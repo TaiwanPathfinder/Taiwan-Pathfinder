@@ -1,0 +1,196 @@
+/*----- About us content -----*/
+
+.Aboutuscontent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/*----- About TPF -----*/ 
+
+.aboutTPF{
+    width: 70%;
+    margin: 0 auto;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px black;
+    padding-bottom: 20px;
+    margin-top: 100px;
+}
+h2{
+    font-size: 28px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+p{
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    line-height: 120%;
+}
+p:hover{
+    color: var(--color-lightgreen);
+}
+h3{
+    font-size: 35px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: var(--color-lightgreen);
+}
+strong{
+    font-weight: bolder;
+}
+.whoimg{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Aboutuscontent img{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    margin: 5px;
+    margin-bottom: 20px;
+}
+
+/*----- About guide -----*/ 
+
+.aboutguide{
+    width: 70%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+}
+.oneguide{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: solid 2px black;
+
+}
+.oneguide:hover{
+    border: solid 4px black;
+}
+
+.guideimg{
+    width: 65%;
+    overflow: hidden;
+}
+.guideimg1{
+    width: 65%;
+    overflow: hidden;
+}
+.guideimg2{
+    width: 65%;
+    overflow: hidden;
+}
+.guideimg img{
+    width: 60%;
+    height: auto;
+    aspect-ratio: 1/1.2;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    transform:scale(1,1);transition: all 0.5s ease-out;
+}
+.guideimg1 img{
+    width: 60%;
+    height: auto;
+    aspect-ratio: 1/1.2;
+    object-fit: cover;
+    object-position: right;
+    margin: 0 auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    transform:scale(1,1);transition: all 0.5s ease-out;
+}
+.guideimg2 img{
+    width: 60%;
+    height: auto;
+    aspect-ratio: 1/1.2;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    transform:scale(1,1);transition: all 0.5s ease-out;
+}
+.guideimg img:hover{
+    transform:scale(1.15,1.15);
+}
+.guideimg1 img:hover{
+    transform:scale(1.15,1.15);
+}
+.guideimg2 img:hover{
+    transform:scale(1.15,1.15);
+}
+.guidetext{
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+@media (max-width:992px) {
+    .oneguide{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }   
+    .guideimg{
+        margin-top: 50px;
+    }
+    .guideimg1{
+        margin-top: 50px;
+    }
+    .guideimg2{
+        margin-top: 50px;
+    }
+    .guidetext{
+        width: 90%;
+    }
+}
+@media (max-width:767px) {
+    .guideimg{
+        width: 100%;
+    }
+    .guideimg1{
+        width: 100%;
+    }
+    .guideimg2{
+        width: 100%;
+    }
+
+    
+}

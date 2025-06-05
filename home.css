@@ -1,0 +1,266 @@
+
+/*-----Banner-----*/
+
+.Banner{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    margin-bottom: 10px;
+    margin-top: 100px;
+}
+.Banner img{
+    width: 100%;
+}
+
+@media (max-width:767px) {
+    .Banner{
+        height: 50vh;
+    }
+
+    
+}
+
+
+/*-----Who we are-----*/
+
+.Whoweare{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-bottom:solid 0.5px black;
+}
+.whotext{
+    position: relative;
+}
+.whotext h2{
+    font-size: 28px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.whotext p{
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    line-height: 120%;
+    padding-bottom: 30px;
+}
+.whoimg{
+    width:100%;
+    margin: 10px;
+    height: auto;
+}
+.whoimg img{
+    width:100%;
+    height: auto;
+}
+.readmore{
+    display: inline;
+    color:white;
+    margin: 10px;
+    background-color: var(--color-darkgreen);
+    border-radius: 40px;
+    padding: 5px;
+    position: absolute;
+    right: 40px;
+    text-decoration: none;
+}
+.readmore:hover{
+    font-weight: bolder;
+}
+ strong {
+    font-weight: bolder;
+ }
+ @media (max-width:992px) {
+    .whotext p{
+        margin-bottom: 1px;
+    }
+    .whotext{
+        width: 80%;
+    }
+ }
+
+ @media (max-width:767px) {
+    .Whoweare{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .whotext{
+        margin-bottom: 100px;
+        
+    }
+    .whotext p{
+        margin-bottom: 1px;
+    }
+
+    
+}
+
+/*-----What we provide-----*/
+
+.Whatweprovide{
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 80px;
+    margin-bottom: 30px;
+    border-bottom:solid 0.5px black;
+}
+.Whatweprovide h2{
+    font-size: 28px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.adventurelist{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5px;
+}
+.oneadventure{
+    width: 30%;
+    border: solid 0.5px black;
+    padding: 5px;
+    
+}
+.oneadventure:hover{
+    border: solid 2px black ;
+}
+.adventureimg{
+    overflow:hidden;
+}
+.oneadventure img{
+    width: 98%;
+    height: auto;
+    padding: 3px;
+    transform:scale(1,1);transition: all 0.5s ease-out;
+}
+.oneadventure img:hover{
+    transform:scale(1.15,1.15);
+}
+.adventuretext{
+    position: relative;
+    padding-bottom: 50px;
+}
+.sort{
+    color: blue;
+    font-weight: bolder;
+    font-size: 14px;
+}
+.sort p:hover{
+    color: rgb(51, 51, 142);
+}
+.adventuretext h3{
+    font-weight: bolder;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: dashed 1px black;
+    border-radius: 30px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.adventuretext p{
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  padding: 3px;
+  line-height: 120%;
+}
+h3 a{
+    color: black;
+    text-decoration: none;
+}
+h3 a:hover{
+    color: rgb(51, 51, 142);
+}
+
+ @media (max-width:767px) {
+    .adventurelist{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .oneadventure{
+        width: 70%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    
+}
+
+/*-----Why choose us-----*/
+
+.Whychooseus{
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    position: relative;
+    border-bottom:solid 0.5px black;
+}
+.whycontent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.whycontent img{
+    margin: 20px;
+    width: 30%;
+    aspect-ratio: 1/1.2;
+    object-fit: cover;
+    object-position: center;
+}
+.Whychooseus h2{
+    font-size: 28px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.Whychooseus ul{
+    width: 50%;
+    margin: 0 auto;
+}
+.Whychooseus ul li{
+    margin-bottom: 20px;
+}
+.Whychooseus ul li p{
+    margin-top: 5px;
+}
+
+ @media (max-width:767px) {
+    .whycontent{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .Whychooseus img{
+        width: 80%;
+    }
+
+    
+}
+
