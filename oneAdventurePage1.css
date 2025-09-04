@@ -1,0 +1,127 @@
+/*-----單頁導覽-----*/
+.Wrap{
+    max-width: 99%;
+    margin: 0 auto;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.Sections{
+    width: 95%;
+    padding-top: 100px;
+}
+
+nav {
+    position: fixed;
+    width: 25%;
+    margin-left: 30px;
+    border: 1px solid black ;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 1em;
+    color: #333;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+main {
+    margin-left: 25%;
+    padding: 2em;
+    padding-top: 20px;
+}
+
+h2{
+    font-weight: bolder;
+    padding-top: 130px;
+    padding-bottom: 20px;
+    text-shadow: 10px 5px 5px #ccc;
+    text-align: center;
+    
+}
+h1{
+    font-weight: bolder;
+    padding-left: 40%;
+    padding-top: 20px;
+    font-size: 40px;
+    color: black;
+}
+p{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+li{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+}
+.mainpic{
+    margin-left: 25%;
+    margin-top: 50px;
+}
+.pic{
+    margin-top: 40px;
+    margin-left: 50px;
+}
+.pic img{
+    transform:scale(1,1);transition: all 1s ease-out;
+}
+.pic img:hover{
+    transform:scale(1.1,1.1);
+}
+img{
+    width: 70%;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+    overflow:hidden;
+    aspect-ratio: 5/5;
+    
+}
+.back{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+
+@media (max-width:767px) {
+
+h2{
+    padding-right: 30%;
+    
+}
+p{
+    width: 99%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+li{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+}
+.back{
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+nav {
+    width: 30%;
+    margin-left: 10px;
+    top: 220px;
+}
+    
+}

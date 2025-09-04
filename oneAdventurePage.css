@@ -1,0 +1,47 @@
+.content{
+    margin-top: 10px;
+    margin-bottom: 200px;
+}
+h1{
+    font-weight: bolder;
+    padding-left: 30%;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-size: 40px;
+}
+h2{
+    text-align: center;
+    padding-right: 35%;
+
+}
+p{
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+li{
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+}
+.pic{
+    overflow:hidden;
+    margin-top: 40px;
+}
+.pic img{
+    transform:scale(1,1);transition: all 1s ease-out;
+}
+.pic img:hover{
+    transform:scale(1.2,1.2);
+}
+img{
+    width: 50%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+.back{
+    margin-top: 120px;
+}

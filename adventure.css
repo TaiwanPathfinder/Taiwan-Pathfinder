@@ -1,0 +1,122 @@
+.Whatweprovide{
+    padding-top: 120px;
+}
+.adventurelist{
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+.adventurelistlast{
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+/*-----單頁導覽-----*/
+.Wrap{
+    width: 100%;
+    margin: 0 auto;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    border: solid 1px black;
+}
+.Sections{
+    width: 95%;
+    padding-top: 100px;
+}
+
+nav {
+    position: fixed;
+    width: 25%;
+    padding-bottom: 100px;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 1em;
+    color: #333;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+main {
+    margin-left: 25%;
+    padding: 2em;
+    padding-top: 20px;
+}
+
+h2{
+    font-weight: bolder;
+    padding-left: 30%;
+    padding-top: 130px;
+    padding-bottom: 20px;
+    text-shadow: 10px 5px 5px #ccc;
+
+    
+}
+
+section {
+    height: 120vh;
+    border-bottom: 1px solid #ccc;
+}
+.section2row {
+    height: 200vh;
+    border-bottom: 1px solid #ccc;
+}
+
+.section3row {
+    height: 280vh;
+    border-bottom: 1px solid #ccc;
+}
+
+section:nth-child(odd) {
+    
+}
+
+section:nth-child(even) {
+    
+}
+
+@media (max-width:767px) {
+    .adventurelist{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 100px;
+    }
+    .adventurelistlast{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 100px;
+        justify-content: space-around;
+    }
+    .oneadventure{
+        width: 70%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    section {
+    height: 280vh;
+    border-bottom: 1px solid #ccc;
+    }
+    .section2row {
+    height: 500vh;
+    border-bottom: 1px solid #ccc;
+    }
+
+    .section3row {
+    height: 700vh;
+    border-bottom: 1px solid #ccc;
+    }
+
+    
+}

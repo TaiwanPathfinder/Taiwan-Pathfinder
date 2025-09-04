@@ -135,10 +135,20 @@
     margin: 0 auto;
     padding: 5px;
 }
+.adventurelistlast{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5px;
+}
 .oneadventure{
     width: 30%;
     border: solid 0.5px black;
     padding: 5px;
+    margin-right: 25px;
     
 }
 .oneadventure:hover{
@@ -200,6 +210,7 @@ h3 a:hover{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        margin-bottom: 100px;
     }
     .oneadventure{
         width: 70%;
