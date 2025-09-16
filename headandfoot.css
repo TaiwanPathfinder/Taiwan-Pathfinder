@@ -89,18 +89,18 @@ h2{
     background-color: white;
     z-index:100;
 }
-.logo img{
-    width: 50px;
-    height: auto;
-    margin: 10px;
-}
 .headertext{
-    width: 70%;
+    width: 99%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+.logo{
+    width: 120px;
+    height: auto;
+    margin: 10px;
 }
 .headertexta{
     text-decoration: none;
@@ -115,38 +115,34 @@ h2{
 }
 .headertextalan{
     text-decoration: none;
-    color: white;
-    background-color: black;
+    color: black;
     font-weight: bolder;
-    font-size: 24px;
-    border: solid 1px black;
-    border-radius: 40px;
-    padding: 7px;
+    font-size: 18px;
 }
 .headertextalan:hover{
     border-radius: 40px;
     text-decoration: underline;
-    padding: 9px;
+    padding: 6px;
 }
 .headertextanow{
     text-decoration: none;
     color: white;
     background-color: rgb(183, 183, 183);
     font-weight: bolder;
-    font-size: 24px;
+    font-size: 18px;
     border-radius: 30px;
-    padding: 7px;
+    padding: 6px;
 }
 .newopen{
     text-decoration: none;
     color: red;
     font-weight: bolder;
-    font-size: 24px;
+    font-size: 18px;
 }
 .newopen:hover{
     color: red;
     text-decoration: underline;
-    padding: 7px;
+    padding: 6px;
 
 }
 @media (max-width:992px) {
@@ -177,17 +173,64 @@ h2{
 }
 
 /*-----Footer-----*/
+.footer{
 
-.Footer{
+}
+.info{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: var(--color-brown);
+}
+.infologo{
+    width: 20%;
+    padding-left: 5%;
+    padding-bottom: 20px;
+}
+.infologo img{
+    max-width: 150px;
+}
+.infoleft{
+    width: 30%;
+    padding: 20px;
+}
+.infoleft h3{
+    font-size: 18px;
+    font-weight: bolder;
+}
+.infolefta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 30px;
+
+}
+.infolefta a{
+    font-size: 12px;
+    color: black;
+}
+.inforight{
+    width: 30%;
+    padding: 20px;
+}
+.inforight h3{
+    font-size: 18px;
+    font-weight: bolder;
+}
+.inforight p{
+    margin-bottom: 0px;
+    font-size: 12px;
+}
+.icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: orange;
 }
 .Footer a img{
     width: 30px;
     height: 30px;
-    padding: 15px;
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

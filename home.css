@@ -2,13 +2,19 @@
 /*-----Banner-----*/
 
 .Banner{
-    width: 100%;
-    height: auto;
+    width: 90%;
+    height: 85vh;
     display: flex;
-    align-items: start;
-    justify-content: start;
-    margin-bottom: 10px;
-    margin-top: 100px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    margin-top: 80px;
+    border: solid black 1px;
+}
+.carousel-item img{
+    width: 100%;
+    height: 85vh;
 }
 .Banner img{
     width: 100%;
@@ -32,21 +38,34 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-bottom: 50px;
+    background-color: rgb(229, 229, 229);
+    
+}
+.whoWeAreInsideBox{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 30px;
     margin-top: 30px;
-    border-bottom:solid 0.5px black;
+    background-color: white;
+    border-radius: 20px;
+    
 }
 .whotext{
     position: relative;
+    width: 60%;
 }
 .whotext h2{
     font-size: 28px;
+    text-align: center;
     font-weight: bolder;
     margin-bottom: 30px;
-    margin-top: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .whotext p{
     padding: 10px;
@@ -54,26 +73,27 @@
     margin: 0 auto;
     margin-bottom: 30px;
     line-height: 120%;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
 }
 .whoimg{
-    width:100%;
-    margin: 10px;
+    width: 60%;
     height: auto;
 }
 .whoimg img{
-    width:100%;
+    width:90%;
     height: auto;
+    border-radius: 20px;
 }
 .readmore{
     display: inline;
     color:white;
-    margin: 10px;
+    margin: 5px;
     background-color: var(--color-darkgreen);
     border-radius: 40px;
     padding: 5px;
     position: absolute;
-    right: 40px;
+    right: 35px;
+    bottom: 5px;
     text-decoration: none;
 }
 .readmore:hover{
@@ -88,6 +108,12 @@
     }
     .whotext{
         width: 80%;
+        padding-bottom: 50px;
+    }
+    .readmore{
+        position: absolute;
+        right: 35px;
+        bottom: 5px;   
     }
  }
 
@@ -98,11 +124,16 @@
         flex-wrap: wrap;
     }
     .whotext{
-        margin-bottom: 100px;
+        padding-bottom: 50px;
         
     }
     .whotext p{
         margin-bottom: 1px;
+    }
+    .readmore{
+        position: absolute;
+        right: 35px;
+        bottom: 5px;   
     }
 
     
@@ -120,9 +151,10 @@
 }
 .Whatweprovide h2{
     font-size: 28px;
+    text-align: center;
     font-weight: bolder;
     margin-bottom: 30px;
-    margin-top: 5px;
+    margin-top: 30px;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -175,7 +207,10 @@
     font-weight: bolder;
     font-size: 14px;
 }
-.sort p:hover{
+.onesort{
+    margin-bottom: 0px;
+}
+.onesort:hover{
     color: rgb(51, 51, 142);
 }
 .adventuretext h3{
@@ -188,6 +223,9 @@
     border-radius: 30px;
     margin-bottom: 5px;
     margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    
 }
 .adventuretext p{
     display: -webkit-box;
@@ -245,6 +283,7 @@ h3 a:hover{
 }
 .Whychooseus h2{
     font-size: 28px;
+    text-align: center;
     font-weight: bolder;
     margin-bottom: 20px;
     margin-top: 5px;
