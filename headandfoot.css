@@ -243,7 +243,6 @@ h2{
 }
 @media (max-width:767px) {
     .info{
-        margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
