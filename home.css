@@ -23,8 +23,19 @@
     .Banner{
         height: 50vh;
     }
-
-    
+}
+@media (max-width:767px) {
+    .Banner{
+        height: 30vh;
+        margin-bottom: 300px;
+        padding-top: 300px;
+    }
+    .carousel-item img{
+    width: 100%;
+    height: 50vh;
+    aspect-ratio: 5/5;
+    object-fit: cover;
+    }
 }
 
 
@@ -102,11 +113,25 @@
     font-weight: bolder;
  }
  @media (max-width:992px) {
+    .whoWeAreInsideBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .whoimg{
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    .whoimg img{
+        width: 100%;
+    }
     .whotext p{
         margin-bottom: 1px;
+        width: 99%;
     }
     .whotext{
-        width: 80%;
+        width: 99%;
         padding-bottom: 50px;
     }
     .readmore{
@@ -117,7 +142,7 @@
  }
 
  @media (max-width:767px) {
-    .Whoweare{
+    .whoWeAreInsideBox{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -242,8 +267,7 @@ h3 a{
 h3 a:hover{
     color: rgb(51, 51, 142);
 }
-
- @media (max-width:767px) {
+@media (max-width:992px) {
     .adventurelist{
         display: flex;
         flex-direction: row;
@@ -254,6 +278,27 @@ h3 a:hover{
         width: 70%;
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+
+}
+
+@media (max-width:767px) {
+    .adventurelist{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .oneadventure{
+        width: 99%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .sort{
+        margin-bottom: 30px;
+    }
+    .readmore{
+        bottom: 20px;
     }
 
     
@@ -300,6 +345,15 @@ h3 a:hover{
 .Whychooseus ul li p{
     margin-top: 5px;
 }
+@media (max-width:992px) {
+    .Whychooseus{
+        width: 90%;
+    }
+    .whycontent img{
+        width: 40%;
+    }
+
+}
 
  @media (max-width:767px) {
     .whycontent{
@@ -309,6 +363,10 @@ h3 a:hover{
     }
     .Whychooseus img{
         width: 80%;
+    }
+    .Whychooseus ul{
+    width: 80%;
+    margin: 0 auto;
     }
 
     

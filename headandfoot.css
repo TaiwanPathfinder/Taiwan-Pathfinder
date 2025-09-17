@@ -227,10 +227,41 @@ h2{
     background-color: orange;
 }
 .Footer a img{
-    width: 30px;
-    height: 30px;
+    max-width: 30px;
+    max-height: 30px;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+@media (max-width:992px) {
+    .infologo{
+        width: 20%;
+    }
+    .infologo img{
+        width: 90%; 
+    }
+    
+}
+@media (max-width:767px) {
+    .info{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .infologo{
+        width:40%;
+    }
+    .infologo img{
+        width: 50%; 
+    }
+    .infoleft{
+        width: 60%;
+    }
+    .inforight{
+        width: 60%;
+    }
 }
