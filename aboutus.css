@@ -32,17 +32,17 @@ h2{
     margin-left: 5px;
     margin-right: 5px;
 }
-p{
+.aboutusp{
     padding: 10px;
     width: 80%;
     margin: 0 auto;
     margin-bottom: 10px;
     line-height: 120%;
 }
-p:hover{
+.aboutusp:hover{
     color: var(--color-lightgreen);
 }
-h3{
+.name{
     font-size: 35px;
     font-weight: bolder;
     margin-bottom: 30px;

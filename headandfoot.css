@@ -190,16 +190,18 @@ h2{
     padding-left: 5%;
     padding-bottom: 20px;
 }
-.infologo img{
+.infologoimg{
     max-width: 150px;
 }
 .infoleft{
     width: 30%;
     padding: 20px;
 }
-.infoleft h3{
+.infoh3{
     font-size: 18px;
     font-weight: bolder;
+    color: black;
+    margin: 3px;
 }
 .infolefta{
     display: flex;
@@ -208,19 +210,15 @@ h2{
     padding-top: 30px;
 
 }
-.infolefta a{
+.infoa{
     font-size: 12px;
     color: black;
 }
 .inforight{
     width: 30%;
     padding: 20px;
-}
-.inforight h3{
-    font-size: 18px;
-    font-weight: bolder;
-}
-.inforight p{
+} 
+.infop{
     margin-bottom: 0px;
     font-size: 12px;
 }
@@ -243,7 +241,7 @@ h2{
     .infologo{
         width: 20%;
     }
-    .infologo img{
+    .infologoimg{
         width: 90%; 
     }
     
@@ -258,7 +256,7 @@ h2{
     .infologo{
         width:40%;
     }
-    .infologo img{
+    .infologoimg{
         width: 50%; 
     }
     .infoleft{
