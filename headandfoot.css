@@ -96,20 +96,20 @@ h2{
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    border: solid black 1px;
+}
+.smartphoneheader{
+    display: none;
 }
 .logo{
     width: 110px;
     height: auto;
     margin: 5px;
-    border: solid black 1px;
 }
 .headertexta{
     text-decoration: none;
     color: black;
     font-weight: bolder;
     font-size: 18px;
-    border: solid black 1px;
 }
 .headertexta:hover{
     color: black;
@@ -121,7 +121,6 @@ h2{
     color: black;
     font-weight: bolder;
     font-size: 18px;
-    border: solid black 1px;
 }
 .headertextalan:hover{
     border-radius: 40px;
@@ -136,14 +135,12 @@ h2{
     font-size: 18px;
     border-radius: 30px;
     padding: 6px;
-    border: solid black 1px;
 }
 .newopen{
     text-decoration: none;
     color: red;
     font-weight: bolder;
     font-size: 18px;
-    border: solid black 1px;
 }
 .newopen:hover{
     color: red;
@@ -160,19 +157,23 @@ h2{
         font-size: 18px;
         padding: 5px;
     }
+    .smartphoneheader{
+        display: none;
+    }
 }
 
 @media (max-width:767px) {
-    .Header{
-        width: 96%;
+    .smartphoneheader{
+        display: block;
+        width: 99%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
-    .headertexta{
-        font-size: 18px;
-        padding: 8px;
-    }
-    .newopen{
-        font-size: 18px;
-        padding: 8px;
+    .headertext{
+        display: none;
     }
 
     

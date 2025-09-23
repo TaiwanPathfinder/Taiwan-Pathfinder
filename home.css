@@ -26,15 +26,15 @@
 }
 @media (max-width:767px) {
     .Banner{
-        height: 30vh;
-        margin-bottom: 300px;
-        padding-top: 300px;
+        height: 50vh;
+        margin-bottom: 50px;
+        padding-top: 50px;
     }
     .carousel-item img{
-    width: 100%;
-    height: 50vh;
-    aspect-ratio: 5/5;
-    object-fit: cover;
+        width: 98%;
+        height: 50vh;
+        aspect-ratio: 7/5;
+        object-fit: cover;
     }
 }
 
@@ -113,6 +113,9 @@
     font-weight: bolder;
  }
  @media (max-width:992px) {
+    .Whoweare{
+        width: 90%;
+    }
     .whoWeAreInsideBox{
         display: flex;
         flex-direction: column;
@@ -146,6 +149,7 @@
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        width: 90%;
     }
     .whotext{
         padding-bottom: 50px;
@@ -283,11 +287,20 @@ h3 a:hover{
 }
 
 @media (max-width:767px) {
+    .Whatweprovide{
+        width: 85%;
+        margin:0 auto;
+        
+    }
     .adventurelist{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         margin-bottom: 10px;
+        width: 99%;
+        margin-left: 3%;
+        margin-right: 3%;
+        
     }
     .oneadventure{
         width: 99%;
@@ -362,11 +375,14 @@ h3 a:hover{
         flex-wrap: wrap;
     }
     .Whychooseus img{
-        width: 90%;
+        width: 80%;
     }
     .Whychooseus ul{
-    width: 95%;
-    margin: 0 auto;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .Whychooseus h2{
+        margin-top: 20px;
     }
 
     
