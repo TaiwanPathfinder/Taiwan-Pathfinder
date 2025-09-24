@@ -202,6 +202,7 @@ h2{
     font-weight: bolder;
     color: black;
     margin: 3px;
+    line-height: 120%;
 }
 .infolefta{
     display: flex;
@@ -213,6 +214,7 @@ h2{
 .infoa{
     font-size: 12px;
     color: black;
+    line-height: 120%;
 }
 .inforight{
     width: 30%;
@@ -221,6 +223,7 @@ h2{
 .infop{
     margin-bottom: 0px;
     font-size: 12px;
+    line-height: 120%;
 }
 .icon{
     display: flex;

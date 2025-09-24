@@ -84,7 +84,13 @@ section:nth-child(odd) {
 section:nth-child(even) {
     
 }
-
+@media (max-width:992px) {
+    .adventurelist{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
 @media (max-width:767px) {
     .adventurelist{
         display: flex;

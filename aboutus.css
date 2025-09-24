@@ -13,7 +13,7 @@
 /*----- About TPF -----*/ 
 
 .aboutTPF{
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     margin: 5px;
     display: flex;
@@ -24,36 +24,33 @@
     padding-bottom: 20px;
     margin-top: 100px;
 }
-h2{
+.whotext h2{
     font-size: 28px;
     font-weight: bolder;
     margin-bottom: 30px;
-    margin-top: 5px;
+    margin-top: 20px;
     margin-left: 5px;
     margin-right: 5px;
+    text-align: center;
 }
-.aboutusp{
+.aboutTPFh3{
+    margin-left: 8%;
+    font-style: italic;
+    font-size: 22px;
+    color: orange;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+.aboutTPFp{
     padding: 10px;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     margin-bottom: 10px;
     line-height: 120%;
+    margin-bottom: 40px;
 }
-.aboutusp:hover{
-    color: var(--color-lightgreen);
-}
-.name{
-    font-size: 35px;
-    font-weight: bolder;
-    margin-bottom: 30px;
-    margin-top: 50px;
-    margin-left: 5px;
-    margin-right: 5px;
-    color: var(--color-lightgreen);
-}
-strong{
-    font-weight: bolder;
-}
+
+
 .whoimg{
     margin: 0 auto;
     display: flex;
@@ -67,6 +64,8 @@ strong{
     margin: 0 auto;
     margin: 5px;
     margin-bottom: 20px;
+    border: solid white 1px;
+    
 }
 
 /*----- About guide -----*/ 
@@ -78,6 +77,10 @@ strong{
     flex-direction: column;
     justify-content: center;
     padding-top: 20px;
+}
+.aboutguide h2{
+    text-align: center;
+    margin-bottom: 10px;
 }
 .oneguide{
     display: flex;
@@ -159,6 +162,22 @@ strong{
     width: 50%;
     margin-top: 10px;
     margin-bottom: 20px;
+}
+.name{
+    font-size: 35px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color:orange;
+}
+.aboutusp{
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    line-height: 120%;
 }
 
 @media (max-width:992px) {
