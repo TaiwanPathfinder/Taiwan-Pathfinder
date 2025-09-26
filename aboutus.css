@@ -111,7 +111,7 @@
     overflow: hidden;
 }
 .guideimg img{
-    width: 60%;
+    width: 80%;
     height: auto;
     aspect-ratio: 1/1.2;
     object-fit: cover;
@@ -124,7 +124,7 @@
     transform:scale(1,1);transition: all 0.5s ease-out;
 }
 .guideimg1 img{
-    width: 60%;
+    width: 80%;
     height: auto;
     aspect-ratio: 1/1.2;
     object-fit: cover;
@@ -137,7 +137,7 @@
     transform:scale(1,1);transition: all 0.5s ease-out;
 }
 .guideimg2 img{
-    width: 60%;
+    width: 80%;
     height: auto;
     aspect-ratio: 1/1.2;
     object-fit: cover;
@@ -181,6 +181,9 @@
 }
 
 @media (max-width:992px) {
+    .aboutTPF{
+        width: 80%;
+    }
     .oneguide{
         display: flex;
         flex-direction: column;
@@ -188,12 +191,15 @@
         width: 100%;
     }   
     .guideimg{
+        width: 90%;
         margin-top: 50px;
     }
     .guideimg1{
+        width: 90%;
         margin-top: 50px;
     }
     .guideimg2{
+        width: 90%;
         margin-top: 50px;
     }
     .guidetext{
@@ -201,14 +207,23 @@
     }
 }
 @media (max-width:767px) {
+    .aboutTPF{
+        width: 90%;
+    }
+    .whoimg{
+        margin-bottom: 60px;
+    }
+    .aboutguide{
+        width: 85%;
+    }
     .guideimg{
-        width: 100%;
+        width: 90%;
     }
     .guideimg1{
-        width: 100%;
+        width: 90%;
     }
     .guideimg2{
-        width: 100%;
+        width: 90%;
     }
 
     
