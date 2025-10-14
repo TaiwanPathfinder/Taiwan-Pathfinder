@@ -1,0 +1,414 @@
+/*--Adventure Head-*/
+.adventureHead{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 75px;
+  background-color: rgb(253, 228, 181);
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  box-shadow: 0px 10px 10px 1px #0005;
+  margin-bottom: 3px;
+}
+.adventureHeadText{
+    width: 30%;
+    margin-right: 20px;
+}
+.adventureHeadText h1{
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;
+}
+.adventureHeadText p{
+    font-size:18px;
+    line-height: 120%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
+}
+
+/*--Gallery--*/
+
+
+.adventureHeadGallery{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 900px;
+  width: 50%;
+  padding: 5px;
+}
+
+.main-image {
+  flex: 1;
+  position: relative;
+  width: 100%;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  aspect-ratio: 13/10.3;
+  object-fit: cover;
+}
+
+/* 左右箭頭 */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  user-select: none;
+  transition: background 0.3s;
+}
+
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+/* 縮圖區 */
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 400px;       /* 限制縮圖區高度 */
+  overflow-y: auto;        /* 可捲動 */
+  scroll-behavior: smooth; /* 平滑捲動 */
+}
+
+.thumbnails img {
+  width: 100px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: border 0.3s;
+}
+
+.thumbnails img:hover,
+.thumbnails img.active {
+  border: 2px solid #333;
+}
+
+@media (max-width:992px) {
+    .adventureHead{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .adventureHeadText{
+        width: 70%;
+    }
+    .adventureHeadGallery{
+        width: 80%;
+    }
+    .main-image img {
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+        aspect-ratio: 13/11;
+        object-fit: cover;
+    }
+}
+@media (max-width:767px) {
+    .adventureHeadText{
+        width: 85%;
+    }
+    .main-image img {
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+        aspect-ratio: 13/18;
+        object-fit: cover;
+    }
+}
+
+/*--Adventure Introduction--*/
+.adventureIntroduction{
+    background-color: rgb(253, 228, 181);
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-shadow: 0px 10px 10px 1px #0005;
+    margin-bottom: 3px;
+}
+
+.advenIntroText{
+    
+    border: solid white 1px;
+    border-radius: 30px;
+    background-color: white;
+
+}
+.advenIntroText h2{
+    text-align: center;
+    font-weight: bolder;
+    margin: 20px;
+}
+.advenIntroTextButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.buttonTime{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background-color: orange;
+    border-radius: 30px;
+}
+.buttonTime h3{
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 10px;
+}
+.buttonTime p{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}                     
+.buttonDifficulty{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background-color: orange;
+    border-radius: 30px;
+}
+.buttonDifficulty h3{
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 10px;
+}
+.buttonDifficulty p{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.buttonPrice{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background-color: orange;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.buttonPrice h3{
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 10px;
+}
+.buttonPrice p{
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bolder;
+    margin-left: 20px;
+    margin-right: 20px;
+}                     
+.advenIntroTextp{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+@media (max-width:992px) {
+    .advenIntroTextButton{
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .buttonTime p{
+        font-size: 14px;
+        margin-top: 20px;
+        margin-left: 5px;
+        margin-right: 20px;
+    }
+    .buttonTime h3{
+        font-size: 20px;
+        font-weight: bolder;
+        margin-right: 5px;
+    } 
+}
+@media (max-width:767px) {
+    .advenIntroTextButton{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .buttonTime{
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    .buttonDifficulty{
+        margin-right: 5px;
+        margin-left: 10px;
+    }
+        
+}
+/*--Adventure Detail--*/
+
+.adventureDetail{
+    background-color: rgb(253, 228, 181);
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    padding-left: 3%;
+    padding-right: 3%;
+    box-shadow: 0px 10px 10px 1px #0005;
+    margin-bottom: 20px;
+}
+
+/* 按鈕列 */
+.tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.tab-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.tab-buttons button.active {
+  background-color: #d9a441; /* 黃色高亮 */
+  color: black;
+}
+
+/* 分頁內容 */
+.tab-content {
+  display: none;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/*--------comment------*/
+
+.review-section {
+  background-color: rgb(253, 228, 181);
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  padding-left: 3%;
+  padding-right: 3%;
+  box-shadow: 0px 10px 10px 1px #0005;
+  margin-bottom: 20px;
+}
+
+.review-section h2 {
+  text-align: center;
+  font-weight: bolder;
+  margin: 20px;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  margin-bottom: 10px;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #f5b301;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  resize: none;
+  margin-top: 10px;
+}
+
+.commentButton {
+  background-color: #0078ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.commentButton:hover {
+  background-color: #005fcc;
+}
+
+.review-item {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.stars {
+  color: #f5b301;
+  margin-bottom: 5px;
+}
