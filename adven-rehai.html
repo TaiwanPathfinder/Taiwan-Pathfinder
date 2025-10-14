@@ -139,12 +139,17 @@
                 <input type="radio" name="star" id="star2" value="2"><label for="star2">★</label>
                 <input type="radio" name="star" id="star1" value="1"><label for="star1">★</label>
             </div>
+
+            <!-- 🔹 新增「姓名輸入框」 -->
+            <input type="text" id="name" placeholder="Your name (optional)" style="width:100%; padding:8px; margin:10px 0; border:1px solid #ccc; border-radius:5px;">
+
             <textarea id="comment" placeholder="Please enter your comment..."></textarea>
             <button class="commentButton" id="submitReview">submit</button>
             <hr>
             <h3>customer reviews</h3>
             <div id="reviews"></div>
         </div>
+
   
         <div class="Footer">
             <div class="info">
@@ -273,70 +278,86 @@
     });
   }
 </script>
-<!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js"></script>
-<script>
-    // 🔹 替換成你自己的 Firebase 設定
-    const firebaseConfig = {
-        apiKey: "AIzaSyCQLNj5loFlKoZ2K7A98t-nGQOMbCK39JU",
-        authDomain: "taiwanpathfinder-reviews.firebaseapp.com",
-        databaseURL: "https://taiwanpathfinder-reviews-default-rtdb.firebaseio.com",
-        projectId: "taiwanpathfinder-reviews",
-        storageBucket: "taiwanpathfinder-reviews.firebasestorage.app",
-        messagingSenderId: "152060208223",
-        appId: "1:152060208223:web:b154baca271535c95ca7ea",
-        measurementId: "G-PND9K7Z1T9"
+<!-- Firebase 評價系統 -->
+<script type="module">
+  // 🔹 Import Firebase modules
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+  // 🔹 Firebase Configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCQLNj5loFlKoZ2K7A98t-nGQOMbCK39JU",
+    authDomain: "taiwanpathfinder-reviews.firebaseapp.com",
+    databaseURL: "https://taiwanpathfinder-reviews-default-rtdb.firebaseio.com",
+    projectId: "taiwanpathfinder-reviews",
+    storageBucket: "taiwanpathfinder-reviews.firebasestorage.app",
+    messagingSenderId: "152060208223",
+    appId: "1:152060208223:web:b154baca271535c95ca7ea",
+    measurementId: "G-PND9K7Z1T9"
+  };
+
+  // ✅ Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const reviewsRef = ref(db, "reviews");
+
+  // 🔹 DOM Elements
+  const reviewsContainer = document.getElementById('reviews');
+  const submitBtn = document.getElementById('submitReview');
+
+  // 🔸 Add Review
+  submitBtn.addEventListener('click', async () => {
+    const rating = document.querySelector('input[name="star"]:checked');
+    const name = document.getElementById('name').value.trim() || 'Anonymous';
+    const comment = document.getElementById('comment').value.trim();
+
+    if (!rating) return alert('Please select a star rating!');
+    if (!comment) return alert('Please enter your comment!');
+
+    const newReview = {
+      name: name,
+      stars: rating.value,
+      comment: comment,
+      date: new Date().toLocaleString()
     };
 
-    const app = firebase.initializeApp(firebaseConfig);
-    const db = firebase.database();
-    const reviewsRef = db.ref("reviews");
-
-    const reviewsContainer = document.getElementById('reviews');
-    const submitBtn = document.getElementById('submitReview');
-
-    // 🔸 新增留言
-    submitBtn.addEventListener('click', () => {
-      const rating = document.querySelector('input[name="star"]:checked');
-      const comment = document.getElementById('comment').value.trim();
-
-      if (!rating) return alert('請選擇星等評分！');
-      if (!comment) return alert('請輸入您的評論！');
-
-      const newReview = {
-        stars: rating.value,
-        comment: comment,
-        date: new Date().toLocaleString()
-      };
-
-      reviewsRef.push(newReview);
+    try {
+      await push(reviewsRef, newReview);
+      alert('Thank you for your review!');
+      document.getElementById('name').value = '';
       document.getElementById('comment').value = '';
       document.querySelectorAll('input[name="star"]').forEach(r => r.checked = false);
-    });
+    } catch (error) {
+      console.error("Submission failed:", error);
+      alert("Submission failed. Please try again later.");
+    }
+  });
 
-    // 🔸 顯示留言
-    reviewsRef.on('value', snapshot => {
-      const data = snapshot.val();
-      reviewsContainer.innerHTML = '';
-      if (!data) {
-        reviewsContainer.innerHTML = '<p>目前還沒有任何評價。</p>';
-        return;
-      }
+  // 🔸 Display Reviews
+  onValue(reviewsRef, snapshot => {
+    const data = snapshot.val();
+    reviewsContainer.innerHTML = '';
+    if (!data) {
+      reviewsContainer.innerHTML = '<p>No reviews yet. Be the first to share your experience!</p>';
+      return;
+    }
 
-      const entries = Object.entries(data).reverse();
-      entries.forEach(([id, r]) => {
-        const stars = '★'.repeat(r.stars) + '☆'.repeat(5 - r.stars);
-        const review = document.createElement('div');
-        review.classList.add('review-item');
-        review.innerHTML = `
-          <div class="stars">${stars}</div>
-          <p>${r.comment}</p>
-          <small style="color:#666;">${r.date}</small>
-        `;
-        reviewsContainer.appendChild(review);
-      });
+    const entries = Object.entries(data).reverse(); // newest first
+    entries.forEach(([id, r]) => {
+      const stars = '★'.repeat(r.stars) + '☆'.repeat(5 - r.stars);
+      const review = document.createElement('div');
+      review.classList.add('review-item');
+      review.style.borderBottom = "1px solid #ddd";
+      review.style.padding = "10px 0";
+      review.innerHTML = `
+        <div class="stars" style="color:#f5a623; font-size:18px;">${stars}</div>
+        <p style="margin:5px 0;"><strong>${r.name}</strong>: ${r.comment}</p>
+        <small style="color:#666;">${r.date}</small>
+      `;
+      reviewsContainer.appendChild(review);
     });
+  });
 </script>
+
 </body>
 </html>
