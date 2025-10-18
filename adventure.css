@@ -59,10 +59,14 @@ main {
 
 h2{
     font-weight: bolder;
-    padding-left: 30%;
+    
     padding-top: 130px;
-    padding-bottom: 20px;
+    
     text-shadow: 10px 5px 5px #ccc;
+    margin: 0 auto;         /* 讓整個按鈕水平置中 */
+    display: flex;          /* 使用 Flexbox */
+    justify-content: center;/* 文字水平置中 */
+    align-items: center;    /* 文字垂直置中 */
 
     
 }
