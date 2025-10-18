@@ -178,14 +178,24 @@ h3 a:hover{
     }
 }
 @media (max-width:767px) {
+    .Sections{
+    width: 95%;
+    padding-top: 10px;
+    }
     .adventurelist{
     }
     .adventurelistlast{
     }
-    .oneadventure{
-        width: 70%;
+    nav {
+        display: none;
     }
-    
-
-    
+    .oneadventure{
+        width: 80%;
+    }
+    main {
+        margin: 0 auto;
+    }
+    .WishText a{
+        font-size: 18px;
+    }
 }
