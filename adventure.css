@@ -29,8 +29,12 @@ body{
 
 nav {
     position: fixed;
-    width: 25%;
-    padding-bottom: 100px;
+    left: 5%;
+    width: 20%;
+    padding-bottom: 20px;
+    background-color: rgb(253, 228, 181);
+    box-shadow: 0px 10px 10px 1px #0005;
+    padding-right: 10px;
 }
 
 nav a {
@@ -62,18 +66,19 @@ h2{
 
     
 }
+.smalltitle{
+    font-weight: bolder;
+    margin-left: 10%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: inline;
+    border-bottom: solid 3px orange;
+}
+
 
 section {
-    height: 120vh;
-    border-bottom: 1px solid #ccc;
-}
-.section2row {
-    height: 200vh;
-    border-bottom: 1px solid #ccc;
-}
-
-.section3row {
-    height: 280vh;
     border-bottom: 1px solid #ccc;
 }
 
@@ -84,45 +89,103 @@ section:nth-child(odd) {
 section:nth-child(even) {
     
 }
+
+/*---oneadventure---*/
+
+
+.sort{
+    margin: 10px;
+}
+.adventuretext h3{
+    font-size: 18px; 
+}
+.adventuretext p{
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  padding: 3px;
+  line-height: 120%;
+}
+h3 a{
+    color: black;
+    text-decoration: none;
+}
+h3 a:hover{
+    color: rgb(51, 51, 142);
+}
+.Wishbutton{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.WishText{
+    text-shadow: none;
+    border: orange 1px solid;
+    border-radius: 40px;
+    background-color: orange;  
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    padding: 20px;
+    width: 80%;             /* 可依需要改成固定或百分比寬度 */
+    margin: 0 auto;         /* 讓整個按鈕水平置中 */
+    display: flex;          /* 使用 Flexbox */
+    justify-content: center;/* 文字水平置中 */
+    align-items: center;    /* 文字垂直置中 */
+    
+}
+.WishText a{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: center;
+}
+.WishText a:hover{
+    text-decoration: underline;
+}
+
+
 @media (max-width:992px) {
     .adventurelist{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-    }
-}
-@media (max-width:767px) {
-    .adventurelist{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-bottom: 100px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        margin-top: 0px;
+        padding-top: 0px;
     }
     .adventurelistlast{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-bottom: 100px;
         justify-content: space-around;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+    .oneadventure{
+        margin-bottom: 20px;
+        padding-bottom: 0px;
+        margin-top: 20px;
+        padding-top: 0px;
+    }
+}
+@media (max-width:767px) {
+    .adventurelist{
+    }
+    .adventurelistlast{
     }
     .oneadventure{
         width: 70%;
-        margin-top: 10px;
-        margin-bottom: 10px;
     }
-    section {
-    height: 280vh;
-    border-bottom: 1px solid #ccc;
-    }
-    .section2row {
-    height: 500vh;
-    border-bottom: 1px solid #ccc;
-    }
-
-    .section3row {
-    height: 700vh;
-    border-bottom: 1px solid #ccc;
-    }
+    
 
     
 }
