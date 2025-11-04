@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>龍洞新手攀岩體驗｜Taiwan Pathfinder</title>
+    <link rel="stylesheet" href="oneAdventurePage.css">
+    <link rel="stylesheet" href="headandfoot.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="Wrap">
+        <div class="Header">
+            <div class="headertext">
+                <a class="headertexta" href="homeZN.html">首頁</a>
+                <a class="newopen" href="https://linktr.ee/pathfinderintaiwan" target="_blank" >立即報名</a>
+                <a class="headertexta" href="aboutusZN.html">關於我們</a>
+                <a href="home.html"><img class="logo" src="logo.png" alt="logo"></a>
+                <a class="headertextanow" href="adventureZN.html">活動體驗</a>
+                <a class="headertexta" href="ContactZN.html">聯絡我們</a>
+                <a class="headertextalan" href="adven-longdongBeginnerClimbing.html">English</a>
+            </div>
+            <div class="smartphoneheader">
+                <img class="logo" src="logo.png" alt="logo">
+                <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    選單
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="homeZN.html">首頁</a></li>
+                    <li><a class="dropdown-item" href="https://linktr.ee/pathfinderintaiwan" target="_blank" >立即報名</a></li>
+                    <li><a class="dropdown-item" href="aboutusZN.html">關於我們</a></li>
+                    <li><a class="dropdown-item" href="adventureZN.html">活動體驗</a></li>
+                    <li><a class="dropdown-item" href="ContactZN.html">聯絡我們</a></li>
+                    <li><a class="dropdown-item" href="adven-longdongBeginnerClimbing.html">English</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <div class="adventureHead">
+            <div class="adventureHeadText">
+                <h1>龍洞新手攀岩體驗</h1>
+                <p><strong>在龍洞安全有趣地體驗戶外攀岩！</strong> 由專業導師帶領，學習攀岩基本技巧，欣賞台灣壯麗的海岸峭壁。非常適合初學者，享受安全又刺激的戶外冒險。</p>
+                <div class="advenIntroTextButton">
+                    <div class="buttonPrice">
+                        <h3>價格</h3>
+                        <p>NT.2500</p>
+                    </div>
+                </div>
+            </div>
+            <div class="adventureHeadGallery">
+                <!-- 大圖 -->
+                <div class="main-image">
+                    <img id="current" src="adventurepics/龍洞新手攀岩體驗/龍洞新手攀岩體驗1.jpg" alt="主圖">
+                <!-- 左右切換箭頭 -->
+                    <button class="arrow left" onclick="prevImage()">&#10094;</button>
+                    <button class="arrow right" onclick="nextImage()">&#10095;</button>
+                </div>
+                <!-- 縮圖 -->
+                <div class="thumbnails" id="thumbnailContainer">
+                    <img src="adventurepics/龍洞新手攀岩體驗/龍洞新手攀岩體驗1.png" alt="縮圖1" onclick="changeImage(0)">
+                    <img src="adventurepics/龍洞新手攀岩體驗/龍洞新手攀岩體驗2.jpg" alt="縮圖2" onclick="changeImage(1)">
+                    <img src="adventurepics/龍洞新手攀岩體驗/龍洞新手攀岩體驗3.jpg" alt="縮圖3" onclick="changeImage(2)">
+                    <img src="adventurepics/龍洞新手攀岩體驗/龍洞新手攀岩體驗4.jpg" alt="縮圖4" onclick="changeImage(3)">
+                    <img src="adventurepics/龍洞新手攀岩體驗/龍洞新手攀岩體驗5.jpg" alt="縮圖5" onclick="changeImage(4)">
+                    <img src="adventurepics/龍洞新手攀岩體驗/龍洞新手攀岩體驗6.jpg" alt="縮圖6" onclick="changeImage(5)">
+                    <img src="adventurepics/龍洞新手攀岩體驗/龍洞新手攀岩體驗7.jpg" alt="縮圖7" onclick="changeImage(6)">
+                    <img src="adventurepics/龍洞新手攀岩體驗/龍洞新手攀岩體驗8.jpg" alt="縮圖8" onclick="changeImage(7)">
+                </div>
+            </div>
+        </div>
+        <div class="adventureIntroduction">
+            <div class="advenIntroText">
+                <h2>活動介紹</h2>
+                <div class="advenIntroTextButton">
+                    <div class="buttonTime">
+                        <h3>時間</h3>
+                        <p>半天 (約3-4小時)</p>
+                    </div>
+                    <div class="buttonDifficulty">
+                        <h3>難度</h3>
+                        <p>新手友善</p>
+                    </div>
+                </div>
+                <p class="advenIntroTextp">參加我們的 <strong>龍洞新手攀岩體驗</strong>，在安全的環境下輕鬆學習戶外攀岩基本技巧，同時欣賞台灣壯麗的海岸峭壁。</p>
+                <p class="advenIntroTextp">非常適合初學者及想體驗刺激戶外活動的人，結合安全指導與美景，帶來難忘的冒險體驗。</p>
+            </div>
+        </div>
+        <div class="adventureDetail">
+            <div class="tab-buttons">
+                <button class="active" onclick="showTab(0)">集合地點</button>
+                <button onclick="showTab(1)">價格包含</button>
+                <button onclick="showTab(2)">安全政策</button>
+                <button onclick="showTab(3)">行前須知</button>
+                <button onclick="showTab(4)">餐食</button>
+                <button onclick="showTab(5)">價格</button>
+            </div>
+
+            <div class="tab-content active">
+                <p>行程從和美國小停車場或西靈巖寺停車場出發。由於公共交通耗時較長，建議自行開車前往（停車免費），或提前安排從台北出發的專車接送服務（需額外收費）。</p>
+            </div>
+
+            <div class="tab-content">
+                <ul>
+                    <li>- 專業嚮導帶領攀岩並架設路線</li>
+                    <li>- 介紹龍洞自然環境及生態</li>
+                    <li>- 提供攀岩裝備：吊帶、頭盔及攀岩鞋</li>
+                    <li>- 提供活動保險</li>
+                </ul>
+            </div>
+
+            <div class="tab-content">
+                <ul>
+                    <li>- 每位參加者享有特定活動保險：意外身故及失能 NT$2,000,000，傷害醫療 NT$200,000</li>
+                    <li>- 嚮導與參加者比例：2名嚮導對6名參加者</li>
+                    <li>- 嚮導皆為經驗豐富攀岩教練，具英語能力，熟悉急救及事故處理</li>
+                    <li>- 必須遵守嚮導的安全指示</li>
+                </ul>
+            </div>
+
+            <div class="tab-content">
+                <ul>
+                    <li>- 請穿著舒適透氣的戶外服裝</li>
+                    <li>- 攜帶防曬用品（防曬霜、帽子、太陽眼鏡）及約2公升飲水</li>
+                    <li>- 提供攀岩鞋，若自備攀岩鞋建議攜帶</li>
+                    <li>- 若有任何特殊需求或健康考量，請提前告知</li>
+                </ul>
+            </div>
+
+            <div class="tab-content">
+                <p>請攜帶自己的一日餐食。我們將提供新鮮本地水果及小吃（免費），可在休息時享用並欣賞海岸美景。</p>
+            </div>
+
+            <div class="tab-content">
+                <p>建議團體人數為2–3人，每團收費NT$9,000。每增加一名參加者，加收NT$3,000，最多6人。若覺得嚮導服務優秀，可給予小費以表感謝。</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="info">
+                <div class="infologo">
+                    <img src="logo_nontext.png" alt="logo" class="infologoimg">
+                </div>
+                <div class="infoleft">
+                    <h3 class="infoh3">顧客資訊</h3>
+                    <h3 class="infoh3">Customer Information</h3>
+                    <div class="infolefta">
+                        <a href="FooterRefundPolicy.html" class="infoa">Refund Policy 退費機制</a>
+                        <a href="FooterTermsConditions.html" class="infoa">Terms & Conditions 條款細則</a>
+                        <a href="FooterPrivacyPolicy.html" class="infoa">Privacy Policy 隱私政策</a>
+                    </div>
+                </div>
+                <div class="inforight">
+                    <h3 class="infoh3">台灣引路人有限公司</h3>
+                    <h3 class="infoh3">Taiwan Pathfinder</h3>
+                    <p class="infop">負責人:</p>
+                    <p class="infop">統一編號:</p>
+                    <p class="infop">LINE客服:</p>
+                    <p class="infop">地址:</p>
+                    <p class="infop">客服信箱:</p>
+                    <p class="infop">pathfinderintaiwan@gmail.com</p>
+                </div>
+            </div>
+            <div class="icon">
+                <a href="https://www.facebook.com/profile.php?id=61562608929140" target="_blank"><img src="icon/fb.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/pathfinderintaiwan" target="_blank"><img src="icon/ig.png" alt="Instagram"></a>
+                <a href="https://lin.ee/D1jlWHsF" target="_blank"><img src="icon/line.png" alt="Line"></a>
+                <a href="mailto:pathfinderintaiwan@gmail.com" target="_blank"><img src="icon/email.png" alt="Email"></a>
+            </div>
+        </div>
+    </div>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js">AOS.init({
+  // ─── 全域設定 ───
+  disable: false,                
+  startEvent: 'DOMContentLoaded', 
+  initClassName: 'aos-init',     
+  animatedClassName: 'aos-animate', 
+  useClassNames: false,          
+  disableMutationObserver: false,
+  debounceDelay: 50,             
+  throttleDelay: 99,             
+
+  offset: 120,                   
+  delay: 0,                      
+  duration: 400,                 
+  easing: 'ease',                
+  once: false,                   
+  mirror: false,                 
+  anchorPlacement: 'top-bottom', 
+});
+</script>
+<script>
+ AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // 照片清單
+		const images = [
+	    "adventurepics/龍洞新手攀岩體驗/龍洞新手攀岩體驗1.png",
+	    "adventurepics/龍洞新手攀岩體驗/龍洞新手攀岩體驗2.jpg",
+	    "adventurepics/龍洞新手攀岩體驗/龍洞新手攀岩體驗3.jpg",
+	    "adventurepics/龍洞新手攀岩體驗/龍洞新手攀岩體驗4.jpg",
+	    "adventurepics/龍洞新手攀岩體驗/龍洞新手攀岩體驗5.jpg",
+	    "adventurepics/龍洞新手攀岩體驗/龍洞新手攀岩體驗6.jpg",
+	    "adventurepics/龍洞新手攀岩體驗/龍洞新手攀岩體驗7.jpg",
+	    "adventurepics/龍洞新手攀岩體驗/龍洞新手攀岩體驗8.jpg"
+			];
+
+		let currentIndex = 0;
+		const currentImage = document.getElementById("current");
+		const thumbs = document.querySelectorAll(".thumbnails img");
+		const thumbnailContainer = document.getElementById("thumbnailContainer");
+		let timer;
+
+
+    // 切換大圖
+    function changeImage(index) {
+      currentIndex = index;
+      currentImage.src = images[currentIndex];
+
+      // 更新縮圖樣式
+      thumbs.forEach(img => img.classList.remove("active"));
+      thumbs[currentIndex].classList.add("active");
+
+      // 縮圖自動捲動到可見區
+      //thumbs[currentIndex].scrollIntoView({
+        //behavior: "smooth",
+        //block: "nearest"
+      //});
+
+      resetTimer();
+    }
+
+    // 上一張
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      changeImage(currentIndex);
+    }
+
+    // 下一張
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      changeImage(currentIndex);
+    }
+
+    // 自動播放
+    function autoPlay() {
+      nextImage();
+    }
+
+    // 重置計時器
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(autoPlay, 3000);
+    }
+
+    // 初始狀態
+    changeImage(0);
+    timer = setInterval(autoPlay, 3000);
+</script>
+<script>
+  function showTab(index) {
+    const buttons = document.querySelectorAll(".tab-buttons button");
+    const contents = document.querySelectorAll(".tab-content");
+
+    buttons.forEach((btn, i) => {
+      btn.classList.toggle("active", i === index);
+    });
+
+    contents.forEach((content, i) => {
+      content.classList.toggle("active", i === index);
+    });
+  }
+</script>
+</body>
+</html>
