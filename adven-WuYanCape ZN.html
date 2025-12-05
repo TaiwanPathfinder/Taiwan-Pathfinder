@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>烏岩角 | Taiwan Pathfinder</title>
+    <link rel="stylesheet" href="oneAdventurePage.css">
+    <link rel="stylesheet" href="headandfoot.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="Wrap">
+        <div class="Header">
+            <div class="headertext">
+                <a class="headertexta" href="homeZN.html">首頁</a>
+                <a class="newopen" href="https://linktr.ee/pathfinderintaiwan" target="_blank" >立即報名</a>
+                <a class="headertexta" href="aboutusZN.html">關於我們</a>
+                <a href="home.html"><img class="logo" src="logo.png" alt="logo"></a>
+                <a class="headertextanow" href="adventureZN.html">活動體驗</a>
+                <a class="headertexta" href="ContactZN.html">聯絡我們</a>
+                <a class="headertextalan" href="adven-WuYanCape.html">English</a>
+            </div>
+            <div class="smartphoneheader">
+                <img class="logo" src="logo.png" alt="logo">
+                <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    選單
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="homeZN.html">首頁</a></li>
+                    <li><a class="dropdown-item" href="https://linktr.ee/pathfinderintaiwan" target="_blank" >立即報名</a></li>
+                    <li><a class="dropdown-item" href="aboutusZN.html">關於我們</a></li>
+                    <li><a class="dropdown-item" href="adventureZN.html">活動體驗</a></li>
+                    <li><a class="dropdown-item" href="ContactZN.html">聯絡我們</a></li>
+                    <li><a class="dropdown-item" href="adven-WuYanCape.html">English</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <div class="adventureHead">
+            <div class="adventureHeadText">
+                <h1>烏岩角</h1>
+                <p><strong>一日行程</strong> 烏岩角是中央山脈的壯麗起點，以高聳的玄武岩峭壁與原始的太平洋海岸線而聞名。</p>
+                <div class="advenIntroTextButton">
+                    <div class="buttonPrice">
+                        <h3>費用</h3>
+                        <p>NT.3,000</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="adventureHeadGallery">
+                <!-- 大圖 -->
+                <div class="main-image">
+                    <img id="current" src="adventurepics/烏岩角/烏岩角7.jpg" alt="main image">
+                    <!-- 左右切換箭頭 -->
+                    <button class="arrow left" onclick="prevImage()">&#10094;</button>
+                    <button class="arrow right" onclick="nextImage()">&#10095;</button>
+                </div>
+
+                <!-- 縮圖 -->
+                <div class="thumbnails" id="thumbnailContainer">
+                    <img src="adventurepics/烏岩角/烏岩角1.jpg" alt="thumb1" onclick="changeImage(0)">
+                    <img src="adventurepics/烏岩角/烏岩角2.jpg" alt="thumb2" onclick="changeImage(1)">
+                    <img src="adventurepics/烏岩角/烏岩角3.jpg" alt="thumb3" onclick="changeImage(2)">
+                    <img src="adventurepics/烏岩角/烏岩角4.jpg" alt="thumb4" onclick="changeImage(3)">
+                    <img src="adventurepics/烏岩角/烏岩角5.jpg" alt="thumb5" onclick="changeImage(4)">
+                    <img src="adventurepics/烏岩角/烏岩角6.jpg" alt="thumb6" onclick="changeImage(5)">
+                    <img src="adventurepics/烏岩角/烏岩角7.jpg" alt="thumb7" onclick="changeImage(6)">
+                    <img src="adventurepics/烏岩角/烏岩角8.jpg" alt="thumb8" onclick="changeImage(7)">
+                </div>
+            </div>
+        </div>
+
+        <div class="adventureIntroduction">
+            <div class="advenIntroText">
+                <h2>行程介紹</h2>
+                <div class="advenIntroTextButton">
+                    <div class="buttonTime">
+                        <h3>行程天數</h3>
+                        <p>1天</p>
+                    </div>
+                    <div class="buttonDifficulty">
+                        <h3>難度等級</h3>
+                        <p>中級</p>
+                    </div>
+                </div>
+                <p class="advenIntroTextp">這次冒險將帶您前往台灣東北角、宜蘭蘇澳附近的烏岩角——一處以壯麗玄武岩崖與險峻海岸線聞名的岬角。行程包含沿海崖健行與探索、體驗刺激的海岸路段，並飽覽遼闊的太平洋景致。</p>
+            </div>
+        </div>
+        <div class="adventureDetail">
+            <div class="tab-buttons">
+                <button class="active" onclick="showTab(0)">集合地點</button>
+                <button onclick="showTab(1)">價格包含</button>
+                <button onclick="showTab(2)">安全政策</button>
+                <button onclick="showTab(3)">行前須知</button>
+                <button onclick="showTab(4)">取消規定</button>
+            </div>
+            <div class="tab-content active">
+		            <p>將於南港火車站或羅東火車站集合</p>
+            </div>
+            <div class="tab-content">
+                <ul>
+                    <li>- 嚮導比至少 1:4</li>
+                    <li>- 攀岩裝備（頭盔、吊帶、Jumar）</li>
+                    <li>- 羅東來回接送，也可選擇於行程結束後送回南港</li>
+                    <li>- 特定活動險</li>
+                    <li>- 專業技術嚮導與英語服務</li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <ul>
+                    <li>- 每位參加者均享有特定活動保險：意外身故與失能新台幣 200 萬元，傷害醫療費用新台幣 20 萬元</li>
+                    <li>- 導遊與參加者比例至少 1:4，導遊皆受過急救及事故處理訓練</li>
+                    <li>- 我們提供全套裝備，並請配合嚮導指示確保活動安全</li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <ul>
+                    <li>- 請穿著舒適透氣的戶外服裝，並攜帶風雨衣外套。</li>
+                    <li>- 攜帶1.5-2公升飲用水、午餐與防曬用品（如防曬霜、帽子、太陽眼鏡）。</li>
+                    <li>- 我們提供攀岩裝備（吊帶、岩盔、Jumar等）及活動保險，讓您無後顧之憂。</li>
+                    <li>- 若有自用岩盔或吊帶建議攜帶，我們也有提供，但尺寸可能無法完全合適。</li>
+                    <li>- 若有特殊需求或健康狀況，請於報名時提前告知。</li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <h4>因天氣取消或改期</h4>
+                <ul>
+                    <li>- 不可抗因素：若遇活動目的地陸上颱風警報、地震、寒流、豪雨特報（定義請參照中央氣象署）、道路封閉或管理單位限制等不可抗因素，致使無法出團，將扣除活動費用 5% 行政手續費後退費。</li>
+                    <li>- 天氣預報不佳：如陰雨綿綿、冷氣團來襲等可能影響活動品質，將由我方綜合評估，最遲於出發日前 3 日公告是否出團。如評估後取消出團，將扣除活動費用 5% 行政手續費後退費。</li>
+                </ul>
+
+                <h4>個人因素取消</h4>
+                <ul>
+                    <li>- 出發前 14 天取消：扣除活動費用 5% 行政手續費後退費。</li>
+                    <li>- 出發前 8–13 天取消：扣除 20% 必要支出後退費。</li>
+                    <li>- 出發前 3–7 天取消：扣除 30% 必要支出後退費。</li>
+                    <li>- 出發前 2 天內取消：不退費。</li>
+                </ul>
+
+                <h4>成團人數規定</h4>
+                <ul>
+                    <li>- 若未達成團人數而確定不出團，參加者可選擇免費延期，或扣除活動費用 5% 行政手續費後退費。</li>
+                </ul>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="info">
+                <div class="infologo">
+                    <img src="logo_nontext.png" alt="logo" class="infologoimg">
+                </div>
+                <div class="infoleft">
+                    <h3 class="infoh3">顧客資訊</h3>
+                    <h3 class="infoh3">Customer Information</h3>
+                    <div class="infolefta">
+                        <a href="FooterRefundPolicy.html" class="infoa">Refund Policy 退費機制</a>
+                        <a href="FooterTermsConditions.html" class="infoa">Terms & Conditions 條款細則</a>
+                        <a href="FooterPrivacyPolicy.html" class="infoa">Privacy Policy 隱私政策</a>
+                    </div>
+                </div>
+                <div class="inforight">
+                    <h3 class="infoh3">台灣引路人有限公司</h3>
+                    <h3 class="infoh3">Taiwan Pathfinder</h3>
+                    <p class="infop">負責人:</p>
+                    <p class="infop">統一編號:</p>
+                    <p class="infop">LINE客服:</p>
+                    <p class="infop">地址:</p>
+                    <p class="infop">客服信箱:</p>
+                    <p class="infop">pathfinderintaiwan@gmail.com</p>
+                </div>
+            </div>
+            <div class="icon">
+                <a href="https://www.facebook.com/profile.php?id=61562608929140" target="_blank"><img src="icon/fb.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/pathfinderintaiwan" target="_blank"><img src="icon/ig.png" alt="Instagram"></a>
+                <a href="https://lin.ee/D1jlWHsF" target="_blank"><img src="icon/line.png" alt="Line"></a>
+                <a href="mailto:pathfinderintaiwan@gmail.com" target="_blank"><img src="icon/email.png" alt="Email"></a>
+            </div>
+        </div>
+    </div>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js">AOS.init({
+  // ─── 全域設定 ───
+  disable: false,                
+  startEvent: 'DOMContentLoaded', 
+  initClassName: 'aos-init',     
+  animatedClassName: 'aos-animate', 
+  useClassNames: false,          
+  disableMutationObserver: false,
+  debounceDelay: 50,             
+  throttleDelay: 99,             
+
+  offset: 120,                   
+  delay: 0,                      
+  duration: 400,                 
+  easing: 'ease',                
+  once: false,                   
+  mirror: false,                 
+  anchorPlacement: 'top-bottom', 
+});
+</script>
+<script>
+ AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // 照片清單
+    const images = ["adventurepics/烏岩角/烏岩角1.jpg", "adventurepics/烏岩角/烏岩角2.jpg", "adventurepics/烏岩角/烏岩角3.jpg", "adventurepics/烏岩角/烏岩角4.jpg", "adventurepics/烏岩角/烏岩角5.jpg", "adventurepics/烏岩角/烏岩角6.jpg", "adventurepics/烏岩角/烏岩角7.jpg", "adventurepics/烏岩角/烏岩角8.jpg"];
+    let currentIndex = 0;
+    const currentImage = document.getElementById("current");
+    const thumbs = document.querySelectorAll(".thumbnails img");
+    const thumbnailContainer = document.getElementById("thumbnailContainer");
+    let timer;
+
+
+    // 切換大圖
+    function changeImage(index) {
+      currentIndex = index;
+      currentImage.src = images[currentIndex];
+
+      // 更新縮圖樣式
+      thumbs.forEach(img => img.classList.remove("active"));
+      thumbs[currentIndex].classList.add("active");
+
+      // 縮圖自動捲動到可見區
+      //thumbs[currentIndex].scrollIntoView({
+        //behavior: "smooth",
+        //block: "nearest"
+      //});
+
+      resetTimer();
+    }
+
+    // 上一張
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      changeImage(currentIndex);
+    }
+
+    // 下一張
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      changeImage(currentIndex);
+    }
+
+    // 自動播放
+    function autoPlay() {
+      nextImage();
+    }
+
+    // 重置計時器
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(autoPlay, 3000);
+    }
+
+    // 初始狀態
+    changeImage(0);
+    timer = setInterval(autoPlay, 3000);
+</script>
+<script>
+  function showTab(index) {
+    const buttons = document.querySelectorAll(".tab-buttons button");
+    const contents = document.querySelectorAll(".tab-content");
+
+    buttons.forEach((btn, i) => {
+      btn.classList.toggle("active", i === index);
+    });
+
+    contents.forEach((content, i) => {
+      content.classList.toggle("active", i === index);
+    });
+  }
+</script>
+</body>
+</html>

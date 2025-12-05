@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wu Yan Cape | Taiwan Pathfinder</title>
+    <link rel="stylesheet" href="oneAdventurePage.css">
+    <link rel="stylesheet" href="headandfoot.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="Wrap">
+        <div class="Header">
+            <div class="headertext">
+                <a class="headertexta" href="home.html">Home</a>
+                <a class="newopen" href="https://linktr.ee/pathfinderintaiwan" target="_blank" >Now Open for Booking</a>
+                <a class="headertexta" href="aboutus.html">About us</a>
+                <a href="home.html"><img class="logo" src="logo.png" alt="logo"></a>
+                <a class="headertextanow" href="adventure.html">Adventures</a>
+                <a class="headertexta" href="Contact.html">Contact us</a>
+                <a class="headertextalan" href="adven-WuYanCape ZN.html">繁體中文</a>
+            </div>
+            <div class="smartphoneheader">
+                <img class="logo" src="logo.png" alt="logo">
+                <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Menu
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="home.html">Home</a></li>
+                    <li><a class="dropdown-item" href="https://linktr.ee/pathfinderintaiwan" target="_blank" >Now Open for Booking</a></li>
+                    <li><a class="dropdown-item" href="aboutus.html">About us</a></li>
+                    <li><a class="dropdown-item" href="adventure.html">Adventures</a></li>
+                    <li><a class="dropdown-item" href="Contact.html">Contact us</a></li>
+                    <li><a class="dropdown-item" href="adven-WuYanCape ZN.html">繁體中文</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <div class="adventureHead">
+            <div class="adventureHeadText">
+                <h1>Wu Yan Cape</h1>
+                <p><strong> one day</strong>  Wu Yan Cape, the dramatic starting point of Taiwan’s Central Mountain Range, is known for its towering basalt cliffs and untamed Pacific coastline.</p>
+                <div class="advenIntroTextButton">
+                    <div class="buttonPrice">
+                        <h3>Price</h3>
+                        <p>NT.3,000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="adventureHeadGallery">
+                <!-- 大圖 -->
+                <div class="main-image">
+                    <img id="current" src="adventurepics/烏岩角/烏岩角7.jpg" alt="main image">
+                <!-- 左右切換箭頭 -->
+                    <button class="arrow left" onclick="prevImage()">&#10094;</button>
+                    <button class="arrow right" onclick="nextImage()">&#10095;</button>
+                </div>
+                <!-- 縮圖 -->
+                <div class="thumbnails" id="thumbnailContainer">
+                    <img src="adventurepics/烏岩角/烏岩角1.jpg" alt="thumb1" onclick="changeImage(0)">
+                    <img src="adventurepics/烏岩角/烏岩角2.jpg" alt="thumb2" onclick="changeImage(1)">
+                    <img src="adventurepics/烏岩角/烏岩角3.jpg" alt="thumb3" onclick="changeImage(2)">
+                    <img src="adventurepics/烏岩角/烏岩角4.jpg" alt="thumb4" onclick="changeImage(3)">
+                    <img src="adventurepics/烏岩角/烏岩角5.jpg" alt="thumb5" onclick="changeImage(4)">
+                    <img src="adventurepics/烏岩角/烏岩角6.jpg" alt="thumb6" onclick="changeImage(5)">
+                    <img src="adventurepics/烏岩角/烏岩角7.jpg" alt="thumb7" onclick="changeImage(6)">
+                    <img src="adventurepics/烏岩角/烏岩角8.jpg" alt="thumb8" onclick="changeImage(7)">
+                <!-- 如果要更多圖片可以繼續加 -->
+                </div>
+            </div>
+        </div>
+        <div class="adventureIntroduction">
+            <div class="advenIntroText">
+                <h2>Activity Introdction</h2>
+                <div class="advenIntroTextButton">
+                    <div class="buttonTime">
+                        <h3>Duration</h3>
+                        <p>1 day</p>
+                    </div>
+                    <div class="buttonDifficulty">
+                        <h3>Difficulty</h3>
+                        <p>Intermediate</p>
+                    </div>
+                </div>
+                <p class="advenIntroTextp">This adventure blends coastal hiking with thrilling exploration, offering awe-inspiring scenery and the raw power of nature. Whether in sunshine or mist, standing at Wu Yan Cape is an unforgettable experience of both challenge and beauty.</p>
+               
+            </div>
+        </div>
+        <div class="adventureDetail">
+            <div class="tab-buttons">
+                <button class="active" onclick="showTab(0)">Meeting Point</button>
+                <button onclick="showTab(1)">What’s Included</button>
+                <button onclick="showTab(2)">Safety Policy</button>
+                <button onclick="showTab(3)">Pre-Trip Notice</button>
+                <button onclick="showTab(4)">Cancellation Policy</button>
+            </div>
+
+            <div class="tab-content active">
+		            <p>Meet at Nangang Station or Luodong Station. </p></div>
+            <div class="tab-content"><ul>
+                <li>- Guide-to-participant ratio of at least 1:4</li>
+                <li>- Climbing equipment (helmet, harness, Jumar)</li>
+                <li>- Round-trip transportation from Luodong is included. Guests may also choose to be dropped off at Nangang after the trip</li>
+                <li>- Specific Activity Insurance.</li>
+                <li>- Professional guiding service with English support.</li>
+            </ul></div>
+            <div class="tab-content"><ul>
+                <li>- Each participant is covered by Specific Activity Insurance: NT$2 million for accidental death and disability, NT$200,000 for injury medical expenses</li>
+                <li>- The guide-to-participant ratio is at least 1:4, and guides are trained in first aid and accident management.</li>
+                <li>- All safety equipment provided; participants must follow guide instructions at all times.</li>
+            </ul></div>
+            <div class="tab-content"><ul>
+                <li>- Comfortable, breathable outdoor clothing and a waterproof jacket.</li>
+                <li>- Approximately 1.5-2 liters of water, lunch, and sun protection (e.g., sunscreen, hat, sunglasses). </li>
+                <li>- All other climbing gear (harness, helmet, Jumar etc.) and activity insurance are provided for a worry-free adventure.</li>
+                <li>- Bringing your own helmet or harness is recommended, though we can provide them; however, sizes may not perfectly fit.</li>
+                <li>- Notify us in advance of any special needs or health conditions.</li>
+            </ul></div>
+            <div class="tab-content">
+                <h4>Trip Cancellation or Rescheduling Due to Weather</h4>
+                <ul>
+                    <li>- Force Majeure: If the trip cannot proceed due to events such as a land typhoon warning, earthquake, cold wave, heavy rain advisory (as defined by the Central Weather Administration), road closures, or restrictions imposed by management authorities, a refund will be issued after deducting a 5% administrative fee.</li>
+                    <li>- Poor Weather Forecast: If adverse weather such as continuous rain or an incoming cold front may affect the trip quality, we will conduct a comprehensive assessment. The final decision will be announced no later than 3 days before departure. If we decide to cancel the trip, a refund will be issued after deducting a 5% administrative fee.</li>
+                </ul>
+
+                <h4>Cancellation Due to Personal Reasons</h4>
+                <ul>
+                    <li>- Cancel 14 days before departure: Refund minus a 5% administrative fee.</li>
+                    <li>- Cancel 8–13 days before departure: 20% of the booking fee will be deducted.</li>
+                    <li>- Cancel 3–7 days before departure: 30% of the booking fee will be deducted.</li>
+                    <li>- Cancel within 2 days of departure: No refund.</li>
+                </ul>
+
+                <h4>Minimum Participant Requirement</h4>
+                <ul>
+                    <li>- If the minimum participant number is not reached and the trip is canceled, participants may choose to reschedule for free or receive a refund with a 5% administrative fee deducted.</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="Footer">
+            <div class="info">
+                <div class="infologo">
+                    <img src="logo_nontext.png" alt="logo" class="infologoimg">
+                </div>
+                <div class="infoleft">
+                    <h3 class="infoh3">顧客資訊</h3>
+                    <h3 class="infoh3">Customer Information</h3>
+                    <div class="infolefta">
+                        <a href="FooterRefundPolicy.html" class="infoa">Refund Policy 退費機制</a>
+                        <a href="FooterTermsConditions.html" class="infoa">Terms & Conditions 條款細則</a>
+                        <a href="FooterPrivacyPolicy.html" class="infoa">Privacy Policy 隱私政策</a>
+                    </div>
+                </div>
+                <div class="inforight">
+                    <h3 class="infoh3">台灣引路人有限公司</h3>
+                    <h3 class="infoh3">Taiwan Pathfinder</h3>
+                    <p class="infop">Responsible Person 負責人:</p>
+                    <p class="infop">Unified Business Number 統一編號:</p>
+                    <p class="infop">LINE Customer Service Line客服:</p>
+                    <p class="infop">Address 地址:</p>
+                    <p class="infop">Email 客服信箱:</p>
+                    <p class="infop">pathfinderintaiwan@gmail.com</p>
+                </div>
+            </div>
+            <div class="icon">
+                <a href="https://www.facebook.com/profile.php?id=61562608929140" target="_blank"><img src="icon/fb.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/pathfinderintaiwan" target="_blank"><img src="icon/ig.png" alt="Instagram"></a>
+                <a href="https://lin.ee/D1jlWHsF" target="_blank"><img src="icon/line.png" alt="Line"></a>
+                <a href="mailto:pathfinderintaiwan@gmail.com" target="_blank"><img src="icon/email.png" alt="Email"></a>
+            </div>
+        </div>
+    </div>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js">AOS.init({
+  // ─── 全域設定 ───
+  disable: false,                // 何時停用 AOS：可填 'phone' / 'tablet' / 'mobile'，或直接給布林值、表達式、函式
+  startEvent: 'DOMContentLoaded',// AOS 什麼事件被觸發時才開始初始化
+  initClassName: 'aos-init',     // 元素在初始化完成後會先加上的類名
+  animatedClassName: 'aos-animate', // 動畫正式啟動時套用的類名
+  useClassNames: false,          // 若設為 true，會把 `data-aos` 的值做為類名，在滾動時一併加上
+  disableMutationObserver: false,// 是否關閉 MutationObserver 自動偵測 DOM 變動（進階）
+  debounceDelay: 50,             // 視窗尺寸改變時的 debounce 間隔（毫秒）
+  throttleDelay: 99,             // 滾動事件的 throttle 間隔（毫秒）
+
+  // ─── 可用 `data-aos-*` 覆寫的項目 ───
+  offset: 120,                   // 觸發動畫時，元素與視窗的距離（px）
+  delay: 0,                      // 動畫延遲 0–3000 ms，步進 50 ms
+  duration: 400,                 // 動畫時長 0–3000 ms，步進 50 ms
+  easing: 'ease',                // 動畫預設 easing 函式
+  once: false,                   // true 表示動畫只在第一次向下滾動時播放
+  mirror: false,                 // true 表示滾過元素後向上滑回可再次播放（鏡像效果）
+  anchorPlacement: 'top-bottom', // 判定元素相對視窗的位置來觸發動畫，例如 'top-bottom' 代表元素頂端到視窗底端
+});
+</script>
+<script>
+ AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // 照片清單
+    const images = ["adventurepics/烏岩角/烏岩角1.jpg", "adventurepics/烏岩角/烏岩角2.jpg", "adventurepics/烏岩角/烏岩角3.jpg", "adventurepics/烏岩角/烏岩角4.jpg", "adventurepics/烏岩角/烏岩角5.jpg", "adventurepics/烏岩角/烏岩角6.jpg", "adventurepics/烏岩角/烏岩角7.jpg", "adventurepics/烏岩角/烏岩角8.jpg"];
+    let currentIndex = 0;
+    const currentImage = document.getElementById("current");
+    const thumbs = document.querySelectorAll(".thumbnails img");
+    const thumbnailContainer = document.getElementById("thumbnailContainer");
+    let timer;
+
+    // 切換大圖
+    function changeImage(index) {
+      currentIndex = index;
+      currentImage.src = images[currentIndex];
+
+      // 更新縮圖樣式
+      thumbs.forEach(img => img.classList.remove("active"));
+      thumbs[currentIndex].classList.add("active");
+
+      // 縮圖自動捲動到可見區
+      //thumbs[currentIndex].scrollIntoView({
+        //behavior: "smooth",
+        //block: "nearest"
+      //});
+
+      resetTimer();
+    }
+
+    // 上一張
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      changeImage(currentIndex);
+    }
+
+    // 下一張
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      changeImage(currentIndex);
+    }
+
+    // 自動播放
+    function autoPlay() {
+      nextImage();
+    }
+
+    // 重置計時器
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(autoPlay, 3000);
+    }
+
+    // 初始狀態
+    changeImage(0);
+    timer = setInterval(autoPlay, 3000);
+</script>
+<script>
+  function showTab(index) {
+    const buttons = document.querySelectorAll(".tab-buttons button");
+    const contents = document.querySelectorAll(".tab-content");
+
+    buttons.forEach((btn, i) => {
+      btn.classList.toggle("active", i === index);
+    });
+
+    contents.forEach((content, i) => {
+      content.classList.toggle("active", i === index);
+    });
+  }
+</script>
+</body>
+</html>
