@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登山代訂服務 | Taiwan Pathfinder</title>
+    <link rel="stylesheet" href="oneAdventurePage.css">
+    <link rel="stylesheet" href="headandfoot.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="Wrap">
+        <div class="Header">
+            <div class="headertext">
+                <a class="headertexta" href="homeZN.html">首頁</a>
+                <a class="newopen" href="https://linktr.ee/pathfinderintaiwan" target="_blank" >立即報名</a>
+                <a class="headertexta" href="aboutusZN.html">關於我們</a>
+                <a href="home.html"><img class="logo" src="logo.png" alt="logo"></a>
+                <a class="headertextanow" href="adventureZN.html">活動體驗</a>
+                <a class="headertexta" href="ContactZN.html">聯絡我們</a>
+                <a class="headertextalan" href="adven-TripBookingAssistance.html">English</a>
+            </div>
+            <div class="smartphoneheader">
+                <img class="logo" src="logo.png" alt="logo">
+                <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    選單
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="homeZN.html">首頁</a></li>
+                    <li><a class="dropdown-item" href="https://linktr.ee/pathfinderintaiwan" target="_blank" >立即報名</a></li>
+                    <li><a class="dropdown-item" href="aboutusZN.html">關於我們</a></li>
+                    <li><a class="dropdown-item" href="adventureZN.html">活動體驗</a></li>
+                    <li><a class="dropdown-item" href="ContactZN.html">聯絡我們</a></li>
+                    <li><a class="dropdown-item" href="adven-TripBookingAssistance.html">English</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <div class="adventureHead">
+            <div class="adventureHeadText">
+                <h1>登山代訂服務</h1>
+                <p><strong>提供入園許可、交通與住宿代訂協助 – 非導覽服務！</strong> 讓您輕鬆規劃台灣登山行程，我們幫您處理必要的行前準備與預訂，讓您的旅行更順利、安全、舒適。</p>
+                <div class="advenIntroTextButton">
+                    <div class="buttonPrice">
+                        <h3>費用</h3>
+                        <p>依需求</p>
+                    </div>
+                </div>
+            </div>
+            <div class="adventureHeadGallery">
+                <!-- 大圖 -->
+                <div class="main-image">
+                    <img id="current" src="adventurepics/行程代訂/行程代訂1.jpg" alt="主圖片">
+                    <!-- 左右切換箭頭 -->
+                    <button class="arrow left" onclick="prevImage()">&#10094;</button>
+                    <button class="arrow right" onclick="nextImage()">&#10095;</button>
+                </div>
+                <!-- 縮圖 -->
+                <div class="thumbnails" id="thumbnailContainer">
+                    <img src="adventurepics/行程代訂/行程代訂1.jpg" alt="縮圖1" onclick="changeImage(0)">
+                    <img src="adventurepics/行程代訂/行程代訂2.jpg" alt="縮圖2" onclick="changeImage(1)">
+                    <img src="adventurepics/行程代訂/行程代訂3.jpg" alt="縮圖3" onclick="changeImage(2)">
+                    <img src="adventurepics/行程代訂/行程代訂4.jpg" alt="縮圖4" onclick="changeImage(3)">
+                    <img src="adventurepics/行程代訂/行程代訂5.jpg" alt="縮圖5" onclick="changeImage(4)">
+                    <img src="adventurepics/行程代訂/行程代訂6.jpg" alt="縮圖6" onclick="changeImage(5)">
+                    <img src="adventurepics/行程代訂/行程代訂7.jpg" alt="縮圖7" onclick="changeImage(6)">
+                    <img src="adventurepics/行程代訂/行程代訂8.jpg" alt="縮圖8" onclick="changeImage(7)">
+                </div>
+            </div>
+        </div>
+        <div class="adventureIntroduction">
+            <div class="advenIntroText">
+                <h2>活動介紹</h2>
+                <div class="advenIntroTextButton">
+                    <div class="buttonTime">
+                        <h3>時間</h3>
+                        <p>依需求安排</p>
+                    </div>
+                    <div class="buttonDifficulty">
+                        <h3>服務類型</h3>
+                        <p>非導覽代訂協助</p>
+                    </div>
+                </div>
+                <p class="advenIntroTextp">本服務提供專業協助，處理 <strong>入園許可、交通安排及住宿預訂</strong>，讓您輕鬆完成登山行程的前置準備，無須為繁瑣手續煩惱。</p>
+                <p class="advenIntroTextp">此服務適合希望自行登山的旅客，我們將協助您完成所有必要安排。注意：本服務為非導覽性質，不提供山岳導遊，但可協助完成所有行前預訂與許可申請。</p>
+            </div>
+        </div>
+        <div class="adventureDetail">
+            <div class="tab-buttons">
+                <button class="active" onclick="showTab(0)">集合地點</button>
+                <button onclick="showTab(1)">費用包含</button>
+                <button onclick="showTab(2)">安全規範</button>
+                <button onclick="showTab(3)">行前說明</button>
+                <button onclick="showTab(4)">餐食住宿</button>
+                <button onclick="showTab(5)">取消政策</button>
+            </div>
+
+            <div class="tab-content active">
+                <p>集合地點與接送方式將依您在台灣的位置安排。預訂時請提供您偏好的接送地點，可依需求安排往返登山口交通。</p>
+            </div>
+
+            <div class="tab-content">
+                <ul>
+                    <li>- 協助申請入山證及國家公園入園許可</li>
+                    <li>- 安排往返登山口交通（依出發地點客製報價）</li>
+                    <li>- 協助預訂山屋或山莊住宿</li>
+                    <li>- 依需求協助代訂餐食（可選葷食或素食，視實際供應為準）</li>
+                    <li>- 旅遊意外保險（專屬活動保險：意外身故／失能 NT$2,000,000，意外醫療 NT$200,000）</li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <p>所有安全安排皆依實際活動內容、地形條件及參加者需求進行客製化規劃，並提供相應的安全計畫、裝備建議以及嚮導安排。</p>
+                <p>將依活動技術難度與風險程度，視需求安排專業嚮導與支援人員。</p>
+            </div>
+            <div class="tab-content">
+                <p>行前資訊將依您選擇的活動內容提供，包括服裝建議、裝備準備、體能需求與集合細節。</p>
+                <p>所有最終安排將依您的需求與實際預訂狀況進行確認。</p>
+            </div>
+
+            <div class="tab-content">
+                <p>住宿與餐食將依個人需求以及所選路線或活動內容進行安排。</p>
+                <p>可依需求協助預訂山屋、旅宿與餐食，實際安排將視供應狀況而定。</p>
+            </div>
+
+            <div class="tab-content">
+                <h4>因天候取消或改期</h4>
+                <ul>
+                    <li>- 不可抗力因素：如陸上颱風警報、地震、寒流、豪雨特報（依中央氣象署公告）、道路封閉或主管機關限制導致無法出團，將扣除 5% 行政費後退款。</li>
+                    <li>- 天氣預報不佳：如持續降雨或冷鋒來襲可能影響行程品質，將進行綜合評估，最遲於出發前三日公告。若決定取消，將扣除 5% 行政費後退款。</li>
+                </ul>
+
+                <h4>個人因素取消</h4>
+                <ul>
+                    <li>- 出發前 14 天取消：扣除 5% 行政費後退款。</li>
+                    <li>- 出發前 8–13 天取消：扣除 20% 報名費用。</li>
+                    <li>- 出發前 3–7 天取消：扣除 30% 報名費用。</li>
+                    <li>- 出發前 2 天內取消：不予退費。</li>
+                </ul>
+
+                <h4>最低成團人數</h4>
+                <ul>
+                    <li>- 若未達最低成團人數而取消行程，參加者可選擇免費改期，或扣除 5% 行政費後退款。</li>
+                </ul>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="info">
+                <div class="infologo">
+                    <img src="logo_nontext.png" alt="logo" class="infologoimg">
+                </div>
+                <div class="infoleft">
+                    <h3 class="infoh3">顧客資訊</h3>
+                    <h3 class="infoh3">Customer Information</h3>
+                    <div class="infolefta">
+                        <a href="FooterRefundPolicy.html" class="infoa">Refund Policy 退費機制</a>
+                        <a href="FooterTermsConditions.html" class="infoa">Terms & Conditions 條款細則</a>
+                        <a href="FooterPrivacyPolicy.html" class="infoa">Privacy Policy 隱私政策</a>
+                    </div>
+                </div>
+                <div class="inforight">
+                    <h3 class="infoh3">台灣引路人有限公司</h3>
+                    <h3 class="infoh3">Taiwan Pathfinder</h3>
+                    <p class="infop">負責人:</p>
+                    <p class="infop">統一編號:</p>
+                    <p class="infop">LINE客服:</p>
+                    <p class="infop">地址:</p>
+                    <p class="infop">客服信箱:</p>
+                    <p class="infop">pathfinderintaiwan@gmail.com</p>
+                </div>
+            </div>
+            <div class="icon">
+                <a href="https://www.facebook.com/profile.php?id=61562608929140" target="_blank"><img src="icon/fb.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/pathfinderintaiwan" target="_blank"><img src="icon/ig.png" alt="Instagram"></a>
+                <a href="https://lin.ee/D1jlWHsF" target="_blank"><img src="icon/line.png" alt="Line"></a>
+                <a href="mailto:pathfinderintaiwan@gmail.com" target="_blank"><img src="icon/email.png" alt="Email"></a>
+            </div>
+        </div>
+    </div>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js">AOS.init({
+  // ─── 全域設定 ───
+  disable: false,                
+  startEvent: 'DOMContentLoaded', 
+  initClassName: 'aos-init',     
+  animatedClassName: 'aos-animate', 
+  useClassNames: false,          
+  disableMutationObserver: false,
+  debounceDelay: 50,             
+  throttleDelay: 99,             
+
+  offset: 120,                   
+  delay: 0,                      
+  duration: 400,                 
+  easing: 'ease',                
+  once: false,                   
+  mirror: false,                 
+  anchorPlacement: 'top-bottom', 
+});
+</script>
+<script>
+ AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // 照片清單
+		const images = [
+		    "adventurepics/行程代訂/行程代訂1.jpg",
+		    "adventurepics/行程代訂/行程代訂2.jpg",
+		    "adventurepics/行程代訂/行程代訂3.jpg",
+		    "adventurepics/行程代訂/行程代訂4.jpg",
+		    "adventurepics/行程代訂/行程代訂5.jpg",
+		    "adventurepics/行程代訂/行程代訂6.jpg",
+		    "adventurepics/行程代訂/行程代訂7.jpg",
+		    "adventurepics/行程代訂/行程代訂8.jpg"
+		];
+		
+		let currentIndex = 0;
+		const currentImage = document.getElementById("current");
+		const thumbs = document.querySelectorAll(".thumbnails img");
+		const thumbnailContainer = document.getElementById("thumbnailContainer");
+		let timer;
+
+
+
+    // 切換大圖
+    function changeImage(index) {
+      currentIndex = index;
+      currentImage.src = images[currentIndex];
+
+      // 更新縮圖樣式
+      thumbs.forEach(img => img.classList.remove("active"));
+      thumbs[currentIndex].classList.add("active");
+
+      // 縮圖自動捲動到可見區
+      //thumbs[currentIndex].scrollIntoView({
+        //behavior: "smooth",
+        //block: "nearest"
+      //});
+
+      resetTimer();
+    }
+
+    // 上一張
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      changeImage(currentIndex);
+    }
+
+    // 下一張
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      changeImage(currentIndex);
+    }
+
+    // 自動播放
+    function autoPlay() {
+      nextImage();
+    }
+
+    // 重置計時器
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(autoPlay, 3000);
+    }
+
+    // 初始狀態
+    changeImage(0);
+    timer = setInterval(autoPlay, 3000);
+</script>
+<script>
+  function showTab(index) {
+    const buttons = document.querySelectorAll(".tab-buttons button");
+    const contents = document.querySelectorAll(".tab-content");
+
+    buttons.forEach((btn, i) => {
+      btn.classList.toggle("active", i === index);
+    });
+
+    contents.forEach((content, i) => {
+      content.classList.toggle("active", i === index);
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玉山主峰健行 | Taiwan Pathfinder</title>
+    <link rel="stylesheet" href="oneAdventurePage.css">
+    <link rel="stylesheet" href="headandfoot.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="Wrap">
+        <div class="Header">
+            <div class="headertext">
+                <a class="headertexta" href="homeZN.html">首頁</a>
+                <a class="newopen" href="https://linktr.ee/pathfinderintaiwan" target="_blank" >立即報名</a>
+                <a class="headertexta" href="aboutusZN.html">關於我們</a>
+                <a href="home.html"><img class="logo" src="logo.png" alt="logo"></a>
+                <a class="headertextanow" href="adventureZN.html">活動體驗</a>
+                <a class="headertexta" href="ContactZN.html">聯絡我們</a>
+                <a class="headertextalan" href="adven-Yushan.html">English</a>
+            </div>
+            <div class="smartphoneheader">
+                <img class="logo" src="logo.png" alt="logo">
+                <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    選單
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="homeZN.html">首頁</a></li>
+                    <li><a class="dropdown-item" href="https://linktr.ee/pathfinderintaiwan" target="_blank" >立即報名</a></li>
+                    <li><a class="dropdown-item" href="aboutusZN.html">關於我們</a></li>
+                    <li><a class="dropdown-item" href="adventureZN.html">活動體驗</a></li>
+                    <li><a class="dropdown-item" href="ContactZN.html">聯絡我們</a></li>
+                    <li><a class="dropdown-item" href="adven-Yushan.html">English</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <div class="adventureHead">
+            <div class="adventureHeadText">
+                <h1>玉山主峰健行</h1>
+                <p><strong>為期兩天兩夜的雪山主峰與東峰冒險之旅！</strong> 作為台灣第二高峰，雪山擁有壯麗的冰斗地形、高山景觀與遼闊的視野。由專業嚮導帶領與完善的行程安排，讓你無需煩惱繁瑣細節，也能輕鬆體驗高海拔登山的魅力。</p>
+                <div class="advenIntroTextButton">
+                    <div class="buttonPrice">
+                        <h3>價格</h3>
+                        <p>NT.9900</p>
+                    </div>
+                </div>
+            </div>
+            <div class="adventureHeadGallery">
+                <!-- 大圖 -->
+                <div class="main-image">
+                    <img id="current" src="adventurepics/玉山/玉山1.jpg" alt="main image">
+                <!-- 左右切換箭頭 -->
+                    <button class="arrow left" onclick="prevImage()">&#10094;</button>
+                    <button class="arrow right" onclick="nextImage()">&#10095;</button>
+                </div>
+                <!-- 縮圖 -->
+                <div class="thumbnails" id="thumbnailContainer">
+                    <img src="adventurepics/玉山/玉山1.jpg" alt="thumb1" onclick="changeImage(0)">
+                    <img src="adventurepics/玉山/玉山2.jpg" alt="thumb2" onclick="changeImage(1)">
+                    <img src="adventurepics/玉山/玉山3.jpg" alt="thumb3" onclick="changeImage(2)">
+                    <img src="adventurepics/玉山/玉山4.jpg" alt="thumb4" onclick="changeImage(3)">
+                    <img src="adventurepics/玉山/玉山5.jpg" alt="thumb4" onclick="changeImage(4)">
+                    <img src="adventurepics/玉山/玉山6.jpg" alt="thumb4" onclick="changeImage(5)">
+                    <img src="adventurepics/玉山/玉山7.jpg" alt="thumb4" onclick="changeImage(6)">
+                    <img src="adventurepics/玉山/玉山8.jpg" alt="thumb4" onclick="changeImage(7)">
+                <!-- 如果要更多圖片可以繼續加 -->
+                </div>
+            </div>
+        </div>
+        <div class="adventureIntroduction">
+            <div class="advenIntroText">
+                <h2>行程介紹</h2>
+                <div class="advenIntroTextButton">
+                    <div class="buttonTime">
+                        <h3>行程天數</h3>
+                        <p>2天2夜</p>
+                    </div>
+                    <div class="buttonDifficulty">
+                        <h3>難度等級</h3>
+                        <p>中級</p>
+                    </div>
+                </div>
+                <p class="advenIntroTextp">在台灣一定要體驗的一件事，就是登上<strong>玉山主峰</strong>！這趟兩天一夜的旅程，將帶你穿越變化豐富的地貌，從雲霧繚繞的森林步道到開闊的高山稜線，最終站上台灣最高點，迎接日出的金色光芒。</p>
+                <p class="advenIntroTextp">這趟旅程不僅是一次登山挑戰，更是一場深刻的自我探索，在壯闊的山岳之間，留下難以忘懷的回憶。</p>
+            </div>
+        </div>
+        <div class="adventureDetail">
+            <div class="tab-buttons">
+                <button class="active" onclick="showTab(0)">集合地點</button>
+                <button onclick="showTab(1)">價格包含</button>
+                <button onclick="showTab(2)">安全政策</button>
+                <button onclick="showTab(3)">行前須知</button>
+                <button onclick="showTab(4)">餐食住宿</button>
+                <button onclick="showTab(5)">取消規定</button>
+            </div>
+
+            <div class="tab-content active">
+		            <p>於高鐵台中站集合，包含往返登山口的接駁交通。</p></div>
+            <div class="tab-content"><ul>
+                <li>- 專業導覽員，精通中英文雙語</li>
+                <li>- 高鐵台中站往返塔塔加交通接駁</li>
+                <li>- 東埔山莊及排雲山莊住宿</li>
+                <li>- 3 餐（第 1 天：晚餐；第 2 天：早早餐、早餐，不包含東埔山莊晚餐及隔天早餐）</li>
+                <li>- 國家公園入園許可及保險</li>
+            </ul></div>
+            <div class="tab-content"><ul>
+                <li>- 每位參加者均享有特定活動保險：意外身故與失能新台幣 200 萬元，傷害醫療費用新台幣 20 萬元</li>
+                <li>- 導遊與參加者比例至少 1:4，導遊皆受過急救及事故處理訓練</li>
+                <li>- 提供所有安全裝備，參加者必須全程遵守導遊指示</li>
+            </ul></div>
+            <div class="tab-content"><ul>
+                <li>- 成功報名後，將提供完整的登山裝備清單。請務必準備齊全，如有任何疑問，歡迎隨時聯絡我們。</li>
+                <li>- 請攜帶個人所需藥物。我們建議在行程前保持規律運動，以確保良好體能。</li>
+            </ul></div>
+            <div class="tab-content"><p>主要餐食包含第 1 天晚餐，以及第 2 天早早餐及早餐。參加者需自備零食與午餐，以及東埔山莊晚餐及隔天早餐。如有特殊飲食需求、過敏或其他需求，請告知，我們將盡力安排。</p>
+                <p>住宿安排在 <strong>東埔山莊</strong> 與 <strong>排雲山莊</strong>，提供睡袋。</p></div>
+            <div class="tab-content">
+                <h4>因天氣取消或改期</h4>
+                <ul>
+                    <li>- 不可抗因素：若遇活動目的地陸上颱風警報、地震、寒流、豪雨特報（定義請參照中央氣象署）、道路封閉或管理單位限制等不可抗因素，致使無法出團，將扣除活動費用 5% 行政手續費後退費。</li>
+                    <li>- 天氣預報不佳：如陰雨綿綿、冷氣團來襲等可能影響活動品質，將由我方綜合評估，最遲於出發日前 3 日公告是否出團。如評估後取消出團，將扣除活動費用 5% 行政手續費後退費。</li>
+                </ul>
+
+                <h4>個人因素取消</h4>
+                <ul>
+                    <li>- 出發前 14 天取消：扣除活動費用 5% 行政手續費後退費。</li>
+                    <li>- 出發前 8–13 天取消：扣除 20% 必要支出後退費。</li>
+                    <li>- 出發前 3–7 天取消：扣除 30% 必要支出後退費。</li>
+                    <li>- 出發前 2 天內取消：不退費。</li>
+                </ul>
+
+                <h4>成團人數規定</h4>
+                <ul>
+                    <li>- 若未達成團人數而確定不出團，參加者可選擇免費延期，或扣除活動費用 5% 行政手續費後退費。</li>
+                </ul>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="info">
+                <div class="infologo">
+                    <img src="logo_nontext.png" alt="logo" class="infologoimg">
+                </div>
+                <div class="infoleft">
+                    <h3 class="infoh3">顧客資訊</h3>
+                    <h3 class="infoh3">Customer Information</h3>
+                    <div class="infolefta">
+                        <a href="FooterRefundPolicy.html" class="infoa">Refund Policy 退費機制</a>
+                        <a href="FooterTermsConditions.html" class="infoa">Terms & Conditions 條款細則</a>
+                        <a href="FooterPrivacyPolicy.html" class="infoa">Privacy Policy 隱私政策</a>
+                    </div>
+                </div>
+                <div class="inforight">
+                    <h3 class="infoh3">台灣引路人有限公司</h3>
+                    <h3 class="infoh3">Taiwan Pathfinder</h3>
+                    <p class="infop">負責人:</p>
+                    <p class="infop">統一編號:</p>
+                    <p class="infop">LINE客服:</p>
+                    <p class="infop">地址:</p>
+                    <p class="infop">客服信箱:</p>
+                    <p class="infop">pathfinderintaiwan@gmail.com</p>
+                </div>
+            </div>
+            <div class="icon">
+                <a href="https://www.facebook.com/profile.php?id=61562608929140" target="_blank"><img src="icon/fb.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/pathfinderintaiwan" target="_blank"><img src="icon/ig.png" alt="Instagram"></a>
+                <a href="https://lin.ee/D1jlWHsF" target="_blank"><img src="icon/line.png" alt="Line"></a>
+                <a href="mailto:pathfinderintaiwan@gmail.com" target="_blank"><img src="icon/email.png" alt="Email"></a>
+            </div>
+        </div>
+    </div>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js">AOS.init({
+  // ─── 全域設定 ───
+  disable: false,                
+  startEvent: 'DOMContentLoaded', 
+  initClassName: 'aos-init',     
+  animatedClassName: 'aos-animate', 
+  useClassNames: false,          
+  disableMutationObserver: false,
+  debounceDelay: 50,             
+  throttleDelay: 99,             
+
+  offset: 120,                   
+  delay: 0,                      
+  duration: 400,                 
+  easing: 'ease',                
+  once: false,                   
+  mirror: false,                 
+  anchorPlacement: 'top-bottom', 
+});
+</script>
+<script>
+ AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // 照片清單
+    const images = ["adventurepics/玉山/玉山1.jpg", "adventurepics/玉山/玉山2.jpg", "adventurepics/玉山/玉山3.jpg", "adventurepics/玉山/玉山4.jpg", "adventurepics/玉山/玉山5.jpg", "adventurepics/玉山/玉山6.jpg", "adventurepics/玉山/玉山7.jpg", "adventurepics/玉山/玉山8.jpg"];
+    let currentIndex = 0;
+    const currentImage = document.getElementById("current");
+    const thumbs = document.querySelectorAll(".thumbnails img");
+    const thumbnailContainer = document.getElementById("thumbnailContainer");
+    let timer;
+
+
+
+    // 切換大圖
+    function changeImage(index) {
+      currentIndex = index;
+      currentImage.src = images[currentIndex];
+
+      // 更新縮圖樣式
+      thumbs.forEach(img => img.classList.remove("active"));
+      thumbs[currentIndex].classList.add("active");
+
+      // 縮圖自動捲動到可見區
+      //thumbs[currentIndex].scrollIntoView({
+        //behavior: "smooth",
+        //block: "nearest"
+      //});
+
+      resetTimer();
+    }
+
+    // 上一張
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      changeImage(currentIndex);
+    }
+
+    // 下一張
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      changeImage(currentIndex);
+    }
+
+    // 自動播放
+    function autoPlay() {
+      nextImage();
+    }
+
+    // 重置計時器
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(autoPlay, 3000);
+    }
+
+    // 初始狀態
+    changeImage(0);
+    timer = setInterval(autoPlay, 3000);
+</script>
+<script>
+  function showTab(index) {
+    const buttons = document.querySelectorAll(".tab-buttons button");
+    const contents = document.querySelectorAll(".tab-content");
+
+    buttons.forEach((btn, i) => {
+      btn.classList.toggle("active", i === index);
+    });
+
+    contents.forEach((content, i) => {
+      content.classList.toggle("active", i === index);
+    });
+  }
+</script>
+</body>
+</html>
