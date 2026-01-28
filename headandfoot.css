@@ -225,6 +225,9 @@ h2{
     font-size: 12px;
     line-height: 120%;
 }
+.infop a{
+    color: black;
+}
 .icon{
     display: flex;
     flex-direction: row;
