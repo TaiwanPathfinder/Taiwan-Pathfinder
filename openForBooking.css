@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #0f0f0f;
+    color: #fff;
+    text-align: center;
+}
+
+.carrd{
+    margin-top: 60px;
+}
+
+@media (max-width: 480px) {
+    .linktree {
+    padding: 30px 15px;
+    }
+}
