@@ -234,7 +234,32 @@
     font-weight: bolder;
     margin-left: 20px;
     margin-right: 20px;
-}                     
+}          
+.buttonBook{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background-color: white;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 2px solid red;
+}
+.buttonBook h3{
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 10px;
+    color: red;
+}
+.buttonBook a{
+    text-decoration: none;
+}   
+.buttonBook a:hover{
+    text-decoration: underline;
+    text-decoration-color: red;
+}    
 .advenIntroTextp{
     margin-left: 10%;
     margin-right: 10%;
