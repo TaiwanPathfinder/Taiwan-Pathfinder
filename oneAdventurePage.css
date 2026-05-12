@@ -235,7 +235,7 @@
     margin-left: 20px;
     margin-right: 20px;
 }          
-.buttonBooking{
+.buttonBook{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -247,14 +247,14 @@
     padding-right: 20px;
     border: 2px solid red;
 }
-.buttonBooking a{
+.buttonBook a{
     text-decoration: none;
     font-size: 20px;
     font-weight: bolder;
     margin: 10px;
     color: red;
 }   
-.buttonBooking a:hover{
+.buttonBook a:hover{
     text-decoration: underline;
     text-decoration-color: red;
 }    
