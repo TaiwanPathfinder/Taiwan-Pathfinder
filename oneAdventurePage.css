@@ -247,14 +247,12 @@
     padding-right: 20px;
     border: 2px solid red;
 }
-.buttonBook h3{
+.buttonBook a{
+    text-decoration: none;
     font-size: 20px;
     font-weight: bolder;
     margin: 10px;
     color: red;
-}
-.buttonBook a{
-    
 }   
 .buttonBook a:hover{
     text-decoration: underline;
