@@ -1,0 +1,106 @@
+/*-----單頁導覽-----*/
+.Wrap{
+    margin: 0 auto;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    border: solid 1px black;
+}
+.Sections{
+    width: 90%;
+    padding-top: 100px;
+}
+
+nav {
+    position: fixed;
+    width: 200px;
+    height: 30vh;
+    background: #ffffff;
+    padding-bottom: 100px;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 1em;
+    color: #333;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+main {
+    margin-left: 200px;
+    padding: 2em;
+}
+
+section {
+    height: 100vh;
+    border-bottom: 1px solid #ffffff;
+}
+
+section:nth-child(odd) {
+    background: #ffffff;
+}
+
+section:nth-child(even) {
+    background: #ffffff;
+}
+
+.collaPic {
+    margin-top: 100px;
+    max-width: 100%;
+    height: auto;
+}
+
+/*-----暫時頁刪除時刪除以下
+
+h1{
+    font-size: 20px;
+    margin-top: 200px;
+    margin-left: 20px;
+}
+.working{
+    height: 80vh;
+}-----*/
+
+
+@media (max-width: 992px){
+
+    .Sections nav{
+        display:none;
+    }
+
+    main{
+        margin-left:0;
+        padding:0;
+    }
+
+    .Sections{
+        width:100%;
+    }
+}
+
+@media (max-width:767px){
+
+    .Sections nav{
+        display:none;
+    }
+
+    main{
+        margin:0;
+        padding:0;
+    }
+
+    section{
+        height:auto;
+    }
+
+    .collaPic{
+        width:100%;
+        height:auto;
+        display:block;
+    }
+}
