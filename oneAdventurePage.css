@@ -393,11 +393,8 @@
 
 /*--Booking Form Embed--*/
 .bookingFormInner{
-    background-color: white;
-    border-radius: 30px;
     max-width: 900px;
     margin: 20px auto 0;
-    padding: 30px;
     text-align: center;
 }
 .bookingFormInner h2{
@@ -409,7 +406,7 @@
 }
 .bookingFormFrameWrap{
     box-shadow: 0px 4px 12px 1px #0004;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     line-height: 0;
 }
 .bookingFormFrameWrap iframe{
