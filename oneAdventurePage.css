@@ -362,11 +362,29 @@
     max-width: 1200px;
 }
 .serviceCard{
+    position: relative;
     background-color: white;
     border-radius: 20px;
     padding: 25px 30px;
+    margin-top: 16px;
     flex: 1 1 0;
     box-shadow: 0px 4px 10px 1px #0003;
+}
+.serviceNum{
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: orange;
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+    box-shadow: 0px 3px 6px 1px #0004;
 }
 .serviceCard h3{
     font-size: 22px;
