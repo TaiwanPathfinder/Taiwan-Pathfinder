@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>龍洞新手攀岩體驗｜Taiwan Pathfinder</title>
+    <link rel="stylesheet" href="/oneAdventurePage.css">
+    <link rel="stylesheet" href="/headandfoot.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDR9E7XZP0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JDR9E7XZP0');
+    </script>   
+</head>
+
+<body>
+    <div class="Wrap">
+        <div class="Header">
+            <div class="headertext">
+                <a class="headertexta" href="/homeZN/">首頁</a>
+                <a class="newopen" href="/openForBookingZN/">立即報名</a>
+                <a class="headertexta" href="/aboutusZN/">關於我們</a>
+                <a href="/homeZN/"><img class="logo" src="/logo.png" alt="logo"></a>
+                <a class="headertextanow" href="/adventureZN/">活動體驗</a>
+                <a class="headertexta" href="/ContactZN/">聯絡我們</a>
+                <a class="headertexta" href="/CollaborateZN/">企業合作</a>
+                <a class="headertextalan" href="/adven-longdongBeginnerClimbing/">English</a>
+            </div>
+            <div class="smartphoneheader">
+                <img class="logo" src="/logo.png" alt="logo">
+                <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    選單
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="/homeZN/">首頁</a></li>
+                    <li><a class="dropdown-item" href="/openForBookingZN/" >立即報名</a></li>
+                    <li><a class="dropdown-item" href="/aboutusZN/">關於我們</a></li>
+                    <li><a class="dropdown-item" href="/adventureZN/">活動體驗</a></li>
+                    <li><a class="dropdown-item" href="/ContactZN/">聯絡我們</a></li>
+                    <li><a class="dropdown-item" href="/CollaborateZN/">企業合作</a></li>
+                    <li><a class="dropdown-item" href="/adven-longdongBeginnerClimbing/">English</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <div class="adventureHead">
+            <div class="adventureHeadText">
+                <h1>龍洞新手攀岩體驗</h1>
+                <p><strong>在海岸岩壁上，體驗你的第一次戶外攀岩</strong></p>
+                <p>想嘗試戶外攀岩，卻不知道從哪裡開始嗎？</p>
+                <p>在龍洞，我們用安全、有引導、又輕鬆的方式，帶你走進真正的戶外岩場。</p>
+                <p>活動由經驗豐富的專業嚮導全程帶領，你不需要有任何攀岩經驗，只要跟著指引、專心享受在岩壁上移動的過程，感受身體與岩石之間的對話。</p>
+                <div class="advenIntroTextButton">
+                    <div class="buttonPrice">
+                        <h3>價格</h3>
+                        <p>NT.3000</p>
+                    </div>
+                </div>
+                <div class="buttonBook">
+                    <a target=" _blank" href="/openForBooking/">我要報名</a>
+                </div>
+            </div>
+            <div class="adventureHeadGallery">
+                <!-- 大圖 -->
+                <div class="main-image">
+                    <img id="current" src="/adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing1.png" alt="主圖">
+                <!-- 左右切換箭頭 -->
+                    <button class="arrow left" onclick="prevImage()">&#10094;</button>
+                    <button class="arrow right" onclick="nextImage()">&#10095;</button>
+                </div>
+                <!-- 縮圖 -->
+                <div class="thumbnails" id="thumbnailContainer">
+                    <img src="/adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing1.png" alt="thumb1" onclick="changeImage(0)">
+                    <img src="/adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing2.jpg" alt="thumb2" onclick="changeImage(1)">
+                    <img src="/adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing3.JPG" alt="thumb3" onclick="changeImage(2)">
+                    <img src="/adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing4.JPG" alt="thumb4" onclick="changeImage(3)">
+                    <img src="/adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing5.JPG" alt="thumb5" onclick="changeImage(4)">
+                    <img src="/adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing6.jpg" alt="thumb6" onclick="changeImage(5)">
+                    <img src="/adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing7.jpg" alt="thumb7" onclick="changeImage(6)">
+                    <img src="/adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing8.jpg" alt="thumb8" onclick="changeImage(7)">
+                </div>
+            </div>
+        </div>
+        <div class="adventureIntroduction">
+            <div class="advenIntroText">
+                <h2>行程介紹</h2>
+                <div class="advenIntroTextButton">
+                    <div class="buttonTime">
+                        <h3>行程天數</h3>
+                        <p>半日（約 5–6 小時）</p>
+                    </div>
+                    <div class="buttonDifficulty">
+                        <h3>難度</h3>
+                        <p>新手友善</p>
+                    </div>
+                </div>
+                <p class="advenIntroTextp">龍洞是台灣東北角最具代表性的攀岩地之一。站在沿海峭壁上，腳下是延伸的岩壁與海岸線，海風、浪聲與遼闊視野交織，讓這不只是一項運動，更是一場貼近自然的冒險體驗。</p>
+                <p class="advenIntroTextp">不需要追求難度，也不必擔心技巧。本體驗專為初學者設計，讓你能在安全的環境中，輕鬆踏出戶外攀岩的第一步，享受站上岩壁的純粹樂趣。</p>
+            </div>
+        </div>
+        <div class="adventureDetail">
+            <div class="tab-buttons">
+                <button class="active" onclick="showTab(0)">集合地點</button>
+                <button onclick="showTab(1)">價格包含</button>
+                <button onclick="showTab(2)">安全政策</button>
+                <button onclick="showTab(3)">行前須知</button>
+                <button onclick="showTab(4)">取消政策</button>
+            </div>
+
+            <div class="tab-content active">
+                <ul>
+                    <li>- 上午 9:00 和美國小，或其他龍洞停車場（實際位置將於活動前三天的確認信中提供）。</li>
+                    <li>- 亦可以加購台北南港往返接駁，每人將額外收取500元接駁費用。</li>
+                </ul>
+            </div>
+
+            <div class="tab-content">
+                <ul>
+                    <li>- 攀岩裝備（岩盔、吊帶、岩鞋、粉袋）</li>
+                    <li>- 專業嚮導服務與英語服務</li>
+                    <li>- 特定活動險</li>
+                </ul>
+            </div>
+
+            <div class="tab-content">
+                <ul>
+                    <li>- 為每位參加者提供特定活動險：NT$200萬意外身故及失能保險金，NT$20萬實支實付傷害醫療保險金</li>
+                    <li>- 嚮導皆具備急救與事故處理能力</li>
+                    <li>- 嚮導與參加者比例不超過 1:6，確保活動品質與安全標準</li>
+                    <li>- 我們提供全套裝備，並請配合嚮導指示確保活動安全</li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <ul>
+                    <li>- 請穿著舒適透氣的戶外服裝，並攜帶防風或防雨外套，以應對海邊多變的天氣。</li>
+                    <li>- 建議準備約 2 公升飲用水、午餐，以及防曬用品（防曬乳、帽子、太陽眼鏡等）。</li>
+                    <li>- 若有自用攀岩鞋建議攜帶，穿起來會更合腳；我們也提供攀岩鞋，但尺寸可能無法完全符合。</li>
+                    <li>- 所有必要的攀岩裝備（吊帶、岩盔等）及活動保險皆由我們提供，讓您輕鬆無後顧之憂。</li>
+                    <li>- 若有任何特殊需求或健康狀況，請在報名時提前告知，我們才能為您提供更妥善的安排。</li>
+                    <li>- 為了讓您能安心準備，出發前三天我們會提供完整行前通知，包含天氣建議與最後提醒。</li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <h4>因天氣取消或改期</h4>
+                <ul>
+                    <li>- 不可抗因素：若遇活動目的地陸上颱風警報、地震、寒流、豪雨特報（定義請參照中央氣象署）、道路封閉或管理單位限制等不可抗因素，致使無法出團，將扣除活動費用 5% 行政手續費後退費。</li>
+                    <li>- 天氣預報不佳：如陰雨綿綿、冷氣團來襲等可能影響活動品質，將由我方綜合評估，最遲於出發日前 3 日公告是否出團。如評估後取消出團，將扣除活動費用 5% 行政手續費後退費。</li>
+                </ul>
+
+                <h4>個人因素取消</h4>
+                <ul>
+                    <li>- 出發前 14 天取消：扣除活動費用 5% 行政手續費後退費。</li>
+                    <li>- 出發前 8–13 天取消：扣除 20% 必要支出後退費。</li>
+                    <li>- 出發前 3–7 天取消：扣除 30% 必要支出後退費。</li>
+                    <li>- 出發前 2 天內取消：不退費。</li>
+                </ul>
+
+                <h4>成團人數規定</h4>
+                <ul>
+                    <li>- 若未達成團人數而確定不出團，參加者可選擇免費延期，或扣除活動費用 5% 行政手續費後退費。</li>
+                </ul>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="info">
+                <div class="infologo">
+                    <img src="/logo_nontext.png" alt="logo" class="infologoimg">
+                </div>
+                <div class="infoleft">
+                    <h3 class="infoh3">顧客資訊</h3>
+                    <h3 class="infoh3">Customer Information</h3>
+                    <div class="infolefta">
+                        <a href="/FooterRefundPolicy/" class="infoa">Refund Policy 退費機制</a>
+                        <a href="/FooterTermsConditions/" class="infoa">Terms & Conditions 條款細則</a>
+                        <a href="/FooterPrivacyPolicy/" class="infoa">Privacy Policy 隱私政策</a>
+                    </div>
+                </div>
+                <div class="inforight">
+                    <h3 class="infoh3">台灣引路人有限公司</h3>
+                    <h3 class="infoh3">Taiwan Pathfinder</h3>
+                    <p class="infop">Unified Business Number 統一編號:62250946</p>
+                    <p class="infop">LINE Customer Service Line客服:<a href="https://lin.ee/D1jlWHsF">@254yakyj</a></p>
+                    <p class="infop">Address 地址:新北市三芝區楓林三街11號</p>
+                    <p class="infop">Email 客服信箱:</p>
+                    <p class="infop"><a href="mailto:pathfinderintaiwan@gmail.com">pathfinderintaiwan@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="icon">
+                <a href="https://www.facebook.com/profile.php?id=61562608929140" target="_blank"><img src="/icon/fb.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/pathfinderintaiwan" target="_blank"><img src="/icon/ig.png" alt="Instagram"></a>
+                <a href="https://lin.ee/D1jlWHsF" target="_blank"><img src="/icon/line.png" alt="Line"></a>
+                <a href="mailto:pathfinderintaiwan@gmail.com" target="_blank"><img src="/icon/email.png" alt="Email"></a>
+            </div>
+        </div>
+    </div>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js">AOS.init({
+  // ─── 全域設定 ───
+  disable: false,                
+  startEvent: 'DOMContentLoaded', 
+  initClassName: 'aos-init',     
+  animatedClassName: 'aos-animate', 
+  useClassNames: false,          
+  disableMutationObserver: false,
+  debounceDelay: 50,             
+  throttleDelay: 99,             
+
+  offset: 120,                   
+  delay: 0,                      
+  duration: 400,                 
+  easing: 'ease',                
+  once: false,                   
+  mirror: false,                 
+  anchorPlacement: 'top-bottom', 
+});
+</script>
+<script>
+ AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // 照片清單
+		const images = [
+	    "adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing1.png",
+	    "adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing2.jpg",
+	    "adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing3.JPG",
+	    "adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing4.JPG",
+	    "adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing5.JPG",
+	    "adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing6.jpg",
+	    "adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing7.jpg",
+	    "adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing8.jpg"
+		];
+
+		let currentIndex = 0;
+		const currentImage = document.getElementById("current");
+		const thumbs = document.querySelectorAll(".thumbnails img");
+		const thumbnailContainer = document.getElementById("thumbnailContainer");
+		let timer;
+
+
+    // 切換大圖
+    function changeImage(index) {
+      currentIndex = index;
+      currentImage.src = images[currentIndex];
+
+      // 更新縮圖樣式
+      thumbs.forEach(img => img.classList.remove("active"));
+      thumbs[currentIndex].classList.add("active");
+
+      // 縮圖自動捲動到可見區
+      //thumbs[currentIndex].scrollIntoView({
+        //behavior: "smooth",
+        //block: "nearest"
+      //});
+
+      resetTimer();
+    }
+
+    // 上一張
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      changeImage(currentIndex);
+    }
+
+    // 下一張
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      changeImage(currentIndex);
+    }
+
+    // 自動播放
+    function autoPlay() {
+      nextImage();
+    }
+
+    // 重置計時器
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(autoPlay, 3000);
+    }
+
+    // 初始狀態
+    changeImage(0);
+    timer = setInterval(autoPlay, 3000);
+</script>
+<script>
+  function showTab(index) {
+    const buttons = document.querySelectorAll(".tab-buttons button");
+    const contents = document.querySelectorAll(".tab-content");
+
+    buttons.forEach((btn, i) => {
+      btn.classList.toggle("active", i === index);
+    });
+
+    contents.forEach((content, i) => {
+      content.classList.toggle("active", i === index);
+    });
+  }
+</script>
+</body>
+</html>
