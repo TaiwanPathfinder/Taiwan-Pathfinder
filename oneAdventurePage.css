@@ -411,15 +411,13 @@
     margin-bottom: 20px;
 }
 .bookingFormFrameWrap{
-    border-radius: 20px;
-    overflow: hidden;
     box-shadow: 0px 4px 12px 1px #0004;
     margin-bottom: 20px;
+    line-height: 0;
 }
 .bookingFormFrameWrap iframe{
     width: 100%;
     height: 900px;
-    border: none;
     display: block;
 }
 @media (max-width:767px){
