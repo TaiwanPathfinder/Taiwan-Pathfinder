@@ -25,14 +25,14 @@
                 <a class="headertexta" href="/homeZN/">首頁</a>
                 <a class="newopen" href="/openForBookingZN/">立即報名</a>
                 <a class="headertexta" href="/aboutusZN/">關於我們</a>
-                <a href="/homeZN/"><img class="logo" src="/logo.png" alt="logo"></a>
+                <a href="/homeZN/"><img width="1768" height="838" class="logo" src="/logo.png" alt="logo"></a>
                 <a class="headertextanow" href="/adventureZN/">活動體驗</a>
                 <a class="headertexta" href="/ContactZN/">聯絡我們</a>
                 <a class="headertexta" href="/CollaborateZN/">企業合作</a>
                 <a class="headertextalan" href="/adven-0-580/">English</a>
             </div>
             <div class="smartphoneheader">
-                <img class="logo" src="/logo.png" alt="logo">
+                <img width="1768" height="838" class="logo" src="/logo.png" alt="logo">
                 <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     選單
@@ -63,21 +63,21 @@
             <div class="adventureHeadGallery">
                 <!-- 大圖 -->
                 <div class="main-image">
-                    <img id="current" src="/adventurepics/0-580/0-580 1.jpg" alt="main image">
+                    <img width="1477" height="1108" id="current" src="/adventurepics/0-580/0-580 1.jpg" alt="main image">
                     <!-- 左右切換箭頭 -->
                     <button class="arrow left" onclick="prevImage()">&#10094;</button>
                     <button class="arrow right" onclick="nextImage()">&#10095;</button>
                 </div>
                 <!-- 縮圖 -->
                 <div class="thumbnails" id="thumbnailContainer">
-                    <img src="/adventurepics/0-580/0-580 1.jpg" alt="thumb1" onclick="changeImage(0)">
-                    <img src="/adventurepics/0-580/0-580 2.jpg" alt="thumb2" onclick="changeImage(1)">
-                    <img src="/adventurepics/0-580/0-580 3.jpg" alt="thumb3" onclick="changeImage(2)">
-                    <img src="/adventurepics/0-580/0-580 4.jpg" alt="thumb4" onclick="changeImage(3)">
-                    <img src="/adventurepics/0-580/0-580 5.jpg" alt="thumb5" onclick="changeImage(4)">
-                    <img src="/adventurepics/0-580/0-580 6.jpg" alt="thumb6" onclick="changeImage(5)">
-                    <img src="/adventurepics/0-580/0-580 7.jpg" alt="thumb7" onclick="changeImage(6)">
-                    <img src="/adventurepics/0-580/0-580 8.jpg" alt="thumb8" onclick="changeImage(7)">
+                    <img loading="lazy" width="1477" height="1108" src="/adventurepics/0-580/0-580 1.jpg" alt="thumb1" onclick="changeImage(0)">
+                    <img loading="lazy" width="1446" height="1920" src="/adventurepics/0-580/0-580 2.jpg" alt="thumb2" onclick="changeImage(1)">
+                    <img loading="lazy" width="964" height="1280" src="/adventurepics/0-580/0-580 3.jpg" alt="thumb3" onclick="changeImage(2)">
+                    <img loading="lazy" width="1365" height="2048" src="/adventurepics/0-580/0-580 4.jpg" alt="thumb4" onclick="changeImage(3)">
+                    <img loading="lazy" width="1108" height="1477" src="/adventurepics/0-580/0-580 5.jpg" alt="thumb5" onclick="changeImage(4)">
+                    <img loading="lazy" width="1536" height="2730" src="/adventurepics/0-580/0-580 6.jpg" alt="thumb6" onclick="changeImage(5)">
+                    <img loading="lazy" width="1477" height="1108" src="/adventurepics/0-580/0-580 7.jpg" alt="thumb7" onclick="changeImage(6)">
+                    <img loading="lazy" width="964" height="1280" src="/adventurepics/0-580/0-580 8.jpg" alt="thumb8" onclick="changeImage(7)">
                 </div>
             </div>
         </div>
@@ -167,7 +167,7 @@
         <div class="Footer">
             <div class="info">
                 <div class="infologo">
-                    <img src="/logo_nontext.png" alt="logo" class="infologoimg">
+                    <img loading="lazy" width="529" height="807" src="/logo_nontext.png" alt="logo" class="infologoimg">
                 </div>
                 <div class="infoleft">
                     <h3 class="infoh3">顧客資訊</h3>
@@ -189,15 +189,17 @@
                 </div>
             </div>
             <div class="icon">
-                <a href="https://www.facebook.com/profile.php?id=61562608929140" target="_blank"><img src="/icon/fb.png" alt="Facebook"></a>
-                <a href="https://www.instagram.com/pathfinderintaiwan" target="_blank"><img src="/icon/ig.png" alt="Instagram"></a>
-                <a href="https://lin.ee/D1jlWHsF" target="_blank"><img src="/icon/line.png" alt="Line"></a>
-                <a href="mailto:pathfinderintaiwan@gmail.com" target="_blank"><img src="/icon/email.png" alt="Email"></a>
+                <a href="https://www.facebook.com/profile.php?id=61562608929140" target="_blank"><img loading="lazy" width="512" height="512" src="/icon/fb.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/pathfinderintaiwan" target="_blank"><img loading="lazy" width="512" height="512" src="/icon/ig.png" alt="Instagram"></a>
+                <a href="https://lin.ee/D1jlWHsF" target="_blank"><img loading="lazy" width="512" height="512" src="/icon/line.png" alt="Line"></a>
+                <a href="mailto:pathfinderintaiwan@gmail.com" target="_blank"><img loading="lazy" width="512" height="512" src="/icon/email.png" alt="Email"></a>
             </div>
         </div>
     </div>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js">AOS.init({
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+ AOS.init({
   // ─── 全域設定 ───
   disable: false,                
   startEvent: 'DOMContentLoaded', 
@@ -216,9 +218,6 @@
   mirror: false,                 
   anchorPlacement: 'top-bottom', 
 });
-</script>
-<script>
- AOS.init();
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>

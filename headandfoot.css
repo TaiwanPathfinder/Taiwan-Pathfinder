@@ -50,6 +50,13 @@ table {
 	border-spacing: 0;
 }
 
+/* img now carry width/height attributes (for CLS prevention); let CSS
+   width rules keep controlling proportions instead of the attribute's
+   raw pixel height, unless a more specific rule already sets height. */
+img {
+	height: auto;
+}
+
 /*-----Var-----*/
 
 :root{
