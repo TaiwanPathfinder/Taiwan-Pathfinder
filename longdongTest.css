@@ -1,0 +1,435 @@
+/*----------------------------------------------------
+  longdong-test.html 專用樣式
+  頁面主結構（主視覺/Activity Introduction/分頁籤）沿用
+  oneAdventurePage.css 既有的 class，這裡只補分頁籤內容
+  用得到、但站上還沒有的排版元件。
+----------------------------------------------------*/
+
+/*--安全網：本頁（僅本頁，不影響正式頁面）避免任何子元素撐寬造成整頁橫向捲動--*/
+.Wrap{
+    overflow-x: hidden;
+}
+
+/*--小字註記（早鳥價、時間僅供參考等）--*/
+.ldPriceNote{
+    font-size: 12px;
+    color: #777;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/*--統一 icon 系統：inline SVG 線條圖示，單色（跟隨 currentColor），
+  活動亮點用橘色、放心參加保證用深咖啡紅，兩段用色不同但風格（線條、粗細）一致--*/
+.ldIcon{
+    display: inline-flex;
+}
+.ldIcon svg{
+    width: 26px;
+    height: 26px;
+    display: block;
+}
+.ldIconHighlight{
+    color: #c97a1a;
+}
+.ldIconSafety{
+    color: #b3390c;
+}
+.ldIconPrice{
+    color: #b3390c;
+}
+.ldIconInline{
+    vertical-align: -4px;
+}
+.ldIconInline svg{
+    width: 18px;
+    height: 18px;
+}
+
+/*--活動亮點：2欄卡片網格（賣點，用淺色卡片+陰影，跟下方保證區塊做出區隔）--*/
+.ldHighlightCardGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+.ldHighlightCard{
+    background-color: #fffaf0;
+    border: 1px solid #f0dfb8;
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0px 3px 8px 1px #0002;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.ldHighlightCard p{
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/*--為什麼你可以放心參加：加重視覺份量的保證區塊（暖色深階背景+左粗邊框）--*/
+.ldSafetyBlock{
+    background-color: #f0c988;
+    border-left: 6px solid #b3390c;
+    border-radius: 14px;
+    margin-top: 35px;
+    margin-left: 4%;
+    margin-right: 4%;
+    padding: 30px 5% 36px;
+}
+.ldSafetyBlockTitle{
+    margin-top: 0;
+    color: #6e2607;
+}
+
+/*--放心參加：橫向數據徽章--*/
+.ldStatBadgeRow{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 6px;
+}
+.ldStatBadge{
+    background-color: white;
+    border: 1px solid rgba(179,57,12,0.15);
+    border-radius: 14px;
+    padding: 16px 10px;
+    text-align: center;
+    box-shadow: 0px 3px 8px 1px #0002;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+.ldStatBadge .ldIcon{
+    margin-bottom: 4px;
+}
+.ldStatBadgeNum{
+    font-size: 26px;
+    font-weight: bolder;
+    color: #b3390c;
+    line-height: 1.1;
+}
+.ldStatBadgeLabel{
+    font-size: 13px;
+    color: #333;
+    line-height: 1.4;
+}
+.ldStatBadgeLabel small{
+    font-size: 11px;
+    color: #777;
+}
+
+/*--放心參加：FAQ 手風琴--*/
+.ldFaqList{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ldFaqItem{
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.ldFaqQuestion{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 14px 18px;
+    cursor: pointer;
+    color: #333;
+}
+.ldFaqArrow{
+    flex: 0 0 auto;
+    color: #b3390c;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.ldFaqItem.open{
+    background-color: #fffaf0;
+}
+.ldFaqAnswer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+.ldFaqItem.open .ldFaqAnswer{
+    max-height: 200px;
+}
+.ldFaqAnswer p{
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444;
+    padding: 0 18px 16px;
+}
+
+/*--集合地點：並排卡片--*/
+.ldMeetGrid{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.ldMeetCard{
+    flex: 1 1 260px;
+    background-color: rgb(253, 228, 181);
+    border-radius: 20px;
+    padding: 20px 22px;
+}
+.ldMeetCard h3{
+    margin-bottom: 10px;
+    color: #b3390c;
+}
+.ldMeetCard p{
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/*--費用包含：早鳥價格表--*/
+.ldPriceTable{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+.ldPriceTable th, .ldPriceTable td{
+    border: 1px solid #e5c98f;
+    padding: 10px 12px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.ldPriceTable th{
+    background-color: rgb(253, 228, 181);
+}
+.ldPriceExtra{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.ldPriceExtra p{
+    font-size: 14px;
+    line-height: 1.6;
+}
+.ldIncludesList{
+    background-color: rgb(253, 228, 181);
+    border-radius: 16px;
+    padding: 18px 22px;
+}
+.ldIncludesList h4{
+    margin-bottom: 10px;
+}
+.ldIncludesList ul{
+    list-style: none;
+}
+.ldIncludesList li{
+    line-height: 1.6;
+    font-size: 14px;
+}
+.ldIncludesList li:before{
+    content: "✓ ";
+    color: #b3390c;
+    font-weight: bolder;
+}
+
+/*--安全保證：icon 條列--*/
+.ldSafetyGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.ldSafetyItem{
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background-color: rgb(253, 228, 181);
+    border-radius: 16px;
+    padding: 16px 18px;
+}
+.ldSafetyIcon{
+    flex: 0 0 auto;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: orange;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.ldSafetyText p{
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/*--次標題統一字級/字重：集合地點卡片標題、行程安排/注意事項/退費政策各段落標題、費用包含標題，
+  同一層級全部套用一致的大小，不要各自忽大忽小--*/
+.ldMeetCard h3,
+.ldSubHeading,
+.ldIncludesList h4{
+    font-size: 18px;
+    font-weight: bolder;
+    line-height: 1.4;
+}
+
+/*--分頁籤內的子標題（行程安排/注意事項/退費政策各段落）--*/
+.ldSubHeading{
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.ldSubHeading:first-child{
+    margin-top: 0;
+}
+
+/*--行程安排：時間軸--*/
+.ldTimeline{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.ldTimelineRow{
+    display: flex;
+    gap: 16px;
+    padding: 10px 0;
+    border-left: 2px solid #d9a441;
+    padding-left: 20px;
+    position: relative;
+}
+.ldTimelineRow:before{
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 16px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #d9a441;
+}
+.ldTimelineTime{
+    flex: 0 0 70px;
+    font-weight: bolder;
+}
+.ldTimelineDesc{
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/*--注意事項/退費政策：條列段落--*/
+.ldNotesList{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.ldNotesList p{
+    position: relative;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.ldNotesList p:before{
+    content: "•";
+    position: absolute;
+    left: 2px;
+    color: #b3390c;
+    font-weight: bolder;
+}
+
+/*--內文字級統一（本頁範圍）：advenIntroTextp 是共用樣式表 oneAdventurePage.css
+  控制的內文，字級沒有明確設定會吃到瀏覽器預設 16px，跟本頁其他內文的 14px 不一致，
+  這裡只在本頁覆寫，不動 oneAdventurePage.css。--*/
+.advenIntroText .advenIntroTextp{
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/*--立即報名區塊上方說明文字--*/
+.ldRegisterNote{
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/*--手機版 hero 修正：.adventureHeadGallery 在 oneAdventurePage.css 裡任何寬度
+  都維持 display:flex 橫排（大圖+縮圖並排），縮圖又是固定寬度不會縮小，
+  在窄螢幕會撐破容器造成整頁橫向溢出。這裡只在本頁（longdongTest.css）覆寫，
+  不動 oneAdventurePage.css，不影響正式頁面。--*/
+@media (max-width:992px){
+    .adventureHead .adventureHeadGallery{
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+    }
+    .adventureHead .thumbnails{
+        flex-direction: row;
+        max-height: none;
+        overflow-x: auto;
+        overflow-y: visible;
+        width: 100%;
+    }
+    .adventureHead .thumbnails img{
+        flex: 0 0 auto;
+    }
+}
+
+/*--手機版分頁籤修正：.tab-buttons 在 oneAdventurePage.css 裡只有 flex-wrap:wrap，
+  6 個籤在窄螢幕會擠出容器被 .Wrap 的 overflow-x:hidden 安全網裁掉文字。
+  改成同一排橫向可滑動，籤本身維持完整寬度和文字，不擠壓變形。
+  同樣只在本頁覆寫，不動 oneAdventurePage.css / 正式頁面。--*/
+@media (max-width:767px){
+    .adventureDetail .tab-buttons{
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 4px 4px 12px;
+    }
+    .adventureDetail .tab-buttons button{
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width:767px){
+    .ldSafetyGrid{
+        grid-template-columns: 1fr;
+    }
+    .ldTimeline{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .ldMeetGrid{
+        flex-direction: column;
+    }
+    .ldHighlightCardGrid{
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .ldStatBadgeRow{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .ldSafetyBlock{
+        margin-left: 0;
+        margin-right: 0;
+        padding: 25px 6% 32px;
+    }
+}
