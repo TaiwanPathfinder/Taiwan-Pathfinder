@@ -79,6 +79,7 @@
     margin-left: 4%;
     margin-right: 4%;
     padding: 30px 5% 36px;
+    margin-bottom: 35px;
 }
 .ldSafetyBlockTitle{
     margin-top: 0;
@@ -366,10 +367,110 @@
     margin-bottom: 20px;
 }
 
+/*--立即報名：選擇場次卡片群組（取代原本 iframe 表單）--*/
+.sessionPickGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 820px;
+    margin: 0 auto 30px;
+}
+.sessionPickLoading{
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #777;
+    padding: 20px 0;
+}
+.sessionPickCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    border: 1px solid rgba(179,57,12,0.15);
+    border-radius: 16px;
+    padding: 20px 16px;
+    box-shadow: 0px 3px 8px 1px #0002;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.sessionPickCard:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 14px 1px #0003;
+    text-decoration: none;
+    color: inherit;
+}
+.sessionPickDate{
+    font-weight: bolder;
+    font-size: 15px;
+    color: #333;
+    text-align: center;
+}
+.sessionPickPriceRow{
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+.sessionPickOld{
+    text-decoration: line-through;
+    color: #999;
+    font-size: 13px;
+}
+.sessionPickNew{
+    font-weight: bolder;
+    font-size: 19px;
+    color: #b3390c;
+}
+.sessionPickCta{
+    margin-top: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    background-color: #e08e00;
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+.sessionPickCard:hover .sessionPickCta{
+    background-color: #c97a1a;
+}
+.sessionPickFallback{
+    text-align: center;
+    padding: 30px 20px;
+    background-color: rgb(253, 228, 181);
+    border-radius: 16px;
+    max-width: 820px;
+    margin: 0 auto 30px;
+}
+.sessionPickFallback a{
+    color: #b3390c;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+@media (max-width:767px){
+    .sessionPickGrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /*--手機版 hero 修正：.adventureHeadGallery 在 oneAdventurePage.css 裡任何寬度
   都維持 display:flex 橫排（大圖+縮圖並排），縮圖又是固定寬度不會縮小，
   在窄螢幕會撐破容器造成整頁橫向溢出。這裡只在本頁（longdongTest.css）覆寫，
   不動 oneAdventurePage.css，不影響正式頁面。--*/
+/*--縮圖統一比例修正：oneAdventurePage.css 原本只設 width:100px，沒有固定 height /
+  object-fit，每張縮圖會吃自己原圖的比例（直幅/橫幅/正方形都不同），在 flex 版面
+  排在一起高度就會不一致；手機版改成橫向排列時，flex 容器的 stretch 行為又會把
+  沒有明確 height 的圖片拉伸/壓扁到跟其他縮圖同高，造成人物變形。
+  改成固定正方形 + object-fit:cover：無論原圖比例為何都置中裁切，不會變形。
+  桌機、手機用同一條規則，邏輯一致。--*/
+.adventureHead .thumbnails img{
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
 @media (max-width:992px){
     .adventureHead .adventureHeadGallery{
         width: 100%;
@@ -385,6 +486,13 @@
     }
     .adventureHead .thumbnails img{
         flex: 0 0 auto;
+    }
+}
+
+@media (max-width:767px){
+    .adventureHead .thumbnails img{
+        width: 80px;
+        height: 80px;
     }
 }
 

@@ -1,0 +1,385 @@
+/*----------------------------------------------------
+  index-test.html 專用樣式（首頁測試版）
+  只在這個測試頁載入，不影響 home.css / headandfoot.css
+  （不動正式頁面共用樣式表）。這個檔案故意放在 <head> 裡
+  bootstrap CDN 之後載入，確保能覆蓋 Bootstrap 的 dropdown-item
+  預設樣式（load order 決定 cascade 優先權，同層特異度時後載入者勝）。
+----------------------------------------------------*/
+
+/*==== 0. 安全網：本頁（僅本頁，不影響正式頁面）避免任何子元素撐寬造成整頁橫向捲動 ====*/
+.Wrap{
+    overflow-x: hidden;
+}
+
+/*==== 0.5 近期開放場次跑馬燈（導覽列正下方、Hero 之前）====*/
+.marqueeBar{
+    background-color: #3a2415;
+    overflow: hidden;
+    padding: 11px 0;
+    margin-top: 75px;
+    position: relative;
+    white-space: nowrap;
+}
+/* .Banner 本來就有 margin-top:80px 用來避開固定導覽列，跑馬燈現在插在中間，
+   避免變成「導覽列 → 75px空白 → 跑馬燈 → 再80px空白 → Hero」疊加兩次空白 */
+.marqueeBar + .Banner{
+    margin-top: 0;
+}
+.marqueeTrack{
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: marqueeScroll 26s linear infinite;
+    will-change: transform;
+}
+.marqueeBar:hover .marqueeTrack{
+    animation-play-state: paused;
+}
+.marqueeItem{
+    display: inline-block;
+    padding: 0 20px;
+    color: #fde4b5;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+a.marqueeItem:hover,
+a.marqueeItem:focus{
+    color: #ffc266;
+    text-decoration: underline;
+}
+.marqueeStrike{
+    text-decoration: line-through;
+    opacity: 0.65;
+    margin-right: 5px;
+    font-weight: normal;
+}
+.marqueeSep{
+    color: #e08e00;
+    font-size: 12px;
+}
+@keyframes marqueeScroll{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(-50%); }
+}
+
+/*--尊重「減少動態效果」系統設定：關閉捲動，改成置中靜態顯示--*/
+.marqueeStatic .marqueeTrack{
+    animation: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+@media (prefers-reduced-motion: reduce){
+    .marqueeTrack{
+        animation: none !important;
+    }
+}
+
+@media (max-width:767px){
+    .marqueeBar{
+        padding: 9px 0;
+    }
+    .marqueeItem{
+        font-size: 12px;
+        padding: 0 14px;
+    }
+}
+
+/*==== 0.7 近期開放場次卡片（Hero 之後、信任標籤列下方）====*/
+.sessionSection{
+    width: 80%;
+    margin: 0 auto 50px;
+}
+.sessionSection h2{
+    font-size: 28px;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.sessionScrollRow{
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding: 6px 4px 16px;
+}
+.sessionLoading{
+    text-align: center;
+    width: 100%;
+    color: #777;
+    padding: 20px 0;
+}
+.sessionCard{
+    flex: 0 0 250px;
+    scroll-snap-align: start;
+    background-color: white;
+    border: 1px solid rgba(179,57,12,0.15);
+    border-radius: 16px;
+    padding: 22px 20px;
+    box-shadow: 0px 3px 8px 1px #0002;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.sessionIcon{
+    color: #b3390c;
+    display: flex;
+}
+.sessionIcon svg{
+    width: 26px;
+    height: 26px;
+}
+.sessionCard h3{
+    font-size: 17px;
+    font-weight: bolder;
+    line-height: 1.4;
+    min-height: 48px;
+}
+.sessionDate{
+    font-size: 13px;
+    color: #777;
+}
+.sessionPrice{
+    font-size: 21px;
+    font-weight: bolder;
+    color: #b3390c;
+    margin-bottom: 4px;
+}
+.sessionCta{
+    margin-top: auto;
+    display: block;
+    background-color: #e08e00;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+.sessionCta:hover{
+    background-color: #c97a1a;
+    color: white;
+    text-decoration: none;
+}
+.sessionMoreCard{
+    flex: 0 0 190px;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.sessionMoreLink{
+    display: inline-block;
+    background-color: var(--color-darkgreen);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.sessionMoreLink:hover{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+.sessionFallback{
+    text-align: center;
+    padding: 30px 20px;
+    background-color: rgb(253, 228, 181);
+    border-radius: 16px;
+    font-size: 15px;
+}
+.sessionFallback a{
+    color: #b3390c;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+@media (max-width:767px){
+    .sessionSection{
+        width: 90%;
+    }
+    .sessionSection h2{
+        font-size: 24px;
+    }
+    .sessionScrollRow{
+        flex-direction: column;
+        overflow-x: visible;
+    }
+    .sessionCard{
+        flex: 1 1 auto;
+    }
+    .sessionCard h3{
+        min-height: 0;
+    }
+    .sessionMoreCard{
+        flex: 1 1 auto;
+        padding: 10px 0;
+    }
+}
+
+/*==== 1. Hero 疊加文字（不隨輪播切換消失：疊加層是 .carousel 的
+  同層兄弟元素，不在 .carousel-inner 裡面，所以不受 slide 動畫影響）====*/
+.carousel{
+    position: relative;
+}
+.heroOverlay{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    z-index: 5;
+    pointer-events: none;
+}
+.heroScrim{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.12) 45%, rgba(0,0,0,0.45) 100%);
+}
+.heroContent{
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    pointer-events: auto;
+}
+.heroContent h1{
+    color: white;
+    font-size: 44px;
+    font-weight: bolder;
+    line-height: 1.3;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.65);
+    margin-bottom: 14px;
+}
+.heroContent p{
+    color: white;
+    font-size: 19px;
+    line-height: 1.5;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.65);
+    margin-bottom: 26px;
+}
+.heroCta{
+    display: inline-block;
+    background-color: #e08e00;
+    color: white;
+    font-weight: bolder;
+    font-size: 17px;
+    padding: 14px 34px;
+    border-radius: 40px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    transition: background-color 0.2s ease;
+}
+.heroCta:hover{
+    background-color: #c97a1a;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width:767px){
+    .heroContent h1{
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+    .heroContent p{
+        font-size: 14px;
+        margin-bottom: 18px;
+    }
+    .heroCta{
+        font-size: 15px;
+        padding: 11px 26px;
+    }
+}
+
+/*==== 2. 信任標籤列（呼應龍洞測試頁「為什麼你可以放心參加」的
+  統計徽章風格：白底卡片、細邊框、線條 icon、單色） ====*/
+.trustBar{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 80%;
+    margin: 0 auto 40px;
+}
+.trustItem{
+    flex: 1 1 200px;
+    max-width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: white;
+    border: 1px solid rgba(179,57,12,0.15);
+    border-radius: 14px;
+    padding: 14px 16px;
+    box-shadow: 0px 3px 8px 1px #0002;
+}
+.trustIcon{
+    display: flex;
+    flex: 0 0 auto;
+    color: #b3390c;
+}
+.trustIcon svg{
+    width: 26px;
+    height: 26px;
+}
+.trustItem span:last-child{
+    font-weight: bolder;
+    font-size: 15px;
+    color: #333;
+    white-space: nowrap;
+}
+
+@media (max-width:767px){
+    .trustBar{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        gap: 12px;
+    }
+    .trustItem{
+        max-width: none;
+    }
+}
+
+/*==== 3. Now Open for Booking 導覽按鈕化（桌面 + 手機下拉選單）====*/
+.Header .newopen{
+    background-color: #e08e00;
+    color: white;
+    font-weight: bolder;
+    font-size: 16px;
+    padding: 8px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.Header .newopen:hover{
+    background-color: #c97a1a;
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+}
+.dropdown-menu .newopenMobile{
+    background-color: #e08e00;
+    color: white;
+    font-weight: bolder;
+    border-radius: 20px;
+    margin: 4px 10px;
+    text-align: center;
+    padding: 8px 10px;
+}
+.dropdown-menu .newopenMobile:hover,
+.dropdown-menu .newopenMobile:focus{
+    background-color: #c97a1a;
+    color: white;
+}

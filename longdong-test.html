@@ -160,10 +160,10 @@
                         </div>
                         <div class="ldStatBadge">
                             <span class="ldIcon ldIconSafety">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a2 2 0 012-2h8a2 2 0 012 2v11a2 2 0 01-2 2H8a2 2 0 01-2-2V8z"/><path d="M9 6V5a3 3 0 016 0v1"/><path d="M9 12h6"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>
                             </span>
-                            <span class="ldStatBadgeNum">0</span>
-                            <span class="ldStatBadgeLabel">需自備裝備</span>
+                            <span class="ldStatBadgeNum">免自備</span>
+                            <span class="ldStatBadgeLabel">裝備由我們準備</span>
                         </div>
                     </div>
                     <p class="ldPriceNote">完整安全保證內容請見下方「安全保證」分頁籤</p>
@@ -369,22 +369,13 @@
             </div>
         </div>
 
-        <!-- 立即報名 -->
+        <!-- 立即報名：選擇場次 -->
         <div class="adventureDetail">
             <div class="bookingFormInner" id="booking-form">
                 <h2>立即報名</h2>
-                <p class="ldRegisterNote">請選擇匯款或 PayPal 付款。收到「報名確認 Email」後才代表正式完成報名，送出表單並完成繳費後請務必查看信箱（含垃圾郵件夾）。</p>
-                <div class="bookingFormFrameWrap">
-                    <iframe
-                        src="https://hxqmyas68g.zite.so/"
-                        title="龍洞新手攀岩體驗 報名表單"
-                        width="100%"
-                        height="900"
-                        frameborder="0">
-                    </iframe>
-                </div>
-                <div class="buttonBook">
-                    <a target="_blank" href="https://hxqmyas68g.zite.so/">於新分頁開啟表單 ↗</a>
+                <p class="ldRegisterNote">請選擇想參加的場次，點擊後會在新分頁開啟該場次的報名表單。收到「報名確認 Email」後才代表正式完成報名，送出表單並完成繳費後請務必查看信箱（含垃圾郵件夾）。</p>
+                <div class="sessionPickGrid" id="sessionPickGrid">
+                    <p class="sessionPickLoading">場次載入中...</p>
                 </div>
             </div>
         </div>
@@ -502,6 +493,138 @@
     const open = item.classList.toggle("open");
     btn.querySelector(".ldFaqArrow").textContent = open ? "－" : "＋";
   }
+</script>
+<script>
+(function(){
+    var grid = document.getElementById('sessionPickGrid');
+    var CSV_URL = 'https://docs.google.com/spreadsheets/d/1VvRRgURxwP4ka_it5MCn96JD6XzbjKS6CGEnWYE_afU/export?format=csv&gid=0';
+    var ACTIVITY_TYPE = '龍洞新手攀岩體驗';
+    var LINE_URL = 'https://lin.ee/D1jlWHsF';
+    var WEEKDAYS = ['日', '一', '二', '三', '四', '五', '六'];
+
+    function esc(s){
+        return String(s == null ? '' : s)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+    }
+
+    // 簡單但正確處理引號內逗號/換行的 CSV parser（Google Sheets 匯出的早鳥價欄位標題本身就含換行）
+    function parseCSV(text){
+        var rows = [], row = [], field = '', inQuotes = false;
+        for (var i = 0; i < text.length; i++){
+            var c = text[i];
+            if (inQuotes){
+                if (c === '"'){
+                    if (text[i+1] === '"'){ field += '"'; i++; }
+                    else { inQuotes = false; }
+                } else {
+                    field += c;
+                }
+            } else {
+                if (c === '"'){ inQuotes = true; }
+                else if (c === ','){ row.push(field); field = ''; }
+                else if (c === '\r'){ /* skip */ }
+                else if (c === '\n'){ row.push(field); rows.push(row); row = []; field = ''; }
+                else { field += c; }
+            }
+        }
+        if (field.length || row.length){ row.push(field); rows.push(row); }
+        return rows;
+    }
+
+    function pad2(n){ return n < 10 ? '0' + n : '' + n; }
+
+    function fmtDateWeekday(dstr){
+        var d = new Date(dstr + 'T00:00:00');
+        if (isNaN(d.getTime())) return dstr;
+        return d.getFullYear() + '/' + pad2(d.getMonth() + 1) + '/' + pad2(d.getDate()) + '（' + WEEKDAYS[d.getDay()] + '）';
+    }
+
+    function toMMDDYYYY(dstr){
+        var parts = (dstr || '').split('-');
+        if (parts.length !== 3) return '';
+        return parts[1] + '/' + parts[2] + '/' + parts[0];
+    }
+
+    function withSessionDateParam(url, dstr){
+        if (!url) return '';
+        var sep = url.indexOf('?') >= 0 ? '&' : '?';
+        return url + sep + 'session_date_param=' + toMMDDYYYY(dstr);
+    }
+
+    function priceRowHtml(orig, current){
+        var o = (orig || '').trim();
+        var c = (current || '').trim();
+        if (c === '免費'){
+            return '<span class="sessionPickNew">免費</span>';
+        }
+        if (o && o !== c){
+            return '<span class="sessionPickOld">' + esc(o) + '</span><span class="sessionPickNew">' + esc(c) + '</span>';
+        }
+        return '<span class="sessionPickNew">' + esc(c) + '</span>';
+    }
+
+    function cardHtml(r){
+        var href = esc(withSessionDateParam(r.formLink, r.date));
+        return '<a class="sessionPickCard" href="' + href + '" target="_blank" rel="noopener">' +
+            '<span class="sessionPickDate">' + esc(fmtDateWeekday(r.date)) + '</span>' +
+            '<span class="sessionPickPriceRow">' + priceRowHtml(r.originalPrice, r.currentPrice) + '</span>' +
+            '<span class="sessionPickCta">立即報名 ↗</span>' +
+            '</a>';
+    }
+
+    function showFallback(){
+        grid.className = 'sessionPickFallback';
+        grid.innerHTML = '請洽詢客服查詢最新場次，<a href="' + LINE_URL + '" target="_blank" rel="noopener">LINE 客服 →</a>';
+    }
+
+    fetch(CSV_URL)
+        .then(function(res){
+            if (!res.ok) throw new Error('CSV fetch failed: ' + res.status);
+            return res.text();
+        })
+        .then(function(text){
+            var rows = parseCSV(text);
+            if (!rows.length) throw new Error('Empty CSV');
+
+            var header = rows[0];
+            var iType = header.indexOf('活動類型');
+            var iDate = header.indexOf('場次日期');
+            var iOrig = header.indexOf('原價');
+            var iStatus = header.indexOf('狀態');
+            var iForm = header.indexOf('報名表單連結');
+            var iPrice = header.indexOf('目前顯示價格（自動）');
+            if (iType < 0 || iDate < 0 || iStatus < 0 || iPrice < 0){
+                throw new Error('CSV missing expected columns');
+            }
+
+            var today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            var upcoming = rows.slice(1)
+                .filter(function(r){ return r.length > iStatus && r[iType] === ACTIVITY_TYPE && r[iStatus] === '開放中'; })
+                .map(function(r){
+                    var d = new Date(r[iDate] + 'T00:00:00');
+                    return {
+                        date: r[iDate],
+                        dateObj: d,
+                        originalPrice: iOrig >= 0 ? r[iOrig] : '',
+                        currentPrice: r[iPrice],
+                        formLink: iForm >= 0 ? r[iForm] : ''
+                    };
+                })
+                .filter(function(r){ return !isNaN(r.dateObj.getTime()) && r.dateObj.getTime() > today.getTime(); })
+                .sort(function(a, b){ return a.dateObj - b.dateObj; });
+
+            if (!upcoming.length) throw new Error('No upcoming open sessions for this activity');
+
+            grid.innerHTML = upcoming.map(cardHtml).join('');
+        })
+        .catch(function(){
+            showFallback();
+        });
+})();
 </script>
 </body>
 </html>
