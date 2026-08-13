@@ -12,18 +12,37 @@
 }
 
 /*==== 0.5 近期開放場次跑馬燈（導覽列正下方、Hero 之前）====*/
+/* 原本試過「導覽列自己 fixed、跑馬燈另外用固定 top 值貼上去」，但兩個各自
+   fixed、top 值是手動量出來的像素數字，只要導覽列實際高度跟量測時差個幾px
+   （字型渲染、瀏覽器差異都可能發生），中間就會露出縫隙，跑馬燈也試過
+   position: sticky，但 .Wrap 有 overflow-x:hidden（見上方 0. 安全網）會讓
+   sticky 失效。
+
+   改成「用同一個容器包住導覽列＋跑馬燈」：.StickyTop 本身 fixed 在畫面頂部，
+   裡面的 .Header 改回 position: static（正常文件流），跑馬燈自然緊接在
+   導覽列正下方——兩者間距永遠是 0，不管導覽列實際渲染高度多少都不會有縫隙。
+   .StickyTop 整塊會脫離頁面正常文件流，所以下面用 .StickyTop + .Banner 的
+   margin-top 補回導覽列+跑馬燈的高度，避免 Hero 輪播圖一開始被蓋住。
+   z-index 給高值，確保捲動時不會被 Hero 輪播圖蓋過去。 */
+.StickyTop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+.StickyTop .Header{
+    position: static;
+}
 .marqueeBar{
     background-color: #3a2415;
     overflow: hidden;
     padding: 11px 0;
-    margin-top: 75px;
-    position: relative;
     white-space: nowrap;
 }
-/* .Banner 本來就有 margin-top:80px 用來避開固定導覽列，跑馬燈現在插在中間，
-   避免變成「導覽列 → 75px空白 → 跑馬燈 → 再80px空白 → Hero」疊加兩次空白 */
-.marqueeBar + .Banner{
-    margin-top: 0;
+/* 導覽列(75px) + 跑馬燈本身高度(桌機約47px／手機約42px，見下方RWD區塊) */
+.StickyTop + .Banner{
+    margin-top: 122px;
 }
 .marqueeTrack{
     display: inline-flex;
@@ -82,6 +101,9 @@ a.marqueeItem:focus{
 @media (max-width:767px){
     .marqueeBar{
         padding: 9px 0;
+    }
+    .StickyTop + .Banner{
+        margin-top: 117px;
     }
     .marqueeItem{
         font-size: 12px;
