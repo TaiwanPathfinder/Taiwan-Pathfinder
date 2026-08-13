@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Longdong Beginner Climbing Experience｜Taiwan Pathfinder</title>
+    <title>Longdong Beginner Rock Climbing｜Taiwan Pathfinder</title>
     <link rel="stylesheet" href="/oneAdventurePage.css">
     <link rel="stylesheet" href="/headandfoot.css">
+    <link rel="stylesheet" href="/longdongTest.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDR9E7XZP0"></script>
@@ -15,7 +16,7 @@
     gtag('js', new Date());
 
     gtag('config', 'G-JDR9E7XZP0');
-    </script>   
+    </script>
 </head>
 
 <body>
@@ -47,32 +48,33 @@
                 </div>
             </div>
         </div>
+
+        <!-- Hero: text left, gallery right -->
         <div class="adventureHead">
             <div class="adventureHeadText">
-                <h1>Longdong Beginner Rock Climbing Experience</h1>
-                <p><strong>Experience your first outdoor rock climbing on coastal cliffs</strong></p>
-                <p>Curious about outdoor rock climbing but not sure where to start?</p>
-                <p>At Longdong, we offer a safe, guided, and relaxed way to step into a real outdoor climbing area.</p>
-                <p>The activity is led by experienced professional guides. No prior climbing experience is required—simply follow the guidance and enjoy moving on the rock, feeling the connection between your body and the natural stone.</p>
+                <h1>Longdong Beginner Rock Climbing</h1>
+                <p><strong>Climb Where the Cliffs Meet the Pacific</strong></p>
+                <p>Thanks for checking out this adventure! This is a coastal rock climbing experience designed just for beginners, set at Longdong — Taiwan's most stunning climbing destination. No climbing experience, no special fitness level, and no gear of your own required. Just bring your curiosity, and we'll take care of the rest.</p>
+                <p>Take a moment to read through the details below, and once you're ready, fill out the registration form. We can't wait to head out with you!</p>
                 <div class="advenIntroTextButton">
                     <div class="buttonPrice">
                         <h3>Price</h3>
                         <p>NT$3,000</p>
                     </div>
                     <div class="buttonBook">
-                    <a target=" _blank" href="/openForBooking/">BOOK NOW</a>
+                    <a href="#booking-form">Book Now</a>
                     </div>
                 </div>
             </div>
             <div class="adventureHeadGallery">
-                <!-- 大圖 -->
+                <!-- Main image -->
                 <div class="main-image">
                     <img width="1920" height="1442" id="current" src="/adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing1.jpg" alt="main image">
-                <!-- 左右切換箭頭 -->
+                <!-- Prev/next arrows -->
                     <button class="arrow left" onclick="prevImage()">&#10094;</button>
                     <button class="arrow right" onclick="nextImage()">&#10095;</button>
                 </div>
-                <!-- 縮圖 -->
+                <!-- Thumbnails -->
                 <div class="thumbnails" id="thumbnailContainer">
                     <img loading="lazy" width="1920" height="1442" src="/adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing1.jpg" alt="thumb1" onclick="changeImage(0)">
                     <img loading="lazy" width="1108" height="1477" src="/adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing2.jpg" alt="thumb2" onclick="changeImage(1)">
@@ -85,88 +87,281 @@
                 </div>
             </div>
         </div>
+
+        <!-- Activity Introduction: badge pills + copy -->
         <div class="adventureIntroduction">
             <div class="advenIntroText">
                 <h2>Activity Introduction</h2>
                 <div class="advenIntroTextButton">
                     <div class="buttonTime">
                         <h3>Duration</h3>
-                        <p>Half-day (5-6 hours)</p>
+                        <p>5–6 hours</p>
                     </div>
                     <div class="buttonDifficulty">
                         <h3>Difficulty</h3>
                         <p>Beginner Friendly</p>
                     </div>
                 </div>
-                <p class="advenIntroTextp">Join our <strong>Longdong Beginner Rock Climbing Experience</strong> for a fun and safe introduction to outdoor climbing. Learn the basics of climbing from expert guides while enjoying the breathtaking coastal cliffs of Taiwan.</p>
-                <p class="advenIntroTextp">Perfect for beginners and anyone looking for an exciting outdoor adventure, this experience combines safety, guidance, and stunning scenery for a memorable day out.</p>
+                <p class="advenIntroTextp">No climbing experience, no special fitness level, and no gear of your own required — just bring your curiosity, and we'll handle the rest.</p>
+
+                <h2>Highlights</h2>
+                <div class="ldHighlightCardGrid">
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l6-10 4 6 3-4 5 8H3z"/></svg>
+                        </span>
+                        <p>Longdong is Taiwan's most iconic coastal climbing spot — dramatic sea cliffs, waves crashing below, and routes designed for beginners without losing the thrill</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><circle cx="9" cy="6" r="2"/><line x1="4" y1="12" x2="20" y2="12"/><circle cx="15" cy="12" r="2"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="11" cy="18" r="2"/></svg>
+                        </span>
+                        <p>Routes suited for total beginners — your guide adjusts the difficulty to match you, so you're never pushed beyond what you're comfortable with</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 19c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg>
+                        </span>
+                        <p>Breathtaking Pacific views — the perfect blend of climbing and natural beauty</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polygon points="13.2 10.8 15 8 12.2 9.8 10 12.5 13.2 10.8" fill="currentColor" stroke="none"/></svg>
+                        </span>
+                        <p>Led by professional guides from start to finish, keeping things safe and fun</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a2 2 0 012-2h8a2 2 0 012 2v11a2 2 0 01-2 2H8a2 2 0 01-2-2V8z"/><path d="M9 6V5a3 3 0 016 0v1"/><path d="M9 12h6"/></svg>
+                        </span>
+                        <p>Full climbing gear provided — just show up, nothing to carry</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-2h6l2 2h3v11H4z"/><circle cx="12" cy="13.5" r="3.5"/></svg>
+                        </span>
+                        <p>Come away with memories worth telling</p>
+                    </div>
+                </div>
+
+                <div class="ldSafetyBlock">
+                    <h2 class="ldSafetyBlockTitle">Why You Can Climb With Confidence</h2>
+                    <div class="ldStatBadgeRow">
+                        <div class="ldStatBadge">
+                            <span class="ldIcon ldIconSafety">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 6-5s6 2 6 5"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 20c.3-2 1.7-3.5 4-3.8"/></svg>
+                            </span>
+                            <span class="ldStatBadgeNum">1:6</span>
+                            <span class="ldStatBadgeLabel">Guide Ratio</span>
+                        </div>
+                        <div class="ldStatBadge">
+                            <span class="ldIcon ldIconSafety">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+                            </span>
+                            <span class="ldStatBadgeNum">NT$2M</span>
+                            <span class="ldStatBadgeLabel">Accident Coverage<br><small>Plus NT$200K medical coverage</small></span>
+                        </div>
+                        <div class="ldStatBadge">
+                            <span class="ldIcon ldIconSafety">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="13" rx="2"/><path d="M12 9.5v6M9 12.5h6"/></svg>
+                            </span>
+                            <span class="ldStatBadgeNum">Certified</span>
+                            <span class="ldStatBadgeLabel">First-Aid Trained Guides</span>
+                        </div>
+                        <div class="ldStatBadge">
+                            <span class="ldIcon ldIconSafety">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>
+                            </span>
+                            <span class="ldStatBadgeNum">Gear Included</span>
+                            <span class="ldStatBadgeLabel">Nothing to Bring</span>
+                        </div>
+                    </div>
+                    <p class="ldPriceNote">For full safety details, see the "Safety" tab below</p>
+
+                    <div class="ldFaqList">
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                I don't exercise regularly — can I still join?
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>Yes. Routes are adjusted to your ability, and your guide is with you the whole way — we'll never push you past your comfort zone.</p></div>
+                        </div>
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                Is it dangerous?
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>We use professional belay systems and gear throughout, keep guide ratios to 1:6 or better, and every participant is covered by insurance.</p></div>
+                        </div>
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                Do I need to bring my own gear?
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>Not at all — helmet, harness, climbing shoes, and chalk bag are all provided.</p></div>
+                        </div>
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                Can I join solo?
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>Absolutely — we run small groups, and plenty of participants come solo. You'll likely make new friends along the way.</p></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Tabs -->
         <div class="adventureDetail">
             <div class="tab-buttons">
                 <button class="active" onclick="showTab(0)">Meeting Point</button>
                 <button onclick="showTab(1)">What's Included</button>
-                <button onclick="showTab(2)">Safety Policy</button>
-                <button onclick="showTab(3)">Pre-Trip Notice</button>
-                <button onclick="showTab(4)">Cancellation Policy</button>
+                <button onclick="showTab(2)">Safety</button>
+                <button onclick="showTab(3)">Itinerary</button>
+                <button onclick="showTab(4)">Before You Go</button>
+                <button onclick="showTab(5)">Cancellation Policy</button>
             </div>
 
+            <!-- 1. Meeting Point -->
             <div class="tab-content active">
-                <ul>
-                    <li>- 9:00 AM at Hemei Elementary School or other Longdong parking areas (exact location will be provided in the confirmation email 3 days before the activity).</li>
-                    <li>- Optional shuttle service from Taipei Nangang round trip is available at an additional cost of NT$500 per person.</li>
-                </ul>
+                <div class="ldMeetGrid">
+                    <div class="ldMeetCard">
+                        <h3>Option A — Meet at Longdong</h3>
+                        <p>9:00 AM (Nov–May) ｜ 11:00 AM (Jun–Oct) at Hemei Elementary School. (No shuttle needed)</p>
+                    </div>
+                    <div class="ldMeetCard">
+                        <h3>Option B — Round-Trip Shuttle from Taipei</h3>
+                        <p>8:00 AM (Nov–May) ｜ 10:00 AM (Jun–Oct) at Nangang Station. An extra NT$500 per person covers round-trip shuttle service.</p>
+                    </div>
+                </div>
             </div>
 
+            <!-- 2. What's Included -->
             <div class="tab-content">
-                <ul>
-                    <li>- Climbing gear (helmet, harness, climbing shoes, Chalk Bag)</li>
-                    <li>- Professional guide services and English support</li>
-                    <li>- Specific activity insurance</li>
-                </ul>
+                <div class="ldPriceExtra">
+                    <p><span class="ldIcon ldIconPrice ldIconInline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-5 9 5"/><path d="M4 10v8M9 10v8M15 10v8M20 10v8"/><path d="M3 21h18"/></svg></span> <strong>Bank Transfer Discount:</strong> 5% off (NT$2,850)</p>
+                    <p><span class="ldIcon ldIconPrice ldIconInline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 6-5s6 2 6 5"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 20c.3-2 1.7-3.5 4-3.8"/></svg></span> <strong>Groups of 4+:</strong> Message us for group rates</p>
+                    <p><span class="ldIcon ldIconPrice ldIconInline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9h7a2 2 0 012 2v7l-9 9a1.5 1.5 0 01-2 0L3 14a1.5 1.5 0 010-2z"/><circle cx="16" cy="8" r="1.5" fill="currentColor" stroke="none"/></svg></span> If you have a discount code, enter it on the registration form.</p>
+                </div>
+
+                <div class="ldIncludesList">
+                    <h4>What's Included</h4>
+                    <ul>
+                        <li>Climbing gear (helmet, harness, climbing shoes, chalk bag)</li>
+                        <li>Activity insurance</li>
+                        <li>Professional guide service in English</li>
+                    </ul>
+                </div>
             </div>
 
+            <!-- 3. Safety -->
             <div class="tab-content">
-                <ul>
-                    <li>- Each participant is provided with specific activity insurance: NT$2,000,000 accidental death and disability coverage, NT$200,000 medical reimbursement insurance</li>
-                    <li>- Guides are trained in first aid and emergency handling</li>
-                    <li>- Guide-to-participant ratio is kept at no more than 1:6 to ensure quality and safety standards</li>
-                    <li>- We provide full equipment, and participants should follow guide instructions to ensure safety</li>
-                </ul>
+                <div class="ldSafetyGrid">
+                    <div class="ldSafetyItem">
+                        <div class="ldSafetyIcon">✓</div>
+                        <div class="ldSafetyText">
+                            <p>Guide-to-participant ratio never exceeds 1:6 — someone's always looking out for you.</p>
+                        </div>
+                    </div>
+                    <div class="ldSafetyItem">
+                        <div class="ldSafetyIcon">✓</div>
+                        <div class="ldSafetyText">
+                            <p>All guides are trained in first aid and emergency response.</p>
+                        </div>
+                    </div>
+                    <div class="ldSafetyItem">
+                        <div class="ldSafetyIcon">✓</div>
+                        <div class="ldSafetyText">
+                            <p>Every participant is insured: NT$2,000,000 for accidental death or disability, plus NT$200,000 in medical expense coverage.</p>
+                        </div>
+                    </div>
+                    <div class="ldSafetyItem">
+                        <div class="ldSafetyIcon">✓</div>
+                        <div class="ldSafetyText">
+                            <p>Full climbing gear is provided (helmet, harness, shoes, chalk bag) — no gear, no problem.</p>
+                        </div>
+                    </div>
+                    <div class="ldSafetyItem">
+                        <div class="ldSafetyIcon">✓</div>
+                        <div class="ldSafetyText">
+                            <p>A detailed pre-trip briefing, including weather advice and last-minute reminders, is sent three days before departure.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <!-- 4. Itinerary -->
             <div class="tab-content">
-                <ul>
-                    <li>- Please wear comfortable, breathable outdoor clothing and bring a windproof or waterproof jacket in case of changing coastal weather.</li>
-                    <li>- Prepare around 2 liters of water, lunch, and sun protection (sunscreen, hat, sunglasses, etc.).</li>
-                    <li>- If you have your own climbing shoes, we recommend bringing them for a better fit; climbing shoes are also provided, though sizes may not be perfect.</li>
-                    <li>- All essential climbing equipment (harness, helmet, etc.) and activity insurance will be provided, so you can enjoy the activity worry-free.</li>
-                    <li>- If you have any special needs or health conditions, please inform us during registration so we can make appropriate arrangements.</li>
-                    <li>- A detailed trip briefing, including weather suggestions and final reminders, will be sent 3 days before departure to help you prepare.</li>
-                </ul>
+                <div class="ldSubHeading">Schedule — November to May</div>
+                <div class="ldTimeline">
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">08:00</div><div class="ldTimelineDesc">Meet at Nangang Station</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">08:40</div><div class="ldTimelineDesc">Convenience store stop</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">09:00</div><div class="ldTimelineDesc">Meet at Hemei Elementary School</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">09:00–14:30</div><div class="ldTimelineDesc">Travel to the crag &amp; climbing</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">15:00</div><div class="ldTimelineDesc">Return to parking lot / dismiss at Hemei Elementary School</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">16:00</div><div class="ldTimelineDesc">Dismiss at Nangang Station</div></div>
+                </div>
+
+                <div class="ldSubHeading">Schedule — June to October</div>
+                <div class="ldTimeline">
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">10:00</div><div class="ldTimelineDesc">Meet at Nangang Station</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">10:40</div><div class="ldTimelineDesc">Convenience store stop</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">11:00</div><div class="ldTimelineDesc">Meet at Hemei Elementary School</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">11:00–16:30</div><div class="ldTimelineDesc">Travel to the crag &amp; climbing</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">17:00</div><div class="ldTimelineDesc">Return to parking lot / dismiss at Hemei Elementary School</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">18:00</div><div class="ldTimelineDesc">Dismiss at Nangang Station</div></div>
+                </div>
+                <p class="ldPriceNote">Times are approximate and may shift depending on weather, traffic, or group pace — we recommend not planning anything else that evening.</p>
             </div>
 
+            <!-- 5. Before You Go -->
             <div class="tab-content">
-                <h4>Trip Cancellation or Rescheduling Due to Weather</h4>
-                <ul>
-                    <li>- Force Majeure: If the trip cannot proceed due to events such as a land typhoon warning, earthquake, cold wave, heavy rain advisory (as defined by the Central Weather Administration), road closures, or restrictions imposed by management authorities, a refund will be issued after deducting a 5% administrative fee.</li>
-                    <li>- Poor Weather Forecast: If adverse weather such as continuous rain or an incoming cold front may affect the trip quality, we will conduct a comprehensive assessment. The final decision will be announced no later than 3 days before departure. If we decide to cancel the trip, a refund will be issued after deducting a 5% administrative fee.</li>
-                </ul>
+                <div class="ldSubHeading">Things to Know</div>
+                <div class="ldNotesList">
+                    <p>Wear comfortable, breathable outdoor clothing, and bring a windproof or rain jacket.</p>
+                    <p>Bring around 2 liters of water, lunch, and sun protection.</p>
+                    <p>If you own climbing shoes, feel free to bring them for a better fit.</p>
+                    <p>All necessary climbing gear and activity insurance are provided.</p>
+                    <p>Please let us know about any special needs or health conditions when you register.</p>
+                    <p>We'll send a full pre-trip briefing three days before departure.</p>
+                </div>
+            </div>
 
-                <h4>Cancellation Due to Personal Reasons</h4>
-                <ul>
-                    <li>- Cancel 14 days before departure: Refund minus a 5% administrative fee.</li>
-                    <li>- Cancel 8–13 days before departure: 20% of the booking fee will be deducted.</li>
-                    <li>- Cancel 3–7 days before departure: 30% of the booking fee will be deducted.</li>
-                    <li>- Cancel within 2 days of departure: No refund.</li>
-                </ul>
+            <!-- 6. Cancellation Policy -->
+            <div class="tab-content">
+                <div class="ldSubHeading">Weather-Related Cancellations or Rescheduling</div>
+                <div class="ldNotesList">
+                    <p>Force majeure: If the trip cannot proceed due to a land typhoon warning, earthquake, cold wave, heavy rain advisory (as defined by Taiwan's Central Weather Administration), road closures, or restrictions from authorities, you'll be refunded minus a 5% administrative fee.</p>
+                    <p>Poor forecasts: For conditions like persistent rain or a cold front that could affect the experience, we'll make a call and announce it no later than 3 days before departure. If we cancel, you'll be refunded minus a 5% administrative fee.</p>
+                </div>
 
-                <h4>Minimum Participant Requirement</h4>
-                <ul>
-                    <li>- If the minimum participant number is not reached and the trip is canceled, participants may choose to reschedule for free or receive a refund with a 5% administrative fee deducted.</li>
-                </ul>
+                <div class="ldSubHeading">Cancellations for Personal Reasons</div>
+                <div class="ldNotesList">
+                    <p>14+ days before departure: Refund minus a 5% administrative fee.</p>
+                    <p>8–13 days before departure: Refund minus 20% of necessary costs.</p>
+                    <p>3–7 days before departure: Refund minus 30% of necessary costs.</p>
+                    <p>Within 2 days of departure: No refund.</p>
+                </div>
+
+                <div class="ldSubHeading">Minimum Group Size</div>
+                <div class="ldNotesList">
+                    <p>If the trip is canceled due to not meeting the minimum group size, you can choose a free reschedule or a refund minus a 5% administrative fee.</p>
+                </div>
             </div>
         </div>
+
+        <!-- Book Now: session picker -->
+        <div class="adventureDetail">
+            <div class="bookingFormInner" id="booking-form">
+                <h2>Book Now</h2>
+                <p class="ldRegisterNote">Choose the session you'd like to join — clicking it opens that session's registration form in a new tab. Your spot isn't confirmed until you receive a "Registration Confirmed" email, so after submitting the form and completing payment, be sure to check your inbox (including spam).</p>
+                <div class="sessionPickGrid" id="sessionPickGrid">
+                    <p class="sessionPickLoading">Loading sessions...</p>
+                </div>
+            </div>
+        </div>
+
         <div class="Footer">
             <div class="info">
                 <div class="infologo">
@@ -199,34 +394,11 @@
             </div>
         </div>
     </div>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
- AOS.init({
-  // ─── 全域設定 ───
-  disable: false,                // 何時停用 AOS：可填 'phone' / 'tablet' / 'mobile'，或直接給布林值、表達式、函式
-  startEvent: 'DOMContentLoaded',// AOS 什麼事件被觸發時才開始初始化
-  initClassName: 'aos-init',     // 元素在初始化完成後會先加上的類名
-  animatedClassName: 'aos-animate', // 動畫正式啟動時套用的類名
-  useClassNames: false,          // 若設為 true，會把 `data-aos` 的值做為類名，在滾動時一併加上
-  disableMutationObserver: false,// 是否關閉 MutationObserver 自動偵測 DOM 變動（進階）
-  debounceDelay: 50,             // 視窗尺寸改變時的 debounce 間隔（毫秒）
-  throttleDelay: 99,             // 滾動事件的 throttle 間隔（毫秒）
 
-  // ─── 可用 `data-aos-*` 覆寫的項目 ───
-  offset: 120,                   // 觸發動畫時，元素與視窗的距離（px）
-  delay: 0,                      // 動畫延遲 0–3000 ms，步進 50 ms
-  duration: 400,                 // 動畫時長 0–3000 ms，步進 50 ms
-  easing: 'ease',                // 動畫預設 easing 函式
-  once: false,                   // true 表示動畫只在第一次向下滾動時播放
-  mirror: false,                 // true 表示滾過元素後向上滑回可再次播放（鏡像效果）
-  anchorPlacement: 'top-bottom', // 判定元素相對視窗的位置來觸發動畫，例如 'top-bottom' 代表元素頂端到視窗底端
-});
-</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // 照片清單
-		const images = [
+    // Photo carousel
+    const images = [
 	    "/adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing1.jpg",
 	    "/adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing2.jpg",
 	    "/adventurepics/longdongBeginnerClimbing/longdongBeginnerClimbing3.JPG",
@@ -243,53 +415,47 @@
 		const thumbnailContainer = document.getElementById("thumbnailContainer");
 		let timer;
 
-
-    // 切換大圖
+    // Switch main image
     function changeImage(index) {
       currentIndex = index;
       currentImage.src = images[currentIndex];
 
-      // 更新縮圖樣式
+      // Update thumbnail highlight
       thumbs.forEach(img => img.classList.remove("active"));
       thumbs[currentIndex].classList.add("active");
-
-      // 縮圖自動捲動到可見區
-      //thumbs[currentIndex].scrollIntoView({
-        //behavior: "smooth",
-        //block: "nearest"
-      //});
 
       resetTimer();
     }
 
-    // 上一張
+    // Previous
     function prevImage() {
       currentIndex = (currentIndex - 1 + images.length) % images.length;
       changeImage(currentIndex);
     }
 
-    // 下一張
+    // Next
     function nextImage() {
       currentIndex = (currentIndex + 1) % images.length;
       changeImage(currentIndex);
     }
 
-    // 自動播放
+    // Autoplay
     function autoPlay() {
       nextImage();
     }
 
-    // 重置計時器
+    // Reset timer
     function resetTimer() {
       clearInterval(timer);
       timer = setInterval(autoPlay, 3000);
     }
 
-    // 初始狀態
+    // Initial state
     changeImage(0);
     timer = setInterval(autoPlay, 3000);
 </script>
 <script>
+  // Tab switching
   function showTab(index) {
     const buttons = document.querySelectorAll(".tab-buttons button");
     const contents = document.querySelectorAll(".tab-content");
@@ -302,6 +468,137 @@
       content.classList.toggle("active", i === index);
     });
   }
+
+  // FAQ accordion (Activity Introduction - Why You Can Climb With Confidence)
+  function toggleFaq(btn) {
+    const item = btn.closest(".ldFaqItem");
+    const open = item.classList.toggle("open");
+    btn.querySelector(".ldFaqArrow").textContent = open ? "－" : "＋";
+  }
+</script>
+<script>
+(function(){
+    var grid = document.getElementById('sessionPickGrid');
+    var CSV_URL = 'https://docs.google.com/spreadsheets/d/1VvRRgURxwP4ka_it5MCn96JD6XzbjKS6CGEnWYE_afU/export?format=csv&gid=0';
+    var ACTIVITY_TYPE = 'Longdong Beginner Rock Climbing';
+    var LINE_URL = 'https://lin.ee/D1jlWHsF';
+    var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var WEEKDAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+    function esc(s){
+        return String(s == null ? '' : s)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+    }
+
+    // Simple but correct CSV parser that handles quoted commas/newlines
+    function parseCSV(text){
+        var rows = [], row = [], field = '', inQuotes = false;
+        for (var i = 0; i < text.length; i++){
+            var c = text[i];
+            if (inQuotes){
+                if (c === '"'){
+                    if (text[i+1] === '"'){ field += '"'; i++; }
+                    else { inQuotes = false; }
+                } else {
+                    field += c;
+                }
+            } else {
+                if (c === '"'){ inQuotes = true; }
+                else if (c === ','){ row.push(field); field = ''; }
+                else if (c === '\r'){ /* skip */ }
+                else if (c === '\n'){ row.push(field); rows.push(row); row = []; field = ''; }
+                else { field += c; }
+            }
+        }
+        if (field.length || row.length){ row.push(field); rows.push(row); }
+        return rows;
+    }
+
+    function fmtDateWeekday(dstr){
+        var d = new Date(dstr + 'T00:00:00');
+        if (isNaN(d.getTime())) return dstr;
+        return MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear() + ' (' + WEEKDAYS[d.getDay()] + ')';
+    }
+
+    function toMMDDYYYY(dstr){
+        var parts = (dstr || '').split('-');
+        if (parts.length !== 3) return '';
+        return parts[1] + '/' + parts[2] + '/' + parts[0];
+    }
+
+    function withSessionDateParam(url, dstr){
+        if (!url) return '';
+        var sep = url.indexOf('?') >= 0 ? '&' : '?';
+        return url + sep + 'session_date_param=' + toMMDDYYYY(dstr);
+    }
+
+    // Fillout early-bird logic isn't set up for every session yet, so we show only
+    // the "原價" (list price) column — no strikethrough comparison.
+    function priceRowHtml(current){
+        var c = (current || '').trim();
+        return '<span class="sessionPickNew">' + esc(c) + '</span>';
+    }
+
+    function cardHtml(r){
+        var href = esc(withSessionDateParam(r.formLink, r.date));
+        return '<a class="sessionPickCard" href="' + href + '" target="_blank" rel="noopener">' +
+            '<span class="sessionPickDate">' + esc(fmtDateWeekday(r.date)) + '</span>' +
+            '<span class="sessionPickPriceRow">' + priceRowHtml(r.currentPrice) + '</span>' +
+            '<span class="sessionPickCta">Book Now ↗</span>' +
+            '</a>';
+    }
+
+    function showFallback(){
+        grid.className = 'sessionPickFallback';
+        grid.innerHTML = 'Contact us for the latest sessions, <a href="' + LINE_URL + '" target="_blank" rel="noopener">LINE Support →</a>';
+    }
+
+    fetch(CSV_URL)
+        .then(function(res){
+            if (!res.ok) throw new Error('CSV fetch failed: ' + res.status);
+            return res.text();
+        })
+        .then(function(text){
+            var rows = parseCSV(text);
+            if (!rows.length) throw new Error('Empty CSV');
+
+            var header = rows[0];
+            var iType = header.indexOf('活動類型 EN');
+            var iDate = header.indexOf('場次日期');
+            var iStatus = header.indexOf('最終狀態（自動）');
+            var iForm = header.indexOf('報名表單連結');
+            var iPrice = header.indexOf('原價');
+            if (iType < 0 || iDate < 0 || iStatus < 0 || iPrice < 0){
+                throw new Error('CSV missing expected columns');
+            }
+
+            var today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            var upcoming = rows.slice(1)
+                .filter(function(r){ return r.length > iStatus && r[iType] === ACTIVITY_TYPE && r[iStatus] === '開放中'; })
+                .map(function(r){
+                    var d = new Date(r[iDate] + 'T00:00:00');
+                    return {
+                        date: r[iDate],
+                        dateObj: d,
+                        currentPrice: r[iPrice],
+                        formLink: iForm >= 0 ? r[iForm] : ''
+                    };
+                })
+                .filter(function(r){ return !isNaN(r.dateObj.getTime()) && r.dateObj.getTime() > today.getTime(); })
+                .sort(function(a, b){ return a.dateObj - b.dateObj; });
+
+            if (!upcoming.length) throw new Error('No upcoming open sessions for this activity');
+
+            grid.innerHTML = upcoming.map(cardHtml).join('');
+        })
+        .catch(function(){
+            showFallback();
+        });
+})();
 </script>
 </body>
 </html>
