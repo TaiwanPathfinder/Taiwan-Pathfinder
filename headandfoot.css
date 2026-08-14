@@ -199,6 +199,94 @@ h2{
     
 }
 
+/*-----Marquee (upcoming-sessions bar under the nav, site-wide)-----*/
+/* .Header above is `position:fixed`. Wrapping it together with the marquee
+   in .StickyTop and making .Header static again inside that wrapper keeps
+   the nav and the marquee flush with zero gap between them, regardless of
+   the fixed header's actual rendered height (see indexTest.css for the
+   fixed-vs-sticky history on this page). The extra space this needs at the
+   top of the page is added by each page's own inline sync script + the
+   shared marquee.js (they measure marqueeBar's real height at runtime and
+   set it as body padding-top), not by a rule here, so this is safe to load
+   on every page without clashing with each page's existing header-clearance
+   margin/padding. */
+.StickyTop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+.StickyTop .Header{
+    position: static;
+}
+.marqueeBar{
+    background-color: #3a2415;
+    overflow: hidden;
+    padding: 11px 0;
+    white-space: nowrap;
+}
+.marqueeTrack{
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: marqueeScroll 26s linear infinite;
+    will-change: transform;
+}
+.marqueeBar:hover .marqueeTrack{
+    animation-play-state: paused;
+}
+.marqueeItem{
+    display: inline-block;
+    padding: 0 20px;
+    color: #fde4b5;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+a.marqueeItem:hover,
+a.marqueeItem:focus{
+    color: #ffc266;
+    text-decoration: underline;
+}
+.marqueeStrike{
+    text-decoration: line-through;
+    opacity: 0.65;
+    margin-right: 5px;
+    font-weight: normal;
+}
+.marqueeSep{
+    color: #e08e00;
+    font-size: 12px;
+}
+@keyframes marqueeScroll{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(-50%); }
+}
+.marqueeStatic .marqueeTrack{
+    animation: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+@media (prefers-reduced-motion: reduce){
+    .marqueeTrack{
+        animation: none !important;
+    }
+}
+@media (max-width:767px){
+    .marqueeBar{
+        padding: 9px 0;
+    }
+    .marqueeItem{
+        font-size: 12px;
+        padding: 0 14px;
+    }
+}
+
 /*-----Footer-----*/
 .info{
     display: flex;

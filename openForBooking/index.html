@@ -22,6 +22,7 @@
 
 <body>
     <div class="Wrap">
+        <div class="StickyTop">
         <div class="Header">
             <div class="headertext">
                 <a class="headertexta" href="/">Home</a>
@@ -48,6 +49,13 @@
                 </ul>
                 </div>
             </div>
+        </div>
+        <div class="marqueeBar" id="marqueeBar">
+            <div class="marqueeTrack" id="marqueeTrack">
+                <span class="marqueeItem">Loading upcoming sessions...</span>
+            </div>
+        </div>
+        <script>document.body.style.paddingTop = document.getElementById('marqueeBar').offsetHeight + 'px';</script>
         </div>
         <div class="carrd">
           <iframe 
@@ -114,5 +122,6 @@
 });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/marquee.js" defer></script>
 </body>
 </html>

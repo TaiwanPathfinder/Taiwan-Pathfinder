@@ -20,6 +20,7 @@
 
 <body>
     <div class="Wrap">
+        <div class="StickyTop">
         <div class="Header">
             <div class="headertext">
                 <a class="headertexta" href="/homeZN/">首頁</a>
@@ -48,6 +49,13 @@
                 </ul>
                 </div>
             </div>
+        </div>
+        <div class="marqueeBar" id="marqueeBar">
+            <div class="marqueeTrack" id="marqueeTrack">
+                <span class="marqueeItem">近期開放場次載入中...</span>
+            </div>
+        </div>
+        <script>document.body.style.paddingTop = document.getElementById('marqueeBar').offsetHeight + 'px';</script>
         </div>
         <div class="adventureHead">
             <div class="adventureHeadText">
@@ -292,5 +300,6 @@
     });
   }
 </script>
+<script src="/marquee.js" defer></script>
 </body>
 </html>
