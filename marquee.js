@@ -16,6 +16,12 @@
     var CSV_URL = 'https://docs.google.com/spreadsheets/d/1VvRRgURxwP4ka_it5MCn96JD6XzbjKS6CGEnWYE_afU/export?format=csv&gid=0';
     var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
+    // The sheet only has a Chinese "報名狀態標籤" column so far (no English
+    // one yet), so English pages translate it via this table.
+    var STATUS_TAG_EN = { '報名中': 'Open', '已成團': 'Confirmed to Run', '即將額滿': 'Almost Full' };
+    var STATUS_TAG_CLASS = { '報名中': 'statusTag-open', '已成團': 'statusTag-confirmed', '即將額滿': 'statusTag-almost-full' };
+    var STATUS_TAG_ICON = { '已成團': '✓ ' };
+
     function esc(s){
         return String(s == null ? '' : s)
             .replace(/&/g, '&amp;')
@@ -71,11 +77,19 @@
         return esc(cur);
     }
 
+    function statusTagHtml(tag){
+        if (!tag) return '';
+        var cls = STATUS_TAG_CLASS[tag] || 'statusTag-open';
+        var label = isZH ? tag : (STATUS_TAG_EN[tag] || tag);
+        var icon = STATUS_TAG_ICON[tag] || '';
+        return '<span class="statusTag ' + cls + '">' + icon + esc(label) + '</span>';
+    }
+
     function marqueeItemHtml(r){
         var label = esc(fmtDateShort(r.date)) + ' ' + esc(r.type) + '・';
         var href = r.formLink ? esc(withSessionDateParam(r.formLink, r.date)) : '#';
         return '<a class="marqueeItem" href="' + href + '" target="_blank" rel="noopener">' +
-            label + marqueePriceHtml(r) + '</a>';
+            label + marqueePriceHtml(r) + statusTagHtml(r.statusTag) + '</a>';
     }
 
     function renderMarqueeStatic(html){
@@ -126,6 +140,7 @@
             var iStatus = header.indexOf('最終狀態（自動）');
             var iForm = header.indexOf('報名表單連結');
             var iPrice = header.indexOf('原價');
+            var iStatusTag = header.indexOf('報名狀態標籤');
             if (iType < 0 || iDate < 0 || iStatus < 0 || iPrice < 0){
                 throw new Error('CSV missing expected columns');
             }
@@ -142,7 +157,8 @@
                         date: r[iDate],
                         dateObj: d,
                         currentPrice: r[iPrice],
-                        formLink: iForm >= 0 ? r[iForm] : ''
+                        formLink: iForm >= 0 ? r[iForm] : '',
+                        statusTag: iStatusTag >= 0 ? r[iStatusTag] : ''
                     };
                 })
                 .filter(function(r){ return !isNaN(r.dateObj.getTime()) && r.dateObj.getTime() > today.getTime(); })

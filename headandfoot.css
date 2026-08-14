@@ -287,6 +287,45 @@ a.marqueeItem:focus{
     }
 }
 
+/*-----Session status tag badges (報名中/已成團/即將額滿), used in the
+  marquee and in the session cards on the home pages + Longdong page-----*/
+.statusTag{
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 2px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    color: white;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+/* 報名中 / Open — plain "still taking bookings" status, kept neutral on purpose */
+.statusTag-open{
+    background-color: #7d8189;
+}
+/* 已成團 / Confirmed to Run — good news (guide + minimum headcount locked
+   in, guaranteed to happen), so this must read as reassuring, not a warning
+   — green + checkmark, never greyed out or struck through. */
+.statusTag-confirmed{
+    background-color: #1f8a4c;
+}
+/* 即將額滿 / Almost Full — the one status meant to create urgency */
+.statusTag-almost-full{
+    background-color: #d64545;
+}
+.marqueeItem .statusTag{
+    margin-left: 6px;
+}
+@media (max-width:767px){
+    .statusTag{
+        font-size: 10px;
+        padding: 2px 7px;
+    }
+}
+
 /*-----Footer-----*/
 .info{
     display: flex;
