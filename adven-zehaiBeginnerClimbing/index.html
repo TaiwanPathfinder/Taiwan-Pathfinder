@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rehai Beginner rock climbing Experience| Taiwan Pathfinder</title>
+    <title>Rehai Beginner Rock Climbing | Taiwan Pathfinder</title>
     <link rel="stylesheet" href="/oneAdventurePage.css?v=2">
     <link rel="stylesheet" href="/headandfoot.css?v=2">
+    <link rel="stylesheet" href="/longdongTest.css?v=2">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDR9E7XZP0"></script>
@@ -15,7 +16,7 @@
     gtag('js', new Date());
 
     gtag('config', 'G-JDR9E7XZP0');
-    </script>   
+    </script>
 </head>
 
 <body>
@@ -55,29 +56,31 @@
         </div>
         <script>document.body.style.paddingTop = document.getElementById('marqueeBar').offsetHeight + 'px';</script>
         </div>
+
+        <!-- Hero: text left, gallery right (kept consistent with the current longdong layout) -->
         <div class="adventureHead">
             <div class="adventureHeadText">
-                <h1>Rehai rock climbing</h1>
-                <p><strong>one day adventure to Rehai</strong> the Rehai Climbing Area offers a unique blend of adventure and tranquility. Famous for its stunning rock formations and serene hot spring surroundings, this climbing spot is a hidden gem for outdoor enthusiasts in Taiwan.</p>
+                <h1>Rehai Beginner Rock Climbing</h1>
+                <p>Rehai Crag is located in Beitou District, Taipei City, near the famous Beitou hot springs and the Datun mountain range — one of the few natural climbing spots within the city. No experience needed: the routes here are designed for beginners, and your guide will be with you every step of the way as you complete your first outdoor climb.</p>
                 <div class="advenIntroTextButton">
                     <div class="buttonPrice">
                         <h3>Price</h3>
-                        <p>NT.3,000</p>
+                        <p>NT$3,000</p>
                     </div>
                 </div>
                 <div class="buttonBook">
-                    <a target=" _blank" href="/openForBooking/">BOOK NOW</a>
+                    <a href="#booking-form">Book Now</a>
                 </div>
             </div>
             <div class="adventureHeadGallery">
-                <!-- 大圖 -->
+                <!-- Main image -->
                 <div class="main-image">
                     <img width="1091" height="1920" id="current" src="/adventurepics/熱海新手體驗攀登/熱海4.jpg" alt="main image">
-                <!-- 左右切換箭頭 -->
+                <!-- Prev/next arrows -->
                     <button class="arrow left" onclick="prevImage()">&#10094;</button>
                     <button class="arrow right" onclick="nextImage()">&#10095;</button>
                 </div>
-                <!-- 縮圖 -->
+                <!-- Thumbnails -->
                 <div class="thumbnails" id="thumbnailContainer">
                     <img loading="lazy" width="1080" height="1920" src="/adventurepics/熱海新手體驗攀登/熱海1.JPG" alt="thumb1" onclick="changeImage(0)">
                     <img loading="lazy" width="1920" height="1440" src="/adventurepics/熱海新手體驗攀登/熱海2.jpg" alt="thumb2" onclick="changeImage(1)">
@@ -87,84 +90,255 @@
                     <img loading="lazy" width="1083" height="1920" src="/adventurepics/熱海新手體驗攀登/熱海6.jpg" alt="thumb6" onclick="changeImage(5)">
                     <img loading="lazy" width="1446" height="1920" src="/adventurepics/熱海新手體驗攀登/熱海7.jpg" alt="thumb7" onclick="changeImage(6)">
                     <img loading="lazy" width="1920" height="1440" src="/adventurepics/熱海新手體驗攀登/熱海8.jpg" alt="thumb8" onclick="changeImage(7)">
-                <!-- 如果要更多圖片可以繼續加 -->
                 </div>
             </div>
         </div>
+
+        <!-- Activity Introduction: badge pills + copy -->
         <div class="adventureIntroduction">
             <div class="advenIntroText">
-                <h2>Activity Introdction</h2>
+                <h2>Activity Introduction</h2>
                 <div class="advenIntroTextButton">
                     <div class="buttonTime">
                         <h3>Duration</h3>
-                        <p>1 day</p>
+                        <p>1 Day</p>
                     </div>
                     <div class="buttonDifficulty">
                         <h3>Difficulty</h3>
                         <p>Beginner</p>
                     </div>
                 </div>
-                <p class="advenIntroTextp">the Rehai Climbing Area offers a unique blend of adventure and tranquility. Famous for its stunning rock formations and serene hot spring surroundings, this climbing spot is a hidden gem for outdoor enthusiasts in Taiwan.</p>
+                <p class="advenIntroTextp">A one-day climbing experience — pure outdoor power.</p>
+                <p class="advenIntroTextp">Step out of the climbing gym and onto real rock! Rehai Crag is easy to reach from Beitou, yet feels a world away from the city's bustle. Known for its solid andesite walls with excellent friction, no experience or gear of your own is required — your guide will start from the absolute basics, so you can safely experience your first outdoor climb. The trip is led by a professional guide, walking you step by step through gear briefing, basic safety concepts, and belay technique before you actually climb, letting you feel the appeal of outdoor climbing for yourself. Between climbs, you can also take in views of Mt. Datun and the hills around Beitou.</p>
+
+                <h2>Highlights</h2>
+                <p class="advenIntroTextp">Rehai is a natural climbing crag tucked into the hills of Beitou, known for its distinctive Chilihan rock walls — easy to reach, with real outdoor climbing available right within the city. Whether it's your first time climbing or you're just looking for somewhere close to explore, Rehai has just the right experience for you.</p>
+                <div class="ldHighlightCardGrid">
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><circle cx="9" cy="6" r="2"/><line x1="4" y1="12" x2="20" y2="12"/><circle cx="15" cy="12" r="2"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="11" cy="18" r="2"/></svg>
+                        </span>
+                        <p>Routes suited for total beginners — your guide adjusts the difficulty to match you, so you're never pushed beyond what you're comfortable with</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 19c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg>
+                        </span>
+                        <p>Breathtaking views of lush green mountains — the perfect blend of climbing and connecting with nature</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polygon points="13.2 10.8 15 8 12.2 9.8 10 12.5 13.2 10.8" fill="currentColor" stroke="none"/></svg>
+                        </span>
+                        <p>Led by professional guides from start to finish, keeping things safe and fun</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a2 2 0 012-2h8a2 2 0 012 2v11a2 2 0 01-2 2H8a2 2 0 01-2-2V8z"/><path d="M9 6V5a3 3 0 016 0v1"/><path d="M9 12h6"/></svg>
+                        </span>
+                        <p>Full climbing gear provided — just show up, nothing to carry</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-2h6l2 2h3v11H4z"/><circle cx="12" cy="13.5" r="3.5"/></svg>
+                        </span>
+                        <p>Come away with memories worth telling</p>
+                    </div>
+                </div>
+
+                <div class="ldSafetyBlock">
+                    <h2 class="ldSafetyBlockTitle">Why You Can Climb With Confidence</h2>
+                    <div class="ldStatBadgeRow">
+                        <div class="ldStatBadge">
+                            <span class="ldIcon ldIconSafety">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 6-5s6 2 6 5"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 20c.3-2 1.7-3.5 4-3.8"/></svg>
+                            </span>
+                            <span class="ldStatBadgeNum">1:6</span>
+                            <span class="ldStatBadgeLabel">Guide Ratio</span>
+                        </div>
+                        <div class="ldStatBadge">
+                            <span class="ldIcon ldIconSafety">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+                            </span>
+                            <span class="ldStatBadgeNum">NT$2M</span>
+                            <span class="ldStatBadgeLabel">Accident Coverage<br><small>Plus NT$200K medical coverage</small></span>
+                        </div>
+                        <div class="ldStatBadge">
+                            <span class="ldIcon ldIconSafety">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="13" rx="2"/><path d="M12 9.5v6M9 12.5h6"/></svg>
+                            </span>
+                            <span class="ldStatBadgeNum">Certified</span>
+                            <span class="ldStatBadgeLabel">First-Aid Trained Guides</span>
+                        </div>
+                        <div class="ldStatBadge">
+                            <span class="ldIcon ldIconSafety">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>
+                            </span>
+                            <span class="ldStatBadgeNum">Gear Included</span>
+                            <span class="ldStatBadgeLabel">Nothing to Bring</span>
+                        </div>
+                    </div>
+                    <p class="ldPriceNote">For full safety details, see the "Safety" tab below</p>
+
+                    <div class="ldFaqList">
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                I don't exercise regularly — can I still join?
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>Yes. Routes are adjusted to your ability, and your guide is with you the whole way — we'll never push you past your comfort zone.</p></div>
+                        </div>
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                Is it dangerous?
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>We use professional belay systems and gear throughout, keep guide ratios to 1:6 or better, and every participant is covered by insurance.</p></div>
+                        </div>
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                Do I need to bring my own gear?
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>Not at all — helmet, harness, climbing shoes, and chalk bag are all provided.</p></div>
+                        </div>
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                Can I join solo?
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>Absolutely — we run small groups, and plenty of participants come solo. You'll likely make new friends along the way.</p></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Tabs -->
         <div class="adventureDetail">
             <div class="tab-buttons">
                 <button class="active" onclick="showTab(0)">Meeting Point</button>
-                <button onclick="showTab(1)">What’s Included</button>
-                <button onclick="showTab(2)">Safety Policy</button>
-                <button onclick="showTab(3)">Pre-Trip Notice</button>
-                <button onclick="showTab(4)">Cancellation Policy</button>
+                <button onclick="showTab(1)">What's Included</button>
+                <button onclick="showTab(2)">Safety</button>
+                <button onclick="showTab(3)">Itinerary</button>
+                <button onclick="showTab(4)">Before You Go</button>
+                <button onclick="showTab(5)">Cancellation Policy</button>
             </div>
 
+            <!-- 1. Meeting Point -->
             <div class="tab-content active">
-		            <p>- Yinguang Trailhead（The entrance of Rehai Climbing Crag）.</p></div>
-            <div class="tab-content">
-                <ul>
-                    <li>- Climbing gear (helmet, harness, climbing shoes)</li>
-                    <li>- Professional guide services and English support</li>
-                    <li>- Specific activity insurance</li>
-                </ul>
-            </div>
-            <div class="tab-content">
-                <ul>
-                    <li>- Each participant is provided with specific activity insurance: NT$2,000,000 accidental death and disability coverage, NT$200,000 medical reimbursement insurance</li>
-                    <li>- Guides are trained in first aid and emergency handling</li>
-                    <li>- Guide-to-participant ratio is kept at no more than 1:6 to ensure quality and safety standards</li>
-                    <li>- We provide full equipment, and participants should follow guide instructions to ensure safety</li>
-                </ul>
+                <div class="ldMeetGrid">
+                    <div class="ldMeetCard">
+                        <h3>Meeting Point</h3>
+                        <p>Yinguang Lane Trailhead (entrance to Rehai Crag)</p>
+                        <p style="margin-top:10px;">Public transit: Take the MRT to Xinbeitou Station, then walk about 30 minutes</p>
+                        <p>Parking near the crag is limited — if you're driving or riding a scooter, please allow extra time to find a spot</p>
+                        <p style="margin-top:10px;color:#777;font-size:13px;">※ No paid shuttle service is available for this trip — please make your own way to the meeting point.</p>
+                    </div>
+                </div>
             </div>
 
+            <!-- 2. What's Included -->
             <div class="tab-content">
-                <ul>
-                    <li>- Please wear comfortable, breathable outdoor clothing and bring a windproof or waterproof jacket in case of changing weather.</li>
-                    <li>- Prepare around 2 liters of water, lunch, and sun protection (sunscreen, hat, sunglasses, etc.).</li>
-                    <li>- If you have your own climbing shoes, we recommend bringing them for a better fit; climbing shoes are also provided, though sizes may not be perfect.</li>
-                    <li>- All essential climbing equipment (harness, helmet, etc.) and activity insurance will be provided, so you can enjoy the activity worry-free.</li>
-                    <li>- If you have any special needs or health conditions, please inform us during registration so we can make appropriate arrangements.</li>
-                    <li>- A detailed trip briefing, including weather suggestions and final reminders, will be sent 3 days before departure to help you prepare.</li>
-                </ul>
+                <div class="ldIncludesList">
+                    <h4>What's Included</h4>
+                    <ul>
+                        <li>Climbing gear (helmet, harness, climbing shoes)</li>
+                        <li>Professional guide service in English</li>
+                        <li>Specific activity insurance</li>
+                    </ul>
+                </div>
             </div>
+
+            <!-- 3. Safety -->
             <div class="tab-content">
-                <h4>Trip Cancellation or Rescheduling Due to Weather</h4>
-                <ul>
-                    <li>- Force Majeure: If the trip cannot proceed due to events such as a land typhoon warning, earthquake, cold wave, heavy rain advisory (as defined by the Central Weather Administration), road closures, or restrictions imposed by management authorities, a refund will be issued after deducting a 5% administrative fee.</li>
-                    <li>- Poor Weather Forecast: If adverse weather such as continuous rain or an incoming cold front may affect the trip quality, we will conduct a comprehensive assessment. The final decision will be announced no later than 3 days before departure. If we decide to cancel the trip, a refund will be issued after deducting a 5% administrative fee.</li>
-                </ul>
+                <div class="ldSafetyGrid">
+                    <div class="ldSafetyItem">
+                        <div class="ldSafetyIcon">✓</div>
+                        <div class="ldSafetyText">
+                            <p>Every participant is covered by specific activity insurance: NT$2,000,000 for accidental death or disability, plus NT$200,000 in medical expense coverage.</p>
+                        </div>
+                    </div>
+                    <div class="ldSafetyItem">
+                        <div class="ldSafetyIcon">✓</div>
+                        <div class="ldSafetyText">
+                            <p>All guides are trained in first aid and emergency response.</p>
+                        </div>
+                    </div>
+                    <div class="ldSafetyItem">
+                        <div class="ldSafetyIcon">✓</div>
+                        <div class="ldSafetyText">
+                            <p>Guide-to-participant ratio never exceeds 1:6, ensuring quality and safety standards.</p>
+                        </div>
+                    </div>
+                    <div class="ldSafetyItem">
+                        <div class="ldSafetyIcon">✓</div>
+                        <div class="ldSafetyText">
+                            <p>Full climbing gear is provided — please follow your guide's instructions to keep the activity safe.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <h4>Cancellation Due to Personal Reasons</h4>
-                <ul>
-                    <li>- Cancel 14 days before departure: Refund minus a 5% administrative fee.</li>
-                    <li>- Cancel 8–13 days before departure: 20% of the booking fee will be deducted.</li>
-                    <li>- Cancel 3–7 days before departure: 30% of the booking fee will be deducted.</li>
-                    <li>- Cancel within 2 days of departure: No refund.</li>
-                </ul>
+            <!-- 4. Itinerary -->
+            <div class="tab-content">
+                <div class="ldSubHeading">Schedule</div>
+                <div class="ldTimeline">
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">09:00</div><div class="ldTimelineDesc">Meet at the Rehai entrance meeting point</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">09:00–09:40</div><div class="ldTimelineDesc">Gear distribution, safety briefing &amp; warm-up</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">09:40–14:00</div><div class="ldTimelineDesc">Head to the crag — climbing begins!</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">14:30</div><div class="ldTimelineDesc">Pack up gear, group photo, dismiss</div></div>
+                </div>
+                <p class="ldPriceNote">※ Times are approximate and may shift depending on weather, traffic, or group pace.</p>
+            </div>
 
-                <h4>Minimum Participant Requirement</h4>
-                <ul>
-                    <li>- If the minimum participant number is not reached and the trip is canceled, participants may choose to reschedule for free or receive a refund with a 5% administrative fee deducted.</li>
-                </ul>
+            <!-- 5. Before You Go -->
+            <div class="tab-content">
+                <div class="ldSubHeading">Things to Know</div>
+                <div class="ldNotesList">
+                    <p>Wear comfortable, breathable outdoor clothing, and bring a windproof or rain jacket in case of changing weather.</p>
+                    <p>Bring around 2 liters of water, lunch, and sun protection (sunscreen, hat, sunglasses, etc.).</p>
+                    <p>If you own climbing shoes, feel free to bring them for a better fit — we also provide climbing shoes, though sizing may not be a perfect match.</p>
+                    <p>All necessary climbing gear (harness, helmet, etc.) and activity insurance are provided, so you can enjoy the day worry-free.</p>
+                    <p>Please let us know about any special needs or health conditions when you register, so we can plan accordingly.</p>
+                    <p>We'll send a full pre-trip briefing three days before departure, including weather advice and last-minute reminders.</p>
+                </div>
+            </div>
+
+            <!-- 6. Cancellation Policy -->
+            <div class="tab-content">
+                <div class="ldSubHeading">Weather-Related Cancellations or Rescheduling</div>
+                <div class="ldNotesList">
+                    <p>Force majeure: If the trip cannot proceed due to a land typhoon warning, earthquake, cold wave, heavy rain advisory (as defined by Taiwan's Central Weather Administration), road closures, or restrictions from authorities, you'll be refunded minus a 5% administrative fee.</p>
+                    <p>Poor forecasts: For conditions like persistent rain or a cold front that could affect the experience, we'll make a call and announce it no later than 3 days before departure. If we cancel, you'll be refunded minus a 5% administrative fee.</p>
+                </div>
+
+                <div class="ldSubHeading">Cancellations for Personal Reasons</div>
+                <div class="ldNotesList">
+                    <p>14+ days before departure: Refund minus a 5% administrative fee.</p>
+                    <p>8–13 days before departure: Refund minus 20% of necessary costs.</p>
+                    <p>3–7 days before departure: Refund minus 30% of necessary costs.</p>
+                    <p>Within 2 days of departure: No refund.</p>
+                </div>
+
+                <div class="ldSubHeading">Minimum Group Size</div>
+                <div class="ldNotesList">
+                    <p>If the trip is canceled due to not meeting the minimum group size, you can choose a free reschedule or a refund minus a 5% administrative fee.</p>
+                </div>
             </div>
         </div>
+
+        <!-- Book Now: session picker -->
+        <div class="adventureDetail">
+            <div class="bookingFormInner" id="booking-form">
+                <h2>Book Now</h2>
+                <p class="ldRegisterNote">Choose the session you'd like to join — clicking it opens that session's registration form in a new tab.<br>Your spot isn't confirmed until you receive a "Registration Confirmed" email, so after submitting the form and completing payment, be sure to check your inbox (including spam).</p>
+                <div class="sessionPickGrid" id="sessionPickGrid">
+                    <p class="sessionPickLoading">Loading sessions...</p>
+                </div>
+            </div>
+        </div>
+
         <div class="Footer">
             <div class="info">
                 <div class="infologo">
@@ -197,33 +371,10 @@
             </div>
         </div>
     </div>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
- AOS.init({
-  // ─── 全域設定 ───
-  disable: false,                // 何時停用 AOS：可填 'phone' / 'tablet' / 'mobile'，或直接給布林值、表達式、函式
-  startEvent: 'DOMContentLoaded',// AOS 什麼事件被觸發時才開始初始化
-  initClassName: 'aos-init',     // 元素在初始化完成後會先加上的類名
-  animatedClassName: 'aos-animate', // 動畫正式啟動時套用的類名
-  useClassNames: false,          // 若設為 true，會把 `data-aos` 的值做為類名，在滾動時一併加上
-  disableMutationObserver: false,// 是否關閉 MutationObserver 自動偵測 DOM 變動（進階）
-  debounceDelay: 50,             // 視窗尺寸改變時的 debounce 間隔（毫秒）
-  throttleDelay: 99,             // 滾動事件的 throttle 間隔（毫秒）
 
-  // ─── 可用 `data-aos-*` 覆寫的項目 ───
-  offset: 120,                   // 觸發動畫時，元素與視窗的距離（px）
-  delay: 0,                      // 動畫延遲 0–3000 ms，步進 50 ms
-  duration: 400,                 // 動畫時長 0–3000 ms，步進 50 ms
-  easing: 'ease',                // 動畫預設 easing 函式
-  once: false,                   // true 表示動畫只在第一次向下滾動時播放
-  mirror: false,                 // true 表示滾過元素後向上滑回可再次播放（鏡像效果）
-  anchorPlacement: 'top-bottom', // 判定元素相對視窗的位置來觸發動畫，例如 'top-bottom' 代表元素頂端到視窗底端
-});
-</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // 照片清單
+    // Photo carousel
     const images = ["/adventurepics/熱海新手體驗攀登/熱海1.JPG", "/adventurepics/熱海新手體驗攀登/熱海2.jpg", "/adventurepics/熱海新手體驗攀登/熱海3.jpg", "/adventurepics/熱海新手體驗攀登/熱海4.jpg", "/adventurepics/熱海新手體驗攀登/熱海5.jpg", "/adventurepics/熱海新手體驗攀登/熱海6.jpg", "/adventurepics/熱海新手體驗攀登/熱海7.jpg", "/adventurepics/熱海新手體驗攀登/熱海8.jpg"];
     let currentIndex = 0;
     const currentImage = document.getElementById("current");
@@ -231,52 +382,47 @@
     const thumbnailContainer = document.getElementById("thumbnailContainer");
     let timer;
 
-    // 切換大圖
+    // Switch main image
     function changeImage(index) {
       currentIndex = index;
       currentImage.src = images[currentIndex];
 
-      // 更新縮圖樣式
+      // Update thumbnail highlight
       thumbs.forEach(img => img.classList.remove("active"));
       thumbs[currentIndex].classList.add("active");
-
-      // 縮圖自動捲動到可見區
-      //thumbs[currentIndex].scrollIntoView({
-        //behavior: "smooth",
-        //block: "nearest"
-      //});
 
       resetTimer();
     }
 
-    // 上一張
+    // Previous
     function prevImage() {
       currentIndex = (currentIndex - 1 + images.length) % images.length;
       changeImage(currentIndex);
     }
 
-    // 下一張
+    // Next
     function nextImage() {
       currentIndex = (currentIndex + 1) % images.length;
       changeImage(currentIndex);
     }
 
-    // 自動播放
+    // Autoplay
     function autoPlay() {
       nextImage();
     }
 
-    // 重置計時器
+    // Reset timer
     function resetTimer() {
       clearInterval(timer);
       timer = setInterval(autoPlay, 3000);
     }
 
-    // 初始狀態
+    // Initial state
     changeImage(0);
     timer = setInterval(autoPlay, 3000);
 </script>
 <script>
+  // Tab switching
   function showTab(index) {
     const buttons = document.querySelectorAll(".tab-buttons button");
     const contents = document.querySelectorAll(".tab-content");
@@ -289,6 +435,153 @@
       content.classList.toggle("active", i === index);
     });
   }
+
+  // FAQ accordion (Activity Introduction - Why You Can Climb With Confidence)
+  function toggleFaq(btn) {
+    const item = btn.closest(".ldFaqItem");
+    const open = item.classList.toggle("open");
+    btn.querySelector(".ldFaqArrow").textContent = open ? "－" : "＋";
+  }
+</script>
+<script>
+(function(){
+    var grid = document.getElementById('sessionPickGrid');
+    var CSV_URL = 'https://docs.google.com/spreadsheets/d/1VvRRgURxwP4ka_it5MCn96JD6XzbjKS6CGEnWYE_afU/export?format=csv&gid=0';
+    var ACTIVITY_TYPE = 'Rehai Rock Climbing';
+    var LINE_URL = 'https://lin.ee/D1jlWHsF';
+    var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var WEEKDAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+    // The sheet only has a Chinese "報名狀態標籤" column so far (no English
+    // one yet), so this page translates it via this table.
+    var STATUS_TAG_EN = { '報名中': 'Open', '已成團': 'Confirmed to Run', '即將額滿': 'Almost Full' };
+    var STATUS_TAG_CLASS = { '報名中': 'statusTag-open', '已成團': 'statusTag-confirmed', '即將額滿': 'statusTag-almost-full' };
+    var STATUS_TAG_ICON = { '已成團': '✓ ' };
+
+    function statusTagHtml(tag){
+        if (!tag) return '';
+        var cls = STATUS_TAG_CLASS[tag] || 'statusTag-open';
+        var icon = STATUS_TAG_ICON[tag] || '';
+        return '<span class="statusTag ' + cls + '">' + icon + esc(STATUS_TAG_EN[tag] || tag) + '</span>';
+    }
+
+    function esc(s){
+        return String(s == null ? '' : s)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+    }
+
+    // Simple but correct CSV parser that handles quoted commas/newlines
+    function parseCSV(text){
+        var rows = [], row = [], field = '', inQuotes = false;
+        for (var i = 0; i < text.length; i++){
+            var c = text[i];
+            if (inQuotes){
+                if (c === '"'){
+                    if (text[i+1] === '"'){ field += '"'; i++; }
+                    else { inQuotes = false; }
+                } else {
+                    field += c;
+                }
+            } else {
+                if (c === '"'){ inQuotes = true; }
+                else if (c === ','){ row.push(field); field = ''; }
+                else if (c === '\r'){ /* skip */ }
+                else if (c === '\n'){ row.push(field); rows.push(row); row = []; field = ''; }
+                else { field += c; }
+            }
+        }
+        if (field.length || row.length){ row.push(field); rows.push(row); }
+        return rows;
+    }
+
+    function fmtDateWeekday(dstr){
+        var d = new Date(dstr + 'T00:00:00');
+        if (isNaN(d.getTime())) return dstr;
+        return MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear() + ' (' + WEEKDAYS[d.getDay()] + ')';
+    }
+
+    function toMMDDYYYY(dstr){
+        var parts = (dstr || '').split('-');
+        if (parts.length !== 3) return '';
+        return parts[1] + '/' + parts[2] + '/' + parts[0];
+    }
+
+    function withSessionDateParam(url, dstr){
+        if (!url) return '';
+        var sep = url.indexOf('?') >= 0 ? '&' : '?';
+        return url + sep + 'session_date_param=' + toMMDDYYYY(dstr);
+    }
+
+    // Fillout early-bird logic isn't set up for every session yet, so we show only
+    // the "原價" (list price) column — no strikethrough comparison.
+    function priceRowHtml(current){
+        var c = (current || '').trim();
+        return '<span class="sessionPickNew">' + esc(c) + '</span>';
+    }
+
+    function cardHtml(r){
+        var href = esc(withSessionDateParam(r.formLink, r.date));
+        return '<a class="sessionPickCard" href="' + href + '" target="_blank" rel="noopener">' +
+            '<span class="sessionPickDate">' + esc(fmtDateWeekday(r.date)) + '</span>' +
+            statusTagHtml(r.statusTag) +
+            '<span class="sessionPickPriceRow">' + priceRowHtml(r.currentPrice) + '</span>' +
+            '<span class="sessionPickCta">Book Now ↗</span>' +
+            '</a>';
+    }
+
+    function showFallback(){
+        grid.className = 'sessionPickFallback';
+        grid.innerHTML = 'Contact us for the latest sessions, <a href="' + LINE_URL + '" target="_blank" rel="noopener">LINE Support →</a>';
+    }
+
+    fetch(CSV_URL)
+        .then(function(res){
+            if (!res.ok) throw new Error('CSV fetch failed: ' + res.status);
+            return res.text();
+        })
+        .then(function(text){
+            var rows = parseCSV(text);
+            if (!rows.length) throw new Error('Empty CSV');
+
+            var header = rows[0];
+            var iType = header.indexOf('活動類型 EN');
+            var iDate = header.indexOf('場次日期');
+            var iStatus = header.indexOf('最終狀態（自動）');
+            var iForm = header.indexOf('報名表單連結');
+            var iPrice = header.indexOf('原價');
+            var iStatusTag = header.indexOf('報名狀態標籤');
+            if (iType < 0 || iDate < 0 || iStatus < 0 || iPrice < 0){
+                throw new Error('CSV missing expected columns');
+            }
+
+            var today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            var upcoming = rows.slice(1)
+                .filter(function(r){ return r.length > iStatus && r[iType] === ACTIVITY_TYPE && r[iStatus] === '開放中'; })
+                .map(function(r){
+                    var d = new Date(r[iDate] + 'T00:00:00');
+                    return {
+                        date: r[iDate],
+                        dateObj: d,
+                        currentPrice: r[iPrice],
+                        formLink: iForm >= 0 ? r[iForm] : '',
+                        statusTag: iStatusTag >= 0 ? r[iStatusTag] : ''
+                    };
+                })
+                .filter(function(r){ return !isNaN(r.dateObj.getTime()) && r.dateObj.getTime() > today.getTime(); })
+                .sort(function(a, b){ return a.dateObj - b.dateObj; });
+
+            if (!upcoming.length) throw new Error('No upcoming open sessions for this activity');
+
+            grid.innerHTML = upcoming.map(cardHtml).join('');
+        })
+        .catch(function(){
+            showFallback();
+        });
+})();
 </script>
 <script src="/marquee.js" defer></script>
 </body>
