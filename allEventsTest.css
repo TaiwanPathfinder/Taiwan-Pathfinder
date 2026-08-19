@@ -1,11 +1,28 @@
 /*----------------------------------------------------
-  all-events-test.html 專用樣式（測試版「所有開放場次」頁）
-  只在這個測試頁載入，不影響 home.css / headandfoot.css，
-  也不影響 Carrd 頁面（openForBooking 完全沒動）。
+  「所有開放場次」頁專用樣式（openForBookingZN/ 中文版、
+  openForBooking/ 英文版共用），不影響 home.css / headandfoot.css。
 ----------------------------------------------------*/
 
 .Wrap{
     overflow-x: hidden;
+}
+
+/* 立即報名導覽按鈕樣式，跟首頁 indexTest.css 的 .Header .newopen 一致 */
+.Header .newopen{
+    background-color: #e08e00;
+    color: white;
+    font-weight: bolder;
+    font-size: 16px;
+    padding: 8px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.Header .newopen:hover{
+    background-color: #c97a1a;
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
 }
 
 .allEventsIntro{
@@ -60,6 +77,11 @@
 .eventDate{
     font-size: 13px;
     color: #777;
+}
+/* .eventCard doesn't center its children (unlike .sessionPickCard), so the
+   shared .statusTag pill would otherwise stretch to the card's full width */
+.eventCard .statusTag{
+    align-self: flex-start;
 }
 .eventPriceRow{
     display: flex;

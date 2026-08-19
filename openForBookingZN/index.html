@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>立即報名 | Taiwan Pathfinder</title>
-    <link rel="stylesheet" href="/home.css?v=2">
-    <link rel="stylesheet" href="/headandfoot.css?v=2">
-    <link rel="stylesheet" href="/openForBooking.css?v=2">
+    <title>所有開放場次｜Taiwan Pathfinder</title>
+    <link rel="stylesheet" href="/home.css">
+    <link rel="stylesheet" href="/headandfoot.css">
+    <link rel="stylesheet" href="/allEventsTest.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDR9E7XZP0"></script>
@@ -16,57 +16,50 @@
     gtag('js', new Date());
 
     gtag('config', 'G-JDR9E7XZP0');
-    </script>  
-    
+    </script>
 </head>
 
 <body>
     <div class="Wrap">
-        <div class="StickyTop">
         <div class="Header">
             <div class="headertext">
                 <a class="headertexta" href="/homeZN/">首頁</a>
-                <a class="headertextanow">立即報名</a>
+                <a class="newopen" href="/openForBookingZN/">立即報名</a>
                 <a class="headertexta" href="/aboutusZN/">關於我們</a>
-                <a href="/"><img width="1768" height="838" class="logo" src="/logo.png" alt="logo"></a>
+                <a href="/homeZN/"><img width="1768" height="838" class="logo" src="/logo.png" alt="logo"></a>
                 <a class="headertexta" href="/adventureZN/">活動體驗</a>
                 <a class="headertexta" href="/ContactZN/">聯絡我們</a>
                 <a class="headertexta" href="/CollaborateZN/">企業合作</a>
-                <a class="headertextalan" href="/openForBooking/">English</a>
+                <a class="headertextalan" href="/">English</a>
             </div>
             <div class="smartphoneheader">
                 <img width="1768" height="838" class="logo" src="/logo.png" alt="logo">
                 <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
+                    選單
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="/homeZN/">首頁</a></li>
-                    <li><a class="dropdown-item" href="/openForBookingZN/">立即報名</a></li>
+                    <li><a class="dropdown-item" href="/openForBookingZN/" >立即報名</a></li>
                     <li><a class="dropdown-item" href="/aboutusZN/">關於我們</a></li>
                     <li><a class="dropdown-item" href="/adventureZN/">活動列表</a></li>
                     <li><a class="dropdown-item" href="/ContactZN/">聯絡我們</a></li>
                     <li><a class="dropdown-item" href="/CollaborateZN/">企業合作</a></li>
-                    <li><a class="dropdown-item" href="/openForBooking/">English</a></li>
+                    <li><a class="dropdown-item" href="/">English</a></li>
                 </ul>
                 </div>
             </div>
         </div>
-        <div class="marqueeBar" id="marqueeBar">
-            <div class="marqueeTrack" id="marqueeTrack">
-                <span class="marqueeItem">近期開放場次載入中...</span>
-            </div>
+
+        <div class="allEventsIntro">
+            <h1>所有開放場次</h1>
+            <p>以下是目前開放報名的所有場次，依日期由近到遠排序。<br>點擊卡片上的「立即報名」即可前往該場次的報名表單。</p>
         </div>
-        <script>document.body.style.paddingTop = document.getElementById('marqueeBar').offsetHeight + 'px';</script>
+
+        <div class="allEventsGrid" id="allEventsGrid">
+            <p class="allEventsLoading">場次載入中...</p>
         </div>
-        <div class="carrd">
-          <iframe 
-            src="https://taiwanpathfinder.carrd.co/"
-            width="100%" 
-            height="700" 
-            frameborder="0">
-          </iframe>
-        </div>
+
         <div class="Footer">
             <div class="info">
                 <div class="infologo">
@@ -99,31 +92,148 @@
             </div>
         </div>
     </div>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
- AOS.init({
-  // ─── 全域設定 ───
-  disable: false,                // 何時停用 AOS：可填 'phone' / 'tablet' / 'mobile'，或直接給布林值、表達式、函式
-  startEvent: 'DOMContentLoaded',// AOS 什麼事件被觸發時才開始初始化
-  initClassName: 'aos-init',     // 元素在初始化完成後會先加上的類名
-  animatedClassName: 'aos-animate', // 動畫正式啟動時套用的類名
-  useClassNames: false,          // 若設為 true，會把 `data-aos` 的值做為類名，在滾動時一併加上
-  disableMutationObserver: false,// 是否關閉 MutationObserver 自動偵測 DOM 變動（進階）
-  debounceDelay: 50,             // 視窗尺寸改變時的 debounce 間隔（毫秒）
-  throttleDelay: 99,             // 滾動事件的 throttle 間隔（毫秒）
 
-  // ─── 可用 `data-aos-*` 覆寫的項目 ───
-  offset: 120,                   // 觸發動畫時，元素與視窗的距離（px）
-  delay: 0,                      // 動畫延遲 0–3000 ms，步進 50 ms
-  duration: 400,                 // 動畫時長 0–3000 ms，步進 50 ms
-  easing: 'ease',                // 動畫預設 easing 函式
-  once: false,                   // true 表示動畫只在第一次向下滾動時播放
-  mirror: false,                 // true 表示滾過元素後向上滑回可再次播放（鏡像效果）
-  anchorPlacement: 'top-bottom', // 判定元素相對視窗的位置來觸發動畫，例如 'top-bottom' 代表元素頂端到視窗底端
-});
-</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/marquee.js" defer></script>
+<script>
+(function(){
+    var grid = document.getElementById('allEventsGrid');
+    var CSV_URL = 'https://docs.google.com/spreadsheets/d/1VvRRgURxwP4ka_it5MCn96JD6XzbjKS6CGEnWYE_afU/export?format=csv&gid=0';
+    var WEEKDAYS = ['日', '一', '二', '三', '四', '五', '六'];
+
+    var STATUS_TAG_CLASS = { '報名中': 'statusTag-open', '已成團': 'statusTag-confirmed', '即將額滿': 'statusTag-almost-full' };
+    var STATUS_TAG_ICON = { '已成團': '✓ ' };
+
+    function statusTagHtml(tag){
+        if (!tag) return '';
+        var cls = STATUS_TAG_CLASS[tag] || 'statusTag-open';
+        var icon = STATUS_TAG_ICON[tag] || '';
+        return '<span class="statusTag ' + cls + '">' + icon + esc(tag) + '</span>';
+    }
+
+    function esc(s){
+        return String(s == null ? '' : s)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+    }
+
+    // 簡單但正確處理引號內逗號/換行的 CSV parser（Google Sheets 匯出的早鳥價欄位標題本身就含換行）
+    function parseCSV(text){
+        var rows = [], row = [], field = '', inQuotes = false;
+        for (var i = 0; i < text.length; i++){
+            var c = text[i];
+            if (inQuotes){
+                if (c === '"'){
+                    if (text[i+1] === '"'){ field += '"'; i++; }
+                    else { inQuotes = false; }
+                } else {
+                    field += c;
+                }
+            } else {
+                if (c === '"'){ inQuotes = true; }
+                else if (c === ','){ row.push(field); field = ''; }
+                else if (c === '\r'){ /* skip */ }
+                else if (c === '\n'){ row.push(field); rows.push(row); row = []; field = ''; }
+                else { field += c; }
+            }
+        }
+        if (field.length || row.length){ row.push(field); rows.push(row); }
+        return rows;
+    }
+
+    function pad2(n){ return n < 10 ? '0' + n : '' + n; }
+
+    function fmtDateWeekday(dstr){
+        var d = new Date(dstr + 'T00:00:00');
+        if (isNaN(d.getTime())) return dstr;
+        return d.getFullYear() + '/' + pad2(d.getMonth() + 1) + '/' + pad2(d.getDate()) + '（' + WEEKDAYS[d.getDay()] + '）';
+    }
+
+    function toMMDDYYYY(dstr){
+        var parts = (dstr || '').split('-');
+        if (parts.length !== 3) return '';
+        return parts[1] + '/' + parts[2] + '/' + parts[0];
+    }
+
+    function withSessionDateParam(url, dstr){
+        if (!url) return '';
+        var sep = url.indexOf('?') >= 0 ? '&' : '?';
+        return url + sep + 'session_date_param=' + toMMDDYYYY(dstr);
+    }
+
+    function priceRowHtml(orig){
+        var o = (orig || '').trim();
+        if (o === '免費'){
+            return '<span class="eventPriceNew">免費參加</span>';
+        }
+        return '<span class="eventPriceNew">' + esc(o) + '</span>';
+    }
+
+    function cardHtml(r){
+        var href = r.formLink ? esc(withSessionDateParam(r.formLink, r.date)) : '#';
+        return '<div class="eventCard">' +
+            '<h3>' + esc(r.type) + '</h3>' +
+            '<p class="eventDate">' + esc(fmtDateWeekday(r.date)) + '</p>' +
+            statusTagHtml(r.statusTag) +
+            '<p class="eventPriceRow">' + priceRowHtml(r.originalPrice) + '</p>' +
+            '<a class="eventCta" href="' + href + '" target="_blank" rel="noopener">立即報名 ↗</a>' +
+            '</div>';
+    }
+
+    function showFallback(){
+        grid.className = 'allEventsFallback';
+        grid.innerHTML = '請透過 Email 或社群聯絡我們查詢最新場次<br>' +
+            '<a href="mailto:pathfinderintaiwan@gmail.com">pathfinderintaiwan@gmail.com</a>　｜　' +
+            '<a href="https://lin.ee/D1jlWHsF" target="_blank" rel="noopener">LINE 客服</a>';
+    }
+
+    fetch(CSV_URL)
+        .then(function(res){
+            if (!res.ok) throw new Error('CSV fetch failed: ' + res.status);
+            return res.text();
+        })
+        .then(function(text){
+            var rows = parseCSV(text);
+            if (!rows.length) throw new Error('Empty CSV');
+
+            var header = rows[0];
+            var iType = header.indexOf('活動類型');
+            var iDate = header.indexOf('場次日期');
+            var iOrig = header.indexOf('原價');
+            var iStatus = header.indexOf('最終狀態（自動）');
+            var iForm = header.indexOf('報名表單連結');
+            var iStatusTag = header.indexOf('報名狀態標籤');
+            if (iType < 0 || iDate < 0 || iStatus < 0 || iOrig < 0){
+                throw new Error('CSV missing expected columns');
+            }
+
+            var today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            var upcoming = rows.slice(1)
+                .filter(function(r){ return r.length > iStatus && r[iStatus] === '開放中'; })
+                .map(function(r){
+                    var d = new Date(r[iDate] + 'T00:00:00');
+                    return {
+                        type: r[iType],
+                        date: r[iDate],
+                        dateObj: d,
+                        originalPrice: r[iOrig],
+                        formLink: iForm >= 0 ? r[iForm] : '',
+                        statusTag: iStatusTag >= 0 ? r[iStatusTag] : ''
+                    };
+                })
+                .filter(function(r){ return !isNaN(r.dateObj.getTime()) && r.dateObj.getTime() > today.getTime(); })
+                .sort(function(a, b){ return a.dateObj - b.dateObj; });
+
+            if (!upcoming.length) throw new Error('No upcoming open sessions');
+
+            grid.innerHTML = upcoming.map(cardHtml).join('');
+        })
+        .catch(function(){
+            showFallback();
+        });
+})();
+</script>
 </body>
 </html>
