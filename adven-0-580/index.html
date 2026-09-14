@@ -6,7 +6,11 @@
     <title>Jinguashi 0–580 Autumn Silver Grass Hike | Taiwan Pathfinder</title>
     <link rel="stylesheet" href="/oneAdventurePage.css?v=2">
     <link rel="stylesheet" href="/headandfoot.css?v=2">
+    <link rel="stylesheet" href="/longdongTest.css?v=2">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Only 3 trust stats (Longdong/Rehai have 4) — page-scoped override keeps the row
+         balanced without touching the shared stylesheet. -->
+    <style>.ldStatBadgeRow{grid-template-columns:repeat(3,1fr);}</style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDR9E7XZP0"></script>
     <script>
@@ -15,7 +19,7 @@
     gtag('js', new Date());
 
     gtag('config', 'G-JDR9E7XZP0');
-    </script>   
+    </script>
 </head>
 
 <body>
@@ -55,14 +59,19 @@
         </div>
         <script>document.body.style.paddingTop = document.getElementById('marqueeBar').offsetHeight + 'px';</script>
         </div>
+
+        <!-- Hero: text left, gallery right (photo carousel layout unchanged) -->
         <div class="adventureHead">
             <div class="adventureHeadText">
-                <h1>Jinguashi 0–580 Autumn Silver Grass Hike</h1>
-                <p>Imagine starting from the deep-blue coastline and walking toward a quiet mountain town, where golden silver grass waves gently in the autumn breeze. This is Jinguashi — a place where mountains, the sea, and history intertwine into a poetic autumn landscape.</p>
+                <h1>Encounter the Hidden Charm of the Mining Hills — Walk into Jinguashi's Scenic Trails</h1>
+                <p>Step into Jinguashi, tucked in Taiwan's northeast corner, where mountains meet the sea. Wander through century-old mining ruins and take in sweeping mountain-and-sea views on this leisurely trip that blends culture, nature, and an easy pace — perfect for anyone who wants to slow down and savor the scenery.</p>
                 <div class="advenIntroTextButton">
                     <div class="buttonPrice">
                         <h3>Price</h3>
                         <p>NT.650</p>
+                    </div>
+                    <div class="buttonBook">
+                    <a href="#booking-form">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -88,6 +97,7 @@
             </div>
         </div>
 
+        <!-- Activity Introduction: badges only, no paragraph below Difficulty (would duplicate Highlights) -->
         <div class="adventureIntroduction">
             <div class="advenIntroText">
                 <h2>Trip Introduction</h2>
@@ -101,71 +111,215 @@
                         <p>Beginner</p>
                     </div>
                 </div>
-                <p class="advenIntroTextp">From the coast to the mountains, embark on a scenic autumn walk through Jinguashi. This route is rich with both natural and cultural beauty — passing through old mining sites, movie locations, and golden hills covered in silver grass swaying in the breeze.</p>
-                <p class="advenIntroTextp">Led by <strong>professional bilingual guides (English-Chinese, licensed tour leaders, EMT2-certified)</strong>, this relaxed and safe journey allows you to fully enjoy the mountain-and-sea views and the mining heritage of Jinguashi.</p>
+                <h2>Highlights</h2>
+                <div class="ldHighlightCardGrid">
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a2 2 0 012-2h8a2 2 0 012 2v11a2 2 0 01-2 2H8a2 2 0 01-2-2V8z"/><path d="M9 6V5a3 3 0 016 0v1"/><path d="M9 12h6"/></svg>
+                        </span>
+                        <p>Mining heritage — wander through old mine sites, cable-car relics, and film locations</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l6-10 4 6 3-4 5 8H3z"/></svg>
+                        </span>
+                        <p>Sweeping mountain-and-sea views — perfect for your best travel photos</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><circle cx="9" cy="6" r="2"/><line x1="4" y1="12" x2="20" y2="12"/><circle cx="15" cy="12" r="2"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="11" cy="18" r="2"/></svg>
+                        </span>
+                        <p>Easy, beginner-friendly route — an unhurried pace to soak in the scenery</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polygon points="13.2 10.8 15 8 12.2 9.8 10 12.5 13.2 10.8" fill="currentColor" stroke="none"/></svg>
+                        </span>
+                        <p>Professional bilingual guides — with you every step of the way</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-2h6l2 2h3v11H4z"/><circle cx="12" cy="13.5" r="3.5"/></svg>
+                        </span>
+                        <p>Professional photography — so you go home with great memories</p>
+                    </div>
+                </div>
+
+                <div class="ldSafetyBlock">
+                    <h2 class="ldSafetyBlockTitle">Why You Can Explore With Confidence</h2>
+                    <div class="ldStatBadgeRow">
+                        <div class="ldStatBadge">
+                            <span class="ldIcon ldIconSafety">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+                            </span>
+                            <span class="ldStatBadgeNum">NT$2M</span>
+                            <span class="ldStatBadgeLabel">Travel Insurance</span>
+                        </div>
+                        <div class="ldStatBadge">
+                            <span class="ldIcon ldIconSafety">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="13" rx="2"/><path d="M12 9.5v6M9 12.5h6"/></svg>
+                            </span>
+                            <span class="ldStatBadgeNum">Professional</span>
+                            <span class="ldStatBadgeLabel">Bilingual Guides</span>
+                        </div>
+                        <div class="ldStatBadge">
+                            <span class="ldIcon ldIconSafety">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                            </span>
+                            <span class="ldStatBadgeNum">5–6 hrs</span>
+                            <span class="ldStatBadgeLabel">Walking Time</span>
+                        </div>
+                    </div>
+                    <p class="ldPriceNote">For full safety details, see the "Safety Policy" tab below</p>
+
+                    <div class="ldFaqList">
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                I've never hiked before — can I still join?
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>Yes! This is a relaxed, easy-paced walk — as long as you can comfortably walk about 8km on your own, you're all set.</p></div>
+                        </div>
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                What kind of fitness level do I need?
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>Nothing intense — the whole trip takes about 5–6 hours at an unhurried pace. If you're used to walking regularly, you'll be fine.</p></div>
+                        </div>
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                Can kids or older family members join?
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>Absolutely — the trail is gentle and the pace relaxed, making it a great fit for families and older participants. If you have any specific concerns, feel free to reach out before you register.</p></div>
+                        </div>
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                Will it be canceled if the weather is bad?
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>We'll assess conditions and make the call. If we cancel due to weather, you can transfer to another session or get a refund (minus a 5% handling fee).</p></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Tabs -->
         <div class="adventureDetail">
             <div class="tab-buttons">
                 <button class="active" onclick="showTab(0)">Meeting Point</button>
-                <button onclick="showTab(1)">What’s Included</button>
+                <button onclick="showTab(1)">What's Included</button>
                 <button onclick="showTab(2)">Safety Policy</button>
-                <button onclick="showTab(3)">Pre-Trip Notice</button>
-                <button onclick="showTab(4)">Cancellation Policy</button>
+                <button onclick="showTab(3)">Itinerary</button>
+                <button onclick="showTab(4)">Pre-Trip Notice</button>
+                <button onclick="showTab(5)">Cancellation Policy</button>
             </div>
 
+            <!-- 1. Meeting Point (content unchanged — just restyled) -->
             <div class="tab-content active">
-                <p><strong>Meeting Point:</strong> Ruifang Train Station</p>
-                <p><strong>Meeting Time:</strong> 08:30</p>
+                <div class="ldMeetGrid">
+                    <div class="ldMeetCard">
+                        <h3>Meeting Point</h3>
+                        <p>Ruifang Train Station, 08:30</p>
+                    </div>
+                </div>
             </div>
 
+            <!-- 2. What's Included (content unchanged, credential list simplified) -->
             <div class="tab-content">
-                <ul>
-                    <li>- Bilingual guide (English-Chinese, licensed tour leader, EMT2-certified)</li>
-                    <li>- Photography service</li>
-                    <li>- NT$2,000,000 travel accident insurance</li>
-                </ul>
-                <p><strong>Not included:</strong> Bus fare, lunch</p>
+                <div class="ldIncludesList">
+                    <h4>What's Included</h4>
+                    <ul>
+                        <li>Professional bilingual guides</li>
+                        <li>Photography service</li>
+                        <li>NT$2,000,000 travel accident insurance</li>
+                    </ul>
+                </div>
+                <p class="ldPriceNote">Not included: Bus fare, lunch</p>
             </div>
 
+            <!-- 3. Safety Policy (content unchanged — just restyled) -->
             <div class="tab-content">
-                <ul>
-                    <li>- Each participant is covered by travel insurance: NT$2 million for accidental death/disability and NT$200,000 for medical coverage.</li>
-                    <li>- All guides are training for safety and emergency handling.</li>
-                    <li>- Participants must follow the guide’s instructions throughout the trip.</li>
-                </ul>
+                <div class="ldSafetyGrid">
+                    <div class="ldSafetyItem">
+                        <div class="ldSafetyIcon">✓</div>
+                        <div class="ldSafetyText">
+                            <p>Each participant is covered by travel insurance: NT$2 million for accidental death/disability and NT$200,000 for medical coverage.</p>
+                        </div>
+                    </div>
+                    <div class="ldSafetyItem">
+                        <div class="ldSafetyIcon">✓</div>
+                        <div class="ldSafetyText">
+                            <p>All guides are trained for safety and emergency handling.</p>
+                        </div>
+                    </div>
+                    <div class="ldSafetyItem">
+                        <div class="ldSafetyIcon">✓</div>
+                        <div class="ldSafetyText">
+                            <p>Participants must follow the guide's instructions throughout the trip.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <!-- 4. Itinerary (new tab) -->
+            <div class="tab-content">
+                <div class="ldSubHeading">Schedule</div>
+                <div class="ldTimeline">
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">08:30</div><div class="ldTimelineDesc">Meet at Ruifang Train Station</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">~09:00</div><div class="ldTimelineDesc">Depart for Jinguashi</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">~5–6 hours</div><div class="ldTimelineDesc">Exploring mining heritage sites and scenic mountain-sea trails</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">Afternoon</div><div class="ldTimelineDesc">Trip ends, dismiss at Ruifang Train Station</div></div>
+                </div>
+                <p class="ldPriceNote">Times are approximate and may shift depending on weather or group pace — exact meeting and dismissal times will be provided in the pre-trip briefing.</p>
+            </div>
+
+            <!-- 5. Pre-Trip Notice (content unchanged except the hour figure, corrected to match
+                 the rest of the page — it still said 3–4 hours while everywhere else says 5–6) -->
             <div class="tab-content">
                 <ul>
-                    <li>- The pace is relaxed, but participants should be able to walk 3–4 hours on mountain trails.</li>
+                    <li>- The pace is relaxed, but participants should be able to walk 5–6 hours on mountain trails.</li>
                     <li>- Please wear appropriate hiking shoes and bring rain gear, sun protection, and drinking water.</li>
                     <li>- In case of bad weather, the trip may be postponed or canceled. You may transfer to another Taiwan Pathfinder trip (5% handling fee applies for refunds).</li>
                 </ul>
             </div>
 
+            <!-- 6. Cancellation Policy (content unchanged — just restyled) -->
             <div class="tab-content">
-                <h4>Trip Cancellation or Rescheduling Due to Weather</h4>
-                <ul>
-                    <li>- Force Majeure: If the trip cannot proceed due to events such as a land typhoon warning, earthquake, cold wave, heavy rain advisory (as defined by the Central Weather Administration), road closures, or restrictions imposed by management authorities, a refund will be issued after deducting a 5% administrative fee.</li>
-                    <li>- Poor Weather Forecast: If adverse weather such as continuous rain or an incoming cold front may affect the trip quality, we will conduct a comprehensive assessment. The final decision will be announced no later than 3 days before departure. If we decide to cancel the trip, a refund will be issued after deducting a 5% administrative fee.</li>
-                </ul>
+                <div class="ldSubHeading">Trip Cancellation or Rescheduling Due to Weather</div>
+                <div class="ldNotesList">
+                    <p>Force Majeure: If the trip cannot proceed due to events such as a land typhoon warning, earthquake, cold wave, heavy rain advisory (as defined by the Central Weather Administration), road closures, or restrictions imposed by management authorities, a refund will be issued after deducting a 5% administrative fee.</p>
+                    <p>Poor Weather Forecast: If adverse weather such as continuous rain or an incoming cold front may affect the trip quality, we will conduct a comprehensive assessment. The final decision will be announced no later than 3 days before departure. If we decide to cancel the trip, a refund will be issued after deducting a 5% administrative fee.</p>
+                </div>
 
-                <h4>Cancellation Due to Personal Reasons</h4>
-                <ul>
-                    <li>- Cancel 14 days before departure: Refund minus a 5% administrative fee.</li>
-                    <li>- Cancel 8–13 days before departure: 20% of the booking fee will be deducted.</li>
-                    <li>- Cancel 3–7 days before departure: 30% of the booking fee will be deducted.</li>
-                    <li>- Cancel within 2 days of departure: No refund.</li>
-                </ul>
+                <div class="ldSubHeading">Cancellation Due to Personal Reasons</div>
+                <div class="ldNotesList">
+                    <p>Cancel 14 days before departure: Refund minus a 5% administrative fee.</p>
+                    <p>Cancel 8–13 days before departure: 20% of the booking fee will be deducted.</p>
+                    <p>Cancel 3–7 days before departure: 30% of the booking fee will be deducted.</p>
+                    <p>Cancel within 2 days of departure: No refund.</p>
+                </div>
 
-                <h4>Minimum Participant Requirement</h4>
-                <ul>
-                    <li>- If the minimum participant number is not reached and the trip is canceled, participants may choose to reschedule for free or receive a refund with a 5% administrative fee deducted.</li>
-                </ul>
+                <div class="ldSubHeading">Minimum Participant Requirement</div>
+                <div class="ldNotesList">
+                    <p>If the minimum participant number is not reached and the trip is canceled, participants may choose to reschedule for free or receive a refund with a 5% administrative fee deducted.</p>
+                </div>
             </div>
-
         </div>
+
+        <!-- Book Now: session picker -->
+        <div class="adventureDetail">
+            <div class="bookingFormInner" id="booking-form">
+                <h2>Book Now</h2>
+                <p class="ldRegisterNote">Choose the session you'd like to join — clicking it opens that session's registration form in a new tab. Your spot isn't confirmed until you receive a "Registration Confirmed" email, so after submitting the form and completing payment, be sure to check your inbox (including spam).</p>
+                <div class="sessionPickGrid" id="sessionPickGrid">
+                    <p class="sessionPickLoading">Loading sessions...</p>
+                </div>
+            </div>
+        </div>
+
         <div class="Footer">
             <div class="info">
                 <div class="infologo">
@@ -198,98 +352,68 @@
             </div>
         </div>
     </div>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
- AOS.init({
-  // ─── 全域設定 ───
-  disable: false,                // 何時停用 AOS：可填 'phone' / 'tablet' / 'mobile'，或直接給布林值、表達式、函式
-  startEvent: 'DOMContentLoaded',// AOS 什麼事件被觸發時才開始初始化
-  initClassName: 'aos-init',     // 元素在初始化完成後會先加上的類名
-  animatedClassName: 'aos-animate', // 動畫正式啟動時套用的類名
-  useClassNames: false,          // 若設為 true，會把 `data-aos` 的值做為類名，在滾動時一併加上
-  disableMutationObserver: false,// 是否關閉 MutationObserver 自動偵測 DOM 變動（進階）
-  debounceDelay: 50,             // 視窗尺寸改變時的 debounce 間隔（毫秒）
-  throttleDelay: 99,             // 滾動事件的 throttle 間隔（毫秒）
 
-  // ─── 可用 `data-aos-*` 覆寫的項目 ───
-  offset: 120,                   // 觸發動畫時，元素與視窗的距離（px）
-  delay: 0,                      // 動畫延遲 0–3000 ms，步進 50 ms
-  duration: 400,                 // 動畫時長 0–3000 ms，步進 50 ms
-  easing: 'ease',                // 動畫預設 easing 函式
-  once: false,                   // true 表示動畫只在第一次向下滾動時播放
-  mirror: false,                 // true 表示滾過元素後向上滑回可再次播放（鏡像效果）
-  anchorPlacement: 'top-bottom', // 判定元素相對視窗的位置來觸發動畫，例如 'top-bottom' 代表元素頂端到視窗底端
-});
-</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // 照片清單
-        const images = [
-            "/adventurepics/0-580/0-580 1.jpg",
-            "/adventurepics/0-580/0-580 2.jpg",
-            "/adventurepics/0-580/0-580 3.jpg",
-            "/adventurepics/0-580/0-580 4.jpg",
-            "/adventurepics/0-580/0-580 5.jpg",
-            "/adventurepics/0-580/0-580 6.jpg",
-            "/adventurepics/0-580/0-580 7.jpg",
-            "/adventurepics/0-580/0-580 8.jpg"
-        ];
+    // Photo carousel
+    const images = [
+        "/adventurepics/0-580/0-580 1.jpg",
+        "/adventurepics/0-580/0-580 2.jpg",
+        "/adventurepics/0-580/0-580 3.jpg",
+        "/adventurepics/0-580/0-580 4.jpg",
+        "/adventurepics/0-580/0-580 5.jpg",
+        "/adventurepics/0-580/0-580 6.jpg",
+        "/adventurepics/0-580/0-580 7.jpg",
+        "/adventurepics/0-580/0-580 8.jpg"
+    ];
 
-        let currentIndex = 0;
-        const currentImage = document.getElementById("current");
-        const thumbs = document.querySelectorAll(".thumbnails img");
-        const thumbnailContainer = document.getElementById("thumbnailContainer");
-        let timer;
+    let currentIndex = 0;
+    const currentImage = document.getElementById("current");
+    const thumbs = document.querySelectorAll(".thumbnails img");
+    const thumbnailContainer = document.getElementById("thumbnailContainer");
+    let timer;
 
-
-
-    // 切換大圖
+    // Switch main image
     function changeImage(index) {
       currentIndex = index;
       currentImage.src = images[currentIndex];
 
-      // 更新縮圖樣式
+      // Update thumbnail highlight
       thumbs.forEach(img => img.classList.remove("active"));
       thumbs[currentIndex].classList.add("active");
-
-      // 縮圖自動捲動到可見區
-      //thumbs[currentIndex].scrollIntoView({
-        //behavior: "smooth",
-        //block: "nearest"
-      //});
 
       resetTimer();
     }
 
-    // 上一張
+    // Previous
     function prevImage() {
       currentIndex = (currentIndex - 1 + images.length) % images.length;
       changeImage(currentIndex);
     }
 
-    // 下一張
+    // Next
     function nextImage() {
       currentIndex = (currentIndex + 1) % images.length;
       changeImage(currentIndex);
     }
 
-    // 自動播放
+    // Autoplay
     function autoPlay() {
       nextImage();
     }
 
-    // 重置計時器
+    // Reset timer
     function resetTimer() {
       clearInterval(timer);
       timer = setInterval(autoPlay, 3000);
     }
 
-    // 初始狀態
+    // Initial state
     changeImage(0);
     timer = setInterval(autoPlay, 3000);
 </script>
 <script>
+  // Tab switching
   function showTab(index) {
     const buttons = document.querySelectorAll(".tab-buttons button");
     const contents = document.querySelectorAll(".tab-content");
@@ -302,6 +426,159 @@
       content.classList.toggle("active", i === index);
     });
   }
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const item = btn.closest(".ldFaqItem");
+    const open = item.classList.toggle("open");
+    btn.querySelector(".ldFaqArrow").textContent = open ? "－" : "＋";
+  }
+</script>
+<script>
+(function(){
+    var grid = document.getElementById('sessionPickGrid');
+    var CSV_URL = 'https://docs.google.com/spreadsheets/d/1VvRRgURxwP4ka_it5MCn96JD6XzbjKS6CGEnWYE_afU/export?format=csv&gid=0';
+    var ACTIVITY_TYPE = 'Jinguashi 0–580 Autumn Silver Grass Hike';
+    var LINE_URL = 'https://lin.ee/D1jlWHsF';
+    var EMAIL = 'pathfinderintaiwan@gmail.com';
+    var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var WEEKDAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+    // The sheet only has a Chinese "報名狀態標籤" column so far (no English
+    // one yet), so this page translates it via this table.
+    var STATUS_TAG_EN = { '報名中': 'Open', '已成團': 'Confirmed to Run', '即將額滿': 'Almost Full' };
+    var STATUS_TAG_CLASS = { '報名中': 'statusTag-open', '已成團': 'statusTag-confirmed', '即將額滿': 'statusTag-almost-full' };
+    var STATUS_TAG_ICON = { '已成團': '✓ ' };
+
+    function statusTagHtml(tag){
+        if (!tag) return '';
+        var cls = STATUS_TAG_CLASS[tag] || 'statusTag-open';
+        var icon = STATUS_TAG_ICON[tag] || '';
+        return '<span class="statusTag ' + cls + '">' + icon + esc(STATUS_TAG_EN[tag] || tag) + '</span>';
+    }
+
+    function esc(s){
+        return String(s == null ? '' : s)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+    }
+
+    // Simple but correct CSV parser that handles quoted commas/newlines
+    function parseCSV(text){
+        var rows = [], row = [], field = '', inQuotes = false;
+        for (var i = 0; i < text.length; i++){
+            var c = text[i];
+            if (inQuotes){
+                if (c === '"'){
+                    if (text[i+1] === '"'){ field += '"'; i++; }
+                    else { inQuotes = false; }
+                } else {
+                    field += c;
+                }
+            } else {
+                if (c === '"'){ inQuotes = true; }
+                else if (c === ','){ row.push(field); field = ''; }
+                else if (c === '\r'){ /* skip */ }
+                else if (c === '\n'){ row.push(field); rows.push(row); row = []; field = ''; }
+                else { field += c; }
+            }
+        }
+        if (field.length || row.length){ row.push(field); rows.push(row); }
+        return rows;
+    }
+
+    function fmtDateWeekday(dstr){
+        var d = new Date(dstr + 'T00:00:00');
+        if (isNaN(d.getTime())) return dstr;
+        return MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear() + ' (' + WEEKDAYS[d.getDay()] + ')';
+    }
+
+    function toMMDDYYYY(dstr){
+        var parts = (dstr || '').split('-');
+        if (parts.length !== 3) return '';
+        return parts[1] + '/' + parts[2] + '/' + parts[0];
+    }
+
+    function withSessionDateParam(url, dstr){
+        if (!url) return '';
+        var sep = url.indexOf('?') >= 0 ? '&' : '?';
+        return url + sep + 'session_date_param=' + toMMDDYYYY(dstr);
+    }
+
+    // Fillout early-bird logic isn't set up for every session yet, so we show only
+    // the "原價" (list price) column — no strikethrough comparison.
+    function priceRowHtml(current){
+        var c = (current || '').trim();
+        return '<span class="sessionPickNew">' + esc(c) + '</span>';
+    }
+
+    function cardHtml(r){
+        var href = esc(withSessionDateParam(r.formLink, r.date));
+        return '<a class="sessionPickCard" href="' + href + '" target="_blank" rel="noopener">' +
+            '<span class="sessionPickDate">' + esc(fmtDateWeekday(r.date)) + '</span>' +
+            statusTagHtml(r.statusTag) +
+            '<span class="sessionPickPriceRow">' + priceRowHtml(r.currentPrice) + '</span>' +
+            '<span class="sessionPickCta">Book Now ↗</span>' +
+            '</a>';
+    }
+
+    // No rows for this activity exist in the sheet yet, so this fallback is what
+    // visitors will actually see for now — with both LINE and Email as next steps.
+    function showFallback(){
+        grid.className = 'sessionPickFallback';
+        grid.innerHTML =
+            '<p>There are no open sessions for this trip right now.</p>' +
+            '<p>Message us on <a href="' + LINE_URL + '" target="_blank" rel="noopener">LINE</a> or email ' +
+            '<a href="mailto:' + EMAIL + '">' + EMAIL + '</a> — or follow our social channels for updates.</p>';
+    }
+
+    fetch(CSV_URL)
+        .then(function(res){
+            if (!res.ok) throw new Error('CSV fetch failed: ' + res.status);
+            return res.text();
+        })
+        .then(function(text){
+            var rows = parseCSV(text);
+            if (!rows.length) throw new Error('Empty CSV');
+
+            var header = rows[0];
+            var iType = header.indexOf('活動類型 EN');
+            var iDate = header.indexOf('場次日期');
+            var iStatus = header.indexOf('最終狀態（自動）');
+            var iForm = header.indexOf('報名表單連結');
+            var iPrice = header.indexOf('原價');
+            var iStatusTag = header.indexOf('報名狀態標籤');
+            if (iType < 0 || iDate < 0 || iStatus < 0 || iPrice < 0){
+                throw new Error('CSV missing expected columns');
+            }
+
+            var today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            var upcoming = rows.slice(1)
+                .filter(function(r){ return r.length > iStatus && r[iType] === ACTIVITY_TYPE && r[iStatus] === '開放中'; })
+                .map(function(r){
+                    var d = new Date(r[iDate] + 'T00:00:00');
+                    return {
+                        date: r[iDate],
+                        dateObj: d,
+                        currentPrice: r[iPrice],
+                        formLink: iForm >= 0 ? r[iForm] : '',
+                        statusTag: iStatusTag >= 0 ? r[iStatusTag] : ''
+                    };
+                })
+                .filter(function(r){ return !isNaN(r.dateObj.getTime()) && r.dateObj.getTime() > today.getTime(); })
+                .sort(function(a, b){ return a.dateObj - b.dateObj; });
+
+            if (!upcoming.length) throw new Error('No upcoming open sessions for this activity');
+
+            grid.innerHTML = upcoming.map(cardHtml).join('');
+        })
+        .catch(function(){
+            showFallback();
+        });
+})();
 </script>
 <script src="/marquee.js" defer></script>
 </body>

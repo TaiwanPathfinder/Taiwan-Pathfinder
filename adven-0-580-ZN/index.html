@@ -6,7 +6,11 @@
     <title>金瓜石秋芒漫步0-580 | Taiwan Pathfinder</title>
     <link rel="stylesheet" href="/oneAdventurePage.css?v=2">
     <link rel="stylesheet" href="/headandfoot.css?v=2">
+    <link rel="stylesheet" href="/longdongTest.css?v=2">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 只有 3 個信任保證數據（龍洞/熱海是 4 個）—page-scoped override 讓排版平衡，
+         不動共用樣式表。 -->
+    <style>.ldStatBadgeRow{grid-template-columns:repeat(3,1fr);}</style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDR9E7XZP0"></script>
     <script>
@@ -15,7 +19,7 @@
     gtag('js', new Date());
 
     gtag('config', 'G-JDR9E7XZP0');
-    </script>   
+    </script>
 </head>
 
 <body>
@@ -40,7 +44,7 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="/homeZN/">首頁</a></li>
-                    <li><a class="dropdown-item" href="/openForBooking/" >立即報名</a></li>
+                    <li><a class="dropdown-item" href="/openForBookingZN/" >立即報名</a></li>
                     <li><a class="dropdown-item" href="/aboutusZN/">關於我們</a></li>
                     <li><a class="dropdown-item" href="/adventureZN/">活動體驗</a></li>
                     <li><a class="dropdown-item" href="/ContactZN/">聯絡我們</a></li>
@@ -57,14 +61,19 @@
         </div>
         <script>document.body.style.paddingTop = document.getElementById('marqueeBar').offsetHeight + 'px';</script>
         </div>
+
+        <!-- 主視覺：左文右圖（照片相簿排版方式不變） -->
         <div class="adventureHead">
             <div class="adventureHeadText">
-                <h1>金瓜石秋芒漫步0-580</h1>
-                <p>想像一下，從湛藍海岸線出發，走向山中小鎮，滿山滿谷的芒花隨著秋風搖曳，閃爍著金色的波浪。這就是金瓜石 — 山、海、歷史交織出的絕美秋日風景。</p>
+                <h1>邂逅礦山秘境，走進金瓜石的山海詩篇</h1>
+                <p>走進台灣東北角的金瓜石，在山與海之間漫遊，探索百年礦業遺跡與壯闊山海景緻。這是一趟結合文化探索、自然欣賞與慢遊體驗的輕旅行，適合想放慢腳步、細細品味風景的你。</p>
                 <div class="advenIntroTextButton">
                     <div class="buttonPrice">
-                        <h3>Price</h3>
+                        <h3>費用</h3>
                         <p>NT.650</p>
+                    </div>
+                    <div class="buttonBook">
+                    <a href="#booking-form">立即報名</a>
                     </div>
                 </div>
             </div>
@@ -90,6 +99,7 @@
             </div>
         </div>
 
+        <!-- 活動介紹：只保留徽章，難度卡片下方不放段落文字（跟活動亮點內容重複） -->
         <div class="adventureIntroduction">
             <div class="advenIntroText">
                 <h2>行程介紹</h2>
@@ -103,74 +113,214 @@
                         <p>初階</p>
                     </div>
                 </div>
-                <p class="advenIntroTextp">從海岸到山城，展開一段金瓜石秋日漫步之旅！在這條充滿歷史與自然的路線中，我們將帶您穿越舊礦場、電影取景地與壯麗山景，一步步走進秋芒搖曳的詩意山谷。</p>
-                <p class="advenIntroTextp">由專業<strong>雙語嚮導（中英雙語、合格外語領隊、EMT2救護員）</strong>帶領，全程步調輕鬆、安全專業，讓您在輕鬆氛圍中細細品味金瓜石的山海風光與礦山記憶。</p>
+                <h2>活動亮點</h2>
+                <div class="ldHighlightCardGrid">
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a2 2 0 012-2h8a2 2 0 012 2v11a2 2 0 01-2 2H8a2 2 0 01-2-2V8z"/><path d="M9 6V5a3 3 0 016 0v1"/><path d="M9 12h6"/></svg>
+                        </span>
+                        <p>礦山文化探索——漫遊舊礦場、纜道、電影取景地</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l6-10 4 6 3-4 5 8H3z"/></svg>
+                        </span>
+                        <p>壯闊山海視野——拍出美照的最佳時機</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><circle cx="9" cy="6" r="2"/><line x1="4" y1="12" x2="20" y2="12"/><circle cx="15" cy="12" r="2"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="11" cy="18" r="2"/></svg>
+                        </span>
+                        <p>輕鬆路線，新手友善——悠閒步調，細細品味風景</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polygon points="13.2 10.8 15 8 12.2 9.8 10 12.5 13.2 10.8" fill="currentColor" stroke="none"/></svg>
+                        </span>
+                        <p>專業雙語嚮導——全程陪同帶領</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-2h6l2 2h3v11H4z"/><circle cx="12" cy="13.5" r="3.5"/></svg>
+                        </span>
+                        <p>專業攝影紀錄——幫你留下最美回憶</p>
+                    </div>
+                </div>
+
+                <div class="ldSafetyBlock">
+                    <h2 class="ldSafetyBlockTitle">為什麼你可以放心參加</h2>
+                    <div class="ldStatBadgeRow">
+                        <div class="ldStatBadge">
+                            <span class="ldIcon ldIconSafety">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+                            </span>
+                            <span class="ldStatBadgeNum">200萬</span>
+                            <span class="ldStatBadgeLabel">旅遊平安險</span>
+                        </div>
+                        <div class="ldStatBadge">
+                            <span class="ldIcon ldIconSafety">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="13" rx="2"/><path d="M12 9.5v6M9 12.5h6"/></svg>
+                            </span>
+                            <span class="ldStatBadgeNum">專業</span>
+                            <span class="ldStatBadgeLabel">雙語嚮導</span>
+                        </div>
+                        <div class="ldStatBadge">
+                            <span class="ldIcon ldIconSafety">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                            </span>
+                            <span class="ldStatBadgeNum">5-6小時</span>
+                            <span class="ldStatBadgeLabel">步行時間</span>
+                        </div>
+                    </div>
+                    <p class="ldPriceNote">完整安全保證內容請見下方「安全保證」分頁籤</p>
+
+                    <div class="ldFaqList">
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                完全沒有爬山經驗可以參加嗎？
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>可以，這是一趟步調輕鬆的健行路線，只要具備可獨立步行8公里的基本體力即可參加。</p></div>
+                        </div>
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                需要什麼樣的體力？
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>步調輕鬆不趕路，全程約5-6小時，建議平常有基本的走路習慣即可。</p></div>
+                        </div>
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                小朋友或長輩可以參加嗎？
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>路線平緩、步調輕鬆，適合親子或長輩同行，如有特殊需求歡迎報名前先與我們聯繫確認。</p></div>
+                        </div>
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                天氣不好會取消嗎？
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>會由我們評估天候狀況決定，若因天候取消，可選擇轉到其他梯次或退費（扣5%手續費）。</p></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-
+        <!-- 分頁籤 -->
         <div class="adventureDetail">
             <div class="tab-buttons">
                 <button class="active" onclick="showTab(0)">集合地點</button>
                 <button onclick="showTab(1)">價格包含</button>
-                <button onclick="showTab(2)">安全政策</button>
-                <button onclick="showTab(3)">行前須知</button>
-                <button onclick="showTab(4)">取消規定</button>
+                <button onclick="showTab(2)">安全保證</button>
+                <button onclick="showTab(3)">時程表</button>
+                <button onclick="showTab(4)">行前須知</button>
+                <button onclick="showTab(5)">退費政策</button>
             </div>
 
+            <!-- 1. 集合地點（內容不變，只調整視覺呈現） -->
             <div class="tab-content active">
-                <p><strong>集合地點：</strong>瑞芳火車站</p>
-                <p><strong>集合時間：</strong>08:30</p>
+                <div class="ldMeetGrid">
+                    <div class="ldMeetCard">
+                        <h3>集合地點</h3>
+                        <p>瑞芳火車站，08:30 集合</p>
+                    </div>
+                </div>
             </div>
 
+            <!-- 2. 價格包含（內容不變，證照描述已簡化） -->
             <div class="tab-content">
-                <ul>
-                    <li>- 雙語嚮導（中英雙語、合格外語領隊、EMT2救護員）</li>
-                    <li>- 攝影服務</li>
-                    <li>- NT$2,000,000 旅平險</li>
-                </ul>
-                <p><strong>不含：</strong> 公車費、午餐</p>
+                <div class="ldIncludesList">
+                    <h4>價格包含</h4>
+                    <ul>
+                        <li>專業雙語嚮導</li>
+                        <li>攝影服務</li>
+                        <li>NT$2,000,000 旅平險</li>
+                    </ul>
+                </div>
+                <p class="ldPriceNote">不含：公車費、午餐</p>
             </div>
 
+            <!-- 3. 安全保證（原「安全政策」，內容不變，只調整視覺呈現） -->
             <div class="tab-content">
-                <ul>
-                    <li>- 每位參加者均享有旅遊平安險：意外身故與失能新台幣 200 萬元，傷害醫療費用新台幣 20 萬元。</li>
-                    <li>- 導遊皆具備安全處理訓練。</li>
-                    <li>- 活動期間請全程遵守嚮導指示，確保安全與順利。</li>
-                </ul>
+                <div class="ldSafetyGrid">
+                    <div class="ldSafetyItem">
+                        <div class="ldSafetyIcon">✓</div>
+                        <div class="ldSafetyText">
+                            <p>每位參加者均享有旅遊平安險：意外身故與失能新台幣 200 萬元，傷害醫療費用新台幣 20 萬元。</p>
+                        </div>
+                    </div>
+                    <div class="ldSafetyItem">
+                        <div class="ldSafetyIcon">✓</div>
+                        <div class="ldSafetyText">
+                            <p>導遊皆具備安全處理訓練。</p>
+                        </div>
+                    </div>
+                    <div class="ldSafetyItem">
+                        <div class="ldSafetyIcon">✓</div>
+                        <div class="ldSafetyText">
+                            <p>活動期間請全程遵守嚮導指示，確保安全與順利。</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <!-- 4. 時程表（新增分頁籤） -->
+            <div class="tab-content">
+                <div class="ldSubHeading">時程安排</div>
+                <div class="ldTimeline">
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">08:30</div><div class="ldTimelineDesc">瑞芳火車站集合</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">09:00左右</div><div class="ldTimelineDesc">出發前往金瓜石</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">全程約5-6小時</div><div class="ldTimelineDesc">漫遊礦山遺跡、山海景緻步道</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">下午</div><div class="ldTimelineDesc">完成行程，返回瑞芳火車站解散</div></div>
+                </div>
+                <p class="ldPriceNote">※ 實際時間會依天候與隊伍狀況調整，正確集合與解散時間將於行前通知中提供。</p>
+            </div>
+
+            <!-- 5. 行前須知（內容不變，唯時數已修正成跟全頁一致的 5-6 小時，
+                 原本這裡還寫 3-4 小時，跟其他地方矛盾） -->
             <div class="tab-content">
                 <ul>
-                    <li>- 步調輕鬆，但需具備連續行走 3–4 小時山路的體力。</li>
+                    <li>- 步調輕鬆，但需具備連續行走 5-6 小時山路的體力。</li>
                     <li>- 請穿著適合山路的鞋，並攜帶雨具、防曬用品及足夠飲水。</li>
                     <li>- 天候不佳時將公告延期或取消，可轉至 Taiwan Pathfinder 其他行程（退費需扣 5% 手續費）。</li>
                 </ul>
             </div>
 
+            <!-- 6. 退費政策（原「取消規定」，內容不變，只調整視覺呈現） -->
             <div class="tab-content">
-                <h4>因天氣取消或改期</h4>
-                <ul>
-                    <li>- 不可抗因素：若遇活動目的地陸上颱風警報、地震、寒流、豪雨特報（定義請參照中央氣象署）、道路封閉或管理單位限制等不可抗因素，致使無法出團，將扣除活動費用 5% 行政手續費後退費。</li>
-                    <li>- 天氣預報不佳：如陰雨綿綿、冷氣團來襲等可能影響活動品質，將由我方綜合評估，最遲於出發日前 3 日公告是否出團。如評估後取消出團，將扣除活動費用 5% 行政手續費後退費。</li>
-                </ul>
+                <div class="ldSubHeading">【因天氣取消或改期】</div>
+                <div class="ldNotesList">
+                    <p>不可抗因素：若遇活動目的地陸上颱風警報、地震、寒流、豪雨特報（定義請參照中央氣象署）、道路封閉或管理單位限制等不可抗因素，致使無法出團，將扣除活動費用 5% 行政手續費後退費。</p>
+                    <p>天氣預報不佳：如陰雨綿綿、冷氣團來襲等可能影響活動品質，將由我方綜合評估，最遲於出發日前 3 日公告是否出團。如評估後取消出團，將扣除活動費用 5% 行政手續費後退費。</p>
+                </div>
 
-                <h4>個人因素取消</h4>
-                <ul>
-                    <li>- 出發前 14 天取消：扣除活動費用 5% 行政手續費後退費。</li>
-                    <li>- 出發前 8–13 天取消：扣除 20% 必要支出後退費。</li>
-                    <li>- 出發前 3–7 天取消：扣除 30% 必要支出後退費。</li>
-                    <li>- 出發前 2 天內取消：不退費。</li>
-                </ul>
+                <div class="ldSubHeading">【個人因素取消】</div>
+                <div class="ldNotesList">
+                    <p>出發前 14 天取消：扣除活動費用 5% 行政手續費後退費。</p>
+                    <p>出發前 8–13 天取消：扣除 20% 必要支出後退費。</p>
+                    <p>出發前 3–7 天取消：扣除 30% 必要支出後退費。</p>
+                    <p>出發前 2 天內取消：不退費。</p>
+                </div>
 
-                <h4>成團人數規定</h4>
-                <ul>
-                    <li>- 若未達成團人數而確定不出團，參加者可選擇免費延期，或扣除活動費用 5% 行政手續費後退費。</li>
-                </ul>
+                <div class="ldSubHeading">【成團人數規定】</div>
+                <div class="ldNotesList">
+                    <p>若未達成團人數而確定不出團，參加者可選擇免費延期，或扣除活動費用 5% 行政手續費後退費。</p>
+                </div>
             </div>
-
         </div>
 
+        <!-- 立即報名：選擇場次 -->
+        <div class="adventureDetail">
+            <div class="bookingFormInner" id="booking-form">
+                <h2>立即報名</h2>
+                <p class="ldRegisterNote">請選擇想參加的場次，點擊後會在新分頁開啟該場次的報名表單。收到「報名確認 Email」後才代表正式完成報名，送出表單並完成繳費後請務必查看信箱（含垃圾郵件夾）。</p>
+                <div class="sessionPickGrid" id="sessionPickGrid">
+                    <p class="sessionPickLoading">場次載入中...</p>
+                </div>
+            </div>
+        </div>
 
         <div class="Footer">
             <div class="info">
@@ -204,50 +354,26 @@
             </div>
         </div>
     </div>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
- AOS.init({
-  // ─── 全域設定 ───
-  disable: false,                
-  startEvent: 'DOMContentLoaded', 
-  initClassName: 'aos-init',     
-  animatedClassName: 'aos-animate', 
-  useClassNames: false,          
-  disableMutationObserver: false,
-  debounceDelay: 50,             
-  throttleDelay: 99,             
 
-  offset: 120,                   
-  delay: 0,                      
-  duration: 400,                 
-  easing: 'ease',                
-  once: false,                   
-  mirror: false,                 
-  anchorPlacement: 'top-bottom', 
-});
-</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // 照片清單
-        const images = [
-            "/adventurepics/0-580/0-580 1.jpg",
-            "/adventurepics/0-580/0-580 2.jpg",
-            "/adventurepics/0-580/0-580 3.jpg",
-            "/adventurepics/0-580/0-580 4.jpg",
-            "/adventurepics/0-580/0-580 5.jpg",
-            "/adventurepics/0-580/0-580 6.jpg",
-            "/adventurepics/0-580/0-580 7.jpg",
-            "/adventurepics/0-580/0-580 8.jpg"
-        ];
+    // 照片輪播
+    const images = [
+        "/adventurepics/0-580/0-580 1.jpg",
+        "/adventurepics/0-580/0-580 2.jpg",
+        "/adventurepics/0-580/0-580 3.jpg",
+        "/adventurepics/0-580/0-580 4.jpg",
+        "/adventurepics/0-580/0-580 5.jpg",
+        "/adventurepics/0-580/0-580 6.jpg",
+        "/adventurepics/0-580/0-580 7.jpg",
+        "/adventurepics/0-580/0-580 8.jpg"
+    ];
 
-        let currentIndex = 0;
-        const currentImage = document.getElementById("current");
-        const thumbs = document.querySelectorAll(".thumbnails img");
-        const thumbnailContainer = document.getElementById("thumbnailContainer");
-        let timer;
-
-
+    let currentIndex = 0;
+    const currentImage = document.getElementById("current");
+    const thumbs = document.querySelectorAll(".thumbnails img");
+    const thumbnailContainer = document.getElementById("thumbnailContainer");
+    let timer;
 
     // 切換大圖
     function changeImage(index) {
@@ -257,12 +383,6 @@
       // 更新縮圖樣式
       thumbs.forEach(img => img.classList.remove("active"));
       thumbs[currentIndex].classList.add("active");
-
-      // 縮圖自動捲動到可見區
-      //thumbs[currentIndex].scrollIntoView({
-        //behavior: "smooth",
-        //block: "nearest"
-      //});
 
       resetTimer();
     }
@@ -295,6 +415,7 @@
     timer = setInterval(autoPlay, 3000);
 </script>
 <script>
+  // 分頁籤切換
   function showTab(index) {
     const buttons = document.querySelectorAll(".tab-buttons button");
     const contents = document.querySelectorAll(".tab-content");
@@ -307,6 +428,156 @@
       content.classList.toggle("active", i === index);
     });
   }
+
+  // FAQ 手風琴
+  function toggleFaq(btn) {
+    const item = btn.closest(".ldFaqItem");
+    const open = item.classList.toggle("open");
+    btn.querySelector(".ldFaqArrow").textContent = open ? "－" : "＋";
+  }
+</script>
+<script>
+(function(){
+    var grid = document.getElementById('sessionPickGrid');
+    var CSV_URL = 'https://docs.google.com/spreadsheets/d/1VvRRgURxwP4ka_it5MCn96JD6XzbjKS6CGEnWYE_afU/export?format=csv&gid=0';
+    var ACTIVITY_TYPE = '金瓜石秋芒漫步0-580';
+    var LINE_URL = 'https://lin.ee/D1jlWHsF';
+    var EMAIL = 'pathfinderintaiwan@gmail.com';
+    var WEEKDAYS = ['日', '一', '二', '三', '四', '五', '六'];
+
+    var STATUS_TAG_CLASS = { '報名中': 'statusTag-open', '已成團': 'statusTag-confirmed', '即將額滿': 'statusTag-almost-full' };
+    var STATUS_TAG_ICON = { '已成團': '✓ ' };
+
+    function statusTagHtml(tag){
+        if (!tag) return '';
+        var cls = STATUS_TAG_CLASS[tag] || 'statusTag-open';
+        var icon = STATUS_TAG_ICON[tag] || '';
+        return '<span class="statusTag ' + cls + '">' + icon + esc(tag) + '</span>';
+    }
+
+    function esc(s){
+        return String(s == null ? '' : s)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+    }
+
+    // 簡單但正確處理引號內逗號/換行的 CSV parser
+    function parseCSV(text){
+        var rows = [], row = [], field = '', inQuotes = false;
+        for (var i = 0; i < text.length; i++){
+            var c = text[i];
+            if (inQuotes){
+                if (c === '"'){
+                    if (text[i+1] === '"'){ field += '"'; i++; }
+                    else { inQuotes = false; }
+                } else {
+                    field += c;
+                }
+            } else {
+                if (c === '"'){ inQuotes = true; }
+                else if (c === ','){ row.push(field); field = ''; }
+                else if (c === '\r'){ /* skip */ }
+                else if (c === '\n'){ row.push(field); rows.push(row); row = []; field = ''; }
+                else { field += c; }
+            }
+        }
+        if (field.length || row.length){ row.push(field); rows.push(row); }
+        return rows;
+    }
+
+    function pad2(n){ return n < 10 ? '0' + n : '' + n; }
+
+    function fmtDateWeekday(dstr){
+        var d = new Date(dstr + 'T00:00:00');
+        if (isNaN(d.getTime())) return dstr;
+        return d.getFullYear() + '/' + pad2(d.getMonth() + 1) + '/' + pad2(d.getDate()) + '（' + WEEKDAYS[d.getDay()] + '）';
+    }
+
+    function toMMDDYYYY(dstr){
+        var parts = (dstr || '').split('-');
+        if (parts.length !== 3) return '';
+        return parts[1] + '/' + parts[2] + '/' + parts[0];
+    }
+
+    function withSessionDateParam(url, dstr){
+        if (!url) return '';
+        var sep = url.indexOf('?') >= 0 ? '&' : '?';
+        return url + sep + 'session_date_param=' + toMMDDYYYY(dstr);
+    }
+
+    // 早鳥計算尚未於報名表單設定完成，暫時只顯示「目前顯示價格（自動）」單一數字，不呈現原價劃線比較
+    function priceRowHtml(current){
+        var c = (current || '').trim();
+        return '<span class="sessionPickNew">' + esc(c) + '</span>';
+    }
+
+    function cardHtml(r){
+        var href = esc(withSessionDateParam(r.formLink, r.date));
+        return '<a class="sessionPickCard" href="' + href + '" target="_blank" rel="noopener">' +
+            '<span class="sessionPickDate">' + esc(fmtDateWeekday(r.date)) + '</span>' +
+            statusTagHtml(r.statusTag) +
+            '<span class="sessionPickPriceRow">' + priceRowHtml(r.currentPrice) + '</span>' +
+            '<span class="sessionPickCta">立即報名 ↗</span>' +
+            '</a>';
+    }
+
+    // CSV 裡目前還沒有這個活動的場次資料，所以訪客現在實際會看到的就是這個備援畫面——
+    // 同時提供 LINE 跟 Email 兩種聯繫方式。
+    function showFallback(){
+        grid.className = 'sessionPickFallback';
+        grid.innerHTML =
+            '<p>目前沒有開放中的場次。</p>' +
+            '<p>歡迎透過 <a href="' + LINE_URL + '" target="_blank" rel="noopener">LINE</a> 或 ' +
+            '<a href="mailto:' + EMAIL + '">Email</a> 聯繫我們，或持續關注社群更新。</p>';
+    }
+
+    fetch(CSV_URL)
+        .then(function(res){
+            if (!res.ok) throw new Error('CSV fetch failed: ' + res.status);
+            return res.text();
+        })
+        .then(function(text){
+            var rows = parseCSV(text);
+            if (!rows.length) throw new Error('Empty CSV');
+
+            var header = rows[0];
+            var iType = header.indexOf('活動類型');
+            var iDate = header.indexOf('場次日期');
+            var iStatus = header.indexOf('最終狀態（自動）');
+            var iForm = header.indexOf('報名表單連結');
+            var iPrice = header.indexOf('原價');
+            var iStatusTag = header.indexOf('報名狀態標籤');
+            if (iType < 0 || iDate < 0 || iStatus < 0 || iPrice < 0){
+                throw new Error('CSV missing expected columns');
+            }
+
+            var today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            var upcoming = rows.slice(1)
+                .filter(function(r){ return r.length > iStatus && r[iType] === ACTIVITY_TYPE && r[iStatus] === '開放中'; })
+                .map(function(r){
+                    var d = new Date(r[iDate] + 'T00:00:00');
+                    return {
+                        date: r[iDate],
+                        dateObj: d,
+                        currentPrice: r[iPrice],
+                        formLink: iForm >= 0 ? r[iForm] : '',
+                        statusTag: iStatusTag >= 0 ? r[iStatusTag] : ''
+                    };
+                })
+                .filter(function(r){ return !isNaN(r.dateObj.getTime()) && r.dateObj.getTime() > today.getTime(); })
+                .sort(function(a, b){ return a.dateObj - b.dateObj; });
+
+            if (!upcoming.length) throw new Error('No upcoming open sessions for this activity');
+
+            grid.innerHTML = upcoming.map(cardHtml).join('');
+        })
+        .catch(function(){
+            showFallback();
+        });
+})();
 </script>
 <script src="/marquee.js" defer></script>
 </body>
