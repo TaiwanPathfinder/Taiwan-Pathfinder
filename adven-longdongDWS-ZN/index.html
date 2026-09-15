@@ -6,6 +6,7 @@
     <title>龍洞深水抱石（DWS）| Taiwan Pathfinder</title>
     <link rel="stylesheet" href="/oneAdventurePage.css?v=2">
     <link rel="stylesheet" href="/headandfoot.css?v=2">
+    <link rel="stylesheet" href="/longdongTest.css?v=2">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDR9E7XZP0"></script>
@@ -15,7 +16,7 @@
     gtag('js', new Date());
 
     gtag('config', 'G-JDR9E7XZP0');
-    </script>   
+    </script>
 </head>
 
 <body>
@@ -57,122 +58,278 @@
         </div>
         <script>document.body.style.paddingTop = document.getElementById('marqueeBar').offsetHeight + 'px';</script>
         </div>
+
+        <!-- 主視覺：左文右圖 -->
         <div class="adventureHead">
             <div class="adventureHeadText">
                 <h1>龍洞深水抱石（DWS）</h1>
-                <p><strong>在龍洞海岸體驗深水抱石</strong>：無需繩索，沿著海崖自由攀爬，跌落即是安全入水。我們會先從簡單橫移熱身，教導正確入水與落水技巧，逐步挑戰經典路線<strong>「蔚藍的誘惑」</strong>。全程由專業教練帶領，提供浮具支援、現場控場，帶給你刺激但安全的一日深水抱石體驗。</p>
+                <p><strong>沒爬過岩壁？不會游泳？</strong>只要不怕水，你就可以參加。</p>
+                <p>深水抱石聽起來像攀岩，但其實就是不綁繩索、在深水上方自由攀爬——手滑了，就是安全地落入海中。我們會先從簡單橫移開始熱身，教你正確的入水與落水技巧。</p>
+                <p>想挑戰更多的人，可以逐步進階到經典路線<strong>「蔚藍的誘惑」</strong>。教練全程在岸上戒護，並在水中攜帶浮具跟隨保護，不會游泳的人我們也會提供救生衣。</p>
                 <div class="advenIntroTextButton">
                     <div class="buttonPrice">
                         <h3>價格</h3>
-                        <p>3500元</p>
+                        <p>NT.3,500</p>
                     </div>
-                </div>
-                <div class="buttonBook">
-                    <a target=" _blank" href="/openForBooking/">我要報名</a>
+                    <div class="buttonBook">
+                    <a href="#booking-form">立即報名</a>
+                    </div>
                 </div>
             </div>
             <div class="adventureHeadGallery">
                 <!-- 大圖 -->
                 <div class="main-image">
-                    <img width="1920" height="1440" id="current" src="/adventurepics/雪山/雪山1.jpg" alt="main image">
+                    <img width="1536" height="1920" id="current" src="/adventurepics/龍洞DWS/龍洞DWS1.jpg" alt="main image">
                 <!-- 左右切換箭頭 -->
                     <button class="arrow left" onclick="prevImage()">&#10094;</button>
                     <button class="arrow right" onclick="nextImage()">&#10095;</button>
                 </div>
                 <!-- 縮圖 -->
-								<div class="thumbnails" id="thumbnailContainer">
-								    <img loading="lazy" width="1536" height="1920" src="/adventurepics/龍洞DWS/龍洞DWS1.jpg" alt="thumb1" onclick="changeImage(0)">
-								    <img loading="lazy" width="1920" height="1280" src="/adventurepics/龍洞DWS/龍洞DWS2.JPG" alt="thumb2" onclick="changeImage(1)">
-								    <img loading="lazy" width="1536" height="1920" src="/adventurepics/龍洞DWS/龍洞DWS3.JPG" alt="thumb3" onclick="changeImage(2)">
-								    <img loading="lazy" width="1920" height="1280" src="/adventurepics/龍洞DWS/龍洞DWS4.JPG" alt="thumb4" onclick="changeImage(3)">
-								    <img loading="lazy" width="964" height="1205" src="/adventurepics/龍洞DWS/龍洞DWS5.jpg" alt="thumb5" onclick="changeImage(4)">
-								    <img loading="lazy" width="1536" height="1920" src="/adventurepics/龍洞DWS/龍洞DWS6.jpg" alt="thumb6" onclick="changeImage(5)">
-								    <img loading="lazy" width="1536" height="1920" src="/adventurepics/龍洞DWS/龍洞DWS7.jpg" alt="thumb7" onclick="changeImage(6)">
-								    <img loading="lazy" width="1920" height="1280" src="/adventurepics/龍洞DWS/龍洞DWS8.JPG" alt="thumb8" onclick="changeImage(7)">
-								    <!-- 如果要更多圖片可以繼續加 -->
-
+                <div class="thumbnails" id="thumbnailContainer">
+                    <img loading="lazy" width="1536" height="1920" src="/adventurepics/龍洞DWS/龍洞DWS1.jpg" alt="thumb1" onclick="changeImage(0)">
+                    <img loading="lazy" width="1920" height="1280" src="/adventurepics/龍洞DWS/龍洞DWS2.JPG" alt="thumb2" onclick="changeImage(1)">
+                    <img loading="lazy" width="1536" height="1920" src="/adventurepics/龍洞DWS/龍洞DWS3.JPG" alt="thumb3" onclick="changeImage(2)">
+                    <img loading="lazy" width="1920" height="1280" src="/adventurepics/龍洞DWS/龍洞DWS4.JPG" alt="thumb4" onclick="changeImage(3)">
+                    <img loading="lazy" width="964" height="1205" src="/adventurepics/龍洞DWS/龍洞DWS5.jpg" alt="thumb5" onclick="changeImage(4)">
+                    <img loading="lazy" width="1536" height="1920" src="/adventurepics/龍洞DWS/龍洞DWS6.jpg" alt="thumb6" onclick="changeImage(5)">
+                    <img loading="lazy" width="1536" height="1920" src="/adventurepics/龍洞DWS/龍洞DWS7.jpg" alt="thumb7" onclick="changeImage(6)">
+                    <img loading="lazy" width="1920" height="1280" src="/adventurepics/龍洞DWS/龍洞DWS8.JPG" alt="thumb8" onclick="changeImage(7)">
                 </div>
             </div>
         </div>
+
+        <!-- 活動介紹：徽章 + 文案 -->
         <div class="adventureIntroduction">
             <div class="advenIntroText">
                 <h2>行程介紹</h2>
                 <div class="advenIntroTextButton">
                     <div class="buttonTime">
                         <h3>行程天數</h3>
-                        <p>1天</p>
+                        <p>4-5小時（不含交通）</p>
                     </div>
                     <div class="buttonDifficulty">
                         <h3>難度等級</h3>
-                        <p>初學至中階</p>
+                        <p>新手友善</p>
                     </div>
                 </div>
                 <p class="advenIntroTextp">在龍洞海岸享受深水抱石的自由。開場將進行岸邊安全簡報，說明潮汐、浪況與入水動作，接著以低位橫移熱身，再逐步嘗試位於深水上方的較高課題；有能力者可挑戰經典路線<strong>「蔚藍的誘惑」</strong>。</p>
-                <p class="advenIntroTextp">本活動適合具備基本攀岩經驗且游泳能力良好者。教練會於岸上與船隻進行保護與觀察，依潮汐選擇合適區域，示範安全上岸與重返岩壁的方式；提供安全帽、與救生衣（視需求）。</p>
+                <p class="advenIntroTextp">參加這個活動不需要攀岩經驗，也不需要會游泳，只要不怕水即可參加。教練會在岸上戒護，並在水中攜帶浮具跟隨觀察，依潮汐選擇合適區域，示範安全上岸與重返岩壁的方式；並視需求提供救生衣。</p>
+
+                <h2>活動亮點</h2>
+                <div class="ldHighlightCardGrid">
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l6-10 4 6 3-4 5 8H3z"/></svg>
+                        </span>
+                        <p>不需要任何攀岩經驗，從簡單橫移開始慢慢熱身</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 19c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg>
+                        </span>
+                        <p>不用會游泳，只要不怕水即可參加，不會游泳者提供救生衣</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+                        </span>
+                        <p>教練岸上戒護＋水中浮具全程跟隨保護</p>
+                    </div>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polygon points="13.2 10.8 15 8 12.2 9.8 10 12.5 13.2 10.8" fill="currentColor" stroke="none"/></svg>
+                        </span>
+                        <p>想挑戰經典路線「蔚藍的誘惑」，完全自由選擇，不會勉強</p>
+                    </div>
+                </div>
+
+                <div class="ldSafetyBlock">
+                    <h2 class="ldSafetyBlockTitle">為什麼你可以放心參加</h2>
+                    <div class="ldStatBadgeRow">
+                        <div class="ldStatBadge">
+                            <span class="ldIcon ldIconSafety">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+                            </span>
+                            <span class="ldStatBadgeNum">200萬</span>
+                            <span class="ldStatBadgeLabel">旅遊平安險</span>
+                        </div>
+                        <div class="ldStatBadge">
+                            <span class="ldIcon ldIconSafety">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 6-5s6 2 6 5"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 20c.3-2 1.7-3.5 4-3.8"/></svg>
+                            </span>
+                            <span class="ldStatBadgeNum">1:6</span>
+                            <span class="ldStatBadgeLabel">嚮導比例上限</span>
+                        </div>
+                        <div class="ldStatBadge">
+                            <span class="ldIcon ldIconSafety">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="13" rx="2"/><path d="M12 9.5v6M9 12.5h6"/></svg>
+                            </span>
+                            <span class="ldStatBadgeNum">專業</span>
+                            <span class="ldStatBadgeLabel">雙語嚮導</span>
+                        </div>
+                        <div class="ldStatBadge">
+                            <span class="ldIcon ldIconSafety">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                            </span>
+                            <span class="ldStatBadgeNum">4-5小時</span>
+                            <span class="ldStatBadgeLabel">活動時間</span>
+                        </div>
+                    </div>
+                    <p class="ldPriceNote">完整安全保證內容請見下方「安全保證」分頁籤</p>
+
+                    <div class="ldFaqList">
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                完全不會游泳可以參加嗎？
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>可以，不需要會游泳、不怕水即可參加，不會游泳的人我們會提供救生衣。</p></div>
+                        </div>
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                沒有攀岩經驗可以參加嗎？
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>可以，這個活動不需要事先具備攀岩經驗。</p></div>
+                        </div>
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                聽起來很刺激，會不會很危險？
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>活動設計上會讓你感受到刺激，但安全上有多重把關：教練會在岸上戒護、並在水中攜帶浮具全程跟隨保護，依潮汐狀況選擇合適區域，視需求提供救生衣。想挑戰難度較高的「蔚藍的誘惑」路線是自由選擇，不會勉強你。</p></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <!-- 分頁籤 -->
         <div class="adventureDetail">
             <div class="tab-buttons">
                 <button class="active" onclick="showTab(0)">集合地點</button>
-                <button onclick="showTab(1)">價格包含</button>
-                <button onclick="showTab(2)">安全政策</button>
-                <button onclick="showTab(3)">行前須知</button>
-                <button onclick="showTab(4)">取消政策</button>
+                <button onclick="showTab(1)">費用包含</button>
+                <button onclick="showTab(2)">安全保證</button>
+                <button onclick="showTab(3)">時程表</button>
+                <button onclick="showTab(4)">行前須知</button>
+                <button onclick="showTab(5)">退費政策</button>
             </div>
 
+            <!-- 1. 集合地點 -->
             <div class="tab-content active">
-		            <ul>
-			            <li>- 和美國小，或其他龍洞停車場（實際位置及集合時間依潮汐狀況將於活動前三天的確認信中提供）。</li>
-	                    <li>- 亦可以加購台北南港往返接駁，每人將額外收取500元接駁費用。</li>
-		            </ul>
+                <div class="ldMeetGrid">
+                    <div class="ldMeetCard">
+                        <h3>方案 A — 龍洞現場集合</h3>
+                        <p>和美國小，或其他龍洞停車場。實際位置及集合時間依潮汐狀況，將於活動前三天的確認信中提供。</p>
+                    </div>
+                    <div class="ldMeetCard">
+                        <h3>方案 B — 台北南港來回接駁</h3>
+                        <p>可加購台北南港往返接駁，每人額外收取 500 元接駁費用。</p>
+                    </div>
+                </div>
             </div>
 
+            <!-- 2. 費用包含 -->
             <div class="tab-content">
-                <ul>
-                    <li>- 攀岩裝備（岩盔、吊帶、岩鞋）</li>
-                    <li>- 專業嚮導服務與英語服務</li>
-                    <li>- 特定活動險</li>
-                </ul>
+                <div class="ldIncludesList">
+                    <h4>費用包含</h4>
+                    <ul>
+                        <li>攀岩裝備（吊帶、岩鞋）</li>
+                        <li>專業嚮導服務與英語服務</li>
+                        <li>特定活動險</li>
+                        <li>救生衣（視需求提供）</li>
+                    </ul>
+                </div>
             </div>
 
+            <!-- 3. 安全保證 -->
             <div class="tab-content">
-                <ul>
-                    <li>- 為每位參加者提供特定活動險：NT$200萬意外身故及失能保險金，NT$20萬實支實付傷害醫療保險金</li>
-                    <li>- 嚮導皆具備急救與事故處理能力</li>
-                    <li>- 嚮導與參加者比例不超過 1:6，確保活動品質與安全標準</li>
-                    <li>- 我們提供全套裝備，並請配合嚮導指示確保活動安全</li>
-                </ul>
+                <div class="ldSafetyGrid">
+                    <div class="ldSafetyItem">
+                        <div class="ldSafetyIcon">✓</div>
+                        <div class="ldSafetyText">
+                            <p>為每位參加者提供特定活動險：NT$200 萬意外身故及失能保險金，NT$20 萬實支實付傷害醫療保險金。</p>
+                        </div>
+                    </div>
+                    <div class="ldSafetyItem">
+                        <div class="ldSafetyIcon">✓</div>
+                        <div class="ldSafetyText">
+                            <p>嚮導皆具備急救與事故處理能力。</p>
+                        </div>
+                    </div>
+                    <div class="ldSafetyItem">
+                        <div class="ldSafetyIcon">✓</div>
+                        <div class="ldSafetyText">
+                            <p>嚮導與參加者比例不超過 1:6，確保活動品質與安全標準。</p>
+                        </div>
+                    </div>
+                    <div class="ldSafetyItem">
+                        <div class="ldSafetyIcon">✓</div>
+                        <div class="ldSafetyText">
+                            <p>教練全程在岸上戒護，並在水中攜帶浮具跟隨保護。</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="tab-content">
-						    <ul>
-						        <li>- 請穿著舒適透氣的戶外服裝，並攜帶防風或防雨外套，以應對海邊多變的天氣。</li>
-						        <li>- 建議準備約 2 公升飲用水、午餐，以及防曬用品（防曬乳、帽子、太陽眼鏡等）。</li>
-						        <li>- 若有自用攀岩鞋建議攜帶，穿起來會更合腳；我們也提供攀岩鞋，但尺寸可能無法完全符合。</li>
-						        <li>- 所有必要的攀岩裝備（吊帶、岩盔等）及活動保險皆由我們提供，讓您輕鬆無後顧之憂。</li>
-						        <li>- 若有任何特殊需求或健康狀況，請在報名時提前告知，我們才能為您提供更妥善的安排。</li>
-						        <li>- 為了讓您能安心準備，出發前三天我們會提供完整行前通知，包含天氣建議與最後提醒。</li>
-						    </ul>
-						</div>
-            <div class="tab-content">
-                <h4>因天氣取消或改期</h4>
-                <ul>
-                    <li>- 不可抗因素：若遇活動目的地陸上颱風警報、地震、寒流、豪雨特報（定義請參照中央氣象署）、道路封閉或管理單位限制等不可抗因素，致使無法出團，將扣除活動費用 5% 行政手續費後退費。</li>
-                    <li>- 天氣預報不佳：如陰雨綿綿、冷氣團來襲等可能影響活動品質，將由我方綜合評估，最遲於出發日前 3 日公告是否出團。如評估後取消出團，將扣除活動費用 5% 行政手續費後退費。</li>
-                </ul>
 
-                <h4>個人因素取消</h4>
-                <ul>
-                    <li>- 出發前 14 天取消：扣除活動費用 5% 行政手續費後退費。</li>
-                    <li>- 出發前 8–13 天取消：扣除 20% 必要支出後退費。</li>
-                    <li>- 出發前 3–7 天取消：扣除 30% 必要支出後退費。</li>
-                    <li>- 出發前 2 天內取消：不退費。</li>
-                </ul>
+            <!-- 4. 時程表 -->
+            <div class="tab-content">
+                <div class="ldSubHeading">時程安排</div>
+                <div class="ldTimeline">
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">集合時間</div><div class="ldTimelineDesc">和美國小 / 龍洞停車場集合，實際時間依潮汐狀況，於出發前三天的確認信中提供</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">約30分鐘</div><div class="ldTimelineDesc">步行前往深水抱石活動場地</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">約30分鐘</div><div class="ldTimelineDesc">岸邊安全講解與熱身</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">約4-5小時</div><div class="ldTimelineDesc">深水抱石活動，視能力可挑戰「蔚藍的誘惑」</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">約30分鐘</div><div class="ldTimelineDesc">步行返回停車場</div></div>
+                    <div class="ldTimelineRow"><div class="ldTimelineTime">活動結束</div><div class="ldTimelineDesc">於集合地點解散（若加購南港接駁，車程約再1小時）</div></div>
+                </div>
+                <p class="ldPriceNote">※ 實際時間依天候與潮汐狀況調整，正確集合與解散時間將於行前通知中提供。</p>
+            </div>
 
-                <h4>成團人數規定</h4>
-                <ul>
-                    <li>- 若未達成團人數而確定不出團，參加者可選擇免費延期，或扣除活動費用 5% 行政手續費後退費。</li>
-                </ul>
+            <!-- 5. 行前須知 -->
+            <div class="tab-content">
+                <div class="ldSubHeading">注意事項</div>
+                <div class="ldNotesList">
+                    <p>請穿著舒適透氣的戶外服裝，並攜帶防風或防雨外套，以應對海邊多變的天氣。</p>
+                    <p>建議準備約 2 公升飲用水、午餐，以及防曬用品（防曬乳、帽子、太陽眼鏡等）。</p>
+                    <p>若有自用攀岩鞋建議攜帶，穿起來會更合腳；我們也提供攀岩鞋，但尺寸可能無法完全符合。</p>
+                    <p>所有必要的攀岩裝備（吊帶等）及活動保險皆由我們提供，讓您輕鬆無後顧之憂。</p>
+                    <p>若有任何特殊需求或健康狀況，請在報名時提前告知，我們才能為您提供更妥善的安排。</p>
+                    <p>為了讓您能安心準備，出發前三天我們會提供完整行前通知，包含天氣建議與最後提醒。</p>
+                </div>
+            </div>
+
+            <!-- 6. 退費政策 -->
+            <div class="tab-content">
+                <div class="ldSubHeading">【因天氣取消或改期】</div>
+                <div class="ldNotesList">
+                    <p>不可抗因素：若遇活動目的地陸上颱風警報、地震、寒流、豪雨特報（定義請參照中央氣象署）、道路封閉或管理單位限制等不可抗因素，致使無法出團，將扣除活動費用 5% 行政手續費後退費。</p>
+                    <p>天氣預報不佳：如陰雨綿綿、冷氣團來襲等可能影響活動品質，將由我方綜合評估，最遲於出發日前 3 日公告是否出團。如評估後取消出團，將扣除活動費用 5% 行政手續費後退費。</p>
+                </div>
+
+                <div class="ldSubHeading">【個人因素取消】</div>
+                <div class="ldNotesList">
+                    <p>出發前 14 天取消：扣除活動費用 5% 行政手續費後退費。</p>
+                    <p>出發前 8–13 天取消：扣除 20% 必要支出後退費。</p>
+                    <p>出發前 3–7 天取消：扣除 30% 必要支出後退費。</p>
+                    <p>出發前 2 天內取消：不退費。</p>
+                </div>
+
+                <div class="ldSubHeading">【成團人數規定】</div>
+                <div class="ldNotesList">
+                    <p>若未達成團人數而確定不出團，參加者可選擇免費延期，或扣除活動費用 5% 行政手續費後退費。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 立即報名：選擇場次 -->
+        <div class="adventureDetail">
+            <div class="bookingFormInner" id="booking-form">
+                <h2>立即報名</h2>
+                <p class="ldRegisterNote">請選擇想參加的場次，點擊後會在新分頁開啟該場次的報名表單。收到「報名確認 Email」後才代表正式完成報名，送出表單並完成繳費後請務必查看信箱（含垃圾郵件夾）。</p>
+                <div class="sessionPickGrid" id="sessionPickGrid">
+                    <p class="sessionPickLoading">場次載入中...</p>
+                </div>
             </div>
         </div>
 
@@ -208,39 +365,26 @@
             </div>
         </div>
     </div>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
- AOS.init({
-  // ─── 全域設定 ───
-  disable: false,                
-  startEvent: 'DOMContentLoaded', 
-  initClassName: 'aos-init',     
-  animatedClassName: 'aos-animate', 
-  useClassNames: false,          
-  disableMutationObserver: false,
-  debounceDelay: 50,             
-  throttleDelay: 99,             
 
-  offset: 120,                   
-  delay: 0,                      
-  duration: 400,                 
-  easing: 'ease',                
-  once: false,                   
-  mirror: false,                 
-  anchorPlacement: 'top-bottom', 
-});
-</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     // 照片清單
-    const images = ["/adventurepics/龍洞DWS/龍洞DWS1.jpg", "/adventurepics/龍洞DWS/龍洞DWS2.JPG", "/adventurepics/龍洞DWS/龍洞DWS3.JPG", "/adventurepics/龍洞DWS/龍洞DWS4.JPG", "/adventurepics/龍洞DWS/龍洞DWS5.jpg", "/adventurepics/龍洞DWS/龍洞DWS6.jpg", "/adventurepics/龍洞DWS/龍洞DWS7.jpg", "/adventurepics/龍洞DWS/龍洞DWS8.JPG"];
-    let currentIndex = 0;
-    const currentImage = document.getElementById("current");
-    const thumbs = document.querySelectorAll(".thumbnails img");
-    const thumbnailContainer = document.getElementById("thumbnailContainer");
-    let timer;
+    const images = [
+	    "/adventurepics/龍洞DWS/龍洞DWS1.jpg",
+	    "/adventurepics/龍洞DWS/龍洞DWS2.JPG",
+	    "/adventurepics/龍洞DWS/龍洞DWS3.JPG",
+	    "/adventurepics/龍洞DWS/龍洞DWS4.JPG",
+	    "/adventurepics/龍洞DWS/龍洞DWS5.jpg",
+	    "/adventurepics/龍洞DWS/龍洞DWS6.jpg",
+	    "/adventurepics/龍洞DWS/龍洞DWS7.jpg",
+	    "/adventurepics/龍洞DWS/龍洞DWS8.JPG"
+		];
 
+		let currentIndex = 0;
+		const currentImage = document.getElementById("current");
+		const thumbs = document.querySelectorAll(".thumbnails img");
+		const thumbnailContainer = document.getElementById("thumbnailContainer");
+		let timer;
 
     // 切換大圖
     function changeImage(index) {
@@ -250,12 +394,6 @@
       // 更新縮圖樣式
       thumbs.forEach(img => img.classList.remove("active"));
       thumbs[currentIndex].classList.add("active");
-
-      // 縮圖自動捲動到可見區
-      //thumbs[currentIndex].scrollIntoView({
-        //behavior: "smooth",
-        //block: "nearest"
-      //});
 
       resetTimer();
     }
@@ -288,6 +426,7 @@
     timer = setInterval(autoPlay, 3000);
 </script>
 <script>
+  // 分頁籤切換
   function showTab(index) {
     const buttons = document.querySelectorAll(".tab-buttons button");
     const contents = document.querySelectorAll(".tab-content");
@@ -300,6 +439,154 @@
       content.classList.toggle("active", i === index);
     });
   }
+
+  // FAQ 手風琴（活動介紹 - 為什麼你可以放心參加）
+  function toggleFaq(btn) {
+    const item = btn.closest(".ldFaqItem");
+    const open = item.classList.toggle("open");
+    btn.querySelector(".ldFaqArrow").textContent = open ? "－" : "＋";
+  }
+</script>
+<script>
+(function(){
+    var grid = document.getElementById('sessionPickGrid');
+    var CSV_URL = 'https://docs.google.com/spreadsheets/d/1VvRRgURxwP4ka_it5MCn96JD6XzbjKS6CGEnWYE_afU/export?format=csv&gid=0';
+    var ACTIVITY_TYPE = '龍洞深水抱石專場 DWS';
+    var LINE_URL = 'https://lin.ee/D1jlWHsF';
+    var EMAIL = 'pathfinderintaiwan@gmail.com';
+    var WEEKDAYS = ['日', '一', '二', '三', '四', '五', '六'];
+
+    var STATUS_TAG_CLASS = { '報名中': 'statusTag-open', '已成團': 'statusTag-confirmed', '即將額滿': 'statusTag-almost-full' };
+    var STATUS_TAG_ICON = { '已成團': '✓ ' };
+
+    function statusTagHtml(tag){
+        if (!tag) return '';
+        var cls = STATUS_TAG_CLASS[tag] || 'statusTag-open';
+        var icon = STATUS_TAG_ICON[tag] || '';
+        return '<span class="statusTag ' + cls + '">' + icon + esc(tag) + '</span>';
+    }
+
+    function esc(s){
+        return String(s == null ? '' : s)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+    }
+
+    // 簡單但正確處理引號內逗號/換行的 CSV parser
+    function parseCSV(text){
+        var rows = [], row = [], field = '', inQuotes = false;
+        for (var i = 0; i < text.length; i++){
+            var c = text[i];
+            if (inQuotes){
+                if (c === '"'){
+                    if (text[i+1] === '"'){ field += '"'; i++; }
+                    else { inQuotes = false; }
+                } else {
+                    field += c;
+                }
+            } else {
+                if (c === '"'){ inQuotes = true; }
+                else if (c === ','){ row.push(field); field = ''; }
+                else if (c === '\r'){ /* skip */ }
+                else if (c === '\n'){ row.push(field); rows.push(row); row = []; field = ''; }
+                else { field += c; }
+            }
+        }
+        if (field.length || row.length){ row.push(field); rows.push(row); }
+        return rows;
+    }
+
+    function pad2(n){ return n < 10 ? '0' + n : '' + n; }
+
+    function fmtDateWeekday(dstr){
+        var d = new Date(dstr + 'T00:00:00');
+        if (isNaN(d.getTime())) return dstr;
+        return d.getFullYear() + '/' + pad2(d.getMonth() + 1) + '/' + pad2(d.getDate()) + '（' + WEEKDAYS[d.getDay()] + '）';
+    }
+
+    function toMMDDYYYY(dstr){
+        var parts = (dstr || '').split('-');
+        if (parts.length !== 3) return '';
+        return parts[1] + '/' + parts[2] + '/' + parts[0];
+    }
+
+    function withSessionDateParam(url, dstr){
+        if (!url) return '';
+        var sep = url.indexOf('?') >= 0 ? '&' : '?';
+        return url + sep + 'session_date_param=' + toMMDDYYYY(dstr);
+    }
+
+    // 早鳥計算尚未於報名表單設定完成，暫時只顯示「原價」單一數字，不呈現劃線比較
+    function priceRowHtml(current){
+        var c = (current || '').trim();
+        return '<span class="sessionPickNew">' + esc(c) + '</span>';
+    }
+
+    function cardHtml(r){
+        var href = esc(withSessionDateParam(r.formLink, r.date));
+        return '<a class="sessionPickCard" href="' + href + '" target="_blank" rel="noopener">' +
+            '<span class="sessionPickDate">' + esc(fmtDateWeekday(r.date)) + '</span>' +
+            statusTagHtml(r.statusTag) +
+            '<span class="sessionPickPriceRow">' + priceRowHtml(r.currentPrice) + '</span>' +
+            '<span class="sessionPickCta">立即報名 ↗</span>' +
+            '</a>';
+    }
+
+    function showFallback(){
+        grid.className = 'sessionPickFallback';
+        grid.innerHTML =
+            '<p>目前沒有開放中的場次。</p>' +
+            '<p>歡迎透過 <a href="' + LINE_URL + '" target="_blank" rel="noopener">LINE</a> 或 ' +
+            '<a href="mailto:' + EMAIL + '">Email</a> 聯繫我們，或持續關注社群更新。</p>';
+    }
+
+    fetch(CSV_URL)
+        .then(function(res){
+            if (!res.ok) throw new Error('CSV fetch failed: ' + res.status);
+            return res.text();
+        })
+        .then(function(text){
+            var rows = parseCSV(text);
+            if (!rows.length) throw new Error('Empty CSV');
+
+            var header = rows[0];
+            var iType = header.indexOf('活動類型');
+            var iDate = header.indexOf('場次日期');
+            var iStatus = header.indexOf('最終狀態（自動）');
+            var iForm = header.indexOf('報名表單連結');
+            var iPrice = header.indexOf('原價');
+            var iStatusTag = header.indexOf('報名狀態標籤');
+            if (iType < 0 || iDate < 0 || iStatus < 0 || iPrice < 0){
+                throw new Error('CSV missing expected columns');
+            }
+
+            var today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            var upcoming = rows.slice(1)
+                .filter(function(r){ return r.length > iStatus && r[iType] === ACTIVITY_TYPE && r[iStatus] === '開放中'; })
+                .map(function(r){
+                    var d = new Date(r[iDate] + 'T00:00:00');
+                    return {
+                        date: r[iDate],
+                        dateObj: d,
+                        currentPrice: r[iPrice],
+                        formLink: iForm >= 0 ? r[iForm] : '',
+                        statusTag: iStatusTag >= 0 ? r[iStatusTag] : ''
+                    };
+                })
+                .filter(function(r){ return !isNaN(r.dateObj.getTime()) && r.dateObj.getTime() > today.getTime(); })
+                .sort(function(a, b){ return a.dateObj - b.dateObj; });
+
+            if (!upcoming.length) throw new Error('No upcoming open sessions for this activity');
+
+            grid.innerHTML = upcoming.map(cardHtml).join('');
+        })
+        .catch(function(){
+            showFallback();
+        });
+})();
 </script>
 <script src="/marquee.js" defer></script>
 </body>
