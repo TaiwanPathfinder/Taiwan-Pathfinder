@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/oneAdventurePage.css?v=2">
     <link rel="stylesheet" href="/headandfoot.css?v=2">
     <link rel="stylesheet" href="/longdongTest.css?v=2">
+    <link rel="stylesheet" href="/longdongPrivateGroup.css?v=2">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDR9E7XZP0"></script>
@@ -63,7 +64,6 @@
                 <h1>Longdong Beginner Rock Climbing</h1>
                 <p><strong>Climb Where the Cliffs Meet the Pacific</strong></p>
                 <p>Thanks for checking out this adventure! This is a coastal rock climbing experience designed just for beginners, set at Longdong — Taiwan's most stunning climbing destination. No climbing experience, no special fitness level, and no gear of your own required. Just bring your curiosity, and we'll take care of the rest.</p>
-                <p>Take a moment to read through the details below, and once you're ready, fill out the registration form. We can't wait to head out with you!</p>
                 <div class="advenIntroTextButton">
                     <div class="buttonPrice">
                         <h3>Price</h3>
@@ -73,6 +73,7 @@
                     <a href="#booking-form">Book Now</a>
                     </div>
                 </div>
+                <a class="ldPrivateHeroLink" href="#private-group">Private groups available・Pick your own date&nbsp;→</a>
             </div>
             <div class="adventureHeadGallery">
                 <!-- Main image -->
@@ -215,13 +216,20 @@
                             </button>
                             <div class="ldFaqAnswer"><p>Absolutely — we run small groups, and plenty of participants come solo. You'll likely make new friends along the way.</p></div>
                         </div>
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                Can we choose our own date and have a private group?
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>Yes. Our <a class="ldPrivateFaqLink" href="#private-group">Private Group</a> option is NT$18,000 per group (1–6 people, Nangang Station shuttle included). You pick the date, and your group gets its own dedicated guide. Please book at least 7 days in advance with full payment.</p></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Tabs -->
-        <div class="adventureDetail">
+        <div class="adventureDetail" id="ldTabs">
             <div class="tab-buttons">
                 <button class="active" onclick="showTab(0)">Meeting Point</button>
                 <button onclick="showTab(1)">What's Included</button>
@@ -260,6 +268,14 @@
                         <li>Activity insurance</li>
                         <li>Professional guide service in English</li>
                     </ul>
+                </div>
+
+                <div class="ldSubHeading">Private Group</div>
+                <div class="ldNotesList ldPrivateInline">
+                    <p>NT$18,000 per group for 1–6 people, Nangang Station shuttle included, pick your own date.</p>
+                    <p>Each additional person (7–10 people): NT$3,000, shuttle included. Groups over 10: please contact us.</p>
+                    <p>Other discounts (early bird, bank transfer discount, promo codes) do not apply.</p>
+                    <p>See <a href="#private-group">Private Group</a> below for full details and how to book.</p>
                 </div>
             </div>
 
@@ -356,6 +372,12 @@
                 <div class="ldNotesList">
                     <p>If the trip is canceled due to not meeting the minimum group size, you can choose a free reschedule or a refund minus a 5% administrative fee.</p>
                 </div>
+
+                <div class="ldSubHeading">Private Groups</div>
+                <div class="ldNotesList">
+                    <p>Private groups follow the same weather and personal cancellation rules above.</p>
+                    <p>The minimum group size rule does not apply.</p>
+                </div>
             </div>
         </div>
 
@@ -366,6 +388,51 @@
                 <p class="ldRegisterNote">Choose the session you'd like to join — clicking it opens that session's registration form in a new tab. Your spot isn't confirmed until you receive a "Registration Confirmed" email, so after submitting the form and completing payment, be sure to check your inbox (including spam).</p>
                 <div class="sessionPickGrid" id="sessionPickGrid">
                     <p class="sessionPickLoading">Loading sessions...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Private Group -->
+        <div class="adventureDetail" id="private-group">
+            <div class="ldPrivateCard">
+                <div class="ldPrivateHead">
+                    <span class="ldIcon ldIconPrice">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 6-5s6 2 6 5"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 20c.3-2 1.7-3.5 4-3.8"/></svg>
+                    </span>
+                    <h2>Private Group</h2>
+                    <p class="ldPrivatePrice">NT$18,000<span> per group</span></p>
+                    <p class="ldPrivateSub">1–6 people・Pick your own date・Nangang Station shuttle included</p>
+                    <p class="ldPrivateNote">For a group of 6, that's NT$3,000 per person, shuttle included</p>
+                </div>
+
+                <div class="ldPrivateFor"><strong>Great for</strong>families, friends, couples, small company teams, travelers on a fixed schedule</div>
+
+                <div class="ldPrivateCols">
+                    <div>
+                        <div class="ldSubHeading">Details</div>
+                        <div class="ldNotesList">
+                            <p>Each additional person (7–10 people): NT$3,000, shuttle included</p>
+                            <p>Groups over 10: please contact us</p>
+                            <p>Other discounts (early bird, bank transfer discount, promo codes) do not apply</p>
+                            <p>Meeting times are based on the schedule above, but can be adjusted on request</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="ldSubHeading">How to Book</div>
+                        <div class="ldNotesList">
+                            <p>Request at least 7 days before your date</p>
+                            <p>Full payment required</p>
+                            <p>Your booking is confirmed once we confirm guide availability and receive your payment</p>
+                            <p>Guide availability is limited, so we recommend booking early</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="ldPrivateCancel"><strong>Cancellation:</strong> Same weather and personal cancellation rules as our regular sessions. See the <a href="#ldTabs" onclick="openRefundTab(event)">Cancellation Policy tab</a>.</p>
+
+                <div class="ldPrivateCtaWrap">
+                    <a class="ldPrivateCta" href="https://forms.fillout.com/t/oZt4SQ3jBMus" target="_blank" rel="noopener">Book a Private Group</a>
+                    <p class="ldPrivateContact">Questions about dates? LINE <a href="https://line.me/R/ti/p/@254yakyj" target="_blank" rel="noopener">@254yakyj</a> or email <a href="mailto:pathfinderintaiwan@gmail.com">pathfinderintaiwan@gmail.com</a></p>
                 </div>
             </div>
         </div>
@@ -483,6 +550,22 @@
     const open = item.classList.toggle("open");
     btn.querySelector(".ldFaqArrow").textContent = open ? "－" : "＋";
   }
+
+  // Private Group card "See the Cancellation Policy tab": switch to tab 6 and scroll to the tabs block
+  function openRefundTab(e) {
+    e.preventDefault();
+    showTab(5);
+    document.getElementById("ldTabs").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  // scroll-margin-top for anchor jumps (#private-group etc.), from the fixed nav + marquee's real height
+  function syncStickyOffset() {
+    const top = document.querySelector(".StickyTop");
+    if (top) document.documentElement.style.setProperty("--ldStickyOffset", (top.offsetHeight + 12) + "px");
+  }
+  syncStickyOffset();
+  window.addEventListener("load", syncStickyOffset);
+  window.addEventListener("resize", syncStickyOffset);
 </script>
 <script>
 (function(){
@@ -574,7 +657,7 @@
 
     function showFallback(){
         grid.className = 'sessionPickFallback';
-        grid.innerHTML = 'Contact us for the latest sessions, <a href="' + LINE_URL + '" target="_blank" rel="noopener">LINE Support →</a>';
+        grid.innerHTML = 'Contact us for the latest sessions, <a href="' + LINE_URL + '" target="_blank" rel="noopener">LINE Support →</a><br>Or <a class="ldPrivateFallbackLink" href="#private-group">book a private group and pick your own date</a>';
     }
 
     fetch(CSV_URL)

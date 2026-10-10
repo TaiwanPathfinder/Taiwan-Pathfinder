@@ -1,0 +1,189 @@
+/*----------------------------------------------------
+  龍洞新手攀岩：包團方案（#private-group）專用樣式
+  只有龍洞新手攀岩頁（中英文）載入，沿用 longdongTest.css
+  的 ld 系列配色（#b3390c 深咖啡紅、#e08e00 橘色按鈕、米色底），
+  獨立成一支檔案，不動其他頁面也共用的 longdongTest.css。
+----------------------------------------------------*/
+
+/*--錨點跳轉：避免標題被 fixed 的導覽列＋跑馬燈（.StickyTop）蓋住。
+  --ldStickyOffset 由頁面底部的 inline script 依 .StickyTop 實際高度設定，
+  140px 只是 script 還沒跑時的備用值。--*/
+#private-group,
+#ldTabs{
+    scroll-margin-top: var(--ldStickyOffset, 140px);
+}
+
+/*--Hero 價格徽章下方的小字連結--*/
+.ldPrivateHeroLink{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #b3390c;
+    text-decoration: underline;
+    margin-top: -6px;
+    padding: 6px 0;
+}
+.ldPrivateHeroLink:hover{
+    color: #8a2b08;
+}
+
+/*--包團卡--*/
+.ldPrivateCard{
+    max-width: 820px;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid rgba(179,57,12,0.15);
+    border-radius: 20px;
+    box-shadow: 0px 3px 8px 1px #0002;
+    padding: 30px 32px;
+}
+.ldPrivateHead{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.ldPrivateHead .ldIcon{
+    margin-bottom: 6px;
+}
+.ldPrivateHead .ldIcon svg{
+    width: 34px;
+    height: 34px;
+}
+.ldPrivateHead h2{
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+.ldPrivatePrice{
+    font-size: 32px;
+    font-weight: bolder;
+    color: #b3390c;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+.ldPrivatePrice span{
+    font-size: 18px;
+    color: #333;
+    margin-left: 2px;
+}
+.ldPrivateSub{
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 4px;
+}
+.ldPrivateNote{
+    font-size: 13px;
+    color: #777;
+    line-height: 1.5;
+}
+
+.ldPrivateFor{
+    background-color: #fffaf0;
+    border: 1px solid #f0dfb8;
+    border-radius: 14px;
+    padding: 12px 18px;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.ldPrivateFor strong{
+    color: #b3390c;
+    margin-right: 6px;
+}
+
+.ldPrivateCols{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.ldPrivateCols .ldSubHeading{
+    margin-top: 0;
+}
+
+.ldPrivateCancel{
+    font-size: 14px;
+    line-height: 1.6;
+    border-top: 1px solid #f0dfb8;
+    padding-top: 16px;
+    margin-top: 10px;
+    margin-bottom: 22px;
+}
+.ldPrivateCancel strong{
+    color: #b3390c;
+}
+.ldPrivateCancel a,
+.ldPrivateInline a,
+.ldPrivateContact a,
+.sessionPickFallback a.ldPrivateFallbackLink{
+    color: #b3390c;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.ldPrivateCtaWrap{
+    text-align: center;
+}
+.ldPrivateCta{
+    display: inline-block;
+    min-width: 220px;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    background-color: #e08e00;
+    padding: 14px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+}
+.ldPrivateCta:hover{
+    background-color: #c97a1a;
+    color: white;
+    text-decoration: none;
+}
+.ldPrivateContact{
+    font-size: 13px;
+    color: #666;
+    line-height: 1.7;
+    margin-top: 12px;
+}
+
+@media (max-width:767px){
+    .ldPrivateCard{
+        padding: 24px 18px;
+        border-radius: 16px;
+    }
+    .ldPrivatePrice{
+        font-size: 28px;
+    }
+    .ldPrivateCols{
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .ldPrivateCta{
+        display: block;
+        width: 100%;
+        min-width: 0;
+    }
+    .ldPrivateContact a{
+        white-space: nowrap;
+    }
+}
+
+/*--FAQ 答案裡的「包團方案」連結--*/
+.ldFaqAnswer a.ldPrivateFaqLink{
+    color: #b3390c;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/*--FAQ 展開高度：longdongTest.css 的 max-height:200px 在英文手機版會切到第 5 題（包團）較長的答案，
+  這裡放寬到 400px（只影響載入本檔的龍洞頁）--*/
+.ldFaqItem.open .ldFaqAnswer{
+    max-height: 400px;
+}
+
+/*--包團卡內的條列：bootstrap 的 p{margin-bottom:1rem} 加上 .ldNotesList 的 gap 讓間距過大，卡片內收緊--*/
+.ldPrivateCard .ldNotesList p{
+    margin-bottom: 0;
+}

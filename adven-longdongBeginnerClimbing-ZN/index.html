@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/oneAdventurePage.css?v=2">
     <link rel="stylesheet" href="/headandfoot.css?v=2">
     <link rel="stylesheet" href="/longdongTest.css?v=2">
+    <link rel="stylesheet" href="/longdongPrivateGroup.css?v=2">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDR9E7XZP0"></script>
@@ -65,7 +66,6 @@
                 <h1>龍洞新手攀岩體驗</h1>
                 <p><strong>與太平洋對話的岩壁體驗</strong></p>
                 <p>感謝你對這次活動有興趣！這是一場專為新手設計的海岸攀岩體驗，地點在台灣最美的攀岩勝地——龍洞。你不需要任何攀岩經驗、不需要特別的體能基礎、也不需要自備裝備，只要帶著想嘗試的心情來就好，其他的交給我們。</p>
-                <p>請花一點時間閱讀下面的資訊，確認沒問題後填寫報名表，我們很期待和你一起出發！</p>
                 <div class="advenIntroTextButton">
                     <div class="buttonPrice">
                         <h3>價格</h3>
@@ -75,6 +75,7 @@
                     <a href="#booking-form">立即報名</a>
                     </div>
                 </div>
+                <a class="ldPrivateHeroLink" href="#private-group">可包團・日期自選&nbsp;→</a>
             </div>
             <div class="adventureHeadGallery">
                 <!-- 大圖 -->
@@ -217,13 +218,20 @@
                             </button>
                             <div class="ldFaqAnswer"><p>可以，我們是小團體制，很多參加者都是自己一個人來，過程中會認識新朋友。</p></div>
                         </div>
+                        <div class="ldFaqItem">
+                            <button class="ldFaqQuestion" onclick="toggleFaq(this)">
+                                可以自己選日期、只有我們自己人嗎？
+                                <span class="ldFaqArrow">＋</span>
+                            </button>
+                            <div class="ldFaqAnswer"><p>可以。<a class="ldPrivateFaqLink" href="#private-group">包團方案</a> NT$18,000／團（1–6 人，含南港接駁），日期由你決定，整團由專屬教練帶領。最晚需於 7 天前預約並全額付款。</p></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- 分頁籤 -->
-        <div class="adventureDetail">
+        <div class="adventureDetail" id="ldTabs">
             <div class="tab-buttons">
                 <button class="active" onclick="showTab(0)">集合地點</button>
                 <button onclick="showTab(1)">費用包含</button>
@@ -262,6 +270,14 @@
                         <li>活動保險</li>
                         <li>專業嚮導服務與英語服務</li>
                     </ul>
+                </div>
+
+                <div class="ldSubHeading">包團方案</div>
+                <div class="ldNotesList ldPrivateInline">
+                    <p>NT$18,000／團，1–6 人同價，含南港車站接駁，日期自選。</p>
+                    <p>第 7–10 人，每加一人 NT$3,000（含接駁）；超過 10 人請另外詢問。</p>
+                    <p>包團方案不適用早鳥、匯款折扣及折扣碼等其他優惠。</p>
+                    <p>詳細說明與預約方式請見下方<a href="#private-group">「包團體驗」</a>。</p>
                 </div>
             </div>
 
@@ -358,6 +374,12 @@
                 <div class="ldNotesList">
                     <p>若未達成團人數而確定不出團，參加者可選擇免費延期，或扣除活動費用 5% 行政手續費後退費。</p>
                 </div>
+
+                <div class="ldSubHeading">【包團方案】</div>
+                <div class="ldNotesList">
+                    <p>天氣取消或改期、個人因素取消的規定與一般活動相同（見上方兩段）。</p>
+                    <p>包團無成團人數限制，不適用「成團人數規定」該段。</p>
+                </div>
             </div>
         </div>
 
@@ -368,6 +390,51 @@
                 <p class="ldRegisterNote">請選擇想參加的場次，點擊後會在新分頁開啟該場次的報名表單。收到「報名確認 Email」後才代表正式完成報名，送出表單並完成繳費後請務必查看信箱（含垃圾郵件夾）。</p>
                 <div class="sessionPickGrid" id="sessionPickGrid">
                     <p class="sessionPickLoading">場次載入中...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 包團方案 -->
+        <div class="adventureDetail" id="private-group">
+            <div class="ldPrivateCard">
+                <div class="ldPrivateHead">
+                    <span class="ldIcon ldIconPrice">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 6-5s6 2 6 5"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 20c.3-2 1.7-3.5 4-3.8"/></svg>
+                    </span>
+                    <h2>包團體驗</h2>
+                    <p class="ldPrivatePrice">NT$18,000<span>／團</span></p>
+                    <p class="ldPrivateSub">1–6 人同價・日期自選・含南港車站接駁</p>
+                    <p class="ldPrivateNote">6 人同行每人 NT$3,000，且已含接駁</p>
+                </div>
+
+                <div class="ldPrivateFor"><strong>適合對象</strong>家人朋友、情侶、公司小團、行程固定的旅客</div>
+
+                <div class="ldPrivateCols">
+                    <div>
+                        <div class="ldSubHeading">方案說明</div>
+                        <div class="ldNotesList">
+                            <p>第 7–10 人，每加一人 NT$3,000（含接駁）</p>
+                            <p>超過 10 人請另外詢問</p>
+                            <p>包團方案不適用早鳥、匯款折扣及折扣碼等其他優惠</p>
+                            <p>集合時間參考本頁上述時間，但仍可討論調整</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="ldSubHeading">預約流程</div>
+                        <div class="ldNotesList">
+                            <p>最晚於出發日 7 天前提出申請</p>
+                            <p>須全額付款</p>
+                            <p>確認當日有嚮導可帶團，且完成匯款後，才算預約完成</p>
+                            <p>嚮導名額有限，建議提早預約</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="ldPrivateCancel"><strong>取消規定：</strong>天氣取消與個人因素取消規定同一般活動，詳見<a href="#ldTabs" onclick="openRefundTab(event)">「退費政策」分頁</a>。</p>
+
+                <div class="ldPrivateCtaWrap">
+                    <a class="ldPrivateCta" href="https://forms.fillout.com/t/oZt4SQ3jBMus" target="_blank" rel="noopener">預約包團</a>
+                    <p class="ldPrivateContact">想先問日期？LINE <a href="https://line.me/R/ti/p/@254yakyj" target="_blank" rel="noopener">@254yakyj</a> 或 Email <a href="mailto:pathfinderintaiwan@gmail.com">pathfinderintaiwan@gmail.com</a></p>
                 </div>
             </div>
         </div>
@@ -485,6 +552,22 @@
     const open = item.classList.toggle("open");
     btn.querySelector(".ldFaqArrow").textContent = open ? "－" : "＋";
   }
+
+  // 包團卡「詳見退費政策分頁」：切到退費政策分頁（第 6 個）並捲到分頁籤區塊
+  function openRefundTab(e) {
+    e.preventDefault();
+    showTab(5);
+    document.getElementById("ldTabs").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  // 錨點跳轉（#private-group 等）的 scroll-margin-top：依 fixed 導覽列＋跑馬燈實際高度設定
+  function syncStickyOffset() {
+    const top = document.querySelector(".StickyTop");
+    if (top) document.documentElement.style.setProperty("--ldStickyOffset", (top.offsetHeight + 12) + "px");
+  }
+  syncStickyOffset();
+  window.addEventListener("load", syncStickyOffset);
+  window.addEventListener("resize", syncStickyOffset);
 </script>
 <script>
 (function(){
@@ -573,7 +656,7 @@
 
     function showFallback(){
         grid.className = 'sessionPickFallback';
-        grid.innerHTML = '請洽詢客服查詢最新場次，<a href="' + LINE_URL + '" target="_blank" rel="noopener">LINE 客服 →</a>';
+        grid.innerHTML = '請洽詢客服查詢最新場次，<a href="' + LINE_URL + '" target="_blank" rel="noopener">LINE 客服 →</a><br>或選擇<a class="ldPrivateFallbackLink" href="#private-group">包團，日期由你決定</a>';
     }
 
     fetch(CSV_URL)
