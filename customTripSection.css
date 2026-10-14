@@ -1,0 +1,55 @@
+/*----------------------------------------------------
+  「所有開放場次」頁底部的客製行程／包團導引卡
+  （openForBooking/、openForBookingZN/ 共用）。
+  永遠顯示的獨立區塊，刻意不共用 .allEventsFallback 的規則。
+----------------------------------------------------*/
+
+.customTripSection{
+    text-align: center;
+    padding: 36px 24px;
+    background-color: rgb(253, 228, 181);
+    border-radius: 16px;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+.customTripSection h2{
+    font-size: 22px;
+    font-weight: bolder;
+    margin-bottom: 12px;
+    text-shadow: none;
+}
+.customTripSection p{
+    font-size: 15px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+}
+.customTripSection a{
+    display: inline-block;
+    background-color: #e08e00;
+    color: white;
+    padding: 10px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+.customTripSection a:hover{
+    background-color: #c97a1a;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width:767px){
+    .customTripSection{
+        width: 88%;
+        padding: 28px 18px;
+    }
+    .customTripSection h2{
+        font-size: 19px;
+    }
+    .customTripSection a{
+        display: block;
+    }
+}
