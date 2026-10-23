@@ -1,0 +1,289 @@
+/*----------------------------------------------------
+  關於我們（aboutus / aboutusZN）新版樣式
+  數據徽章、卡片、安全區塊沿用 longdongTest.css 的 ld 系列 class，
+  這裡只補本頁才有的 Hero、故事段落、嚮導卡片、結尾 CTA。
+  配色沿用 ld 系列：米色 rgb(253,228,181)、卡片底 #fffaf0、
+  深咖啡紅 #b3390c / #6e2607、橘色按鈕 #e08e00（hover #c97a1a）。
+----------------------------------------------------*/
+
+/*--Hero：米色區塊＋白色圓角內卡，跟活動頁 .adventureHead / .advenIntroText 同一套--*/
+.abBand{
+    background-color: rgb(253, 228, 181);
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 40px 6%;
+    box-shadow: 0px 10px 10px 1px #0005;
+    margin-bottom: 3px;
+}
+.abBandFirst{
+    margin-top: 75px;
+}
+.abCard{
+    background-color: white;
+    border-radius: 30px;
+    padding: 36px 6%;
+}
+.abCard h2{
+    text-align: center;
+    font-weight: bolder;
+    margin: 10px 0 20px;
+}
+.abCard + .abCard{
+    margin-top: 30px;
+}
+
+.abHero{
+    text-align: center;
+}
+.abHero h1{
+    font-size: 36px;
+    font-weight: bolder;
+    margin-bottom: 12px;
+}
+.abHeroSub{
+    font-size: 18px;
+    color: #6e2607;
+    line-height: 1.5;
+    margin-bottom: 26px;
+}
+.abHeroImg{
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0px 3px 8px 1px #0002;
+    display: block;
+    margin: 0 auto 30px;
+}
+
+/*--我們的故事--*/
+.abStory p{
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 760px;
+    margin: 0 auto 14px;
+}
+
+/*--卡片內小標（我們重視的事）--*/
+.abValues .ldHighlightCard p strong{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+/*--安全：勾選條列（放在 .ldSafetyBlock 暖色區塊內）--*/
+.abCheckList{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.abCheckList li{
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 8px 0 8px 32px;
+    position: relative;
+}
+.abCheckList li:before{
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #b3390c;
+    color: white;
+    font-size: 13px;
+    font-weight: bolder;
+    line-height: 22px;
+    text-align: center;
+}
+
+/*--認識嚮導--*/
+.abGuideIntro{
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+    max-width: 720px;
+    margin: 0 auto 26px;
+}
+.abGuideGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+.abGuideCard{
+    background-color: #fffaf0;
+    border: 1px solid #f0dfb8;
+    border-radius: 16px;
+    box-shadow: 0px 3px 8px 1px #0002;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+/*--照片統一 4:5、cover 裁切不變形；每張的裁切基準點在 HTML inline 的 object-position 調整--*/
+.abGuidePhoto{
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+}
+.abGuideBody{
+    padding: 20px 22px 22px;
+}
+.abGuideBody h3{
+    font-size: 22px;
+    font-weight: bolder;
+    margin-bottom: 12px;
+}
+.abTags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+.abTag{
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.3;
+    padding: 4px 10px;
+    border-radius: 30px;
+    background-color: rgb(253, 228, 181);
+    color: #6e2607;
+    font-weight: bold;
+}
+/*--輕鬆的一面（貓咪愛好者）：較淡的樣式--*/
+.abTagLight{
+    background-color: transparent;
+    border: 1px dashed #c97a1a;
+    color: #c97a1a;
+    font-weight: normal;
+}
+.abGuideSub{
+    font-size: 13px;
+    font-weight: bolder;
+    color: #b3390c;
+    margin: 4px 0 8px;
+}
+.abCredList{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px;
+}
+.abCredList li{
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 3px 0 3px 18px;
+    position: relative;
+}
+.abCredList li:before{
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #b3390c;
+    font-weight: bolder;
+}
+.abClimbList li:before{
+    content: "▲";
+    font-size: 9px;
+    top: 7px;
+    color: #c97a1a;
+}
+/*--查看全部證照：展開收合--*/
+.abCredToggle{
+    background: none;
+    border: none;
+    padding: 6px 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #c97a1a;
+    cursor: pointer;
+}
+.abCredToggle:hover{
+    color: #b3390c;
+    text-decoration: underline;
+}
+.abCredAll{
+    margin-top: 8px;
+    padding: 12px 14px;
+    background-color: white;
+    border-radius: 10px;
+}
+.abCredAll[hidden]{
+    display: none;
+}
+.abCredAll ol{
+    padding-left: 20px;
+    margin: 0;
+    list-style: decimal;
+}
+/*--展開區內第二段清單（如重要攀登經驗）的小標--*/
+.abCredAllSub{
+    margin-top: 12px;
+}
+.abCredAll li{
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 2px 0;
+}
+
+/*--結尾 CTA：兩顆橘色按鈕（主：實心；次：白底橘框）--*/
+.abCta{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.abCtaBtn{
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #e08e00;
+}
+.abCtaPrimary{
+    background-color: #e08e00;
+    color: white;
+}
+.abCtaPrimary:hover{
+    background-color: #c97a1a;
+    border-color: #c97a1a;
+    color: white;
+}
+.abCtaSecondary{
+    background-color: white;
+    color: #e08e00;
+}
+.abCtaSecondary:hover{
+    background-color: rgb(253, 228, 181);
+    color: #c97a1a;
+}
+
+@media (max-width:767px){
+    .abBand{
+        margin-left: 0;
+        margin-right: 0;
+        padding: 24px 4%;
+    }
+    .abCard{
+        padding: 26px 5%;
+        border-radius: 20px;
+    }
+    .abHero h1{
+        font-size: 28px;
+    }
+    .abHeroSub{
+        font-size: 16px;
+    }
+    .abGuideGrid{
+        grid-template-columns: 1fr;
+    }
+    .abCta{
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+}

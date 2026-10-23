@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>關於我們 | Taiwan Pathfinder</title>
-    <link rel="stylesheet" href="/aboutus.css?v=2">
+    <title>關於我們｜Taiwan Pathfinder</title>
     <link rel="stylesheet" href="/headandfoot.css?v=2">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/longdongTest.css?v=2">
+    <link rel="stylesheet" href="/aboutusNew.css?v=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDR9E7XZP0"></script>
     <script>
@@ -15,7 +16,7 @@
     gtag('js', new Date());
 
     gtag('config', 'G-JDR9E7XZP0');
-    </script>   
+    </script>
 </head>
 <body>
     <div class="Wrap">
@@ -56,97 +57,241 @@
         </div>
         <script>document.body.style.paddingTop = document.getElementById('marqueeBar').offsetHeight + 'px';</script>
         </div>
-        <div class="Aboutuscontent">
-            <div class="aboutTPF">
-                <div data-aos="fade-up" class="whotext">
-                    <h2>關於 Taiwan Pathfinder</h2>
-                    <div data-aos="fade-right" class="whoimg">
-                        <img loading="lazy" width="1920" height="1440" src="/Who we are 2.jpeg" alt="我們是誰">
+
+        <!-- 主視覺＋數據列 -->
+        <div class="abBand abBandFirst">
+            <div class="abCard abHero">
+                <h1>關於 Taiwan Pathfinder</h1>
+                <p class="abHeroSub">在台灣出生長大，帶你走進台灣的山與海岸。</p>
+                <img class="abHeroImg" width="1920" height="1440" src="/Who we are 2.jpeg" alt="Taiwan Pathfinder 團隊在海崖上的合照">
+
+                <div class="ldStatBadgeRow">
+                    <div class="ldStatBadge">
+                        <span class="ldIcon ldIconSafety">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+                        </span>
+                        <span class="ldStatBadgeNum">2024</span>
+                        <span class="ldStatBadgeLabel">年成立</span>
                     </div>
-                    <h3 class="aboutTPFh3">成立於 2024 — 100% 本地、台灣擁有</h3>
-                    <p data-aos="fade-right" class="aboutTPFp">Taiwan Pathfinder 由一群熱愛戶外的專業人士於 2024 年創立，團隊成員皆自豪地在台灣出生與成長。我們不同於一般旅行業者，我們是真正的本地嚮導，對這片土地、文化與人們有深厚的連結。我們的使命是將台灣壯麗的自然美景分享給世界各地的冒險者。</p>
-                    <h3 class="aboutTPFh3">英文友善的健行、登山與攀岩行程</h3>
-                    <p data-aos="fade-right" class="aboutTPFp">我們了解語言障礙常使外國人難以探索台灣的山林。因此，我們所有的 <strong>健行、登山與攀岩行程</strong> 都提供全程英文導覽——清晰、親切且包容。我們不僅提供指引，也架起文化與語言的橋樑，讓在台灣的戶外冒險 <strong>安全、易於參與且充滿意義</strong>。</p>
-                    <h3 class="aboutTPFh3">認證山岳導遊與戶外專家</h3>
-                    <p data-aos="fade-right" class="aboutTPFp">我們的團隊持有多項山岳嚮導、攀岩、滑雪及野外急救證書。多年實務經驗讓我們能將專業技術與對安全、教育及環境保護的熱忱結合。不論您參加短程健行或多日探險，都將由值得信賴的專業人士帶領。</p>
-                    <h3 class="aboutTPFh3">不只是冒險 — 也是文化之旅</h3>
-                    <p data-aos="fade-right" class="aboutTPFp">在 Taiwan Pathfinder，我們相信山林不僅是征服的地方，也是學習、成長與連結的空間。沿途您將體驗台灣獨特的文化、歷史與傳統，讓每一次冒險同時是身心與文化的旅程。</p>
-                    <h3 class="aboutTPFh3">加入我們，探索台灣戶外世界</h3>
-                    <p data-aos="fade-right" class="aboutTPFp">無論您是初學者、資深健行者，或尋求新挑戰的攀岩者，Taiwan Pathfinder 都將陪伴您。我們的目標是激發個人成長、讚美自然，並讓台灣山林對所有人開放。<strong>讓我們成為您在台灣下一次冒險的可靠夥伴。</strong></p>
+                    <div class="ldStatBadge">
+                        <span class="ldIcon ldIconSafety">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 6-5s6 2 6 5"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 20c.3-2 1.7-3.5 4-3.8"/></svg>
+                        </span>
+                        <span class="ldStatBadgeNum">1:6</span>
+                        <span class="ldStatBadgeLabel">嚮導比例</span>
+                    </div>
+                    <div class="ldStatBadge">
+                        <span class="ldIcon ldIconSafety">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+                        </span>
+                        <span class="ldStatBadgeNum">200萬</span>
+                        <span class="ldStatBadgeLabel">保險<br><small>另有 20 萬醫療給付</small></span>
+                    </div>
+                    <div class="ldStatBadge">
+                        <span class="ldIcon ldIconSafety">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/><path d="M8.5 11h7M8.5 14h4"/></svg>
+                        </span>
+                        <span class="ldStatBadgeNum">中英雙語</span>
+                        <span class="ldStatBadgeLabel">導覽</span>
+                    </div>
                 </div>
             </div>
-            <div class="aboutguide">
-                <h2>關於嚮導</h2>
-                <div data-aos="fade-up" class="oneguide">
-                    <div class="guideimg1">
-                        <img loading="lazy" width="1920" height="1441" src="/Sunrise.jpeg" alt="Sunrise">
+        </div>
+
+        <!-- 故事、重視的事、安全、嚮導 -->
+        <div class="abBand">
+            <div class="abCard abStory">
+                <h2>我們的故事</h2>
+                <p>Taiwan Pathfinder 於 2024 年由一群在台灣土生土長的戶外專業人士創立。我們開始帶隊，是因為想把自己熱愛的台灣山林、海崖與步道，分享給世界各地的朋友。</p>
+                <p>我們發現，語言與陌生感常讓外國旅客錯過台灣最精彩的戶外風景。所以我們的每一趟行程都以清楚、友善、準備充分為原則，可全程以中文或英文導覽。</p>
+            </div>
+
+            <div class="abCard abValues">
+                <h2>我們重視的事</h2>
+                <div class="ldHighlightCardGrid">
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0114 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+                        </span>
+                        <p><strong>在地連結</strong>我們是住在這裡的嚮導，與台灣的土地、文化與人群有真實的連結。</p>
                     </div>
-                    <div class="guidetext">
-                        <h3 class="name">Sunrise Chang</h3>
-                        <p class="aboutusp"><strong>專長：</strong></p>
-                        <p class="aboutusp">登山嚮導、傳統攀登、雪季登山、技術攀登、野外急救。</p>
-                        <p class="aboutusp"><strong>證照：</strong></p>
-                        <p class="aboutusp">
-                            1. 中華民國山域嚮導專業人員<br><br>
-                            2. 中級救護技術員 EMT-2<br><br>
-                            3. 野外救護技術員 ＷEMS<br><br>
-                            4. 攜帶型加壓袋種子教師證書 PAC <br><br>
-                            5. 空中醫療救護專業人員初級訓練</p>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/><path d="M8.5 11h7M8.5 14h4"/></svg>
+                        </span>
+                        <p><strong>中英雙語</strong>所有健行、攀岩與登山行程都能以中文或英文導覽，讓你專心享受體驗。</p>
                     </div>
-                </div>
-                <div data-aos="fade-up" class="oneguide">
-                    <div class="guideimg">
-                        <img loading="lazy" width="1108" height="1477" src="/Sunny.jpg" alt="Sunny">
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+                        </span>
+                        <p><strong>安全第一</strong>小團制、受過訓練的嚮導，每趟行程都有保險。</p>
                     </div>
-                    <div class="guidetext">
-                        <h3 class="name">Sunny Ho</h3>
-                        <p class="aboutusp"><strong>專長：</strong></p>
-                        <p class="aboutusp">登山嚮導、攀岩、技術攀登、單雙板滑雪。</p>
-                        <p class="aboutusp"><strong>證照：</strong></p>
-                        <p class="aboutusp">
-                            1. 基本救命術認證 (BLS)<br><br>
-                            2. 初級野外急救認證 (WFA)<br><br>
-                            3. 中華民國滑雪協會C級滑雪教練<br><br>
-                            4. 中華民國山岳協會CBTest 認證<br><br>
-                            5. 台灣生態登山學校野地教育輔導員<br><br>
-                            6. 多益聽力閱讀 920 分（金色證書）<br><br>
-                            7. 中華民國外語領隊證照</p>
-                    </div>
-                </div>
-                <div data-aos="fade-up" class="oneguide">
-                    <div class="guideimg">
-                        <img loading="lazy" width="1920" height="1440" src="/Milton.jpg" alt="Milton">
-                    </div>
-                    <div class="guidetext">
-                        <h3 class="name">Milton Lee</h3>
-                        <p class="aboutusp"><strong>專長：</strong></p>
-                        <p class="aboutusp">登山嚮導、傳統攀登、技術攀登、雪季健行、溪降、越野跑、野外急救。</p>
-                        <p class="aboutusp"><strong>證照：</strong></p>
-                        <p class="aboutusp">1. 基本救命術（Basic Life Support, BLS）</p>
-                        <p class="aboutusp">2. 野外第一反應員（Wilderness First Responder,WFR）</p>
-                        <p class="aboutusp"><strong>重要攀登經驗：</strong></p>
-                        <p class="aboutusp">
-                            1. 日本冬季西穗高岳冬季<br><br>
-                            2. 日本冬季阿彌陀岳<br><br>
-                            3. 日本表銀座縱走<br><br>
-                            4. 一日南湖大山<br><br>
-                            5. 紐西蘭 Kepler 步道</p>
+                    <div class="ldHighlightCard">
+                        <span class="ldIcon ldIconHighlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polygon points="13.2 10.8 15 8 12.2 9.8 10 12.5 13.2 10.8" fill="currentColor" stroke="none"/></svg>
+                        </span>
+                        <p><strong>不只是行程</strong>沿途認識風景背後的歷史、文化與傳統。</p>
                     </div>
                 </div>
-                <div data-aos="fade-up" class="oneguide">
-                    <div class="guideimg2">
-                        <img loading="lazy" width="1110" height="1171" src="/Williams.jpg" alt="Williams">
+
+                <div class="ldSafetyBlock">
+                    <h2 class="ldSafetyBlockTitle">我們如何照顧你的安全</h2>
+                    <ul class="abCheckList">
+                        <li>嚮導與參加者比例不超過 1:6</li>
+                        <li>每位參加者皆有保險：NT$200 萬意外身故及失能保險金，NT$20 萬實支實付醫療保險金</li>
+                        <li>嚮導皆具備急救與事故處理能力</li>
+                        <li>出發前三天提供完整行前通知</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="abCard">
+                <h2>認識嚮導</h2>
+                <p class="abGuideIntro">我們的嚮導具備登山、攀岩與急救等不同專業資格。實際帶隊的嚮導會依活動與日期而異。</p>
+
+                <div class="abGuideGrid">
+                    <!-- Sunrise Chang -->
+                    <div class="abGuideCard">
+                        <img class="abGuidePhoto" loading="lazy" width="1920" height="1441" src="/Sunrise.jpeg" alt="Sunrise Chang" style="object-position: 85% center;">
+                        <div class="abGuideBody">
+                            <h3>Sunrise Chang</h3>
+                            <div class="abTags">
+                                <span class="abTag">登山嚮導</span>
+                                <span class="abTag">傳統攀登</span>
+                                <span class="abTag">雪季登山</span>
+                                <span class="abTag">技術攀登</span>
+                                <span class="abTag">野外急救</span>
+                            </div>
+                            <p class="abGuideSub">代表性證照</p>
+                            <ul class="abCredList">
+                                <li>中華民國山域嚮導專業人員</li>
+                                <li>中級救護技術員（EMT-2）</li>
+                                <li>野外救護技術員（WEMS）</li>
+                            </ul>
+                            <button class="abCredToggle" type="button" aria-expanded="false" onclick="toggleCreds(this)">查看全部證照 ＋</button>
+                            <div class="abCredAll" hidden>
+                                <ol>
+                                    <li>中華民國山域嚮導專業人員</li>
+                                    <li>中級救護技術員（EMT-2）</li>
+                                    <li>野外救護技術員（WEMS）</li>
+                                    <li>攜帶型加壓袋種子教師證書（PAC）</li>
+                                    <li>空中醫療救護專業人員初級訓練</li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
-                    <div class="guidetext">
-                        <h3 class="name">Williams Lin</h3>
-                        <p class="aboutusp"><strong>專長：</strong></p>
-                        <p class="aboutusp">登山、多繩距/冰雪/技術攀登、水肺潛水/自由潛水 & 貓咪愛好者。</p>
-                        <p class="aboutusp"><strong>證照：</strong></p>
-                        <p class="aboutusp">
-                            1. 基本救命術認證 (BLS)<br><br>
-                            2. 緊急救護技術員 - 初級 (EMT-1)<br><br>
-                            3. 可攜式高壓艙操作證書</p>
+
+                    <!-- Sunny Ho -->
+                    <div class="abGuideCard">
+                        <img class="abGuidePhoto" loading="lazy" width="1108" height="1477" src="/Sunny.jpg" alt="Sunny Ho" style="object-position: center 70%;">
+                        <div class="abGuideBody">
+                            <h3>Sunny Ho</h3>
+                            <div class="abTags">
+                                <span class="abTag">登山嚮導</span>
+                                <span class="abTag">攀岩</span>
+                                <span class="abTag">技術攀登</span>
+                                <span class="abTag">單雙板滑雪</span>
+                            </div>
+                            <p class="abGuideSub">代表性證照</p>
+                            <ul class="abCredList">
+                                <li>初級野外急救認證（WFA）</li>
+                                <li>中華民國外語領隊證照</li>
+                                <li>台灣生態登山學校野地教育輔導員</li>
+                            </ul>
+                            <button class="abCredToggle" type="button" aria-expanded="false" onclick="toggleCreds(this)">查看全部證照 ＋</button>
+                            <div class="abCredAll" hidden>
+                                <ol>
+                                    <li>基本救命術認證（BLS）</li>
+                                    <li>初級野外急救認證（WFA）</li>
+                                    <li>中華民國滑雪協會 C 級滑雪教練</li>
+                                    <li>中華民國山岳協會 CBTest 認證</li>
+                                    <li>台灣生態登山學校野地教育輔導員</li>
+                                    <li>多益聽力閱讀 920 分（金色證書）</li>
+                                    <li>中華民國外語領隊證照</li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Milton Lee -->
+                    <div class="abGuideCard">
+                        <img class="abGuidePhoto" loading="lazy" width="1920" height="1440" src="/Milton.jpg" alt="Milton Lee" style="object-position: 55% center;">
+                        <div class="abGuideBody">
+                            <h3>Milton Lee</h3>
+                            <div class="abTags">
+                                <span class="abTag">登山嚮導</span>
+                                <span class="abTag">傳統攀登</span>
+                                <span class="abTag">技術攀登</span>
+                                <span class="abTag">雪季健行</span>
+                                <span class="abTag">溪降</span>
+                                <span class="abTag">越野跑</span>
+                            </div>
+                            <p class="abGuideSub">代表性證照</p>
+                            <ul class="abCredList">
+                                <li>野外第一反應員（WFR）</li>
+                            </ul>
+                            <p class="abGuideSub">重要攀登經驗</p>
+                            <ul class="abCredList abClimbList">
+                                <li>日本冬季西穗高岳</li>
+                                <li>日本冬季阿彌陀岳</li>
+                            </ul>
+                            <button class="abCredToggle" type="button" aria-expanded="false" onclick="toggleCreds(this)">查看全部證照 ＋</button>
+                            <div class="abCredAll" hidden>
+                                <ol>
+                                    <li>基本救命術（Basic Life Support, BLS）</li>
+                                    <li>野外第一反應員（Wilderness First Responder, WFR）</li>
+                                </ol>
+                                <p class="abGuideSub abCredAllSub">重要攀登經驗</p>
+                                <ol>
+                                    <li>日本冬季西穗高岳</li>
+                                    <li>日本冬季阿彌陀岳</li>
+                                    <li>日本表銀座縱走</li>
+                                    <li>一日南湖大山</li>
+                                    <li>紐西蘭 Kepler 步道</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Williams Lin -->
+                    <div class="abGuideCard">
+                        <img class="abGuidePhoto" loading="lazy" width="1110" height="1171" src="/Williams.jpg" alt="Williams Lin" style="object-position: 20% center;">
+                        <div class="abGuideBody">
+                            <h3>Williams Lin</h3>
+                            <div class="abTags">
+                                <span class="abTag">登山</span>
+                                <span class="abTag">多繩距與冰雪攀登</span>
+                                <span class="abTag">技術攀登</span>
+                                <span class="abTag">水肺潛水</span>
+                                <span class="abTag">自由潛水</span>
+                                <span class="abTag abTagLight">貓咪愛好者</span>
+                            </div>
+                            <p class="abGuideSub">代表性證照</p>
+                            <ul class="abCredList">
+                                <li>緊急救護技術員－初級（EMT-1）</li>
+                                <li>可攜式高壓艙操作證書</li>
+                            </ul>
+                            <button class="abCredToggle" type="button" aria-expanded="false" onclick="toggleCreds(this)">查看全部證照 ＋</button>
+                            <div class="abCredAll" hidden>
+                                <ol>
+                                    <li>基本救命術認證（BLS）</li>
+                                    <li>緊急救護技術員－初級（EMT-1）</li>
+                                    <li>可攜式高壓艙操作證書</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 結尾 CTA -->
+        <div class="abBand">
+            <div class="abCard">
+                <div class="abCta">
+                    <a class="abCtaBtn abCtaPrimary" href="/openForBookingZN/">查看近期場次</a>
+                    <a class="abCtaBtn abCtaSecondary" href="/ContactZN/">聯絡我們</a>
                 </div>
             </div>
         </div>
@@ -183,31 +328,17 @@
             </div>
         </div>
     </div>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
- AOS.init({
-  // ─── 全域設定 ───
-  disable: false,                // 何時停用 AOS：可填 'phone' / 'tablet' / 'mobile'，或直接給布林值、表達式、函式
-  startEvent: 'DOMContentLoaded',// AOS 什麼事件被觸發時才開始初始化
-  initClassName: 'aos-init',     // 元素在初始化完成後會先加上的類名
-  animatedClassName: 'aos-animate', // 動畫正式啟動時套用的類名
-  useClassNames: false,          // 若設為 true，會把 `data-aos` 的值做為類名，在滾動時一併加上
-  disableMutationObserver: false,// 是否關閉 MutationObserver 自動偵測 DOM 變動（進階）
-  debounceDelay: 50,             // 視窗尺寸改變時的 debounce 間隔（毫秒）
-  throttleDelay: 99,             // 滾動事件的 throttle 間隔（毫秒）
-
-  // ─── 可用 `data-aos-*` 覆寫的項目 ───
-  offset: 120,                   // 觸發動畫時，元素與視窗的距離（px）
-  delay: 0,                      // 動畫延遲 0–3000 ms，步進 50 ms
-  duration: 400,                 // 動畫時長 0–3000 ms，步進 50 ms
-  easing: 'ease',                // 動畫預設 easing 函式
-  once: false,                   // true 表示動畫只在第一次向下滾動時播放
-  mirror: false,                 // true 表示滾過元素後向上滑回可再次播放（鏡像效果）
-  anchorPlacement: 'top-bottom', // 判定元素相對視窗的位置來觸發動畫，例如 'top-bottom' 代表元素頂端到視窗底端
-});
-</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // 嚮導卡片：「查看全部證照」展開收合
+  function toggleCreds(btn) {
+    const panel = btn.nextElementSibling;
+    const open = panel.hidden;
+    panel.hidden = !open;
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    btn.textContent = open ? "收合證照 －" : "查看全部證照 ＋";
+  }
+</script>
 <script src="/marquee.js" defer></script>
 </body>
 </html>
