@@ -1,0 +1,108 @@
+/*----------------------------------------------------
+  聯絡頁「客製行程／其他問題」雙按鈕 + 簡化表單提示
+  （Contact/、ContactZN/ 共用）。
+  橘色沿用 customTripSection.css 的 #e08e00。
+----------------------------------------------------*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* 左欄：兩顆按鈕上下排列（+ 展開後的表單）；右欄：Get in Touch */
+.contact-container{
+    align-items: start;
+}
+
+.contactChoiceRow{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 表單按「其他問題」後才出現，接在按鈕下方 */
+.contactLeft .contact-form{
+    margin-top: 24px;
+}
+.contactLeft .contact-form[hidden]{
+    display: none;
+}
+
+.contactChoiceCard{
+    display: block;
+    width: 100%;
+    font: inherit;
+    cursor: pointer;
+    padding: 28px 24px;
+    border-radius: 16px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+.contactChoiceCard:hover{
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.contactChoiceTitle{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.contactChoiceSub{
+    display: block;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* 按鈕 A：主要動作，實心橘 */
+.contactChoicePrimary{
+    background-color: #e08e00;
+    color: white;
+}
+.contactChoicePrimary:hover{
+    background-color: #c97a1a;
+    color: white;
+}
+
+/* 按鈕 B：次要動作，白底橘框 */
+.contactChoiceSecondary{
+    background-color: white;
+    color: #e08e00;
+    border: 2px solid #e08e00;
+}
+.contactChoiceSecondary:hover{
+    background-color: rgb(253, 228, 181);
+    color: #c97a1a;
+}
+
+/* 固定導覽列＋跑馬燈會蓋住捲動目標，留出空間 */
+#contact-form{
+    scroll-margin-top: 140px;
+}
+
+/* 已展開時按鈕 B 維持淡橘底，表示目前狀態 */
+.contactChoiceSecondary[aria-expanded="true"]{
+    background-color: rgb(253, 228, 181);
+}
+
+.contactFormHint{
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    background-color: rgb(253, 228, 181);
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-bottom: 20px;
+}
+
+@media (max-width:768px){
+    .contactChoiceRow{
+        gap: 16px;
+    }
+    .contactChoiceTitle{
+        font-size: 18px;
+    }
+}
