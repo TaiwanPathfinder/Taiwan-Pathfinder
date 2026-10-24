@@ -1,0 +1,788 @@
+/*----------------------------------------------------
+  首頁新版（index / homeZN）樣式
+  在 indexTest.css 之後載入：導覽列、跑馬燈、Hero 輪播、信任列沿用
+  indexTest.css（不動它，正式首頁也在用），這裡只補新區塊與必要覆寫。
+  配色沿用 ld 系列：米色 rgb(253,228,181)、卡片底 #fffaf0、
+  深咖啡紅 #b3390c / #6e2607、橘色按鈕 #e08e00（hover #c97a1a）。
+  區塊間距刻意縮小，讓手機整頁捲動長度比舊版短。
+----------------------------------------------------*/
+
+/*==== 共用：區塊外框與標題 ====*/
+.hmSection{
+    width: 86%;
+    max-width: 1180px;
+    margin: 0 auto 44px;
+}
+.hmSection > h2{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 26px;
+    margin-bottom: 16px;
+}
+/*--錨點跳轉：避開 fixed 的導覽列＋跑馬燈--*/
+.hmSection[id]{
+    scroll-margin-top: 140px;
+}
+
+/*--按鈕：主＝實心橘、次＝白底橘框--*/
+.hmBtn{
+    display: inline-block;
+    padding: 11px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #e08e00;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+.hmBtnPrimary{
+    background-color: #e08e00;
+    color: white;
+}
+.hmBtnPrimary:hover{
+    background-color: #c97a1a;
+    border-color: #c97a1a;
+    color: white;
+    text-decoration: none;
+}
+.hmBtnSecondary{
+    background-color: white;
+    color: #e08e00;
+}
+.hmBtnSecondary:hover{
+    background-color: rgb(253, 228, 181);
+    color: #c97a1a;
+    text-decoration: none;
+}
+.hmBtnRow{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/*==== 1. Hero：兩顆按鈕＋信任列＋一行流程小字 ====*/
+.heroBtns{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.heroCtaSecondary{
+    display: inline-block;
+    background-color: rgba(255,255,255,0.92);
+    color: #b3390c;
+    font-weight: bolder;
+    font-size: 17px;
+    padding: 12px 30px;
+    border-radius: 40px;
+    border: 2px solid white;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+}
+.heroCtaSecondary:hover{
+    background-color: white;
+    color: #6e2607;
+    text-decoration: none;
+}
+/*--信任列：「小團制（最多 1:7，依活動而異）」較長，允許換行--*/
+.trustItem span:last-child{
+    white-space: normal;
+    line-height: 1.3;
+}
+.trustBar{
+    margin-bottom: 30px;
+}
+
+/*==== 1b. 三步驟流程卡片 ====*/
+.hmSteps{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+.hmStep{
+    position: relative;
+    background-color: #fffaf0;
+    border: 1px solid #f0dfb8;
+    border-radius: 16px;
+    padding: 18px 18px;
+    box-shadow: 0px 3px 8px 1px #0002;
+    text-align: center;
+}
+.hmStepIcon{
+    display: inline-flex;
+    color: #c97a1a;
+    margin-bottom: 4px;
+}
+.hmStepIcon svg{
+    width: 28px;
+    height: 28px;
+}
+.hmStepNum{
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: #b3390c;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+.hmStep h3{
+    font-size: 17px;
+    font-weight: bolder;
+    margin-bottom: 4px;
+}
+.hmStep p{
+    font-size: 14px;
+    line-height: 1.55;
+    color: #444;
+    margin: 0;
+}
+/*--步驟之間的箭頭--*/
+.hmStep:not(:last-child):after{
+    content: "→";
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #c97a1a;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/*==== 2. 近期開放場次：左右捲動輪播；「查看更多場次」在輪播外（不會被 overflow 裁切） ====*/
+#sessionCarousel .sessionCard h3{
+    min-height: 0;
+}
+#sessionCarousel .sessionLoading{
+    flex: 1 1 100%;
+}
+.hmSessionMore{
+    text-align: center;
+    margin-top: 10px;
+}
+/*--沒有場次時：備援文字佔滿整列--*/
+.hmCarousel.hmStatic .hmCarTrack > .hmSessionFallback{
+    flex: 1 1 100%;
+}
+
+/*==== 共用輪播外觀（活動輪播、回饋輪播） ====*/
+.hmCarousel{
+    position: relative;
+}
+.hmCarTrack{
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    padding: 4px 2px 10px;
+    scroll-padding-inline: 2px;
+    outline-offset: 4px;
+}
+.hmCarTrack::-webkit-scrollbar{
+    display: none;
+}
+.hmCarTrack > *{
+    scroll-snap-align: start;
+    flex: 0 0 calc((100% - 32px) / 3);
+}
+.hmCarTrack.is-dragging{
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+    cursor: grabbing;
+}
+.hmCarTrack.is-dragging *{
+    pointer-events: none;
+}
+.hmCarControls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 6px;
+}
+.hmCarBtn{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(179,57,12,0.3);
+    background-color: white;
+    color: #b3390c;
+    font-size: 15px;
+    line-height: 1;
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+.hmCarBtn:hover{
+    background-color: rgb(253, 228, 181);
+}
+.hmCarBtn[hidden]{
+    display: none;
+}
+.hmCarDots{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    max-width: 60%;
+}
+.hmCarDot{
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    background-color: #e3c48c;
+    cursor: pointer;
+}
+.hmCarDot.is-active{
+    background-color: #b3390c;
+    transform: scale(1.3);
+}
+/*--回饋只有 1–2 則：靜態並排，不輪播--*/
+.hmCarousel.hmStatic .hmCarTrack{
+    overflow: visible;
+    justify-content: center;
+}
+.hmCarousel.hmStatic .hmCarTrack > *{
+    flex: 0 1 380px;
+}
+.hmCarousel.hmStatic .hmCarControls{
+    display: none;
+}
+
+/*==== 3. 活動輪播：難度篩選＋卡片 ====*/
+.hmFilter{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+.hmFilterBtn{
+    padding: 6px 18px;
+    border-radius: 30px;
+    border: 2px solid #e08e00;
+    background-color: white;
+    color: #c97a1a;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+.hmFilterBtn.is-active{
+    background-color: #e08e00;
+    color: white;
+}
+.hmActCard{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid rgba(179,57,12,0.15);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0px 3px 8px 1px #0002;
+    color: #333;
+    text-decoration: none;
+}
+.hmActCard[hidden]{
+    display: none;
+}
+.hmActCard:hover{
+    color: #333;
+    text-decoration: none;
+}
+.hmActCard img,
+.hmActCard .thumbPlaceholder{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+.hmActBody{
+    padding: 10px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+.hmActTags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.hmLvl,
+.hmActTag{
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 9px;
+    border-radius: 30px;
+}
+.hmLvlBeginner{
+    background-color: rgb(253, 228, 181);
+    color: #6e2607;
+}
+.hmLvlAdvanced{
+    background-color: #6e2607;
+    color: white;
+}
+/*--DWS／大尖山「夏季限定」--*/
+.hmActTag{
+    background-color: #e3f2fd;
+    color: #0d5c8c;
+}
+.hmActBody h3{
+    font-size: 16px;
+    font-weight: bolder;
+    line-height: 1.35;
+    margin: 0;
+}
+.hmActMeta{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    font-size: 13px;
+    color: #555;
+    margin: 0;
+}
+.hmActPrice{
+    font-weight: bold;
+    color: #b3390c;
+}
+.hmActPrice[hidden]{
+    display: none;
+}
+.hmActNext{
+    font-size: 13px;
+    color: #b3390c;
+    font-weight: bold;
+    margin: auto 0 0;
+}
+.hmActNext.hmActNextNone{
+    color: #888;
+    font-weight: normal;
+}
+/*--最後一張固定卡：查看全部活動--*/
+.hmActAllCard{
+    background-color: rgb(253, 228, 181);
+    border: 2px dashed #e08e00;
+    box-shadow: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    min-height: 200px;
+    gap: 6px;
+}
+.hmActAllCard strong{
+    font-size: 18px;
+    color: #b3390c;
+}
+.hmActAllCard span{
+    font-size: 13px;
+    color: #6e2607;
+}
+
+/*==== 4. 為什麼選擇我們（小卡）＋兩句關於我們 ====*/
+.hmWhyGrid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+.hmWhyCard{
+    background-color: #fffaf0;
+    border: 1px solid #f0dfb8;
+    border-radius: 14px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.hmIcon{
+    display: inline-flex;
+    color: #c97a1a;
+}
+.hmIcon svg{
+    width: 24px;
+    height: 24px;
+}
+.hmWhyCard h3{
+    font-size: 15px;
+    font-weight: bolder;
+    margin: 0;
+}
+.hmWhyCard p{
+    font-size: 13px;
+    line-height: 1.55;
+    margin: 0;
+}
+.hmWhyLink{
+    margin-top: auto;
+    font-size: 13px;
+    font-weight: bold;
+    color: #c97a1a;
+}
+.hmWhyLink:hover{
+    color: #b3390c;
+}
+.hmAboutLine{
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.75;
+    color: #444;
+    max-width: 760px;
+    margin: 18px auto 0;
+}
+.hmAboutLine a{
+    color: #c97a1a;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/*==== 5. 參加者回饋（資料驅動；沒有可顯示的評論時整區 hidden） ====*/
+#reviews[hidden]{
+    display: none;
+}
+.hmReview{
+    background-color: white;
+    border: 1px solid rgba(179,57,12,0.15);
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0px 3px 8px 1px #0002;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+}
+.hmReviewText{
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+    white-space: pre-line;
+    /* 最多 4 行，按「展開」看全文 */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.hmReview.is-open .hmReviewText{
+    -webkit-line-clamp: unset;
+    display: block;
+}
+.hmReviewText:before{
+    content: "“";
+    color: #e08e00;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 0;
+    vertical-align: -8px;
+    margin-right: 2px;
+}
+.hmReviewMore{
+    align-self: flex-start;
+    background: none;
+    border: none;
+    padding: 0;
+    color: #c97a1a;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+}
+.hmReviewMore[hidden]{
+    display: none;
+}
+.hmReviewMeta{
+    font-size: 13px;
+    color: #777;
+    margin: 0;
+    margin-top: auto;
+}
+
+/*==== 6. 活動照片集（每頁 8 張的輪播：桌機 4×2、手機 2×4）＋燈箱 ====*/
+#gallery[hidden]{
+    display: none;
+}
+/*--每頁佔滿整個寬度，不需要軌道左右內距（否則右欄會被裁掉 2px）--*/
+#galleryCarousel .hmCarTrack{
+    padding-left: 0;
+    padding-right: 0;
+    scroll-padding-inline: 0;
+}
+#galleryCarousel .hmCarTrack > .hmGalleryPage{
+    flex: 0 0 100%;
+}
+.hmGalleryPage{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+.hmGalleryItem{
+    padding: 0;
+    border: none;
+    background: #f3e7d0;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: zoom-in;
+    display: block;
+}
+.hmGalleryItem img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s ease;
+}
+.hmGalleryItem:hover img{
+    transform: scale(1.04);
+}
+.hmLightbox{
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: pan-y;
+}
+.hmLightbox[hidden]{
+    display: none;
+}
+.hmLightbox img{
+    max-width: 92vw;
+    max-height: 86vh;
+    object-fit: contain;
+    border-radius: 6px;
+}
+.hmLbBtn{
+    position: absolute;
+    background-color: rgba(255,255,255,0.15);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+}
+.hmLbBtn:hover{
+    background-color: rgba(255,255,255,0.3);
+}
+.hmLbPrev{ left: 16px; top: 50%; transform: translateY(-50%); }
+.hmLbNext{ right: 16px; top: 50%; transform: translateY(-50%); }
+.hmLbClose{ right: 16px; top: 16px; }
+.hmLbCount{
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #ddd;
+    font-size: 13px;
+}
+
+/*==== 7. 最終 CTA ====*/
+.hmFinal{
+    background-color: rgb(253, 228, 181);
+    border-radius: 20px;
+    padding: 28px 20px;
+    text-align: center;
+}
+.hmFinal h2{
+    font-weight: bolder;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+.hmFinal p{
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+.hmBtnLine{
+    background-color: #06c755;
+    border-color: #06c755;
+    color: white;
+}
+.hmBtnLine:hover{
+    background-color: #05a648;
+    border-color: #05a648;
+    color: white;
+    text-decoration: none;
+}
+
+/*==== 8. 手機版浮動「LINE 詢問」：只在手機顯示；捲到頁尾時隱藏（由 script 切換 class）====*/
+.hmFloatLine{
+    display: none;
+}
+@media (max-width:767px){
+    .hmFloatLine{
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        position: fixed;
+        right: 14px;
+        bottom: 16px;
+        z-index: 90;
+        background-color: #06c755;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 11px 18px;
+        border-radius: 30px;
+        text-decoration: none;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .hmFloatLine:hover{
+        color: white;
+        text-decoration: none;
+    }
+    .hmFloatLine.hmFloatHidden{
+        opacity: 0;
+        transform: translateY(20px);
+        pointer-events: none;
+    }
+}
+
+/*==== RWD ====*/
+@media (max-width:992px){
+    .hmSteps{
+        gap: 12px;
+    }
+    .hmCarTrack > *{
+        flex-basis: calc((100% - 16px) / 2);
+    }
+    .hmWhyGrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width:767px){
+    .hmSection{
+        width: 92%;
+        margin-bottom: 22px;
+    }
+    .hmSection > h2{
+        font-size: 21px;
+        margin-bottom: 10px;
+    }
+    .trustBar{
+        margin-bottom: 8px;
+    }
+    .trustItem{
+        padding: 10px 10px;
+        gap: 8px;
+    }
+    .trustItem span:last-child{
+        font-size: 13px;
+    }
+    .trustBar{
+        margin-bottom: 22px;
+    }
+    /*--三步驟：手機直排精簡，圖示在左、文字在右--*/
+    .hmSteps{
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    .hmStep{
+        display: grid;
+        grid-template-columns: 34px 1fr;
+        column-gap: 10px;
+        text-align: left;
+        padding: 12px 14px;
+    }
+    .hmStepIcon{
+        grid-row: 1 / span 3;
+        align-self: center;
+        margin: 0;
+    }
+    .hmStep h3{
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+    .hmStep p{
+        font-size: 13px;
+    }
+    .hmStep:not(:last-child):after{
+        content: "↓";
+        right: auto;
+        left: 50%;
+        top: auto;
+        bottom: -17px;
+        transform: translateX(-50%);
+        font-size: 14px;
+    }
+    /*--場次卡：手機精簡（不顯示圖示、內距縮小）--*/
+    #sessionCarousel .sessionCard{
+        padding: 14px 16px;
+        gap: 4px;
+    }
+    #sessionCarousel .sessionIcon{
+        display: none;
+    }
+    #sessionCarousel .sessionPrice{
+        font-size: 18px;
+        margin-bottom: 2px;
+    }
+    #sessionCarousel .sessionCta{
+        padding: 8px;
+    }
+    /*--輪播：約顯示 1.2 張，露出下一張--*/
+    .hmCarTrack{
+        gap: 12px;
+    }
+    .hmCarTrack > *{
+        flex-basis: 80%;
+    }
+    .hmActAllCard{
+        min-height: 160px;
+    }
+    .hmWhyCard{
+        padding: 12px;
+    }
+    .hmWhyCard p{
+        font-size: 12px;
+    }
+    .hmGalleryPage{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+    .hmFinal{
+        padding: 18px 14px;
+    }
+    .hmFinal p{
+        margin-bottom: 12px;
+    }
+    .hmAboutLine{
+        font-size: 14px;
+        margin-top: 12px;
+    }
+    .hmBtnRow{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .heroCtaSecondary{
+        font-size: 15px;
+        padding: 9px 22px;
+    }
+    .hmLbPrev{ left: 6px; }
+    .hmLbNext{ right: 6px; }
+    /*--手機：15 個小圓點要排在一行，不換行--*/
+    .hmCarDots{
+        max-width: none;
+        flex-wrap: nowrap;
+        gap: 4px;
+    }
+    .hmCarDot{
+        width: 6px;
+        height: 6px;
+    }
+    .hmCarControls{
+        gap: 8px;
+    }
+}

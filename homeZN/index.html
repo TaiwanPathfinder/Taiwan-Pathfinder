@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/headandfoot.css?v=2">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/indexTest.css?v=2">
+    <link rel="stylesheet" href="/homeNew.css?v=1">
+    <link rel="stylesheet" href="/photoPlaceholder.css?v=1">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDR9E7XZP0"></script>
     <script>
@@ -109,7 +111,7 @@
                     <div class="heroContent">
                         <h1>零基礎也能安心挑戰</h1>
                         <p>專業嚮導全程陪同・帶你安全探索台灣山林</p>
-                        <a class="heroCta" href="/openForBookingZN/">查看近期開放場次</a>
+                        <div class="heroBtns"><a class="heroCta" href="#sessions">查看近期場次</a><a class="heroCtaSecondary" href="/ContactZN/">客製化行程</a></div>
                     </div>
                 </div>
             </div>
@@ -125,94 +127,278 @@
             </div>
             <div class="trustItem">
                 <span class="trustIcon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 6-5s6 2 6 5"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 20c.3-2 1.7-3.5 4-3.8"/></svg></span>
-                <span>1:7 小團制</span>
+                <span>小團制（最多 1:7，依活動而異）</span>
             </div>
             <div class="trustItem">
                 <span class="trustIcon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
                 <span>安全保障</span>
             </div>
         </div>
-        <div class="sessionSection">
+
+        <!-- 1b. 三步驟流程（卡片） -->
+        <div class="hmSection hmStepsSection">
+            <h2>三步驟，輕鬆出發</h2>
+            <div class="hmSteps">
+                <div class="hmStep">
+                    <span class="hmStepIcon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></span>
+                    <span class="hmStepNum">步驟 1</span>
+                    <h3>選活動</h3>
+                    <p>瀏覽近期場次，或依難度挑一個適合你的活動。</p>
+                </div>
+                <div class="hmStep">
+                    <span class="hmStepIcon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span>
+                    <span class="hmStepNum">步驟 2</span>
+                    <h3>線上報名</h3>
+                    <p>填寫報名表單並完成付款，收到「報名確認 Email」就完成報名。</p>
+                </div>
+                <div class="hmStep">
+                    <span class="hmStepIcon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l6-10 4 6 3-4 5 8H3z"/></svg></span>
+                    <span class="hmStepNum">步驟 3</span>
+                    <h3>出發</h3>
+                    <p>出發前三天收到完整行前通知，當天跟著嚮導出發。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. 近期開放場次（最多 6 場；左右捲動輪播，「查看更多場次」放在輪播外，不會被裁切） -->
+        <div class="hmSection sessionSection" id="sessions">
             <h2>近期開放場次</h2>
-            <div class="sessionScrollRow" id="sessionScrollRow">
-                <p class="sessionLoading">場次載入中...</p>
+            <div class="hmCarousel" id="sessionCarousel" role="region" aria-label="近期開放場次輪播" aria-roledescription="carousel">
+                <div class="hmCarTrack" id="sessionGrid" tabindex="0">
+                    <p class="sessionLoading">場次載入中...</p>
+                </div>
+            <div class="hmCarControls">
+                <button type="button" class="hmCarBtn hmCarPrev" aria-label="上一張">&#10094;</button>
+                <div class="hmCarDots"></div>
+                <button type="button" class="hmCarBtn hmCarPause" aria-label="暫停自動播放" aria-pressed="false">❚❚</button>
+                <button type="button" class="hmCarBtn hmCarNext" aria-label="下一張">&#10095;</button>
+            </div>
+            </div>
+            <div class="hmSessionMore">
+                <a class="hmBtn hmBtnPrimary" href="/openForBookingZN/">查看更多場次</a>
             </div>
         </div>
-        <div class="Whoweare">
-            <div class="whoWeAreInsideBox">
-                <div data-aos="fade-up" class="whotext">
-                    <h2>我們是誰?</h2>
-                    <p>我們是<strong>台灣引路人 Taiwan Pathfinder</strong>——一群在台灣土生土長的專業戶外嚮導與登山者。因為熱愛大自然，我們致力於將台灣壯麗的高山、步道與原始自然風光分享給全世界。<br><br>
-                    我們深知語言障礙常常讓外國朋友無法真正體驗台灣的戶外美景，因此我們的使命就是讓每一次冒險都<strong>安全、容易參與、且充滿意義</strong>。<br><br>
-                    憑藉專業證照與豐富實戰經驗，我們帶領、協助並啟發每一位參與者。讓我們陪你一步步探索台灣的山林之美，從一條步道開始，展開難忘的登山與戶外旅程。</p>
-                    <a class="readmore" href="/aboutusZN/" target="_blank">閱讀更多...</a>
+
+        <!-- 3. 活動輪播（難度篩選；最後一張「查看全部活動」篩選時也保留） -->
+        <div class="hmSection" id="activities">
+            <h2>活動一覽</h2>
+            <div class="hmFilter" role="group" aria-label="依難度篩選活動">
+                <button type="button" class="hmFilterBtn is-active" data-filter="all" aria-pressed="true">全部</button>
+                <button type="button" class="hmFilterBtn" data-filter="beginner" aria-pressed="false">初階</button>
+                <button type="button" class="hmFilterBtn" data-filter="advanced" aria-pressed="false">中階以上</button>
+            </div>
+            <div class="hmCarousel" id="actCarousel" role="region" aria-label="活動輪播" aria-roledescription="carousel">
+                <div class="hmCarTrack" tabindex="0">
+                <a class="hmActCard" href="/adven-longdongBeginnerClimbing-ZN/" data-level="beginner" data-csv="龍洞新手攀岩體驗">
+                    <img loading="lazy" width="540" height="540" src="/adventurepics/an adventure - longdong.png" alt="龍洞新手攀岩體驗">
+                    <div class="hmActBody">
+                        <div class="hmActTags"><span class="hmLvl hmLvlBeginner">初階</span></div>
+                        <h3>龍洞新手攀岩體驗</h3>
+                        <p class="hmActMeta"><span>5–6 小時</span><span class="hmActPrice" hidden></span></p>
+                        <p class="hmActNext hmActNextNone">洽詢場次</p>
+                    </div>
+                </a>
+                <a class="hmActCard" href="/adven-zehaiBeginnerClimbing-ZN/" data-level="beginner" data-csv="熱海攀岩體驗">
+                    <img loading="lazy" width="540" height="540" src="/adventurepics/an adventure - rehai.png" alt="熱海新手攀岩體驗">
+                    <div class="hmActBody">
+                        <div class="hmActTags"><span class="hmLvl hmLvlBeginner">初階</span></div>
+                        <h3>熱海新手攀岩體驗</h3>
+                        <p class="hmActMeta"><span>1 天</span><span class="hmActPrice" hidden></span></p>
+                        <p class="hmActNext hmActNextNone">洽詢場次</p>
+                    </div>
+                </a>
+                <a class="hmActCard" href="/adven-DaPaoBeginnerClimbing-ZN/" data-level="beginner" data-csv="大砲岩攀岩體驗">
+                    <img loading="lazy" width="540" height="540" src="/adventurepics/an adventure Dapao.png" alt="大砲岩新手攀岩體驗">
+                    <div class="hmActBody">
+                        <div class="hmActTags"><span class="hmLvl hmLvlBeginner">初階</span></div>
+                        <h3>大砲岩新手攀岩體驗</h3>
+                        <p class="hmActMeta"><span>1 天</span><span class="hmActPrice" hidden></span></p>
+                        <p class="hmActNext hmActNextNone">洽詢場次</p>
+                    </div>
+                </a>
+                <a class="hmActCard" href="/adven-longdongDWS-ZN/" data-level="beginner" data-csv="龍洞深水抱石專場 DWS">
+                    <img loading="lazy" width="540" height="540" src="/adventurepics/an adventure DWS.png" alt="龍洞深水抱石體驗（DWS）">
+                    <div class="hmActBody">
+                        <div class="hmActTags"><span class="hmLvl hmLvlBeginner">初階</span><span class="hmActTag">夏季限定</span></div>
+                        <h3>龍洞深水抱石體驗（DWS）</h3>
+                        <p class="hmActMeta"><span>4–5 小時（不含交通）</span><span class="hmActPrice" hidden></span></p>
+                        <p class="hmActNext hmActNextNone">洽詢場次</p>
+                    </div>
+                </a>
+                <a class="hmActCard" href="/adven-0-580-ZN/" data-level="beginner">
+                    <img loading="lazy" width="540" height="540" src="/adventurepics/an adventure 0-580.png" alt="金瓜石秋芒漫步 0-580">
+                    <div class="hmActBody">
+                        <div class="hmActTags"><span class="hmLvl hmLvlBeginner">初階</span></div>
+                        <h3>金瓜石秋芒漫步 0-580</h3>
+                        <p class="hmActMeta"><span>1 天</span><span class="hmActPrice" hidden></span></p>
+                        <p class="hmActNext hmActNextNone">洽詢場次</p>
+                    </div>
+                </a>
+                <a class="hmActCard" href="/adven-DajianshanCanyoning-ZN/" data-level="beginner" data-csv="大尖山瀑布群溪降體驗">
+                    <img loading="lazy" width="540" height="540" src="/adventurepics/dajianshan/web/card-540.jpg" alt="大尖山瀑布群溪降體驗">
+                    <div class="hmActBody">
+                        <div class="hmActTags"><span class="hmLvl hmLvlBeginner">初階</span><span class="hmActTag">夏季限定</span></div>
+                        <h3>大尖山瀑布群溪降體驗</h3>
+                        <p class="hmActMeta"><span>約 5–6 小時</span><span class="hmActPrice" hidden></span></p>
+                        <p class="hmActNext hmActNextNone">洽詢場次</p>
+                    </div>
+                </a>
+                <a class="hmActCard" href="/adven-Thunder-Peak-ZN/" data-level="beginner">
+                    <img loading="lazy" width="540" height="540" src="/adventurepics/an adventure Thunder peak.png" alt="雷霆鋒一日健行">
+                    <div class="hmActBody">
+                        <div class="hmActTags"><span class="hmLvl hmLvlBeginner">初階</span></div>
+                        <h3>雷霆鋒一日健行</h3>
+                        <p class="hmActMeta"><span>1 天</span><span class="hmActPrice" hidden></span></p>
+                        <p class="hmActNext hmActNextNone">洽詢場次</p>
+                    </div>
+                </a>
+                <a class="hmActCard" href="/adven-TopRopeCourse-ZN/" data-level="beginner">
+                    <img loading="lazy" width="540" height="540" src="/adventurepics/anAdventureTopRope.png" alt="頂繩攀登課程">
+                    <div class="hmActBody">
+                        <div class="hmActTags"><span class="hmLvl hmLvlBeginner">初階</span></div>
+                        <h3>頂繩攀登課程</h3>
+                        <p class="hmActMeta"><span>2 天，每天約 3 小時</span><span class="hmActPrice" hidden></span></p>
+                        <p class="hmActNext hmActNextNone">洽詢場次</p>
+                    </div>
+                </a>
+                <a class="hmActCard" href="/adven-TradWorkshop-ZN/" data-level="advanced" data-csv="傳攀工作坊">
+                    <img loading="lazy" width="540" height="540" src="/adventurepics/an adventure tradWorkshop.png" alt="傳攀工作坊">
+                    <div class="hmActBody">
+                        <div class="hmActTags"><span class="hmLvl hmLvlAdvanced">中階以上</span></div>
+                        <h3>傳攀工作坊</h3>
+                        <p class="hmActMeta"><span>1 天，約 6 小時</span><span class="hmActPrice" hidden></span></p>
+                        <p class="hmActNext hmActNextNone">洽詢場次</p>
+                    </div>
+                </a>
+                <a class="hmActCard" href="/adven-CliffToReef-ZN/" data-level="advanced">
+                    <img loading="lazy" width="540" height="540" src="/adventurepics/an adventure - Cliff To Reef.png" alt="龍洞攀岩垂降冒險">
+                    <div class="hmActBody">
+                        <div class="hmActTags"><span class="hmLvl hmLvlAdvanced">中階以上</span></div>
+                        <h3>龍洞攀岩垂降冒險</h3>
+                        <p class="hmActMeta"><span>6 小時</span><span class="hmActPrice" hidden></span></p>
+                        <p class="hmActNext hmActNextNone">洽詢場次</p>
+                    </div>
+                </a>
+                <a class="hmActCard" href="/adven-LeadingCourse-ZN/" data-level="advanced">
+                    <img loading="lazy" width="540" height="540" src="/adventurepics/anAdventureLeading.png" alt="先鋒攀登課程">
+                    <div class="hmActBody">
+                        <div class="hmActTags"><span class="hmLvl hmLvlAdvanced">中階以上</span></div>
+                        <h3>先鋒攀登課程</h3>
+                        <p class="hmActMeta"><span>2 天，每天約 3 小時</span><span class="hmActPrice" hidden></span></p>
+                        <p class="hmActNext hmActNextNone">洽詢場次</p>
+                    </div>
+                </a>
+                <a class="hmActCard" href="/adven-WuYanCape-ZN/" data-level="advanced" data-csv="烏岩角健行">
+                    <img loading="lazy" width="540" height="540" src="/adventurepics/an adventure WuYanCape.png" alt="烏岩角一日健行">
+                    <div class="hmActBody">
+                        <div class="hmActTags"><span class="hmLvl hmLvlAdvanced">中階以上</span></div>
+                        <h3>烏岩角一日健行</h3>
+                        <p class="hmActMeta"><span>1 天</span><span class="hmActPrice" hidden></span></p>
+                        <p class="hmActNext hmActNextNone">洽詢場次</p>
+                    </div>
+                </a>
+                <a class="hmActCard" href="/adven-xueshan-ZN/" data-level="advanced">
+                    <img loading="lazy" width="540" height="540" src="/adventurepics/an adventure - xueshan.png" alt="雪山主東峰健行">
+                    <div class="hmActBody">
+                        <div class="hmActTags"><span class="hmLvl hmLvlAdvanced">中階以上</span></div>
+                        <h3>雪山主東峰健行</h3>
+                        <p class="hmActMeta"><span>2 天 2 夜</span><span class="hmActPrice" hidden></span></p>
+                        <p class="hmActNext hmActNextNone">洽詢場次</p>
+                    </div>
+                </a>
+                <a class="hmActCard" href="/adven-Yushan-ZN/" data-level="advanced">
+                    <img loading="lazy" width="540" height="540" src="/adventurepics/an adventure yushan.png" alt="玉山主峰健行">
+                    <div class="hmActBody">
+                        <div class="hmActTags"><span class="hmLvl hmLvlAdvanced">中階以上</span></div>
+                        <h3>玉山主峰健行</h3>
+                        <p class="hmActMeta"><span>2 天 2 夜</span><span class="hmActPrice" hidden></span></p>
+                        <p class="hmActNext hmActNextNone">洽詢場次</p>
+                    </div>
+                </a>
+                <a class="hmActCard hmActAllCard" href="/openForBookingZN/" data-level="always">
+                    <strong>查看全部活動 →</strong>
+                    <span>所有開放報名的場次</span>
+                </a>
                 </div>
-                <div data-aos="fade-up" class="whoimg">
-                    <img loading="lazy" width="1920" height="1440" src="/Who we are 2.jpeg" alt="Who we are">
+            <div class="hmCarControls">
+                <button type="button" class="hmCarBtn hmCarPrev" aria-label="上一張">&#10094;</button>
+                <div class="hmCarDots"></div>
+                <button type="button" class="hmCarBtn hmCarPause" aria-label="暫停自動播放" aria-pressed="false">❚❚</button>
+                <button type="button" class="hmCarBtn hmCarNext" aria-label="下一張">&#10095;</button>
+            </div>
+            </div>
+        </div>
+
+        <!-- 4. 為什麼選擇我們（小卡）＋兩句關於我們 -->
+        <div class="hmSection">
+            <h2>為什麼選擇我們</h2>
+            <div class="hmWhyGrid">
+                <div class="hmWhyCard">
+                    <span class="hmIcon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 6-5s6 2 6 5"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 20c.3-2 1.7-3.5 4-3.8"/></svg></span>
+                    <h3>小團制</h3>
+                    <p>嚮導與參加者比例最多 1:7，依活動而異。</p>
+                </div>
+                <div class="hmWhyCard">
+                    <span class="hmIcon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/><path d="M8.5 11h7M8.5 14h4"/></svg></span>
+                    <h3>專業雙語嚮導</h3>
+                    <p>具備登山、攀岩與急救訓練，可用中文或英文帶隊。</p>
+                </div>
+                <div class="hmWhyCard">
+                    <span class="hmIcon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+                    <h3>安全保障</h3>
+                    <p>每位參加者都有活動保險，出發前三天提供行前通知。</p>
+                </div>
+                <div class="hmWhyCard">
+                    <span class="hmIcon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg></span>
+                    <h3>客製化行程</h3>
+                    <p>想自訂日期、人數或路線？告訴我們你的需求。</p>
+                    <a class="hmWhyLink" href="/ContactZN/">聯絡我們 →</a>
+                </div>
+            </div>
+            <p class="hmAboutLine">Taiwan Pathfinder 由一群在台灣土生土長的戶外專業人士於 2024 年創立，想把台灣的山林、海洋與步道分享給更多人。每一趟行程都以清楚、友善、準備充分為原則，可全程以中文或英文導覽。 <a href="/aboutusZN/">認識我們的團隊 →</a></p>
+        </div>
+
+        <!-- 5. 參加者回饋輪播（資料驅動；沒有可顯示的評論時整區隱藏） -->
+        <div class="hmSection" id="reviews" hidden>
+            <h2>參加者回饋</h2>
+            <div class="hmCarousel" id="reviewCarousel" role="region" aria-label="參加者回饋輪播" aria-roledescription="carousel">
+                <div class="hmCarTrack" tabindex="0"></div>
+            <div class="hmCarControls">
+                <button type="button" class="hmCarBtn hmCarPrev" aria-label="上一張">&#10094;</button>
+                <div class="hmCarDots"></div>
+                <button type="button" class="hmCarBtn hmCarPause" aria-label="暫停自動播放" aria-pressed="false">❚❚</button>
+                <button type="button" class="hmCarBtn hmCarNext" aria-label="下一張">&#10095;</button>
+            </div>
+            </div>
+        </div>
+
+        <!-- 6. 活動照片集（全部照片，每頁 8 張輪播；讀 /adventurepics/gallery/manifest.json） -->
+        <div class="hmSection" id="gallery" hidden>
+            <h2>活動照片集</h2>
+            <div class="hmCarousel" id="galleryCarousel" role="region" aria-label="活動照片輪播" aria-roledescription="carousel">
+                <div class="hmCarTrack" id="galleryGrid" tabindex="0"></div>
+            <div class="hmCarControls">
+                <button type="button" class="hmCarBtn hmCarPrev" aria-label="上一張">&#10094;</button>
+                <div class="hmCarDots"></div>
+                <button type="button" class="hmCarBtn hmCarPause" aria-label="暫停自動播放" aria-pressed="false">❚❚</button>
+                <button type="button" class="hmCarBtn hmCarNext" aria-label="下一張">&#10095;</button>
+            </div>
+            </div>
+        </div>
+
+        <!-- 7. 最終 CTA -->
+        <div class="hmSection">
+            <div class="hmFinal">
+                <h2>準備好出發了嗎？</h2>
+                <p>選一個場次報名，或直接用 LINE 問我們。</p>
+                <div class="hmBtnRow">
+                    <a class="hmBtn hmBtnPrimary" href="/openForBookingZN/">查看場次並報名</a>
+                    <a class="hmBtn hmBtnLine" href="https://line.me/R/ti/p/@254yakyj" target="_blank" rel="noopener">LINE 詢問</a>
+                    <a class="hmBtn hmBtnSecondary" href="/ContactZN/">客製化行程</a>
                 </div>
             </div>
         </div>
-        <div class="Whatweprovide">
-            <h2>熱門活動</h2>
-            <div  class="adventurelist">
-                <div  data-aos="fade-up" class="oneadventure">
-                    <div class="adventureimg">
-                        <a href="/adven-longdongBeginnerClimbing-ZN/"><img loading="lazy" width="540" height="540" src="/adventurepics/an adventure - longdong.png" alt="longdong"></a>
-                    </div>
-                    <div class="adventuretext">
-                        <h3><a href="/adven-longdongBeginnerClimbing-ZN/">龍洞新手攀岩體驗</a></h3>
-                        <div class="sort">
-                            <p class="onesort">#零基礎友善</p>
-                            <p class="onesort">#教練全程手把手</p>
-                            <p class="onesort">#人生第一次攀岩就在這裡</p>
-                        </div>
-                        <a class="readmore" href="/adven-longdongBeginnerClimbing-ZN/">閱讀更多...</a>
-                    </div>
-                </div>
-                <div data-aos="fade-up" class="oneadventure">
-                    <div class="adventureimg">
-                        <a href="/adven-zehaiBeginnerClimbing-ZN/"><img loading="lazy" width="540" height="540" src="/adventurepics/an adventure - rehai.png" alt="ReHai"></a>
-                    </div>
-                    <div class="adventuretext">
-                        <h3><a href="/adven-zehaiBeginnerClimbing-ZN/">熱海新手攀岩體驗</a></h3>
-                        <div class="sort">
-                            <p class="onesort">#零基礎也能上手</p>
-                            <p class="onesort">#岩場+溫泉一日雙享受</p>
-                            <p class="onesort">#新手首選攀岩地</p>
-                        </div>
-                        <a class="readmore" href="/adven-zehaiBeginnerClimbing-ZN/">閱讀更多...</a>
-                    </div>
-                </div>
-                <div data-aos="fade-up" class="oneadventure">
-                    <div class="adventureimg">
-                        <a href="/adven-xueshan-ZN/"><img loading="lazy" width="540" height="540" src="/adventurepics/an adventure - xueshan.png" alt="Xueshan"></a>
-                    </div>
-                    <div class="adventuretext">
-                        <h3><a href="/adven-xueshan-ZN/">雪山主東峰健行</a></h3>
-                        <div class="sort">
-                            <p class="onesort">#百岳新手推薦路線</p>
-                            <p class="onesort">#山屋不用自己揹</p>
-                            <p class="onesort">#人生第一座百岳</p>
-                        </div>
-                        <a class="readmore" href="/adven-xueshan-ZN/">閱讀更多...</a>
-                    </div>
-                </div>
-            </div>
-            <a class="readmore" href="/adventureZN/">閱讀更多...</a>
-        </div>
-        <div class="Whychooseus">
-            <h2>為什麼要選擇Taiwan Pathfinder呢?</h2>
-            <div class="whycontent">
-                <img loading="lazy" width="1536" height="2048" data-aos="fade-up" src="/Why us.jpg" alt="Why choose us">
-                <ul data-aos="fade-up" >
-                    <li data-aos="fade-up">🌍 <strong>英文導覽友善</strong>: <p>所有行程皆提供全程英文導覽，清楚易懂，國際旅客也能輕鬆參與。</p></li>
-                    <li data-aos="fade-up">🎓 <strong>專業認證嚮導</strong>: <p>由具備專業訓練與山岳實戰經驗的持證嚮導帶領。</p></li>
-                    <li data-aos="fade-up">🧑‍🤝‍🧑 <strong>安全小團制</strong>: <p>嚮導與旅客比例保證 1:7 以內，確保更安全、更貼心的登山體驗。</p></li>
-                    <li data-aos="fade-up">🗺️ <strong>客製化行程</strong>: <p>提供彈性與客製化的登山健行行程，依照你的步調、目標與興趣量身打造。</p></li>
-                    <li data-aos="fade-up">🏞️ <strong>文化與自然結合</strong>: <p>在山林步道中，認識台灣在地文化、傳統與歷史故事。</p></li>
-                </ul>
-            </div>
-        </div>
+
         <div class="Footer">
             <div class="info">
                 <div class="infologo">
@@ -245,222 +431,39 @@
             </div>
         </div>
     </div>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
- AOS.init({
-  // ─── 全域設定 ───
-  disable: false,                // 何時停用 AOS：可填 'phone' / 'tablet' / 'mobile'，或直接給布林值、表達式、函式
-  startEvent: 'DOMContentLoaded',// AOS 什麼事件被觸發時才開始初始化
-  initClassName: 'aos-init',     // 元素在初始化完成後會先加上的類名
-  animatedClassName: 'aos-animate', // 動畫正式啟動時套用的類名
-  useClassNames: false,          // 若設為 true，會把 `data-aos` 的值做為類名，在滾動時一併加上
-  disableMutationObserver: false,// 是否關閉 MutationObserver 自動偵測 DOM 變動（進階）
-  debounceDelay: 50,             // 視窗尺寸改變時的 debounce 間隔（毫秒）
-  throttleDelay: 99,             // 滾動事件的 throttle 間隔（毫秒）
+    <!-- 燈箱 -->
+    <div class="hmLightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="活動照片集">
+        <img id="lbImg" src="" alt="">
+        <button type="button" class="hmLbBtn hmLbPrev" id="lbPrev" aria-label="上一張">&#10094;</button>
+        <button type="button" class="hmLbBtn hmLbNext" id="lbNext" aria-label="下一張">&#10095;</button>
+        <button type="button" class="hmLbBtn hmLbClose" id="lbClose" aria-label="關閉">&#10005;</button>
+        <p class="hmLbCount" id="lbCount"></p>
+    </div>
 
-  // ─── 可用 `data-aos-*` 覆寫的項目 ───
-  offset: 120,                   // 觸發動畫時，元素與視窗的距離（px）
-  delay: 0,                      // 動畫延遲 0–3000 ms，步進 50 ms
-  duration: 400,                 // 動畫時長 0–3000 ms，步進 50 ms
-  easing: 'ease',                // 動畫預設 easing 函式
-  once: false,                   // true 表示動畫只在第一次向下滾動時播放
-  mirror: false,                 // true 表示滾過元素後向上滑回可再次播放（鏡像效果）
-  anchorPlacement: 'top-bottom', // 判定元素相對視窗的位置來觸發動畫，例如 'top-bottom' 代表元素頂端到視窗底端
-});
-</script>
+    <!-- 8. 手機浮動 LINE 按鈕 -->
+    <a class="hmFloatLine" id="floatLine" href="https://line.me/R/ti/p/@254yakyj" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/><path d="M8.5 11h7M8.5 14h4"/></svg>LINE 詢問</a>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-(function(){
-    var marqueeBar = document.getElementById('marqueeBar');
-    var marqueeTrack = document.getElementById('marqueeTrack');
-    var sessionRow = document.getElementById('sessionScrollRow');
-    var MARQUEE_FALLBACK = '零基礎友善・專業嚮導全程陪同・1:6 小團制・保險保障';
-    var BOOKING_URL = '/openForBookingZN/';
-    var CSV_URL = 'https://docs.google.com/spreadsheets/d/1VvRRgURxwP4ka_it5MCn96JD6XzbjKS6CGEnWYE_afU/export?format=csv&gid=0';
-
-    var STATUS_TAG_CLASS = { '報名中': 'statusTag-open', '已成團': 'statusTag-confirmed', '即將額滿': 'statusTag-almost-full' };
-    var STATUS_TAG_ICON = { '已成團': '✓ ' };
-
-    function statusTagHtml(tag){
-        if (!tag) return '';
-        var cls = STATUS_TAG_CLASS[tag] || 'statusTag-open';
-        var icon = STATUS_TAG_ICON[tag] || '';
-        return '<span class="statusTag ' + cls + '">' + icon + esc(tag) + '</span>';
-    }
-
-    function esc(s){
-        return String(s == null ? '' : s)
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;');
-    }
-
-    // 簡單但正確處理引號內逗號/換行的 CSV parser
-    function parseCSV(text){
-        var rows = [], row = [], field = '', inQuotes = false;
-        for (var i = 0; i < text.length; i++){
-            var c = text[i];
-            if (inQuotes){
-                if (c === '"'){
-                    if (text[i+1] === '"'){ field += '"'; i++; }
-                    else { inQuotes = false; }
-                } else {
-                    field += c;
-                }
-            } else {
-                if (c === '"'){ inQuotes = true; }
-                else if (c === ','){ row.push(field); field = ''; }
-                else if (c === '\r'){ /* skip */ }
-                else if (c === '\n'){ row.push(field); rows.push(row); row = []; field = ''; }
-                else { field += c; }
-            }
+    window.HOME_CONFIG = {
+        lang: 'zh',
+        typeColumn: '活動類型',
+        reviewColumn: '評論（中文）',
+        activityColumn: '活動',
+        bookingUrl: '/openForBookingZN/',
+        text: {
+            bookNow: '立即報名',
+            nextPrefix: '下一場：',
+            marqueeFallback: '零基礎友善・專業嚮導全程陪同・小團制・保險保障',
+            sessionFallbackHtml: '目前暫無開放場次。想安排自己的日期？<a href="/ContactZN/">預約客製化行程 →</a>',
+            slideLabel: '第 {n} 張',
+            pause: '暫停自動播放',
+            play: '恢復自動播放',
+            expand: '展開',
+            collapse: '收合'
         }
-        if (field.length || row.length){ row.push(field); rows.push(row); }
-        return rows;
-    }
-
-    function fmtDateShort(dstr){
-        var d = new Date(dstr + 'T00:00:00');
-        if (isNaN(d.getTime())) return dstr;
-        return (d.getMonth() + 1) + '/' + d.getDate();
-    }
-
-    function pad2(n){ return n < 10 ? '0' + n : '' + n; }
-
-    function toMMDDYYYY(dstr){
-        var parts = (dstr || '').split('-');
-        if (parts.length !== 3) return '';
-        return parts[1] + '/' + parts[2] + '/' + parts[0];
-    }
-
-    function withSessionDateParam(url, dstr){
-        if (!url) return '';
-        var sep = url.indexOf('?') >= 0 ? '&' : '?';
-        return url + sep + 'session_date_param=' + toMMDDYYYY(dstr);
-    }
-
-    function fmtDateFull(dstr){
-        var d = new Date(dstr + 'T00:00:00');
-        if (isNaN(d.getTime())) return dstr;
-        return d.getFullYear() + '/' + pad2(d.getMonth() + 1) + '/' + pad2(d.getDate());
-    }
-
-    /* -------- 跑馬燈 -------- */
-
-    // 早鳥計算尚未於報名表單設定完成，暫時只顯示「目前顯示價格（自動）」單一數字，不呈現原價劃線比較
-    function marqueePriceHtml(r){
-        var cur = (r.currentPrice || '').trim();
-        if (cur === '免費') return '免費參加';
-        return esc(cur);
-    }
-
-    function marqueeItemHtml(r){
-        var label = esc(fmtDateShort(r.date)) + ' ' + esc(r.type) + '・';
-        var href = r.formLink ? esc(withSessionDateParam(r.formLink, r.date)) : '#';
-        return '<a class="marqueeItem" href="' + href + '" target="_blank" rel="noopener">' +
-            label + marqueePriceHtml(r) + statusTagHtml(r.statusTag) + '</a>';
-    }
-
-    function renderMarqueeStatic(html){
-        marqueeBar.classList.add('marqueeStatic');
-        marqueeTrack.innerHTML = html;
-    }
-
-    function renderMarquee(list){
-        var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        var sep = '<span class="marqueeSep" aria-hidden="true">◆</span>';
-        var htmlOnce = list.slice(0, 5).map(function(r){
-            return marqueeItemHtml(r) + sep;
-        }).join('');
-        if (reduceMotion){
-            renderMarqueeStatic(htmlOnce);
-        } else {
-            marqueeTrack.innerHTML = htmlOnce + htmlOnce;
-        }
-    }
-
-    function showMarqueeFallback(){
-        renderMarqueeStatic('<span class="marqueeItem">' + esc(MARQUEE_FALLBACK) + '</span>');
-    }
-
-    /* -------- 近期開放場次卡片 -------- */
-
-    var sessionIconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="16" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>';
-
-    function sessionCardHtml(r){
-        var href = r.formLink ? esc(r.formLink) : BOOKING_URL;
-        return '<div class="sessionCard">' +
-            '<span class="sessionIcon">' + sessionIconSvg + '</span>' +
-            '<h3>' + esc(r.type) + '</h3>' +
-            '<p class="sessionDate">' + esc(fmtDateFull(r.date)) + ' ' + statusTagHtml(r.statusTag) + '</p>' +
-            '<p class="sessionPrice">' + esc(r.currentPrice) + '</p>' +
-            '<a class="sessionCta" href="' + href + '" target="_blank" rel="noopener">立即報名</a>' +
-            '</div>';
-    }
-
-    function renderSessionCards(list){
-        var html = list.map(sessionCardHtml).join('');
-        html += '<div class="sessionMoreCard"><a class="sessionMoreLink" href="' + BOOKING_URL + '">查看更多場次</a></div>';
-        sessionRow.innerHTML = html;
-    }
-
-    function showSessionFallback(){
-        sessionRow.className = 'sessionFallback';
-        sessionRow.innerHTML = '請至報名頁查看最新場次，<a href="' + BOOKING_URL + '">前往報名頁 →</a>';
-    }
-
-    /* -------- 共用：抓取一次 CSV，兩個區塊共用同一份資料 -------- */
-
-    fetch(CSV_URL)
-        .then(function(res){
-            if (!res.ok) throw new Error('CSV fetch failed: ' + res.status);
-            return res.text();
-        })
-        .then(function(text){
-            var rows = parseCSV(text);
-            if (!rows.length) throw new Error('Empty CSV');
-
-            var header = rows[0];
-            var iType = header.indexOf('活動類型');
-            var iDate = header.indexOf('場次日期');
-            var iStatus = header.indexOf('最終狀態（自動）');
-            var iForm = header.indexOf('報名表單連結');
-            var iPrice = header.indexOf('原價');
-            var iStatusTag = header.indexOf('報名狀態標籤');
-            if (iType < 0 || iDate < 0 || iStatus < 0 || iPrice < 0){
-                throw new Error('CSV missing expected columns');
-            }
-
-            var today = new Date();
-            today.setHours(0, 0, 0, 0);
-
-            var upcoming = rows.slice(1)
-                .filter(function(r){ return r.length > iStatus && r[iStatus] === '開放中'; })
-                .map(function(r){
-                    var d = new Date(r[iDate] + 'T00:00:00');
-                    return {
-                        type: r[iType],
-                        date: r[iDate],
-                        dateObj: d,
-                        currentPrice: r[iPrice],
-                        formLink: iForm >= 0 ? r[iForm] : '',
-                        statusTag: iStatusTag >= 0 ? r[iStatusTag] : ''
-                    };
-                })
-                .filter(function(r){ return !isNaN(r.dateObj.getTime()) && r.dateObj.getTime() > today.getTime(); })
-                .sort(function(a, b){ return a.dateObj - b.dateObj; });
-
-            if (!upcoming.length) throw new Error('No upcoming open sessions');
-
-            renderMarquee(upcoming);
-            renderSessionCards(upcoming);
-        })
-        .catch(function(){
-            showMarqueeFallback();
-            showSessionFallback();
-        });
-})();
+    };
 </script>
+<script src="/homeNew.js?v=1"></script>
 </body>
 </html>

@@ -1,0 +1,15 @@
+{
+  "_note": "大尖山瀑布群溪降活動頁（中英文共用）的相簿照片清單。把照片檔放進 /adventurepics/dajianshan/ 後，在下面的 photos 陣列加一筆即可（file＝相對於本資料夾的路徑，alt＝中文說明，alt_en＝英文說明）。超過 500KB 的原圖請另存壓縮版到 web/（寬度最大 1600px）並指向壓縮版。陣列為空時，活動頁顯示「照片整理中／Photos coming soon」佔位。第一張會當 Hero 大圖。首頁與活動列表的方形縮圖是另一張：web/card-540.jpg（由 IMG_3983 裁切）。",
+  "photos": [
+    { "file": "web/IMG_3983.jpg", "alt": "沿著高瀑垂降而下的參加者", "alt_en": "A participant rappelling down a tall waterfall" },
+    { "file": "web/IMG_5287.jpg", "alt": "在瀑布水流中垂降", "alt_en": "Rappelling through the flow of a waterfall" },
+    { "file": "web/IMG_5303.jpg", "alt": "從上方看參加者沿瀑布垂降", "alt_en": "Looking down on a participant descending beside a waterfall" },
+    { "file": "web/IMG_4018.jpg", "alt": "隊伍在瀑布底下合照", "alt_en": "The group at the base of a waterfall" },
+    { "file": "web/IMG_3922.jpg", "alt": "在濕滑岩面上準備垂降的隊伍", "alt_en": "The group getting ready to descend over wet rock" },
+    { "file": "web/IMG_3935.jpg", "alt": "參加者與嚮導在林間溪谷中", "alt_en": "A participant and guide in the forested canyon" },
+    { "file": "web/IMG_6851.jpg", "alt": "沿溪谷岩壁往下垂降", "alt_en": "Descending a rock face in the canyon" },
+    { "file": "web/IMG_4049.jpg", "alt": "站在瀑布下方溪流中的參加者", "alt_en": "A participant standing in the stream below a waterfall" },
+    { "file": "web/IMG_3888.jpg", "alt": "走在落花小路上前往溪谷的隊伍", "alt_en": "Walking a flower-strewn path toward the canyon" },
+    { "file": "web/IMG_6882.jpg", "alt": "活動前的團體自拍", "alt_en": "A group selfie before the trip" }
+  ]
+}

@@ -1,0 +1,86 @@
+/*----------------------------------------------------
+  大尖山瀑布群溪降體驗（adven-DajianshanCanyoning / -ZN）專用樣式
+  版型沿用 longdongTest.css 的 ld 系列，這裡只補：
+  照片佔位（manifest 沒有照片時）、價格讀取前隱藏、錨點避開固定導覽列。
+----------------------------------------------------*/
+
+/*--錨點跳轉：避免被 fixed 的導覽列＋跑馬燈（.StickyTop）蓋住--*/
+#booking-form,
+#ldTabs{
+    scroll-margin-top: var(--ldStickyOffset, 140px);
+}
+
+/*--價格由 CSV「原價」帶入，讀到之前（或讀取失敗）保持隱藏--*/
+#heroPrice[hidden],
+#includedPrice[hidden]{
+    display: none;
+}
+
+/*--「不怕高」提醒（Hero 與活動介紹）--*/
+.dsNotice{
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    color: #6e2607;
+    background-color: rgba(255,255,255,0.7);
+    border: 1px solid #e3c48c;
+    border-radius: 30px;
+    padding: 4px 14px;
+    margin: 6px auto 0;
+}
+.dsNoticeWrap{
+    text-align: center;
+}
+
+/*--照片佔位：沿用相簿「大圖＋右側縮圖」的尺寸，放入照片後不用改版面--*/
+.galleryPlaceholderMain{
+    width: 100%;
+    aspect-ratio: 13 / 10.3;
+    border-radius: 6px;
+    background-color: #f6ecd9;
+    border: 2px dashed #dcc296;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #9a7440;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+.galleryPlaceholderMain svg{
+    width: 44px;
+    height: 44px;
+}
+.galleryPlaceholderThumb{
+    width: 100px;
+    height: 100px;
+    flex: 0 0 auto;
+    border-radius: 4px;
+    background-color: #f6ecd9;
+    border: 2px dashed #dcc296;
+}
+/*--佔位狀態不需要左右切換箭頭--*/
+.adventureHeadGallery.isPlaceholder .arrow{
+    display: none;
+}
+
+/*--信任區只有 3 個徽章（保險、雙語嚮導、急救），範本是 4 欄--*/
+.ldStatBadgeRow.dsBadges{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width:767px){
+    .ldStatBadgeRow.dsBadges{
+        grid-template-columns: 1fr;
+    }
+    .galleryPlaceholderThumb{
+        width: 80px;
+        height: 80px;
+    }
+    .galleryPlaceholderMain{
+        font-size: 16px;
+    }
+}

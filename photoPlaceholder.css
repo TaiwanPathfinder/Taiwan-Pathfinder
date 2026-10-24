@@ -1,0 +1,36 @@
+/*----------------------------------------------------
+  活動卡片的「照片整理中」方形佔位縮圖
+  （活動列表頁、首頁難度分類卡片共用；有正式縮圖後把 div 換回 img 即可）
+----------------------------------------------------*/
+.thumbPlaceholder{
+    width: 98%;
+    aspect-ratio: 1 / 1;
+    margin: 3px auto;
+    border-radius: 10px;
+    background-color: #f6ecd9;
+    border: 2px dashed #dcc296;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #9a7440;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+.thumbPlaceholder svg{
+    width: 36px;
+    height: 36px;
+}
+/*--活動列表頁：佔位放在連結裡，不要繼承連結底線--*/
+.adventureimg a:has(> .thumbPlaceholder){
+    text-decoration: none;
+}
+/*--首頁難度分類卡片：佔滿卡片上半部、沿用卡片圓角--*/
+.hmActCard .thumbPlaceholder{
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    border-width: 0 0 2px 0;
+}

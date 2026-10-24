@@ -1,0 +1,269 @@
+{
+  "_note": "首頁活動照片集，全部顯示。file＝燈箱用大圖（原圖 >500KB 時指向 web/<名>-web.jpg，寬度最大 1600px；否則用原圖）；thumb＝網格縮圖（web/<名>-thumb.jpg，寬 600px）；路徑相對於 /adventurepics/gallery/；original＝原始檔名。新增照片：放進本資料夾，產生 -web／-thumb 後在 images 加一筆。HEIC 檔（2026-08-01 12-15-20.heic、IMG_6340.HEIC）瀏覽器無法顯示，需另存 JPG 才能加入；龍洞新手攀岩體驗3.jpg 與「3 (1).jpg」內容相同，只列一張。",
+  "images": [
+    {
+      "file": "web/PXL_20260912_022603018-1-web.jpg",
+      "thumb": "web/PXL_20260912_022603018-1-thumb.jpg",
+      "original": "PXL_20260912_022603018 (1).jpg",
+      "width": 1600,
+      "height": 2133,
+      "thumbWidth": 600,
+      "thumbHeight": 800,
+      "alt": "參加者在海岸山稜上的合照",
+      "alt_en": "Participants on a coastal ridge"
+    },
+    {
+      "file": "web/龍洞新手攀岩體驗3-1-web.jpg",
+      "thumb": "web/龍洞新手攀岩體驗3-1-thumb.jpg",
+      "original": "龍洞新手攀岩體驗3 (1).jpg",
+      "width": 1600,
+      "height": 1201,
+      "thumbWidth": 600,
+      "thumbHeight": 450,
+      "alt": "龍洞海岸岩壁上的攀岩",
+      "alt_en": "Climbing a coastal rock face at Longdong"
+    },
+    {
+      "file": "web/龍洞新手攀岩體驗1-web.jpg",
+      "thumb": "web/龍洞新手攀岩體驗1-thumb.jpg",
+      "original": "龍洞新手攀岩體驗1.jpg",
+      "width": 1600,
+      "height": 1067,
+      "thumbWidth": 600,
+      "thumbHeight": 400,
+      "alt": "龍洞海崖上的攀岩體驗",
+      "alt_en": "Climbing a sea cliff at Longdong"
+    },
+    {
+      "file": "web/龍洞新手攀岩體驗12-web.jpg",
+      "thumb": "web/龍洞新手攀岩體驗12-thumb.jpg",
+      "original": "龍洞新手攀岩體驗12.jpg",
+      "width": 1108,
+      "height": 1477,
+      "thumbWidth": 600,
+      "thumbHeight": 800,
+      "alt": "走在龍洞步道上前往岩場的參加者",
+      "alt_en": "Participants on the approach trail at Longdong"
+    },
+    {
+      "file": "web/龍洞新手攀岩體驗2-1-web.jpg",
+      "thumb": "web/龍洞新手攀岩體驗2-1-thumb.jpg",
+      "original": "龍洞新手攀岩體驗2 (1).jpg",
+      "width": 1600,
+      "height": 1065,
+      "thumbWidth": 600,
+      "thumbHeight": 399,
+      "alt": "龍洞岩壁上的攀岩參加者",
+      "alt_en": "A climber on a rock wall at Longdong"
+    },
+    {
+      "file": "LINE_ALBUM_20250830大鬼瀑布_250831_6.jpg",
+      "thumb": "web/LINE_ALBUM_20250830大鬼瀑布_250831_6-thumb.jpg",
+      "original": "LINE_ALBUM_20250830大鬼瀑布_250831_6.jpg",
+      "width": 720,
+      "height": 1280,
+      "thumbWidth": 600,
+      "thumbHeight": 1067,
+      "alt": "大鬼瀑布溪谷中的溯溪行程",
+      "alt_en": "River tracing in the Dagui Waterfall canyon"
+    },
+    {
+      "file": "web/PXL_20251206_081031816-1-web.jpg",
+      "thumb": "web/PXL_20251206_081031816-1-thumb.jpg",
+      "original": "PXL_20251206_081031816 (1).jpg",
+      "width": 1600,
+      "height": 1205,
+      "thumbWidth": 600,
+      "thumbHeight": 452,
+      "alt": "參加者與 Taiwan Pathfinder 旗幟合照",
+      "alt_en": "Group photo with the Taiwan Pathfinder flag"
+    },
+    {
+      "file": "web/龍洞新手攀岩體驗6-web.jpg",
+      "thumb": "web/龍洞新手攀岩體驗6-thumb.jpg",
+      "original": "龍洞新手攀岩體驗6.jpg",
+      "width": 1536,
+      "height": 2730,
+      "thumbWidth": 600,
+      "thumbHeight": 1066,
+      "alt": "從上方拍攝的龍洞攀岩參加者",
+      "alt_en": "A climber at Longdong, seen from above"
+    },
+    {
+      "file": "web/龍洞新手攀岩體驗4-2-web.jpg",
+      "thumb": "web/龍洞新手攀岩體驗4-2-thumb.jpg",
+      "original": "龍洞新手攀岩體驗4 (2).jpg",
+      "width": 1600,
+      "height": 1201,
+      "thumbWidth": 600,
+      "thumbHeight": 450,
+      "alt": "龍洞海邊岩壁上的攀岩",
+      "alt_en": "Climbing on a seaside crag at Longdong"
+    },
+    {
+      "file": "web/PXL_20260531_075629323-web.jpg",
+      "thumb": "web/PXL_20260531_075629323-thumb.jpg",
+      "original": "PXL_20260531_075629323.jpg",
+      "width": 1600,
+      "height": 1200,
+      "thumbWidth": 600,
+      "thumbHeight": 450,
+      "alt": "參加者拿著 Taiwan Pathfinder 旗幟合照",
+      "alt_en": "Participants posing with the Taiwan Pathfinder flag"
+    },
+    {
+      "file": "web/5AD23B53-AEF2-4109-B2F4-E8B5C74898E5-web.jpg",
+      "thumb": "web/5AD23B53-AEF2-4109-B2F4-E8B5C74898E5-thumb.jpg",
+      "original": "5AD23B53-AEF2-4109-B2F4-E8B5C74898E5.JPG",
+      "width": 1600,
+      "height": 2844,
+      "thumbWidth": 600,
+      "thumbHeight": 1067,
+      "alt": "海邊岩壁上的攀岩",
+      "alt_en": "Climbing on a seaside rock face"
+    },
+    {
+      "file": "web/龍洞DWS6-web.jpg",
+      "thumb": "web/龍洞DWS6-thumb.jpg",
+      "original": "龍洞DWS6.jpg",
+      "width": 1536,
+      "height": 2730,
+      "thumbWidth": 600,
+      "thumbHeight": 1066,
+      "alt": "龍洞海面上方岩壁的深水抱石",
+      "alt_en": "Deep water soloing above the sea at Longdong"
+    },
+    {
+      "file": "web/35A4362E-7424-4690-95A9-61EA62969C31-web.jpg",
+      "thumb": "web/35A4362E-7424-4690-95A9-61EA62969C31-thumb.jpg",
+      "original": "35A4362E-7424-4690-95A9-61EA62969C31.JPG",
+      "width": 1600,
+      "height": 2133,
+      "thumbWidth": 600,
+      "thumbHeight": 800,
+      "alt": "參加者在海崖上垂降",
+      "alt_en": "A participant rappelling down a sea cliff"
+    },
+    {
+      "file": "web/龍洞新手攀岩體驗9-web.jpg",
+      "thumb": "web/龍洞新手攀岩體驗9-thumb.jpg",
+      "original": "龍洞新手攀岩體驗9.jpg",
+      "width": 1536,
+      "height": 2730,
+      "thumbWidth": 600,
+      "thumbHeight": 1066,
+      "alt": "龍洞岩壁上的攀岩",
+      "alt_en": "Climbing at Longdong"
+    },
+    {
+      "file": "web/LINE_ALBUM_20250830大鬼瀑布_250831_22-web.jpg",
+      "thumb": "web/LINE_ALBUM_20250830大鬼瀑布_250831_22-thumb.jpg",
+      "original": "LINE_ALBUM_20250830大鬼瀑布_250831_22.jpg",
+      "width": 1600,
+      "height": 900,
+      "thumbWidth": 600,
+      "thumbHeight": 338,
+      "alt": "大鬼瀑布溯溪團體合照",
+      "alt_en": "Group photo on the Dagui Waterfall river tracing trip"
+    },
+    {
+      "file": "web/龍洞新手攀岩體驗10-web.jpg",
+      "thumb": "web/龍洞新手攀岩體驗10-thumb.jpg",
+      "original": "龍洞新手攀岩體驗10.jpg",
+      "width": 1600,
+      "height": 2133,
+      "thumbWidth": 600,
+      "thumbHeight": 800,
+      "alt": "在龍洞岩壁上微笑的攀岩參加者",
+      "alt_en": "A smiling climber on the rock at Longdong"
+    },
+    {
+      "file": "web/龍洞新手攀岩體驗5-web.jpg",
+      "thumb": "web/龍洞新手攀岩體驗5-thumb.jpg",
+      "original": "龍洞新手攀岩體驗5.jpg",
+      "width": 1108,
+      "height": 1477,
+      "thumbWidth": 600,
+      "thumbHeight": 800,
+      "alt": "參加者在龍洞岩頂上合照",
+      "alt_en": "Participants on top of the rocks at Longdong"
+    },
+    {
+      "file": "web/龍洞新手攀岩體驗8-2-web.jpg",
+      "thumb": "web/龍洞新手攀岩體驗8-2-thumb.jpg",
+      "original": "龍洞新手攀岩體驗8 (2).jpg",
+      "width": 1600,
+      "height": 2125,
+      "thumbWidth": 600,
+      "thumbHeight": 797,
+      "alt": "龍洞的岩塔與攀岩者",
+      "alt_en": "A rock tower and climbers at Longdong"
+    },
+    {
+      "file": "web/龍洞新手攀岩體驗14-web.jpg",
+      "thumb": "web/龍洞新手攀岩體驗14-thumb.jpg",
+      "original": "龍洞新手攀岩體驗14.jpg",
+      "width": 1600,
+      "height": 1065,
+      "thumbWidth": 600,
+      "thumbHeight": 399,
+      "alt": "龍洞橘色岩壁上的攀岩",
+      "alt_en": "Climbing an orange rock face at Longdong"
+    },
+    {
+      "file": "web/龍洞DWS3-web.jpg",
+      "thumb": "web/龍洞DWS3-thumb.jpg",
+      "original": "龍洞DWS3.JPG",
+      "width": 1600,
+      "height": 2400,
+      "thumbWidth": 600,
+      "thumbHeight": 900,
+      "alt": "龍洞深水抱石，參加者從岩壁跳進海裡",
+      "alt_en": "Deep water soloing at Longdong, jumping from the rock into the sea"
+    },
+    {
+      "file": "web/龍洞新手攀岩體驗13-web.jpg",
+      "thumb": "web/龍洞新手攀岩體驗13-thumb.jpg",
+      "original": "龍洞新手攀岩體驗13.JPG",
+      "width": 1600,
+      "height": 1067,
+      "thumbWidth": 600,
+      "thumbHeight": 400,
+      "alt": "戴著頭盔在龍洞岩壁上攀爬的參加者",
+      "alt_en": "A helmeted climber on the rock at Longdong"
+    },
+    {
+      "file": "web/PXL_20260913_023019069.MP-web.jpg",
+      "thumb": "web/PXL_20260913_023019069.MP-thumb.jpg",
+      "original": "PXL_20260913_023019069.MP.jpg",
+      "width": 1600,
+      "height": 1205,
+      "thumbWidth": 600,
+      "thumbHeight": 452,
+      "alt": "室內攀岩館的團體合照",
+      "alt_en": "Group photo at an indoor climbing gym"
+    },
+    {
+      "file": "web/龍洞新手攀岩體驗15-web.jpg",
+      "thumb": "web/龍洞新手攀岩體驗15-thumb.jpg",
+      "original": "龍洞新手攀岩體驗15.jpg",
+      "width": 1600,
+      "height": 2125,
+      "thumbWidth": 600,
+      "thumbHeight": 797,
+      "alt": "龍洞海蝕洞口前的參加者剪影",
+      "alt_en": "Silhouettes of participants at a sea cave opening in Longdong"
+    },
+    {
+      "file": "web/龍洞新手攀岩體驗7-新-web.jpg",
+      "thumb": "web/龍洞新手攀岩體驗7-新-thumb.jpg",
+      "original": "龍洞新手攀岩體驗7(新).jpg",
+      "width": 1600,
+      "height": 2843,
+      "thumbWidth": 600,
+      "thumbHeight": 1066,
+      "alt": "龍洞高聳岩壁上的攀岩者",
+      "alt_en": "Climbers on a tall rock face at Longdong"
+    }
+  ]
+}
